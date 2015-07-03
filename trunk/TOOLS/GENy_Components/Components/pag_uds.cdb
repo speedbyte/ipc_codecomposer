@@ -1,0 +1,4457 @@
+<?xml version='1.0' encoding='iso-8859-1' standalone='no'?>
+<!DOCTYPE CANDELA SYSTEM 'candela.dtd'>
+<CANDELA dtdvers='5.0.140'>
+<ECUDOC doctype='inst' manufacturer='porsche' mid='403481' saveno='9' languages='(en-US)' uptodateLanguages='(en-US)' jobfileext=''>
+<DESC>
+<TUV xml:lang='en-US' struct='1'><PARA><FC>This CANdela template is based on "Unified Diagnostic Services base on ISO 14229-1" specification. The template is a "flat" representation of the ISO spec (most services are only define by a service id and a data object).</FC>
+</PARA>
+</TUV>
+</DESC>
+<PROTOCOLSTANDARD>UDS</PROTOCOLSTANDARD>
+<DTID>e1daXQMaf39FHmouKCQqISFmAyEoLSUjPjomM3EBNiYjPzQ9KnZ7DSg/MwkHCwYWX0YjKxE1Pig+
+Qk8jEAQWOhpMV0pLVlswHBwa7Luis6q8v6m4uaarz8zA6/Xi8dH15v/0</DTID>
+<QUALGENOPTIONS case='ignore' minLen='1' maxLen='64'/>
+<ATTRCATS>
+<ATTRCAT id='_0x02ad6658' usage='sys' xauth='r'>
+<NAME>
+<TUV xml:lang='en-US'>Available interfaces</TUV>
+</NAME>
+<DESC>
+<TUV xml:lang='en-US'>(System category)</TUV>
+</DESC>
+<QUAL>COM.INTERFACES</QUAL>
+</ATTRCAT>
+<ATTRCAT id='_0x02ad6800'>
+<NAME>
+<TUV xml:lang='en-US'>CANdesc</TUV>
+</NAME>
+<DESC>
+<TUV xml:lang='en-US'>Information used by CANdelaGen to configure diagnostic software components.</TUV>
+</DESC>
+<QUAL>CANdesc</QUAL>
+</ATTRCAT>
+<ATTRCAT id='_0x02ad69a8'>
+<NAME>
+<TUV xml:lang='en-US'>CANdescBasic</TUV>
+</NAME>
+<QUAL>CANdescBasic</QUAL>
+</ATTRCAT>
+</ATTRCATS>
+<DEFATTS>
+<DATAOBJATTS>
+<STRDEF id='_0x02ad6ac0' attrcatref='_0x02ad6800'>
+<NAME>
+<TUV xml:lang='en-US'>VariableForDirectAccess</TUV>
+</NAME>
+<DESC>
+<TUV xml:lang='en-US'>Specifiy name of application variable to be accessed by CANdesc. Currently, no (extended) type specifiers are allowed. If no Variable for direct access is specified, a callback function will be generated.
+Restriction: Only evaluated if:
+  - Service attribute 'MainHandler (on Service Level)' is set to 'generated' or
+  - Diagnostic instance attribute 'PacketHandlerOption' is set to 'generated').</TUV>
+</DESC>
+<QUAL>VariableForDirectAccess</QUAL>
+<STRING>
+<TUV xml:lang='en-US'></TUV>
+</STRING>
+</STRDEF>
+<STRDEF id='_0x02ad6e00' attrcatref='_0x02ad6800'>
+<NAME>
+<TUV xml:lang='en-US'>SignalHandlerOverrideName</TUV>
+</NAME>
+<DESC>
+<TUV xml:lang='en-US'>Provide alternative name for Signal Handler instead of generated one (default prefix + SignalHandlerOverrideName). You can reuse a Signal Handler for different Signals, if you specify the same Override Name. Payattention that the function signature must match the different use-cases.
+Restriction: Only evaluated if:
+  - Service attribute 'MainHandler (on Service Level)' is set to 'generated' or
+  - Diagnostic instance attribute 'PacketHandlerOption' is set to 'generated').</TUV>
+</DESC>
+<QUAL>SignalHandlerOverrideName</QUAL>
+<STRING>
+<TUV xml:lang='en-US'></TUV>
+</STRING>
+</STRDEF>
+</DATAOBJATTS>
+<DIAGCLASSATTS>
+<ENUMDEF id='_0x02ad7140' attrcatref='_0x02ad6800' v='0' sort='id'>
+<NAME>
+<TUV xml:lang='en-US'>MainHandlerSupport (on Protocol Service Level)</TUV>
+</NAME>
+<DESC>
+<TUV xml:lang='en-US'>Provide MainHandlers and select type for All Protocol Services of Diagnostic class.</TUV>
+</DESC>
+<QUAL>MainHandlerSupport</QUAL>
+<ETAG v='0'>
+<TUV xml:lang='en-US'>none</TUV>
+</ETAG>
+<ETAG v='1'>
+<TUV xml:lang='en-US'>oem</TUV>
+</ETAG>
+<ETAG v='2'>
+<TUV xml:lang='en-US'>user</TUV>
+</ETAG>
+</ENUMDEF>
+<ENUMDEF id='_0x02ad7558' attrcatref='_0x02ad6800' v='0' sort='id'>
+<NAME>
+<TUV xml:lang='en-US'>PreHandlerSupport (for all Protocol Services)</TUV>
+</NAME>
+<DESC>
+<TUV xml:lang='en-US'>Provide type of Service Pre Handlers for All Protocol Services of Diagnostic class.</TUV>
+</DESC>
+<QUAL>PreHandlerSupport</QUAL>
+<ETAG v='0'>
+<TUV xml:lang='en-US'>none</TUV>
+</ETAG>
+<ETAG v='1'>
+<TUV xml:lang='en-US'>oem</TUV>
+</ETAG>
+<ETAG v='2'>
+<TUV xml:lang='en-US'>user</TUV>
+</ETAG>
+</ENUMDEF>
+<ENUMDEF id='_0x02ad7970' attrcatref='_0x02ad6800' v='0' sort='id'>
+<NAME>
+<TUV xml:lang='en-US'>PostHandlerSupport (for all Protocol Services)</TUV>
+</NAME>
+<DESC>
+<TUV xml:lang='en-US'>Provide type of Service Post Handlers for All Protocol Services of Diagnostic class.
+Restriction: Only evaluated if 'MainHandlerSupport' (on ProtocolService Level)' is set, i.e. unequal to 'none'.</TUV>
+</DESC>
+<QUAL>PostHandlerSupport</QUAL>
+<ETAG v='0'>
+<TUV xml:lang='en-US'>none</TUV>
+</ETAG>
+<ETAG v='1'>
+<TUV xml:lang='en-US'>oem</TUV>
+</ETAG>
+<ETAG v='2'>
+<TUV xml:lang='en-US'>user</TUV>
+</ETAG>
+</ENUMDEF>
+<ENUMDEF id='_0x02ad7d88' attrcatref='_0x02ad6800' v='0' sort='id'>
+<NAME>
+<TUV xml:lang='en-US'>PacketHandlerSupport</TUV>
+</NAME>
+<DESC>
+<TUV xml:lang='en-US'>Switch on/off Packet Handlers support for each Diagnostic instance of currrent Diagnostic class.
+Restriction: Only evaluated if 'MainHandlerSupport' (on ProtocolService Level)' is set, i.e. unequal to 'none'.</TUV>
+</DESC>
+<QUAL>PacketHandlerSupport</QUAL>
+<ETAG v='0'>
+<TUV xml:lang='en-US'>none</TUV>
+</ETAG>
+<ETAG v='1'>
+<TUV xml:lang='en-US'>all</TUV>
+</ETAG>
+</ENUMDEF>
+</DIAGCLASSATTS>
+<DIAGINSTATTS>
+<ENUMDEF id='_0x02ad8150' attrcatref='_0x02ad6800' v='0' sort='id'>
+<NAME>
+<TUV xml:lang='en-US'>PacketHandlerOption</TUV>
+</NAME>
+<DESC>
+<TUV xml:lang='en-US'>Provide type of current Packet Handler for first found Service Positive Response.
+Restriction: Only evaluated if Folder attribute 'PacketHandlerSupport' is set to 'all'.</TUV>
+</DESC>
+<QUAL>PacketHandlerOption</QUAL>
+<ETAG v='0'>
+<TUV xml:lang='en-US'>user</TUV>
+</ETAG>
+<ETAG v='1'>
+<TUV xml:lang='en-US'>generated</TUV>
+</ETAG>
+</ENUMDEF>
+</DIAGINSTATTS>
+<ECUATTS>
+<ENUMDEF id='_0x02ad8518' attrcatref='_0x02ad6658' usage='admin' v='1' sort='id'>
+<NAME>
+<TUV xml:lang='en-US'>Diagnostic CAN</TUV>
+</NAME>
+<QUAL>CAN</QUAL>
+<ETAG v='0'>
+<TUV xml:lang='en-US'>not supported</TUV>
+</ETAG>
+<ETAG v='1'>
+<TUV xml:lang='en-US'>supported</TUV>
+</ETAG>
+</ENUMDEF>
+</ECUATTS>
+<SERVICEATTS>
+<ENUMDEF id='_0x02ad8850' attrcatref='_0x02ad6800' v='0' sort='id'>
+<NAME>
+<TUV xml:lang='en-US'>MainHandlerSupport (on Service Level)</TUV>
+</NAME>
+<DESC>
+<TUV xml:lang='en-US'>Provide MainHandler for current Service (Service/Subfunction combination).
+Restriction: Only evaluated if Folder attribute 'MainHandlerSupport (on Protocol Service Level)' is not set, i.e. equals to 'none'.</TUV>
+</DESC>
+<QUAL>MainHandlerSupport</QUAL>
+<ETAG v='0'>
+<TUV xml:lang='en-US'>user</TUV>
+</ETAG>
+<ETAG v='1'>
+<TUV xml:lang='en-US'>oem</TUV>
+</ETAG>
+<ETAG v='2'>
+<TUV xml:lang='en-US'>generated</TUV>
+</ETAG>
+</ENUMDEF>
+<ENUMDEF id='_0x02ad8c68' attrcatref='_0x02ad6800' v='0' sort='id'>
+<NAME>
+<TUV xml:lang='en-US'>PreHandlerSupport</TUV>
+</NAME>
+<DESC>
+<TUV xml:lang='en-US'>Provide type of Service Pre Handler for current Service (Service/Subfunction combination). The Service Pre Handler is executed directly before the Main Handler.
+Restriction: Only evaluated if Folder attribute 'MainHandlerSupport (on Protocol Service Level)' is not set, i.e. equals to 'none'.</TUV>
+</DESC>
+<QUAL>PreHandlerSupport</QUAL>
+<ETAG v='0'>
+<TUV xml:lang='en-US'>none</TUV>
+</ETAG>
+<ETAG v='1'>
+<TUV xml:lang='en-US'>oem</TUV>
+</ETAG>
+<ETAG v='2'>
+<TUV xml:lang='en-US'>user</TUV>
+</ETAG>
+</ENUMDEF>
+<STRDEF id='_0x02ad9080' attrcatref='_0x02ad6800'>
+<NAME>
+<TUV xml:lang='en-US'>PreHandlerOverrideName</TUV>
+</NAME>
+<DESC>
+<TUV xml:lang='en-US'>Provide alternative name for Service Pre Handler instead of generated one (default prefix + PreHandlerOverrideName). You can reuse a Service Pre Handler for different Services, if you specify the same Override Name.
+Restriction: Only evaluated if Folder attribute 'MainHandlerSupport (on Protocol Service Level)' is not set, i.e. equals to 'none'.</TUV>
+</DESC>
+<QUAL>PreHandlerOverrideName</QUAL>
+<STRING>
+<TUV xml:lang='en-US'></TUV>
+</STRING>
+</STRDEF>
+<ENUMDEF id='_0x02ad93c0' attrcatref='_0x02ad6800' v='0' sort='id'>
+<NAME>
+<TUV xml:lang='en-US'>PostHandlerSupport</TUV>
+</NAME>
+<DESC>
+<TUV xml:lang='en-US'>Provide type of Service Post Handler for current Service (Service/Subfunction combination. The Service Post Handler is executed after a positive confirmation of the positive response.
+Restriction: Only evaluated if Folder attribute 'MainHandlerSupport (on Protocol Service Level)' is not set, i.e. equals to 'none'.</TUV>
+</DESC>
+<QUAL>PostHandlerSupport</QUAL>
+<ETAG v='0'>
+<TUV xml:lang='en-US'>none</TUV>
+</ETAG>
+<ETAG v='1'>
+<TUV xml:lang='en-US'>oem</TUV>
+</ETAG>
+<ETAG v='2'>
+<TUV xml:lang='en-US'>user</TUV>
+</ETAG>
+</ENUMDEF>
+<STRDEF id='_0x02ad97d8' attrcatref='_0x02ad6800'>
+<NAME>
+<TUV xml:lang='en-US'>PostHandlerOverrideName</TUV>
+</NAME>
+<DESC>
+<TUV xml:lang='en-US'>Provide alternative name for Service Post Handler instead of generated one (default prefix + PostHandlerOverrideName).You can reuse a Service Post Handler for different Services, if you specify the same Override Name.
+Restriction: Only evaluated if Folder attribute 'MainHandlerSupport (on Protocol Service Level)' is not set, i. e. equals to 'none'.</TUV>
+</DESC>
+<QUAL>PostHandlerOverrideName</QUAL>
+<STRING>
+<TUV xml:lang='en-US'></TUV>
+</STRING>
+</STRDEF>
+</SERVICEATTS>
+<VARATTS>
+<ENUMDEF id='_0x02ad9b18' attrcatref='_0x02ad69a8' v='1' sort='id'>
+<NAME>
+<TUV xml:lang='en-US'>CANDescBasic like described variant</TUV>
+</NAME>
+<QUAL>CANdescBasicLikeDescribedVariant</QUAL>
+<ETAG v='0'>
+<TUV xml:lang='en-US'>false</TUV>
+</ETAG>
+<ETAG v='1'>
+<TUV xml:lang='en-US'>true</TUV>
+</ETAG>
+</ENUMDEF>
+</VARATTS>
+</DEFATTS>
+<AUTHORS>
+<AUTHOR id='_0x02ad9e50' obs='0' responsible='1'>
+<LASTNAME>Shishmanyan</LASTNAME>
+<FIRSTNAME>Mishel</FIRSTNAME>
+<SHORTNAME>sa</SHORTNAME>
+<COMPANY>Vector Informatik GmbH</COMPANY>
+<DEPT>PSC</DEPT>
+</AUTHOR>
+</AUTHORS>
+<HISTITEMS>
+<HISTITEM authorref='_0x02ad9e50' stid='0' tool='CANdelaStudio 4.0.100' dt='2006-02-10 09:23:23+01:00'>
+<LABEL>1.0</LABEL>
+<MOD>first template</MOD>
+<REASON></REASON>
+</HISTITEM>
+<HISTITEM authorref='_0x02ad9e50' stid='2' tool='CANdelaStudio 4.0.100' dt='2006-02-10 09:23:40+01:00'>
+<LABEL>1.1</LABEL>
+<MOD>- Removed unnecessary services
+- Modified session transitions and filters
+- Added PAG specific sessions
+</MOD>
+<REASON></REASON>
+</HISTITEM>
+<HISTITEM authorref='_0x02ad9e50' stid='1' tool='CANdelaStudio 4.0.140' dt='2006-08-23 14:35:27+02:00'>
+<LABEL>1.2</LABEL>
+<MOD>Session filter modified according to the Porsche LH 1.2.0</MOD>
+<REASON></REASON>
+</HISTITEM>
+<HISTITEM authorref='_0x02ad9e50' stid='0' tool='CANdelaStudio 5.0 SP 4' dt='2007-09-21 09:32:28+02:00'>
+<LABEL>1.3</LABEL>
+<MOD>M: ECU Reset supported now in the default session.
+
+M: Session transitions Programming-&#62;Extended 
+Programming-&#62;EOL
+Programming-&#62;ECOS
+Programming-&#62;Development   not possible any more (NRC$7E).</MOD>
+<REASON>New PAG Requirements. See "SLP_2007Mmaintenance" (PI_3094)</REASON>
+</HISTITEM>
+</HISTITEMS>
+<TARGETGROUPS>
+<TARGETGROUP>
+<NAME>
+<TUV xml:lang='en-US'>Supplier</TUV>
+</NAME>
+<QUAL>Supplier</QUAL>
+</TARGETGROUP>
+<TARGETGROUP>
+<NAME>
+<TUV xml:lang='en-US'>Development vehicle manufacturer</TUV>
+</NAME>
+<QUAL>Development_vehicle_manufacturer</QUAL>
+</TARGETGROUP>
+<TARGETGROUP>
+<NAME>
+<TUV xml:lang='en-US'>Manufacturing</TUV>
+</NAME>
+<QUAL>Manufacturing</QUAL>
+</TARGETGROUP>
+<TARGETGROUP>
+<NAME>
+<TUV xml:lang='en-US'>After-Sales</TUV>
+</NAME>
+<QUAL>After_Sales</QUAL>
+</TARGETGROUP>
+<TARGETGROUP>
+<NAME>
+<TUV xml:lang='en-US'>After-Market</TUV>
+</NAME>
+<QUAL>After_Market</QUAL>
+</TARGETGROUP>
+</TARGETGROUPS>
+<NEGRESCODES bl='8' bo='21' stateGroupDefault='34'>
+<NEGRESCODE id='_0x02ada9f0' v='17'>
+<NAME>
+<TUV xml:lang='en-US'>Service not supported</TUV>
+</NAME>
+<QUAL>Service_not_supported</QUAL>
+</NEGRESCODE>
+<NEGRESCODE id='_0x02adab10' v='18'>
+<NAME>
+<TUV xml:lang='en-US'>Subfunction not supported</TUV>
+</NAME>
+<QUAL>Subfunction_not_supported</QUAL>
+</NEGRESCODE>
+<NEGRESCODE id='_0x02adac30' v='19'>
+<NAME>
+<TUV xml:lang='en-US'>Incorrect message length or invalid format</TUV>
+</NAME>
+<QUAL>Incorrect_message_length_or_invalid_format</QUAL>
+</NEGRESCODE>
+<NEGRESCODE id='_0x02adad50' v='34'>
+<NAME>
+<TUV xml:lang='en-US'>Conditions not correct</TUV>
+</NAME>
+<QUAL>Conditions_not_correct</QUAL>
+</NEGRESCODE>
+<NEGRESCODE id='_0x02adae70' v='49'>
+<NAME>
+<TUV xml:lang='en-US'>Request out of range</TUV>
+</NAME>
+<QUAL>Request_out_of_range</QUAL>
+</NEGRESCODE>
+<NEGRESCODE id='_0x02adaf90' v='36'>
+<NAME>
+<TUV xml:lang='en-US'>Request sequence error</TUV>
+</NAME>
+<QUAL>Request_sequence_error</QUAL>
+</NEGRESCODE>
+<NEGRESCODE id='_0x02adb0b0' v='53'>
+<NAME>
+<TUV xml:lang='en-US'>Invalid key</TUV>
+</NAME>
+<QUAL>Invalid_key</QUAL>
+</NEGRESCODE>
+<NEGRESCODE id='_0x02adb1d0' v='54'>
+<NAME>
+<TUV xml:lang='en-US'>Exceed number of attempts</TUV>
+</NAME>
+<QUAL>Exceed_number_of_attempts</QUAL>
+</NEGRESCODE>
+<NEGRESCODE id='_0x02adb2f0' v='55'>
+<NAME>
+<TUV xml:lang='en-US'>Required time delay not expired</TUV>
+</NAME>
+<QUAL>Required_time_delay_not_expired</QUAL>
+</NEGRESCODE>
+<NEGRESCODE id='_0x02adb410' v='51'>
+<NAME>
+<TUV xml:lang='en-US'>Security access denied</TUV>
+</NAME>
+<QUAL>Security_access_denied</QUAL>
+</NEGRESCODE>
+<NEGRESCODE id='_0x02adb530' v='114'>
+<NAME>
+<TUV xml:lang='en-US'>General programming failure</TUV>
+</NAME>
+<QUAL>General_programming_failure</QUAL>
+</NEGRESCODE>
+<NEGRESCODE id='_0x02adb650' v='112'>
+<NAME>
+<TUV xml:lang='en-US'>Upload/download not accepted</TUV>
+</NAME>
+<QUAL>Upload_download_not_accepted</QUAL>
+</NEGRESCODE>
+<NEGRESCODE id='_0x02adb770' v='113'>
+<NAME>
+<TUV xml:lang='en-US'>Transfer data suspended</TUV>
+</NAME>
+<QUAL>Transfer_data_suspended</QUAL>
+</NEGRESCODE>
+<NEGRESCODE id='_0x02adb890' v='115'>
+<NAME>
+<TUV xml:lang='en-US'>Work block sequence counter</TUV>
+</NAME>
+<QUAL>Work_block_sequence_counter</QUAL>
+</NEGRESCODE>
+<NEGRESCODE id='_0x02adb9b0' v='141'>
+<NAME>
+<TUV xml:lang='en-US'>Transmission range in gear</TUV>
+</NAME>
+<QUAL>Transmission_range_in_gear</QUAL>
+</NEGRESCODE>
+<NEGRESCODE id='_0x02adbad0' v='126'>
+<NAME>
+<TUV xml:lang='en-US'>Subfunction not supported in active session</TUV>
+</NAME>
+<QUAL>subFunctionNotSupportedInActiveSession</QUAL>
+</NEGRESCODE>
+</NEGRESCODES>
+<STATEGROUPS>
+<STATEGROUP spec='session'>
+<NAME>
+<TUV xml:lang='en-US'>Session</TUV>
+</NAME>
+<DESC>
+<TUV xml:lang='en-US'>{NRC = 0x7E}</TUV>
+</DESC>
+<QUAL>Session</QUAL>
+<STATE>
+<NAME>
+<TUV xml:lang='en-US'>Default</TUV>
+</NAME>
+<DESC>
+<TUV xml:lang='en-US'>{P2 = 50, P2Ex = 5000}</TUV>
+</DESC>
+<QUAL>Default</QUAL>
+</STATE>
+<STATE>
+<NAME>
+<TUV xml:lang='en-US'>Programming</TUV>
+</NAME>
+<DESC>
+<TUV xml:lang='en-US'>{P2 = 10, P2Ex = 5000}</TUV>
+</DESC>
+<QUAL>Programming</QUAL>
+</STATE>
+<STATE>
+<NAME>
+<TUV xml:lang='en-US'>Extended</TUV>
+</NAME>
+<DESC>
+<TUV xml:lang='en-US'>{P2 = 50, P2Ex = 5000}</TUV>
+</DESC>
+<QUAL>Extended</QUAL>
+</STATE>
+<STATE>
+<NAME>
+<TUV xml:lang='en-US'>EndOfLine</TUV>
+</NAME>
+<DESC>
+<TUV xml:lang='en-US'>{P2 = 50, P2Ex = 5000}</TUV>
+</DESC>
+<QUAL>EndOfLine</QUAL>
+</STATE>
+<STATE>
+<NAME>
+<TUV xml:lang='en-US'>ECOS</TUV>
+</NAME>
+<DESC>
+<TUV xml:lang='en-US'>{P2 = 50, P2Ex = 5000}</TUV>
+</DESC>
+<QUAL>ECOS</QUAL>
+</STATE>
+<STATE>
+<NAME>
+<TUV xml:lang='en-US'>Development</TUV>
+</NAME>
+<DESC>
+<TUV xml:lang='en-US'>{P2 = 50, P2Ex = 5000}</TUV>
+</DESC>
+<QUAL>Development</QUAL>
+</STATE>
+<NEGRESCODEPROXY idref='_0x02adbad0'/>
+</STATEGROUP>
+</STATEGROUPS>
+<VCKMGR vckmode='stringsDC' vckmin='1' vckmax='1336335' vcknext='1'/>
+<DATATYPES>
+<IDENT id='_0x02adc8c8' bm='4294967295' xauth='me'>
+<NAME>
+<TUV xml:lang='en-US'>HexDump (1Byte)</TUV>
+</NAME>
+<QUAL>HexDump_1Byte</QUAL>
+<CVALUETYPE bl='8' bo='21' enc='uns' sig='0' df='hex' qty='atom' sz='no' minsz='0' maxsz='255'/>
+<PVALUETYPE bl='8' bo='21' enc='uns' sig='0' df='hex' qty='atom' sz='no' minsz='0' maxsz='255'/>
+</IDENT>
+<IDENT id='_0x02adcad0' bm='4294967295' xauth='me'>
+<NAME>
+<TUV xml:lang='en-US'>HexDump (2Byte)</TUV>
+</NAME>
+<QUAL>HexDump_2Byte</QUAL>
+<CVALUETYPE bl='16' bo='21' enc='uns' sig='0' df='hex' qty='atom' sz='no' minsz='0' maxsz='255'/>
+<PVALUETYPE bl='16' bo='21' enc='uns' sig='0' df='hex' qty='atom' sz='no' minsz='0' maxsz='255'/>
+</IDENT>
+<IDENT id='_0x02adccd8' bm='4294967295' xauth='me'>
+<NAME>
+<TUV xml:lang='en-US'>HexDump (3Byte)</TUV>
+</NAME>
+<QUAL>HexDump_3Byte</QUAL>
+<CVALUETYPE bl='24' bo='21' enc='uns' sig='0' df='hex' qty='atom' sz='no' minsz='0' maxsz='255'/>
+<PVALUETYPE bl='24' bo='21' enc='uns' sig='0' df='hex' qty='atom' sz='no' minsz='0' maxsz='255'/>
+</IDENT>
+<IDENT id='_0x02adcee0' bm='4294967295' xauth='me'>
+<NAME>
+<TUV xml:lang='en-US'>HexDump (4Byte)</TUV>
+</NAME>
+<QUAL>HexDump_4Byte</QUAL>
+<CVALUETYPE bl='32' bo='21' enc='uns' sig='0' df='hex' qty='atom' sz='no' minsz='0' maxsz='255'/>
+<PVALUETYPE bl='32' bo='21' enc='uns' sig='0' df='hex' qty='atom' sz='no' minsz='0' maxsz='255'/>
+</IDENT>
+<IDENT id='_0x02add0e8' bm='4294967295' xauth='me'>
+<NAME>
+<TUV xml:lang='en-US'>Unsigned (1Byte)</TUV>
+</NAME>
+<QUAL>Unsigned_1Byte</QUAL>
+<CVALUETYPE bl='8' bo='21' enc='uns' sig='0' df='dec' qty='atom' sz='no' minsz='0' maxsz='255'/>
+<PVALUETYPE bl='8' bo='21' enc='uns' sig='0' df='dec' qty='atom' sz='no' minsz='0' maxsz='255'/>
+</IDENT>
+<IDENT id='_0x02add2f0' bm='4294967295' xauth='me'>
+<NAME>
+<TUV xml:lang='en-US'>Unsigned (2Byte)</TUV>
+</NAME>
+<QUAL>Unsigned_2Byte</QUAL>
+<CVALUETYPE bl='16' bo='21' enc='uns' sig='0' df='dec' qty='atom' sz='no' minsz='0' maxsz='255'/>
+<PVALUETYPE bl='16' bo='21' enc='uns' sig='0' df='dec' qty='atom' sz='no' minsz='0' maxsz='255'/>
+</IDENT>
+<IDENT id='_0x02add4f8' bm='4294967295' xauth='me'>
+<NAME>
+<TUV xml:lang='en-US'>Unsigned (3Byte)</TUV>
+</NAME>
+<QUAL>Unsigned_3Byte</QUAL>
+<CVALUETYPE bl='24' bo='21' enc='uns' sig='0' df='dec' qty='atom' sz='no' minsz='0' maxsz='255'/>
+<PVALUETYPE bl='24' bo='21' enc='uns' sig='0' df='dec' qty='atom' sz='no' minsz='0' maxsz='255'/>
+</IDENT>
+<IDENT id='_0x02add700' bm='4294967295' xauth='me'>
+<NAME>
+<TUV xml:lang='en-US'>Unsigned (4Byte)</TUV>
+</NAME>
+<QUAL>Unsigned_4Byte</QUAL>
+<CVALUETYPE bl='32' bo='21' enc='uns' sig='0' df='dec' qty='atom' sz='no' minsz='0' maxsz='255'/>
+<PVALUETYPE bl='32' bo='21' enc='uns' sig='0' df='dec' qty='atom' sz='no' minsz='0' maxsz='255'/>
+</IDENT>
+<IDENT id='_0x02add908' bm='4294967295' xauth='me'>
+<NAME>
+<TUV xml:lang='en-US'>reserved (5Bit)</TUV>
+</NAME>
+<QUAL>Reserved_5Bit</QUAL>
+<CVALUETYPE bl='5' bo='21' enc='uns' sig='0' df='hex' qty='atom' sz='no' minsz='0' maxsz='255'/>
+<PVALUETYPE bl='5' bo='21' enc='uns' sig='0' df='hex' qty='atom' sz='no' minsz='0' maxsz='255'/>
+</IDENT>
+<IDENT id='_0x02addb10' bm='4294967295' xauth='me'>
+<NAME>
+<TUV xml:lang='en-US'>Unsigned (1Bit)</TUV>
+</NAME>
+<QUAL>Unsigned_1Bit</QUAL>
+<CVALUETYPE bl='1' bo='21' enc='uns' sig='0' df='dec' qty='atom' sz='no' minsz='0' maxsz='255'/>
+<PVALUETYPE bl='1' bo='21' enc='uns' sig='0' df='dec' qty='atom' sz='no' minsz='0' maxsz='255'/>
+</IDENT>
+</DATATYPES>
+<DOCTMPL saveno='21'>
+<NAME>
+<TUV xml:lang='en-US'>New ECU 1</TUV>
+</NAME>
+<QUAL>New_ECU_1</QUAL>
+<LABEL>1.1</LABEL>
+</DOCTMPL>
+<RECORDTMPLS>
+<RECORDTMPL spec='faultMemory'>
+<CVALUETYPE bl='24' bo='21' enc='uns' sig='0' df='hex' qty='atom' sz='no' minsz='0' maxsz='255'/>
+<PVALUETYPE bl='16' bo='21' enc='utf' sig='0' df='text' qty='field' sz='no' minsz='0' maxsz='65535'/>
+<TRRECORDITEMTMPL id='_0x02adde20' mayBeDup='0' conv='req'>
+<NAME>
+<TUV xml:lang='en-US'>SD Macroname</TUV>
+</NAME>
+<QUAL>SDCode</QUAL>
+</TRRECORDITEMTMPL>
+<TRRECORDITEMTMPL id='_0x02addf90' mayBeDup='1' conv='opt'>
+<NAME>
+<TUV xml:lang='en-US'>Test condition</TUV>
+</NAME>
+<QUAL>TestCondition</QUAL>
+</TRRECORDITEMTMPL>
+<TRRECORDITEMTMPL id='_0x02ade100' mayBeDup='1' conv='opt'>
+<NAME>
+<TUV xml:lang='en-US'>Test time</TUV>
+</NAME>
+<QUAL>TestTime</QUAL>
+</TRRECORDITEMTMPL>
+<TRRECORDITEMTMPL id='_0x02ade270' mayBeDup='1' conv='opt'>
+<NAME>
+<TUV xml:lang='en-US'>Set Conditions &#38; Verification</TUV>
+</NAME>
+<QUAL>SetCondition</QUAL>
+</TRRECORDITEMTMPL>
+<TRRECORDITEMTMPL id='_0x02ade3e0' mayBeDup='1' conv='opt'>
+<NAME>
+<TUV xml:lang='en-US'>Reset condition &#38; self healing</TUV>
+</NAME>
+<QUAL>ResetCondition</QUAL>
+</TRRECORDITEMTMPL>
+<UNSRECORDITEMTMPL id='_0x02ade550' mayBeDup='1' conv='req' df='dec' v='0'>
+<NAME>
+<TUV xml:lang='en-US'>SD Data Environment Parameter</TUV>
+</NAME>
+<QUAL>EnvParameter</QUAL>
+</UNSRECORDITEMTMPL>
+<TRRECORDITEMTMPL id='_0x02ade678' mayBeDup='1' conv='opt'>
+<NAME>
+<TUV xml:lang='en-US'>SD Test Permanent</TUV>
+</NAME>
+<QUAL>TestPermanent</QUAL>
+</TRRECORDITEMTMPL>
+</RECORDTMPL>
+</RECORDTMPLS>
+<UNSUPPSRVNEG>
+<NAME>
+<TUV xml:lang='en-US'>Unsupported service negative response codes</TUV>
+</NAME>
+<QUAL>UNSUPPORTED_SERVICE_NR</QUAL>
+<CONSTCOMP id='_0x02ade7e8' must='1' spec='sid' bl='8' v='127'>
+<NAME>
+<TUV xml:lang='en-US'>SID-NR</TUV>
+</NAME>
+<QUAL>SID_NR</QUAL>
+</CONSTCOMP>
+<STATICCOMP id='_0x02ade930' must='1' spec='id' bl='8'>
+<NAME>
+<TUV xml:lang='en-US'>SID-RQ-NR</TUV>
+</NAME>
+<QUAL>SID_RQ_NR</QUAL>
+</STATICCOMP>
+<SIMPLEPROXYCOMP id='_0x02adea60' must='1' dest='resCode' minbl='8' maxbl='8'>
+<NAME>
+<TUV xml:lang='en-US'>RESPONSE CODE</TUV>
+</NAME>
+<QUAL>RC</QUAL>
+</SIMPLEPROXYCOMP>
+<CONTENTCOMP id='_0x02adeb98' must='1'>
+<NAME>
+<TUV xml:lang='en-US'>RESPONSE CODE TABLE</TUV>
+</NAME>
+<QUAL>RESPONSE_CODE_TABLE</QUAL>
+<SIMPLECOMPCONT>
+<SPECDATAOBJ>
+<NAME>
+<TUV xml:lang='en-US'>NEGATIVE RESPONSE CODES</TUV>
+</NAME>
+<QUAL>NRC</QUAL>
+<NEGRESCODEPROXIES>
+<NEGRESCODEPROXY idref='_0x02ada9f0'/>
+</NEGRESCODEPROXIES>
+</SPECDATAOBJ>
+</SIMPLECOMPCONT>
+</CONTENTCOMP>
+</UNSUPPSRVNEG>
+<PROTOCOLSERVICES>
+<PROTOCOLSERVICE id='_0x02adf050' func='1' phys='1' mresp='0' respOnPhys='1' respOnFunc='1' maycombcont='1'>
+<NAME>
+<TUV xml:lang='en-US'>($01) RequestCurrentPowertrainDiagnosticData</TUV>
+</NAME>
+<QUAL>RequestCurrentPowertrainDiagnosticData</QUAL>
+<REQ>
+<NAME>
+<TUV xml:lang='en-US'>RequestCurrentPowertrainDiagnosticData-RQ</TUV>
+</NAME>
+<QUAL>RequestCurrentPowertrainDiagnosticData_RQ</QUAL>
+<CONSTCOMP id='_0x02adf318' must='1' spec='sid' bl='8' v='1'>
+<NAME>
+<TUV xml:lang='en-US'>SID-RQ</TUV>
+</NAME>
+<QUAL>SID_RQ</QUAL>
+</CONSTCOMP>
+<SIMPLEPROXYCOMP id='_0x02adf450' must='0' dest='any' minbl='8'>
+<NAME>
+<TUV xml:lang='en-US'>Data</TUV>
+</NAME>
+<QUAL>Data</QUAL>
+</SIMPLEPROXYCOMP>
+</REQ>
+<POS>
+<NAME>
+<TUV xml:lang='en-US'>RequestCurrentPowertrainDiagnosticData-PR</TUV>
+</NAME>
+<QUAL>RequestCurrentPowertrainDiagnosticData_PR</QUAL>
+<CONSTCOMP id='_0x02adf6f0' must='1' spec='sid' bl='8' v='65'>
+<NAME>
+<TUV xml:lang='en-US'>SID-PR</TUV>
+</NAME>
+<QUAL>SID_PR</QUAL>
+</CONSTCOMP>
+<SIMPLEPROXYCOMP id='_0x02adf828' must='0' dest='any' minbl='8'>
+<NAME>
+<TUV xml:lang='en-US'>Data</TUV>
+</NAME>
+<QUAL>Data</QUAL>
+</SIMPLEPROXYCOMP>
+</POS>
+<NEG>
+<NAME>
+<TUV xml:lang='en-US'>RequestCurrentPowertrainDiagnosticData-NR</TUV>
+</NAME>
+<QUAL>RequestCurrentPowertrainDiagnosticData_NR</QUAL>
+<CONSTCOMP id='_0x02adfac8' must='1' spec='sid' bl='8' v='127'>
+<NAME>
+<TUV xml:lang='en-US'>SID-NR</TUV>
+</NAME>
+<QUAL>SID_NR</QUAL>
+</CONSTCOMP>
+<CONSTCOMP id='_0x02adfc00' must='1' spec='sid' bl='8' v='1'>
+<NAME>
+<TUV xml:lang='en-US'>SIDRQ-NR</TUV>
+</NAME>
+<QUAL>SIDRQ_NR</QUAL>
+</CONSTCOMP>
+<SIMPLEPROXYCOMP id='_0x02adfd38' must='1' dest='resCode' minbl='8' maxbl='8'>
+<NAME>
+<TUV xml:lang='en-US'>Response Code</TUV>
+</NAME>
+<QUAL>RC</QUAL>
+</SIMPLEPROXYCOMP>
+</NEG>
+<NEGRESCODEPROXIES>
+<NEGRESCODEPROXY idref='_0x02adab10'/>
+<NEGRESCODEPROXY idref='_0x02adac30'/>
+<NEGRESCODEPROXY idref='_0x02adad50'/>
+</NEGRESCODEPROXIES>
+</PROTOCOLSERVICE>
+<PROTOCOLSERVICE id='_0x04c20048' func='1' phys='1' mresp='0' respOnPhys='1' respOnFunc='1' maycombcont='1'>
+<NAME>
+<TUV xml:lang='en-US'>($02) RequestPowertrainFreezeFrameData</TUV>
+</NAME>
+<QUAL>RequestPowertrainFreezeFrameData</QUAL>
+<REQ>
+<NAME>
+<TUV xml:lang='en-US'>RequestPowertrainFreezeFrameData-RQ</TUV>
+</NAME>
+<QUAL>RequestPowertrainFreezeFrameData_RQ</QUAL>
+<CONSTCOMP id='_0x04c202f0' must='1' spec='sid' bl='8' v='2'>
+<NAME>
+<TUV xml:lang='en-US'>SID-RQ</TUV>
+</NAME>
+<QUAL>SID_RQ</QUAL>
+</CONSTCOMP>
+<SIMPLEPROXYCOMP id='_0x04c20418' must='0' dest='any' minbl='8'>
+<NAME>
+<TUV xml:lang='en-US'>Data</TUV>
+</NAME>
+<QUAL>Data</QUAL>
+</SIMPLEPROXYCOMP>
+</REQ>
+<POS>
+<NAME>
+<TUV xml:lang='en-US'>RequestPowertrainFreezeFrameData-PR</TUV>
+</NAME>
+<QUAL>RequestPowertrainFreezeFrameData_PR</QUAL>
+<CONSTCOMP id='_0x04c206a8' must='1' spec='sid' bl='8' v='66'>
+<NAME>
+<TUV xml:lang='en-US'>SID-PR</TUV>
+</NAME>
+<QUAL>SID_PR</QUAL>
+</CONSTCOMP>
+<SIMPLEPROXYCOMP id='_0x04c207e0' must='0' dest='any' minbl='8'>
+<NAME>
+<TUV xml:lang='en-US'>Data</TUV>
+</NAME>
+<QUAL>Data</QUAL>
+</SIMPLEPROXYCOMP>
+</POS>
+<NEG>
+<NAME>
+<TUV xml:lang='en-US'>RequestPowertrainFreezeFrameData-NR</TUV>
+</NAME>
+<QUAL>RequestPowertrainFreezeFrameData_NR</QUAL>
+<CONSTCOMP id='_0x04c20a80' must='1' spec='sid' bl='8' v='127'>
+<NAME>
+<TUV xml:lang='en-US'>SID-NR</TUV>
+</NAME>
+<QUAL>SID_NR</QUAL>
+</CONSTCOMP>
+<CONSTCOMP id='_0x04c20bb8' must='1' spec='sid' bl='8' v='2'>
+<NAME>
+<TUV xml:lang='en-US'>SIDRQ-NR</TUV>
+</NAME>
+<QUAL>SIDRQ_NR</QUAL>
+</CONSTCOMP>
+<SIMPLEPROXYCOMP id='_0x04c20cf0' must='1' dest='resCode' minbl='8' maxbl='8'>
+<NAME>
+<TUV xml:lang='en-US'>Response Code</TUV>
+</NAME>
+<QUAL>RC</QUAL>
+</SIMPLEPROXYCOMP>
+</NEG>
+<NEGRESCODEPROXIES>
+<NEGRESCODEPROXY idref='_0x02adab10'/>
+<NEGRESCODEPROXY idref='_0x02adac30'/>
+<NEGRESCODEPROXY idref='_0x02adad50'/>
+</NEGRESCODEPROXIES>
+</PROTOCOLSERVICE>
+<PROTOCOLSERVICE id='_0x04c20f78' func='1' phys='1' mresp='0' respOnPhys='1' respOnFunc='1'>
+<NAME>
+<TUV xml:lang='en-US'>($03) RequestEmissionRelatedDiagnosticTroubleCodes</TUV>
+</NAME>
+<QUAL>RequestEmissionRelatedDiagnosticTroubleCodes</QUAL>
+<REQ>
+<NAME>
+<TUV xml:lang='en-US'>RequestEmissionRelatedDiagnosticTroubleCodes-RQ</TUV>
+</NAME>
+<QUAL>RequestEmissionRelatedDiagnosticTroubleCodes_RQ</QUAL>
+<CONSTCOMP id='_0x04c21240' must='1' spec='sid' bl='8' v='3'>
+<NAME>
+<TUV xml:lang='en-US'>SID-RQ</TUV>
+</NAME>
+<QUAL>SID_RQ</QUAL>
+</CONSTCOMP>
+<SIMPLEPROXYCOMP id='_0x04c21378' must='0' dest='any' minbl='8'>
+<NAME>
+<TUV xml:lang='en-US'>Data</TUV>
+</NAME>
+<QUAL>Data</QUAL>
+</SIMPLEPROXYCOMP>
+</REQ>
+<POS>
+<NAME>
+<TUV xml:lang='en-US'>RequestEmissionRelatedDiagnosticTroubleCodes-PR</TUV>
+</NAME>
+<QUAL>RequestEmissionRelatedDiagnosticTroubleCodes_PR</QUAL>
+<CONSTCOMP id='_0x04c21618' must='1' spec='sid' bl='8' v='67'>
+<NAME>
+<TUV xml:lang='en-US'>SID-PR</TUV>
+</NAME>
+<QUAL>SID_PR</QUAL>
+</CONSTCOMP>
+<SIMPLEPROXYCOMP id='_0x04c21750' must='0' dest='any' minbl='8'>
+<NAME>
+<TUV xml:lang='en-US'>Data</TUV>
+</NAME>
+<QUAL>Data</QUAL>
+</SIMPLEPROXYCOMP>
+</POS>
+<NEG>
+<NAME>
+<TUV xml:lang='en-US'>RequestEmissionRelatedDiagnosticTroubleCodes-NR</TUV>
+</NAME>
+<QUAL>RequestEmissionRelatedDiagnosticTroubleCodes_NR</QUAL>
+<CONSTCOMP id='_0x04c219f0' must='1' spec='sid' bl='8' v='127'>
+<NAME>
+<TUV xml:lang='en-US'>SID-NR</TUV>
+</NAME>
+<QUAL>SID_NR</QUAL>
+</CONSTCOMP>
+<CONSTCOMP id='_0x04c21b28' must='1' spec='sid' bl='8' v='3'>
+<NAME>
+<TUV xml:lang='en-US'>SIDRQ-NR</TUV>
+</NAME>
+<QUAL>SIDRQ_NR</QUAL>
+</CONSTCOMP>
+<SIMPLEPROXYCOMP id='_0x04c21c60' must='1' dest='resCode' minbl='8' maxbl='8'>
+<NAME>
+<TUV xml:lang='en-US'>Response Code</TUV>
+</NAME>
+<QUAL>RC</QUAL>
+</SIMPLEPROXYCOMP>
+</NEG>
+<NEGRESCODEPROXIES>
+<NEGRESCODEPROXY idref='_0x02adab10'/>
+<NEGRESCODEPROXY idref='_0x02adac30'/>
+<NEGRESCODEPROXY idref='_0x02adad50'/>
+</NEGRESCODEPROXIES>
+</PROTOCOLSERVICE>
+<PROTOCOLSERVICE id='_0x04c21ee8' func='1' phys='1' mresp='0' respOnPhys='1' respOnFunc='1'>
+<NAME>
+<TUV xml:lang='en-US'>($04) ClearResetEmissionRelatedDiagnosticInformation</TUV>
+</NAME>
+<QUAL>ClearResetEmissionRelatedDiagnosticInformation</QUAL>
+<REQ>
+<NAME>
+<TUV xml:lang='en-US'>ClearResetEmissionRelatedDiagnosticInformation-RQ</TUV>
+</NAME>
+<QUAL>ClearResetEmissionRelatedDiagnosticInformation_RQ</QUAL>
+<CONSTCOMP id='_0x04c221b0' must='1' spec='sid' bl='8' v='4'>
+<NAME>
+<TUV xml:lang='en-US'>SID-RQ</TUV>
+</NAME>
+<QUAL>SID_RQ</QUAL>
+</CONSTCOMP>
+<SIMPLEPROXYCOMP id='_0x04c222e8' must='0' dest='any' minbl='8'>
+<NAME>
+<TUV xml:lang='en-US'>Data</TUV>
+</NAME>
+<QUAL>Data</QUAL>
+</SIMPLEPROXYCOMP>
+</REQ>
+<POS>
+<NAME>
+<TUV xml:lang='en-US'>ClearResetEmissionRelatedDiagnosticInformation-PR</TUV>
+</NAME>
+<QUAL>ClearResetEmissionRelatedDiagnosticInformation_PR</QUAL>
+<CONSTCOMP id='_0x04c22588' must='1' spec='sid' bl='8' v='68'>
+<NAME>
+<TUV xml:lang='en-US'>SID-PR</TUV>
+</NAME>
+<QUAL>SID_PR</QUAL>
+</CONSTCOMP>
+<SIMPLEPROXYCOMP id='_0x04c226c0' must='0' dest='any' minbl='8'>
+<NAME>
+<TUV xml:lang='en-US'>Data</TUV>
+</NAME>
+<QUAL>Data</QUAL>
+</SIMPLEPROXYCOMP>
+</POS>
+<NEG>
+<NAME>
+<TUV xml:lang='en-US'>ClearResetEmissionRelatedDiagnosticInformation-NR</TUV>
+</NAME>
+<QUAL>ClearResetEmissionRelatedDiagnosticInformation_NR</QUAL>
+<CONSTCOMP id='_0x04c22960' must='1' spec='sid' bl='8' v='127'>
+<NAME>
+<TUV xml:lang='en-US'>SID-NR</TUV>
+</NAME>
+<QUAL>SID_NR</QUAL>
+</CONSTCOMP>
+<CONSTCOMP id='_0x04c22a98' must='1' spec='sid' bl='8' v='4'>
+<NAME>
+<TUV xml:lang='en-US'>SIDRQ-NR</TUV>
+</NAME>
+<QUAL>SIDRQ_NR</QUAL>
+</CONSTCOMP>
+<SIMPLEPROXYCOMP id='_0x04c22bd0' must='1' dest='resCode' minbl='8' maxbl='8'>
+<NAME>
+<TUV xml:lang='en-US'>Response Code</TUV>
+</NAME>
+<QUAL>RC</QUAL>
+</SIMPLEPROXYCOMP>
+</NEG>
+<NEGRESCODEPROXIES>
+<NEGRESCODEPROXY idref='_0x02adab10'/>
+<NEGRESCODEPROXY idref='_0x02adac30'/>
+<NEGRESCODEPROXY idref='_0x02adad50'/>
+</NEGRESCODEPROXIES>
+</PROTOCOLSERVICE>
+<PROTOCOLSERVICE id='_0x04c22e58' func='1' phys='1' mresp='0' respOnPhys='1' respOnFunc='1' maycombcont='1'>
+<NAME>
+<TUV xml:lang='en-US'>($06) RequestOnBoardMonitoringTestResultsForSpecificMonitoredSystems</TUV>
+</NAME>
+<QUAL>RequestOnBoardMonitoringTestResultsForSpecificMonitoredSystems</QUAL>
+<REQ>
+<NAME>
+<TUV xml:lang='en-US'>RequestOnBoardMonitoringTestResultsForSpecificMonitoredSystems-RQ</TUV>
+</NAME>
+<QUAL>RequestOnBoardMonitoringTestResultsForSpecificMonitoredSystems_R</QUAL>
+<CONSTCOMP id='_0x04c23120' must='1' spec='sid' bl='8' v='6'>
+<NAME>
+<TUV xml:lang='en-US'>SID-RQ</TUV>
+</NAME>
+<QUAL>SID_RQ</QUAL>
+</CONSTCOMP>
+<SIMPLEPROXYCOMP id='_0x04c23258' must='0' dest='any' minbl='8'>
+<NAME>
+<TUV xml:lang='en-US'>Data</TUV>
+</NAME>
+<QUAL>Data</QUAL>
+</SIMPLEPROXYCOMP>
+</REQ>
+<POS>
+<NAME>
+<TUV xml:lang='en-US'>RequestOnBoardMonitoringTestResultsForSpecificMonitoredSystems-PR</TUV>
+</NAME>
+<QUAL>RequestOnBoardMonitoringTestResultsForSpecificMonitoredSystems_P</QUAL>
+<CONSTCOMP id='_0x04c234f8' must='1' spec='sid' bl='8' v='70'>
+<NAME>
+<TUV xml:lang='en-US'>SID-PR</TUV>
+</NAME>
+<QUAL>SID_PR</QUAL>
+</CONSTCOMP>
+<SIMPLEPROXYCOMP id='_0x04c23630' must='0' dest='any' minbl='8'>
+<NAME>
+<TUV xml:lang='en-US'>Data</TUV>
+</NAME>
+<QUAL>Data</QUAL>
+</SIMPLEPROXYCOMP>
+</POS>
+<NEG>
+<NAME>
+<TUV xml:lang='en-US'>RequestOnBoardMonitoringTestResultsForSpecificMonitoredSystems-NR</TUV>
+</NAME>
+<QUAL>RequestOnBoardMonitoringTestResultsForSpecificMonitoredSystems_N</QUAL>
+<CONSTCOMP id='_0x04c238d0' must='1' spec='sid' bl='8' v='127'>
+<NAME>
+<TUV xml:lang='en-US'>SID-NR</TUV>
+</NAME>
+<QUAL>SID_NR</QUAL>
+</CONSTCOMP>
+<CONSTCOMP id='_0x04c23a08' must='1' spec='sid' bl='8' v='6'>
+<NAME>
+<TUV xml:lang='en-US'>SIDRQ-NR</TUV>
+</NAME>
+<QUAL>SIDRQ_NR</QUAL>
+</CONSTCOMP>
+<SIMPLEPROXYCOMP id='_0x04c23b40' must='1' dest='resCode' minbl='8' maxbl='8'>
+<NAME>
+<TUV xml:lang='en-US'>Response Code</TUV>
+</NAME>
+<QUAL>RC</QUAL>
+</SIMPLEPROXYCOMP>
+</NEG>
+<NEGRESCODEPROXIES>
+<NEGRESCODEPROXY idref='_0x02adab10'/>
+<NEGRESCODEPROXY idref='_0x02adac30'/>
+<NEGRESCODEPROXY idref='_0x02adad50'/>
+</NEGRESCODEPROXIES>
+</PROTOCOLSERVICE>
+<PROTOCOLSERVICE id='_0x04c23dc8' func='1' phys='1' mresp='0' respOnPhys='1' respOnFunc='1'>
+<NAME>
+<TUV xml:lang='en-US'>($07) RequestEmissionRelatedDTCsDetectedDuringCurrentOrLastCycle</TUV>
+</NAME>
+<QUAL>RequestEmissionRelatedDTCsDetectedDuringCurrentOrLastCycle</QUAL>
+<REQ>
+<NAME>
+<TUV xml:lang='en-US'>RequestEmissionRelatedDTCsDetectedDuringCurrentOrLastCycle-RQ</TUV>
+</NAME>
+<QUAL>RequestEmissionRelatedDTCsDetectedDuringCurrentOrLastCycle_RQ</QUAL>
+<CONSTCOMP id='_0x04c24090' must='1' spec='sid' bl='8' v='7'>
+<NAME>
+<TUV xml:lang='en-US'>SID-RQ</TUV>
+</NAME>
+<QUAL>SID_RQ</QUAL>
+</CONSTCOMP>
+<SIMPLEPROXYCOMP id='_0x04c241c8' must='0' dest='any' minbl='8'>
+<NAME>
+<TUV xml:lang='en-US'>Data</TUV>
+</NAME>
+<QUAL>Data</QUAL>
+</SIMPLEPROXYCOMP>
+</REQ>
+<POS>
+<NAME>
+<TUV xml:lang='en-US'>RequestEmissionRelatedDTCsDetectedDuringCurrentOrLastCycle-PR</TUV>
+</NAME>
+<QUAL>RequestEmissionRelatedDTCsDetectedDuringCurrentOrLastCycle_PR</QUAL>
+<CONSTCOMP id='_0x04c24468' must='1' spec='sid' bl='8' v='71'>
+<NAME>
+<TUV xml:lang='en-US'>SID-PR</TUV>
+</NAME>
+<QUAL>SID_PR</QUAL>
+</CONSTCOMP>
+<SIMPLEPROXYCOMP id='_0x04c245a0' must='0' dest='any' minbl='8'>
+<NAME>
+<TUV xml:lang='en-US'>Data</TUV>
+</NAME>
+<QUAL>Data</QUAL>
+</SIMPLEPROXYCOMP>
+</POS>
+<NEG>
+<NAME>
+<TUV xml:lang='en-US'>RequestEmissionRelatedDTCsDetectedDuringCurrentOrLastCycle-NR</TUV>
+</NAME>
+<QUAL>RequestEmissionRelatedDTCsDetectedDuringCurrentOrLastCycle_NR</QUAL>
+<CONSTCOMP id='_0x04c24840' must='1' spec='sid' bl='8' v='127'>
+<NAME>
+<TUV xml:lang='en-US'>SID-NR</TUV>
+</NAME>
+<QUAL>SID_NR</QUAL>
+</CONSTCOMP>
+<CONSTCOMP id='_0x04c24978' must='1' spec='sid' bl='8' v='7'>
+<NAME>
+<TUV xml:lang='en-US'>SIDRQ-NR</TUV>
+</NAME>
+<QUAL>SIDRQ_NR</QUAL>
+</CONSTCOMP>
+<SIMPLEPROXYCOMP id='_0x04c24ab0' must='1' dest='resCode' minbl='8' maxbl='8'>
+<NAME>
+<TUV xml:lang='en-US'>Response Code</TUV>
+</NAME>
+<QUAL>RC</QUAL>
+</SIMPLEPROXYCOMP>
+</NEG>
+<NEGRESCODEPROXIES>
+<NEGRESCODEPROXY idref='_0x02adab10'/>
+<NEGRESCODEPROXY idref='_0x02adac30'/>
+<NEGRESCODEPROXY idref='_0x02adad50'/>
+</NEGRESCODEPROXIES>
+</PROTOCOLSERVICE>
+<PROTOCOLSERVICE id='_0x04c24d38' func='1' phys='1' mresp='0' respOnPhys='1' respOnFunc='1' maycombcont='1'>
+<NAME>
+<TUV xml:lang='en-US'>($08) RequestControlOfOnBoardSystemTestOrComponent</TUV>
+</NAME>
+<QUAL>RequestControlOfOnBoardSystemTestOrComponent</QUAL>
+<REQ>
+<NAME>
+<TUV xml:lang='en-US'>RequestControlOfOnBoardSystemTestOrComponent-RQ</TUV>
+</NAME>
+<QUAL>RequestControlOfOnBoardSystemTestOrComponent_RQ</QUAL>
+<CONSTCOMP id='_0x04c25008' must='1' spec='sid' bl='8' v='8'>
+<NAME>
+<TUV xml:lang='en-US'>SID-RQ</TUV>
+</NAME>
+<QUAL>SID_RQ</QUAL>
+</CONSTCOMP>
+<SIMPLEPROXYCOMP id='_0x04c25140' must='0' dest='any' minbl='8'>
+<NAME>
+<TUV xml:lang='en-US'>Data</TUV>
+</NAME>
+<QUAL>Data</QUAL>
+</SIMPLEPROXYCOMP>
+</REQ>
+<POS>
+<NAME>
+<TUV xml:lang='en-US'>RequestControlOfOnBoardSystemTestOrComponent-PR</TUV>
+</NAME>
+<QUAL>RequestControlOfOnBoardSystemTestOrComponent_PR</QUAL>
+<CONSTCOMP id='_0x04c253e0' must='1' spec='sid' bl='8' v='72'>
+<NAME>
+<TUV xml:lang='en-US'>SID-PR</TUV>
+</NAME>
+<QUAL>SID_PR</QUAL>
+</CONSTCOMP>
+<SIMPLEPROXYCOMP id='_0x04c25518' must='0' dest='any' minbl='8'>
+<NAME>
+<TUV xml:lang='en-US'>Data</TUV>
+</NAME>
+<QUAL>Data</QUAL>
+</SIMPLEPROXYCOMP>
+</POS>
+<NEG>
+<NAME>
+<TUV xml:lang='en-US'>RequestControlOfOnBoardSystemTestOrComponent-NR</TUV>
+</NAME>
+<QUAL>RequestControlOfOnBoardSystemTestOrComponent_NR</QUAL>
+<CONSTCOMP id='_0x04c257b8' must='1' spec='sid' bl='8' v='127'>
+<NAME>
+<TUV xml:lang='en-US'>SID-NR</TUV>
+</NAME>
+<QUAL>SID_NR</QUAL>
+</CONSTCOMP>
+<CONSTCOMP id='_0x04c258f0' must='1' spec='sid' bl='8' v='8'>
+<NAME>
+<TUV xml:lang='en-US'>SIDRQ-NR</TUV>
+</NAME>
+<QUAL>SIDRQ_NR</QUAL>
+</CONSTCOMP>
+<SIMPLEPROXYCOMP id='_0x04c25a28' must='1' dest='resCode' minbl='8' maxbl='8'>
+<NAME>
+<TUV xml:lang='en-US'>Response Code</TUV>
+</NAME>
+<QUAL>RC</QUAL>
+</SIMPLEPROXYCOMP>
+</NEG>
+<NEGRESCODEPROXIES>
+<NEGRESCODEPROXY idref='_0x02adab10'/>
+<NEGRESCODEPROXY idref='_0x02adac30'/>
+<NEGRESCODEPROXY idref='_0x02adad50'/>
+</NEGRESCODEPROXIES>
+</PROTOCOLSERVICE>
+<PROTOCOLSERVICE id='_0x04c25cb0' func='1' phys='1' mresp='0' respOnPhys='1' respOnFunc='1' maycombcont='1'>
+<NAME>
+<TUV xml:lang='en-US'>($09) RequestVehicleInformation</TUV>
+</NAME>
+<QUAL>RequestVehicleInformation</QUAL>
+<REQ>
+<NAME>
+<TUV xml:lang='en-US'>RequestVehicleInformation-RQ</TUV>
+</NAME>
+<QUAL>RequestVehicleInformation_RQ</QUAL>
+<CONSTCOMP id='_0x04c25f78' must='1' spec='sid' bl='8' v='9'>
+<NAME>
+<TUV xml:lang='en-US'>SID-RQ</TUV>
+</NAME>
+<QUAL>SID_RQ</QUAL>
+</CONSTCOMP>
+<SIMPLEPROXYCOMP id='_0x04c260b0' must='0' dest='any' minbl='8'>
+<NAME>
+<TUV xml:lang='en-US'>Data</TUV>
+</NAME>
+<QUAL>Data</QUAL>
+</SIMPLEPROXYCOMP>
+</REQ>
+<POS>
+<NAME>
+<TUV xml:lang='en-US'>RequestVehicleInformation-PR</TUV>
+</NAME>
+<QUAL>RequestVehicleInformation_PR</QUAL>
+<CONSTCOMP id='_0x04c26350' must='1' spec='sid' bl='8' v='73'>
+<NAME>
+<TUV xml:lang='en-US'>SID-PR</TUV>
+</NAME>
+<QUAL>SID_PR</QUAL>
+</CONSTCOMP>
+<SIMPLEPROXYCOMP id='_0x04c26488' must='0' dest='any' minbl='8'>
+<NAME>
+<TUV xml:lang='en-US'>Data</TUV>
+</NAME>
+<QUAL>Data</QUAL>
+</SIMPLEPROXYCOMP>
+</POS>
+<NEG>
+<NAME>
+<TUV xml:lang='en-US'>RequestVehicleInformation-NR</TUV>
+</NAME>
+<QUAL>RequestVehicleInformation_NR</QUAL>
+<CONSTCOMP id='_0x04c26728' must='1' spec='sid' bl='8' v='127'>
+<NAME>
+<TUV xml:lang='en-US'>SID-NR</TUV>
+</NAME>
+<QUAL>SID_NR</QUAL>
+</CONSTCOMP>
+<CONSTCOMP id='_0x04c26860' must='1' spec='sid' bl='8' v='9'>
+<NAME>
+<TUV xml:lang='en-US'>SIDRQ-NR</TUV>
+</NAME>
+<QUAL>SIDRQ_NR</QUAL>
+</CONSTCOMP>
+<SIMPLEPROXYCOMP id='_0x04c26998' must='1' dest='resCode' minbl='8' maxbl='8'>
+<NAME>
+<TUV xml:lang='en-US'>Response Code</TUV>
+</NAME>
+<QUAL>RC</QUAL>
+</SIMPLEPROXYCOMP>
+</NEG>
+<NEGRESCODEPROXIES>
+<NEGRESCODEPROXY idref='_0x02adab10'/>
+<NEGRESCODEPROXY idref='_0x02adac30'/>
+<NEGRESCODEPROXY idref='_0x02adad50'/>
+</NEGRESCODEPROXIES>
+</PROTOCOLSERVICE>
+<PROTOCOLSERVICE id='_0x04c26c20' func='1' phys='1' mresp='0' respOnPhys='1' respOnFunc='1'>
+<NAME>
+<TUV xml:lang='en-US'>($10) DiagnosticSessionControl</TUV>
+</NAME>
+<QUAL>DiagnosticSessionControl</QUAL>
+<REQ>
+<NAME>
+<TUV xml:lang='en-US'>DiagnosticSessionControl-RQ</TUV>
+</NAME>
+<QUAL>DiagnosticSessionControl_RQ</QUAL>
+<CONSTCOMP id='_0x04c26ee8' must='1' spec='sid' bl='8' v='16'>
+<NAME>
+<TUV xml:lang='en-US'>SID-RQ</TUV>
+</NAME>
+<QUAL>SID_RQ</QUAL>
+</CONSTCOMP>
+<STATICCOMP id='_0x04c27020' must='1' spec='sub' bl='8' respsupbit='1'>
+<NAME>
+<TUV xml:lang='en-US'>DiagnosticSessionType</TUV>
+</NAME>
+<QUAL>DiagSessionType</QUAL>
+</STATICCOMP>
+</REQ>
+<POS>
+<NAME>
+<TUV xml:lang='en-US'>DiagnosticSessionControl-PR</TUV>
+</NAME>
+<QUAL>DiagnosticSessionControl_PR</QUAL>
+<CONSTCOMP id='_0x04c272b8' must='1' spec='sid' bl='8' v='80'>
+<NAME>
+<TUV xml:lang='en-US'>SID-PR</TUV>
+</NAME>
+<QUAL>SID_PR</QUAL>
+</CONSTCOMP>
+<STATICCOMP id='_0x04c273f0' must='1' spec='sub' bl='8'>
+<NAME>
+<TUV xml:lang='en-US'>DiagnosticSessionType</TUV>
+</NAME>
+<QUAL>DiagSessionType</QUAL>
+</STATICCOMP>
+<SIMPLEPROXYCOMP id='_0x04c27520' must='0' dest='data' minbl='8'>
+<NAME>
+<TUV xml:lang='en-US'>Data</TUV>
+</NAME>
+<QUAL>Data</QUAL>
+</SIMPLEPROXYCOMP>
+</POS>
+<NEG>
+<NAME>
+<TUV xml:lang='en-US'>DiagnosticSessionControl-NR</TUV>
+</NAME>
+<QUAL>DiagnosticSessionControl_NR</QUAL>
+<CONSTCOMP id='_0x04c277c0' must='1' spec='sid' bl='8' v='127'>
+<NAME>
+<TUV xml:lang='en-US'>SID-NR</TUV>
+</NAME>
+<QUAL>SID_NR</QUAL>
+</CONSTCOMP>
+<CONSTCOMP id='_0x04c278f8' must='1' spec='sid' bl='8' v='16'>
+<NAME>
+<TUV xml:lang='en-US'>SIDRQ-NR</TUV>
+</NAME>
+<QUAL>SIDRQ_NR</QUAL>
+</CONSTCOMP>
+<SIMPLEPROXYCOMP id='_0x04c27a30' must='1' dest='resCode' minbl='8' maxbl='8'>
+<NAME>
+<TUV xml:lang='en-US'>Response Code</TUV>
+</NAME>
+<QUAL>RC</QUAL>
+</SIMPLEPROXYCOMP>
+</NEG>
+<NEGRESCODEPROXIES>
+<NEGRESCODEPROXY idref='_0x02adab10'/>
+<NEGRESCODEPROXY idref='_0x02adac30'/>
+<NEGRESCODEPROXY idref='_0x02adad50'/>
+</NEGRESCODEPROXIES>
+</PROTOCOLSERVICE>
+<PROTOCOLSERVICE id='_0x04c27cb8' func='1' phys='1' mresp='0' respOnPhys='1' respOnFunc='1'>
+<NAME>
+<TUV xml:lang='en-US'>($11) EcuReset</TUV>
+</NAME>
+<QUAL>EcuReset</QUAL>
+<REQ>
+<NAME>
+<TUV xml:lang='en-US'>EcuReset-RQ</TUV>
+</NAME>
+<QUAL>EcuReset_RQ</QUAL>
+<CONSTCOMP id='_0x04c27f80' must='1' spec='sid' bl='8' v='17'>
+<NAME>
+<TUV xml:lang='en-US'>SID-RQ</TUV>
+</NAME>
+<QUAL>SID_RQ</QUAL>
+</CONSTCOMP>
+<SIMPLEPROXYCOMP id='_0x04c280b8' must='0' dest='any' minbl='8' respsupbit='1'>
+<NAME>
+<TUV xml:lang='en-US'>Data</TUV>
+</NAME>
+<QUAL>Data</QUAL>
+</SIMPLEPROXYCOMP>
+</REQ>
+<POS>
+<NAME>
+<TUV xml:lang='en-US'>EcuReset-PR</TUV>
+</NAME>
+<QUAL>EcuReset_PR</QUAL>
+<CONSTCOMP id='_0x04c28358' must='1' spec='sid' bl='8' v='81'>
+<NAME>
+<TUV xml:lang='en-US'>SID-PR</TUV>
+</NAME>
+<QUAL>SID_PR</QUAL>
+</CONSTCOMP>
+<SIMPLEPROXYCOMP id='_0x04c28490' must='0' dest='any' minbl='8'>
+<NAME>
+<TUV xml:lang='en-US'>Data</TUV>
+</NAME>
+<QUAL>Data</QUAL>
+</SIMPLEPROXYCOMP>
+</POS>
+<NEG>
+<NAME>
+<TUV xml:lang='en-US'>EcuReset-NR</TUV>
+</NAME>
+<QUAL>EcuReset_NR</QUAL>
+<CONSTCOMP id='_0x04c28730' must='1' spec='sid' bl='8' v='127'>
+<NAME>
+<TUV xml:lang='en-US'>SID-NR</TUV>
+</NAME>
+<QUAL>SID_NR</QUAL>
+</CONSTCOMP>
+<CONSTCOMP id='_0x04c28868' must='1' spec='sid' bl='8' v='17'>
+<NAME>
+<TUV xml:lang='en-US'>SIDRQ-NR</TUV>
+</NAME>
+<QUAL>SIDRQ_NR</QUAL>
+</CONSTCOMP>
+<SIMPLEPROXYCOMP id='_0x04c289a0' must='1' dest='resCode' minbl='8' maxbl='8'>
+<NAME>
+<TUV xml:lang='en-US'>Response Code</TUV>
+</NAME>
+<QUAL>RC</QUAL>
+</SIMPLEPROXYCOMP>
+</NEG>
+<NEGRESCODEPROXIES>
+<NEGRESCODEPROXY idref='_0x02adab10'/>
+<NEGRESCODEPROXY idref='_0x02adac30'/>
+<NEGRESCODEPROXY idref='_0x02adad50'/>
+</NEGRESCODEPROXIES>
+</PROTOCOLSERVICE>
+<PROTOCOLSERVICE id='_0x04c28c28' func='1' phys='1' mresp='0' respOnPhys='1' respOnFunc='1'>
+<NAME>
+<TUV xml:lang='en-US'>($27) SecurityAccess</TUV>
+</NAME>
+<QUAL>SecurityAccess</QUAL>
+<REQ>
+<NAME>
+<TUV xml:lang='en-US'>SecurityAccess-RQ</TUV>
+</NAME>
+<QUAL>SecurityAccess_RQ</QUAL>
+<CONSTCOMP id='_0x04c28ef0' must='1' spec='sid' bl='8' v='39'>
+<NAME>
+<TUV xml:lang='en-US'>SID-RQ</TUV>
+</NAME>
+<QUAL>SID_RQ</QUAL>
+</CONSTCOMP>
+<SIMPLEPROXYCOMP id='_0x04c29028' must='0' dest='any' minbl='8' respsupbit='1'>
+<NAME>
+<TUV xml:lang='en-US'>Data</TUV>
+</NAME>
+<QUAL>Data</QUAL>
+</SIMPLEPROXYCOMP>
+</REQ>
+<POS>
+<NAME>
+<TUV xml:lang='en-US'>SecurityAccess-PR</TUV>
+</NAME>
+<QUAL>SecurityAccess_PR</QUAL>
+<CONSTCOMP id='_0x04c292c8' must='1' spec='sid' bl='8' v='103'>
+<NAME>
+<TUV xml:lang='en-US'>SID-PR</TUV>
+</NAME>
+<QUAL>SID_PR</QUAL>
+</CONSTCOMP>
+<SIMPLEPROXYCOMP id='_0x04c29400' must='0' dest='any' minbl='8'>
+<NAME>
+<TUV xml:lang='en-US'>Data</TUV>
+</NAME>
+<QUAL>Data</QUAL>
+</SIMPLEPROXYCOMP>
+</POS>
+<NEG>
+<NAME>
+<TUV xml:lang='en-US'>SecurityAccess-NR</TUV>
+</NAME>
+<QUAL>SecurityAccess_NR</QUAL>
+<CONSTCOMP id='_0x04c296a0' must='1' spec='sid' bl='8' v='127'>
+<NAME>
+<TUV xml:lang='en-US'>SID-NR</TUV>
+</NAME>
+<QUAL>SID_NR</QUAL>
+</CONSTCOMP>
+<CONSTCOMP id='_0x04c297d8' must='1' spec='sid' bl='8' v='39'>
+<NAME>
+<TUV xml:lang='en-US'>SIDRQ-NR</TUV>
+</NAME>
+<QUAL>SIDRQ_NR</QUAL>
+</CONSTCOMP>
+<SIMPLEPROXYCOMP id='_0x04c29910' must='1' dest='resCode' minbl='8' maxbl='8'>
+<NAME>
+<TUV xml:lang='en-US'>Response Code</TUV>
+</NAME>
+<QUAL>RC</QUAL>
+</SIMPLEPROXYCOMP>
+</NEG>
+<NEGRESCODEPROXIES>
+<NEGRESCODEPROXY idref='_0x02adab10'/>
+<NEGRESCODEPROXY idref='_0x02adac30'/>
+<NEGRESCODEPROXY idref='_0x02adad50'/>
+<NEGRESCODEPROXY idref='_0x02adaf90'/>
+<NEGRESCODEPROXY idref='_0x02adae70'/>
+<NEGRESCODEPROXY idref='_0x02adb0b0'/>
+<NEGRESCODEPROXY idref='_0x02adb1d0'/>
+<NEGRESCODEPROXY idref='_0x02adb2f0'/>
+</NEGRESCODEPROXIES>
+</PROTOCOLSERVICE>
+<PROTOCOLSERVICE id='_0x04c29dc8' func='1' phys='1' mresp='0' respOnPhys='1' respOnFunc='1'>
+<NAME>
+<TUV xml:lang='en-US'>($28) CommunicationControl</TUV>
+</NAME>
+<QUAL>CommunicationControl</QUAL>
+<REQ>
+<NAME>
+<TUV xml:lang='en-US'>CommunicationControl-RQ</TUV>
+</NAME>
+<QUAL>CommunicationControl_RQ</QUAL>
+<CONSTCOMP id='_0x04c2a090' must='1' spec='sid' bl='8' v='40'>
+<NAME>
+<TUV xml:lang='en-US'>SID-RQ</TUV>
+</NAME>
+<QUAL>SID_RQ</QUAL>
+</CONSTCOMP>
+<STATICCOMP id='_0x04c2a1c8' must='1' spec='sub' bl='8' respsupbit='1'>
+<NAME>
+<TUV xml:lang='en-US'>ControlType</TUV>
+</NAME>
+<QUAL>ControlType</QUAL>
+</STATICCOMP>
+<SIMPLEPROXYCOMP id='_0x04c2a2f8' must='0' dest='data'>
+<NAME>
+<TUV xml:lang='en-US'>Data</TUV>
+</NAME>
+<QUAL>Data</QUAL>
+</SIMPLEPROXYCOMP>
+</REQ>
+<POS>
+<NAME>
+<TUV xml:lang='en-US'>CommunicationControl-PR</TUV>
+</NAME>
+<QUAL>CommunicationControl_PR</QUAL>
+<CONSTCOMP id='_0x04c2a598' must='1' spec='sid' bl='8' v='104'>
+<NAME>
+<TUV xml:lang='en-US'>SID-PR</TUV>
+</NAME>
+<QUAL>SID_PR</QUAL>
+</CONSTCOMP>
+<STATICCOMP id='_0x04c2a6d0' must='1' spec='sub' bl='8'>
+<NAME>
+<TUV xml:lang='en-US'>ControlType</TUV>
+</NAME>
+<QUAL>ControlType</QUAL>
+</STATICCOMP>
+</POS>
+<NEG>
+<NAME>
+<TUV xml:lang='en-US'>CommunicationControl-NR</TUV>
+</NAME>
+<QUAL>CommunicationControl_NR</QUAL>
+<CONSTCOMP id='_0x04c2a968' must='1' spec='sid' bl='8' v='127'>
+<NAME>
+<TUV xml:lang='en-US'>SID-NR</TUV>
+</NAME>
+<QUAL>SID_NR</QUAL>
+</CONSTCOMP>
+<CONSTCOMP id='_0x04c2aaa0' must='1' spec='sid' bl='8' v='40'>
+<NAME>
+<TUV xml:lang='en-US'>SIDRQ-NR</TUV>
+</NAME>
+<QUAL>SIDRQ_NR</QUAL>
+</CONSTCOMP>
+<SIMPLEPROXYCOMP id='_0x04c2abd8' must='1' dest='resCode' minbl='8' maxbl='8'>
+<NAME>
+<TUV xml:lang='en-US'>Response Code</TUV>
+</NAME>
+<QUAL>RC</QUAL>
+</SIMPLEPROXYCOMP>
+</NEG>
+<NEGRESCODEPROXIES>
+<NEGRESCODEPROXY idref='_0x02adab10'/>
+<NEGRESCODEPROXY idref='_0x02adac30'/>
+<NEGRESCODEPROXY idref='_0x02adad50'/>
+<NEGRESCODEPROXY idref='_0x02adae70'/>
+</NEGRESCODEPROXIES>
+</PROTOCOLSERVICE>
+<PROTOCOLSERVICE id='_0x04c2aed0' func='1' phys='1' mresp='0' respOnPhys='1' respOnFunc='1'>
+<NAME>
+<TUV xml:lang='en-US'>($3E) TesterPresent</TUV>
+</NAME>
+<QUAL>TesterPresent</QUAL>
+<REQ>
+<NAME>
+<TUV xml:lang='en-US'>TesterPresent-RQ</TUV>
+</NAME>
+<QUAL>TesterPresent_RQ</QUAL>
+<CONSTCOMP id='_0x04c2b198' must='1' spec='sid' bl='8' v='62'>
+<NAME>
+<TUV xml:lang='en-US'>SID-RQ</TUV>
+</NAME>
+<QUAL>SID_RQ</QUAL>
+</CONSTCOMP>
+<CONSTCOMP id='_0x04c2b2d0' must='0' spec='sub' bl='8' v='0' respsupbit='1'>
+<NAME>
+<TUV xml:lang='en-US'>Data</TUV>
+</NAME>
+<QUAL>Data</QUAL>
+</CONSTCOMP>
+</REQ>
+<POS>
+<NAME>
+<TUV xml:lang='en-US'>TesterPresent-PR</TUV>
+</NAME>
+<QUAL>TesterPresent_PR</QUAL>
+<CONSTCOMP id='_0x04c2b570' must='1' spec='sid' bl='8' v='126'>
+<NAME>
+<TUV xml:lang='en-US'>SID-PR</TUV>
+</NAME>
+<QUAL>SID_PR</QUAL>
+</CONSTCOMP>
+<CONSTCOMP id='_0x04c2b6a8' must='0' spec='sub' bl='8' v='0'>
+<NAME>
+<TUV xml:lang='en-US'>Data</TUV>
+</NAME>
+<QUAL>Data</QUAL>
+</CONSTCOMP>
+</POS>
+<NEG>
+<NAME>
+<TUV xml:lang='en-US'>TesterPresent-NR</TUV>
+</NAME>
+<QUAL>TesterPresent_NR</QUAL>
+<CONSTCOMP id='_0x04c2b948' must='1' spec='sid' bl='8' v='127'>
+<NAME>
+<TUV xml:lang='en-US'>SID-NR</TUV>
+</NAME>
+<QUAL>SID_NR</QUAL>
+</CONSTCOMP>
+<CONSTCOMP id='_0x04c2ba80' must='1' spec='sid' bl='8' v='62'>
+<NAME>
+<TUV xml:lang='en-US'>SIDRQ-NR</TUV>
+</NAME>
+<QUAL>SIDRQ_NR</QUAL>
+</CONSTCOMP>
+<SIMPLEPROXYCOMP id='_0x04c2bbb8' must='1' dest='resCode' minbl='8' maxbl='8'>
+<NAME>
+<TUV xml:lang='en-US'>Response Code</TUV>
+</NAME>
+<QUAL>RC</QUAL>
+</SIMPLEPROXYCOMP>
+</NEG>
+<NEGRESCODEPROXIES>
+<NEGRESCODEPROXY idref='_0x02adab10'/>
+<NEGRESCODEPROXY idref='_0x02adac30'/>
+</NEGRESCODEPROXIES>
+</PROTOCOLSERVICE>
+<PROTOCOLSERVICE id='_0x04c2bdd0' func='1' phys='1' mresp='0' respOnPhys='1' respOnFunc='1'>
+<NAME>
+<TUV xml:lang='en-US'>($84) SecuredDataTransmission</TUV>
+</NAME>
+<QUAL>SecuredDataTransmission</QUAL>
+<REQ>
+<NAME>
+<TUV xml:lang='en-US'>SecuredDataTransmission-RQ</TUV>
+</NAME>
+<QUAL>SecuredDataTransmission_RQ</QUAL>
+<CONSTCOMP id='_0x04c2c098' must='1' spec='sid' bl='8' v='132'>
+<NAME>
+<TUV xml:lang='en-US'>SID-RQ</TUV>
+</NAME>
+<QUAL>SID_RQ</QUAL>
+</CONSTCOMP>
+<SIMPLEPROXYCOMP id='_0x04c2c1d0' must='0' dest='any' minbl='8'>
+<NAME>
+<TUV xml:lang='en-US'>Data</TUV>
+</NAME>
+<QUAL>Data</QUAL>
+</SIMPLEPROXYCOMP>
+</REQ>
+<POS>
+<NAME>
+<TUV xml:lang='en-US'>SecuredDataTransmission-PR</TUV>
+</NAME>
+<QUAL>SecuredDataTransmission_PR</QUAL>
+<CONSTCOMP id='_0x04c2c470' must='1' spec='sid' bl='8' v='196'>
+<NAME>
+<TUV xml:lang='en-US'>SID-PR</TUV>
+</NAME>
+<QUAL>SID_PR</QUAL>
+</CONSTCOMP>
+<SIMPLEPROXYCOMP id='_0x04c2c5a8' must='0' dest='any' minbl='8'>
+<NAME>
+<TUV xml:lang='en-US'>Data</TUV>
+</NAME>
+<QUAL>Data</QUAL>
+</SIMPLEPROXYCOMP>
+</POS>
+<NEG>
+<NAME>
+<TUV xml:lang='en-US'>SecuredDataTransmission-NR</TUV>
+</NAME>
+<QUAL>SecuredDataTransmission_NR</QUAL>
+<CONSTCOMP id='_0x04c2c848' must='1' spec='sid' bl='8' v='127'>
+<NAME>
+<TUV xml:lang='en-US'>SID-NR</TUV>
+</NAME>
+<QUAL>SID_NR</QUAL>
+</CONSTCOMP>
+<CONSTCOMP id='_0x04c2c980' must='1' spec='sid' bl='8' v='132'>
+<NAME>
+<TUV xml:lang='en-US'>SIDRQ-NR</TUV>
+</NAME>
+<QUAL>SIDRQ_NR</QUAL>
+</CONSTCOMP>
+<SIMPLEPROXYCOMP id='_0x04c2cab8' must='1' dest='resCode' minbl='8' maxbl='8'>
+<NAME>
+<TUV xml:lang='en-US'>Response Code</TUV>
+</NAME>
+<QUAL>RC</QUAL>
+</SIMPLEPROXYCOMP>
+</NEG>
+<NEGRESCODEPROXIES>
+<NEGRESCODEPROXY idref='_0x02adac30'/>
+</NEGRESCODEPROXIES>
+</PROTOCOLSERVICE>
+<PROTOCOLSERVICE id='_0x04c2cc60' func='1' phys='1' mresp='0' respOnPhys='1' respOnFunc='1'>
+<NAME>
+<TUV xml:lang='en-US'>($85) ControlDTCSetting</TUV>
+</NAME>
+<QUAL>ControlDTCSetting</QUAL>
+<REQ>
+<NAME>
+<TUV xml:lang='en-US'>ControlDTCSetting-RQ</TUV>
+</NAME>
+<QUAL>ControlDTCSetting_RQ</QUAL>
+<CONSTCOMP id='_0x04c2cf28' must='1' spec='sid' bl='8' v='133'>
+<NAME>
+<TUV xml:lang='en-US'>SID-RQ</TUV>
+</NAME>
+<QUAL>SID_RQ</QUAL>
+</CONSTCOMP>
+<SIMPLEPROXYCOMP id='_0x04c2d060' must='0' dest='any' minbl='8' respsupbit='1'>
+<NAME>
+<TUV xml:lang='en-US'>Data</TUV>
+</NAME>
+<QUAL>Data</QUAL>
+</SIMPLEPROXYCOMP>
+</REQ>
+<POS>
+<NAME>
+<TUV xml:lang='en-US'>ControlDTCSetting-PR</TUV>
+</NAME>
+<QUAL>ControlDTCSetting_PR</QUAL>
+<CONSTCOMP id='_0x04c2d300' must='1' spec='sid' bl='8' v='197'>
+<NAME>
+<TUV xml:lang='en-US'>SID-PR</TUV>
+</NAME>
+<QUAL>SID_PR</QUAL>
+</CONSTCOMP>
+<SIMPLEPROXYCOMP id='_0x04c2d438' must='0' dest='any' minbl='8'>
+<NAME>
+<TUV xml:lang='en-US'>Data</TUV>
+</NAME>
+<QUAL>Data</QUAL>
+</SIMPLEPROXYCOMP>
+</POS>
+<NEG>
+<NAME>
+<TUV xml:lang='en-US'>ControlDTCSetting-NR</TUV>
+</NAME>
+<QUAL>ControlDTCSetting_NR</QUAL>
+<CONSTCOMP id='_0x04c2d6d8' must='1' spec='sid' bl='8' v='127'>
+<NAME>
+<TUV xml:lang='en-US'>SID-NR</TUV>
+</NAME>
+<QUAL>SID_NR</QUAL>
+</CONSTCOMP>
+<CONSTCOMP id='_0x04c2d810' must='1' spec='sid' bl='8' v='133'>
+<NAME>
+<TUV xml:lang='en-US'>SIDRQ-NR</TUV>
+</NAME>
+<QUAL>SIDRQ_NR</QUAL>
+</CONSTCOMP>
+<SIMPLEPROXYCOMP id='_0x04c2d948' must='1' dest='resCode' minbl='8' maxbl='8'>
+<NAME>
+<TUV xml:lang='en-US'>Response Code</TUV>
+</NAME>
+<QUAL>RC</QUAL>
+</SIMPLEPROXYCOMP>
+</NEG>
+<NEGRESCODEPROXIES>
+<NEGRESCODEPROXY idref='_0x02adab10'/>
+<NEGRESCODEPROXY idref='_0x02adac30'/>
+<NEGRESCODEPROXY idref='_0x02adad50'/>
+<NEGRESCODEPROXY idref='_0x02adae70'/>
+</NEGRESCODEPROXIES>
+</PROTOCOLSERVICE>
+<PROTOCOLSERVICE id='_0x04c2dc40' func='1' phys='1' mresp='0' respOnPhys='1' respOnFunc='1'>
+<NAME>
+<TUV xml:lang='en-US'>($86) ResponseOnEvent</TUV>
+</NAME>
+<QUAL>ResponseOnEvent</QUAL>
+<REQ>
+<NAME>
+<TUV xml:lang='en-US'>ResponseOnEvent-RQ</TUV>
+</NAME>
+<QUAL>ResponseOnEvent_RQ</QUAL>
+<CONSTCOMP id='_0x04c2df08' must='1' spec='sid' bl='8' v='134'>
+<NAME>
+<TUV xml:lang='en-US'>SID-RQ</TUV>
+</NAME>
+<QUAL>SID_RQ</QUAL>
+</CONSTCOMP>
+<SIMPLEPROXYCOMP id='_0x04c2e040' must='0' dest='any' minbl='8' respsupbit='1'>
+<NAME>
+<TUV xml:lang='en-US'>Data</TUV>
+</NAME>
+<QUAL>Data</QUAL>
+</SIMPLEPROXYCOMP>
+</REQ>
+<POS>
+<NAME>
+<TUV xml:lang='en-US'>ResponseOnEvent-PR</TUV>
+</NAME>
+<QUAL>ResponseOnEvent_PR</QUAL>
+<CONSTCOMP id='_0x04c2e2e0' must='1' spec='sid' bl='8' v='198'>
+<NAME>
+<TUV xml:lang='en-US'>SID-PR</TUV>
+</NAME>
+<QUAL>SID_PR</QUAL>
+</CONSTCOMP>
+<SIMPLEPROXYCOMP id='_0x04c2e418' must='0' dest='any' minbl='8'>
+<NAME>
+<TUV xml:lang='en-US'>Data</TUV>
+</NAME>
+<QUAL>Data</QUAL>
+</SIMPLEPROXYCOMP>
+</POS>
+<NEG>
+<NAME>
+<TUV xml:lang='en-US'>ResponseOnEvent-NR</TUV>
+</NAME>
+<QUAL>ResponseOnEvent_NR</QUAL>
+<CONSTCOMP id='_0x04c2e6b8' must='1' spec='sid' bl='8' v='127'>
+<NAME>
+<TUV xml:lang='en-US'>SID-NR</TUV>
+</NAME>
+<QUAL>SID_NR</QUAL>
+</CONSTCOMP>
+<CONSTCOMP id='_0x04c2e7f0' must='1' spec='sid' bl='8' v='134'>
+<NAME>
+<TUV xml:lang='en-US'>SIDRQ-NR</TUV>
+</NAME>
+<QUAL>SIDRQ_NR</QUAL>
+</CONSTCOMP>
+<SIMPLEPROXYCOMP id='_0x04c2e928' must='1' dest='resCode' minbl='8' maxbl='8'>
+<NAME>
+<TUV xml:lang='en-US'>Response Code</TUV>
+</NAME>
+<QUAL>RC</QUAL>
+</SIMPLEPROXYCOMP>
+</NEG>
+<NEGRESCODEPROXIES>
+<NEGRESCODEPROXY idref='_0x02adab10'/>
+<NEGRESCODEPROXY idref='_0x02adac30'/>
+<NEGRESCODEPROXY idref='_0x02adad50'/>
+<NEGRESCODEPROXY idref='_0x02adae70'/>
+</NEGRESCODEPROXIES>
+</PROTOCOLSERVICE>
+<PROTOCOLSERVICE id='_0x04c2ec20' func='1' phys='1' mresp='0' respOnPhys='1' respOnFunc='1' maycombcont='1'>
+<NAME>
+<TUV xml:lang='en-US'>($22) ReadDataByIdentifier</TUV>
+</NAME>
+<QUAL>ReadDataByIdentifier</QUAL>
+<REQ>
+<NAME>
+<TUV xml:lang='en-US'>ReadDataByIdentifier-RQ</TUV>
+</NAME>
+<QUAL>ReadDataByIdentifier_RQ</QUAL>
+<CONSTCOMP id='_0x04c2eee8' must='1' spec='sid' bl='8' v='34'>
+<NAME>
+<TUV xml:lang='en-US'>SID-RQ</TUV>
+</NAME>
+<QUAL>SID_RQ</QUAL>
+</CONSTCOMP>
+<SIMPLEPROXYCOMP id='_0x04c2f020' must='0' dest='any' minbl='8'>
+<NAME>
+<TUV xml:lang='en-US'>Data</TUV>
+</NAME>
+<QUAL>Data</QUAL>
+</SIMPLEPROXYCOMP>
+</REQ>
+<POS>
+<NAME>
+<TUV xml:lang='en-US'>ReadDataByIdentifier-PR</TUV>
+</NAME>
+<QUAL>ReadDataByIdentifier_PR</QUAL>
+<CONSTCOMP id='_0x04c2f2c0' must='1' spec='sid' bl='8' v='98'>
+<NAME>
+<TUV xml:lang='en-US'>SID-PR</TUV>
+</NAME>
+<QUAL>SID_PR</QUAL>
+</CONSTCOMP>
+<SIMPLEPROXYCOMP id='_0x04c2f3f8' must='0' dest='any' minbl='8'>
+<NAME>
+<TUV xml:lang='en-US'>Data</TUV>
+</NAME>
+<QUAL>Data</QUAL>
+</SIMPLEPROXYCOMP>
+</POS>
+<NEG>
+<NAME>
+<TUV xml:lang='en-US'>ReadDataByIdentifier-NR</TUV>
+</NAME>
+<QUAL>ReadDataByIdentifier_NR</QUAL>
+<CONSTCOMP id='_0x04c2f698' must='1' spec='sid' bl='8' v='127'>
+<NAME>
+<TUV xml:lang='en-US'>SID-NR</TUV>
+</NAME>
+<QUAL>SID_NR</QUAL>
+</CONSTCOMP>
+<CONSTCOMP id='_0x04c2f7d0' must='1' spec='sid' bl='8' v='34'>
+<NAME>
+<TUV xml:lang='en-US'>SIDRQ-NR</TUV>
+</NAME>
+<QUAL>SIDRQ_NR</QUAL>
+</CONSTCOMP>
+<SIMPLEPROXYCOMP id='_0x04c2f908' must='1' dest='resCode' minbl='8' maxbl='8'>
+<NAME>
+<TUV xml:lang='en-US'>Response Code</TUV>
+</NAME>
+<QUAL>RC</QUAL>
+</SIMPLEPROXYCOMP>
+</NEG>
+<NEGRESCODEPROXIES>
+<NEGRESCODEPROXY idref='_0x02adab10'/>
+<NEGRESCODEPROXY idref='_0x02adac30'/>
+<NEGRESCODEPROXY idref='_0x02adae70'/>
+<NEGRESCODEPROXY idref='_0x02adb410'/>
+</NEGRESCODEPROXIES>
+</PROTOCOLSERVICE>
+<PROTOCOLSERVICE id='_0x04c2fc00' func='1' phys='1' mresp='0' respOnPhys='1' respOnFunc='1'>
+<NAME>
+<TUV xml:lang='en-US'>($24) ReadScalingDataByIdentifier</TUV>
+</NAME>
+<QUAL>ReadScalingDataByIdentifier</QUAL>
+<REQ>
+<NAME>
+<TUV xml:lang='en-US'>ReadScalingDataByIdentifier-RQ</TUV>
+</NAME>
+<QUAL>ReadScalingDataByIdentifier_RQ</QUAL>
+<CONSTCOMP id='_0x04c2fec8' must='1' spec='sid' bl='8' v='36'>
+<NAME>
+<TUV xml:lang='en-US'>SID-RQ</TUV>
+</NAME>
+<QUAL>SID_RQ</QUAL>
+</CONSTCOMP>
+<SIMPLEPROXYCOMP id='_0x04c30008' must='0' dest='any' minbl='8'>
+<NAME>
+<TUV xml:lang='en-US'>Data</TUV>
+</NAME>
+<QUAL>Data</QUAL>
+</SIMPLEPROXYCOMP>
+</REQ>
+<POS>
+<NAME>
+<TUV xml:lang='en-US'>ReadScalingDataByIdentifier-PR</TUV>
+</NAME>
+<QUAL>ReadScalingDataByIdentifier_PR</QUAL>
+<CONSTCOMP id='_0x04c302a8' must='1' spec='sid' bl='8' v='100'>
+<NAME>
+<TUV xml:lang='en-US'>SID-PR</TUV>
+</NAME>
+<QUAL>SID_PR</QUAL>
+</CONSTCOMP>
+<SIMPLEPROXYCOMP id='_0x04c303e0' must='0' dest='any' minbl='8'>
+<NAME>
+<TUV xml:lang='en-US'>Data</TUV>
+</NAME>
+<QUAL>Data</QUAL>
+</SIMPLEPROXYCOMP>
+</POS>
+<NEG>
+<NAME>
+<TUV xml:lang='en-US'>ReadScalingDataByIdentifier-NR</TUV>
+</NAME>
+<QUAL>ReadScalingDataByIdentifier_NR</QUAL>
+<CONSTCOMP id='_0x04c30680' must='1' spec='sid' bl='8' v='127'>
+<NAME>
+<TUV xml:lang='en-US'>SID-NR</TUV>
+</NAME>
+<QUAL>SID_NR</QUAL>
+</CONSTCOMP>
+<CONSTCOMP id='_0x04c307b8' must='1' spec='sid' bl='8' v='36'>
+<NAME>
+<TUV xml:lang='en-US'>SIDRQ-NR</TUV>
+</NAME>
+<QUAL>SIDRQ_NR</QUAL>
+</CONSTCOMP>
+<SIMPLEPROXYCOMP id='_0x04c308f0' must='1' dest='resCode' minbl='8' maxbl='8'>
+<NAME>
+<TUV xml:lang='en-US'>Response Code</TUV>
+</NAME>
+<QUAL>RC</QUAL>
+</SIMPLEPROXYCOMP>
+</NEG>
+<NEGRESCODEPROXIES>
+<NEGRESCODEPROXY idref='_0x02adab10'/>
+<NEGRESCODEPROXY idref='_0x02adac30'/>
+<NEGRESCODEPROXY idref='_0x02adae70'/>
+<NEGRESCODEPROXY idref='_0x02adb410'/>
+</NEGRESCODEPROXIES>
+</PROTOCOLSERVICE>
+<PROTOCOLSERVICE id='_0x04c30be8' func='1' phys='1' mresp='0' respOnPhys='1' respOnFunc='1'>
+<NAME>
+<TUV xml:lang='en-US'>($23) ReadMemoryByAddress</TUV>
+</NAME>
+<QUAL>ReadMemoryByAddress</QUAL>
+<REQ>
+<NAME>
+<TUV xml:lang='en-US'>ReadMemoryByAddress-RQ</TUV>
+</NAME>
+<QUAL>ReadMemoryByAddress_RQ</QUAL>
+<CONSTCOMP id='_0x04c30eb0' must='1' spec='sid' bl='8' v='35'>
+<NAME>
+<TUV xml:lang='en-US'>SID-RQ</TUV>
+</NAME>
+<QUAL>SID_RQ</QUAL>
+</CONSTCOMP>
+<SIMPLEPROXYCOMP id='_0x04c30fe8' must='0' dest='any' minbl='8'>
+<NAME>
+<TUV xml:lang='en-US'>Data</TUV>
+</NAME>
+<QUAL>Data</QUAL>
+</SIMPLEPROXYCOMP>
+</REQ>
+<POS>
+<NAME>
+<TUV xml:lang='en-US'>ReadMemoryByAddress-PR</TUV>
+</NAME>
+<QUAL>ReadMemoryByAddress_PR</QUAL>
+<CONSTCOMP id='_0x04c31288' must='1' spec='sid' bl='8' v='99'>
+<NAME>
+<TUV xml:lang='en-US'>SID-PR</TUV>
+</NAME>
+<QUAL>SID_PR</QUAL>
+</CONSTCOMP>
+<SIMPLEPROXYCOMP id='_0x04c313c0' must='0' dest='any' minbl='8'>
+<NAME>
+<TUV xml:lang='en-US'>Data</TUV>
+</NAME>
+<QUAL>Data</QUAL>
+</SIMPLEPROXYCOMP>
+</POS>
+<NEG>
+<NAME>
+<TUV xml:lang='en-US'>ReadMemoryByAddress-NR</TUV>
+</NAME>
+<QUAL>ReadMemoryByAddress_NR</QUAL>
+<CONSTCOMP id='_0x04c31660' must='1' spec='sid' bl='8' v='127'>
+<NAME>
+<TUV xml:lang='en-US'>SID-NR</TUV>
+</NAME>
+<QUAL>SID_NR</QUAL>
+</CONSTCOMP>
+<CONSTCOMP id='_0x04c31798' must='1' spec='sid' bl='8' v='35'>
+<NAME>
+<TUV xml:lang='en-US'>SIDRQ-NR</TUV>
+</NAME>
+<QUAL>SIDRQ_NR</QUAL>
+</CONSTCOMP>
+<SIMPLEPROXYCOMP id='_0x04c318d0' must='1' dest='resCode' minbl='8' maxbl='8'>
+<NAME>
+<TUV xml:lang='en-US'>Response Code</TUV>
+</NAME>
+<QUAL>RC</QUAL>
+</SIMPLEPROXYCOMP>
+</NEG>
+<NEGRESCODEPROXIES>
+<NEGRESCODEPROXY idref='_0x02adab10'/>
+<NEGRESCODEPROXY idref='_0x02adac30'/>
+<NEGRESCODEPROXY idref='_0x02adae70'/>
+<NEGRESCODEPROXY idref='_0x02adb410'/>
+</NEGRESCODEPROXIES>
+</PROTOCOLSERVICE>
+<PROTOCOLSERVICE id='_0x04c31bc8' func='1' phys='1' mresp='0' respOnPhys='1' respOnFunc='1'>
+<NAME>
+<TUV xml:lang='en-US'>($2C) DynamicallyDefineDataIdentifier</TUV>
+</NAME>
+<QUAL>DynamicallyDefineDataIdentifier</QUAL>
+<REQ>
+<NAME>
+<TUV xml:lang='en-US'>DynamicallyDefineDataIdentifier-RQ</TUV>
+</NAME>
+<QUAL>DynamicallyDefineDataIdentifier_RQ</QUAL>
+<CONSTCOMP id='_0x04c31e90' must='1' spec='sid' bl='8' v='44'>
+<NAME>
+<TUV xml:lang='en-US'>SID-RQ</TUV>
+</NAME>
+<QUAL>SID_RQ</QUAL>
+</CONSTCOMP>
+<SIMPLEPROXYCOMP id='_0x04c31fc8' must='0' dest='any' minbl='8' respsupbit='1'>
+<NAME>
+<TUV xml:lang='en-US'>Data</TUV>
+</NAME>
+<QUAL>Data</QUAL>
+</SIMPLEPROXYCOMP>
+</REQ>
+<POS>
+<NAME>
+<TUV xml:lang='en-US'>DynamicallyDefineDataIdentifier-PR</TUV>
+</NAME>
+<QUAL>DynamicallyDefineDataIdentifier_PR</QUAL>
+<CONSTCOMP id='_0x04c32268' must='1' spec='sid' bl='8' v='108'>
+<NAME>
+<TUV xml:lang='en-US'>SID-PR</TUV>
+</NAME>
+<QUAL>SID_PR</QUAL>
+</CONSTCOMP>
+<SIMPLEPROXYCOMP id='_0x04c323a0' must='0' dest='any' minbl='8'>
+<NAME>
+<TUV xml:lang='en-US'>Data</TUV>
+</NAME>
+<QUAL>Data</QUAL>
+</SIMPLEPROXYCOMP>
+</POS>
+<NEG>
+<NAME>
+<TUV xml:lang='en-US'>DynamicallyDefineDataIdentifier-NR</TUV>
+</NAME>
+<QUAL>DynamicallyDefineDataIdentifier_NR</QUAL>
+<CONSTCOMP id='_0x04c32640' must='1' spec='sid' bl='8' v='127'>
+<NAME>
+<TUV xml:lang='en-US'>SID-NR</TUV>
+</NAME>
+<QUAL>SID_NR</QUAL>
+</CONSTCOMP>
+<CONSTCOMP id='_0x04c32778' must='1' spec='sid' bl='8' v='44'>
+<NAME>
+<TUV xml:lang='en-US'>SIDRQ-NR</TUV>
+</NAME>
+<QUAL>SIDRQ_NR</QUAL>
+</CONSTCOMP>
+<SIMPLEPROXYCOMP id='_0x04c328b0' must='1' dest='resCode' minbl='8' maxbl='8'>
+<NAME>
+<TUV xml:lang='en-US'>Response Code</TUV>
+</NAME>
+<QUAL>RC</QUAL>
+</SIMPLEPROXYCOMP>
+</NEG>
+<NEGRESCODEPROXIES>
+<NEGRESCODEPROXY idref='_0x02adab10'/>
+<NEGRESCODEPROXY idref='_0x02adac30'/>
+<NEGRESCODEPROXY idref='_0x02adad50'/>
+<NEGRESCODEPROXY idref='_0x02adae70'/>
+<NEGRESCODEPROXY idref='_0x02adb410'/>
+</NEGRESCODEPROXIES>
+</PROTOCOLSERVICE>
+<PROTOCOLSERVICE id='_0x04c32c18' func='1' phys='1' mresp='0' respOnPhys='1' respOnFunc='1'>
+<NAME>
+<TUV xml:lang='en-US'>($2E) WriteDataByIdentifier</TUV>
+</NAME>
+<QUAL>WriteDataByIdentifier</QUAL>
+<REQ>
+<NAME>
+<TUV xml:lang='en-US'>WriteDataByIdentifier-RQ</TUV>
+</NAME>
+<QUAL>WriteDataByIdentifier_RQ</QUAL>
+<CONSTCOMP id='_0x04c32ee0' must='1' spec='sid' bl='8' v='46'>
+<NAME>
+<TUV xml:lang='en-US'>SID-RQ</TUV>
+</NAME>
+<QUAL>SID_RQ</QUAL>
+</CONSTCOMP>
+<SIMPLEPROXYCOMP id='_0x04c33018' must='0' dest='any' minbl='8'>
+<NAME>
+<TUV xml:lang='en-US'>Data</TUV>
+</NAME>
+<QUAL>Data</QUAL>
+</SIMPLEPROXYCOMP>
+</REQ>
+<POS>
+<NAME>
+<TUV xml:lang='en-US'>WriteDataByIdentifier-PR</TUV>
+</NAME>
+<QUAL>WriteDataByIdentifier_PR</QUAL>
+<CONSTCOMP id='_0x04c332b8' must='1' spec='sid' bl='8' v='110'>
+<NAME>
+<TUV xml:lang='en-US'>SID-PR</TUV>
+</NAME>
+<QUAL>SID_PR</QUAL>
+</CONSTCOMP>
+<SIMPLEPROXYCOMP id='_0x04c333f0' must='0' dest='any' minbl='8'>
+<NAME>
+<TUV xml:lang='en-US'>Data</TUV>
+</NAME>
+<QUAL>Data</QUAL>
+</SIMPLEPROXYCOMP>
+</POS>
+<NEG>
+<NAME>
+<TUV xml:lang='en-US'>WriteDataByIdentifier-NR</TUV>
+</NAME>
+<QUAL>WriteDataByIdentifier_NR</QUAL>
+<CONSTCOMP id='_0x04c33690' must='1' spec='sid' bl='8' v='127'>
+<NAME>
+<TUV xml:lang='en-US'>SID-NR</TUV>
+</NAME>
+<QUAL>SID_NR</QUAL>
+</CONSTCOMP>
+<CONSTCOMP id='_0x04c337c8' must='1' spec='sid' bl='8' v='46'>
+<NAME>
+<TUV xml:lang='en-US'>SIDRQ-NR</TUV>
+</NAME>
+<QUAL>SIDRQ_NR</QUAL>
+</CONSTCOMP>
+<SIMPLEPROXYCOMP id='_0x04c33900' must='1' dest='resCode' minbl='8' maxbl='8'>
+<NAME>
+<TUV xml:lang='en-US'>Response Code</TUV>
+</NAME>
+<QUAL>RC</QUAL>
+</SIMPLEPROXYCOMP>
+</NEG>
+<NEGRESCODEPROXIES>
+<NEGRESCODEPROXY idref='_0x02adac30'/>
+<NEGRESCODEPROXY idref='_0x02adad50'/>
+<NEGRESCODEPROXY idref='_0x02adae70'/>
+<NEGRESCODEPROXY idref='_0x02adb410'/>
+<NEGRESCODEPROXY idref='_0x02adb530'/>
+</NEGRESCODEPROXIES>
+</PROTOCOLSERVICE>
+<PROTOCOLSERVICE id='_0x04c33c68' func='1' phys='1' mresp='0' respOnPhys='1' respOnFunc='1'>
+<NAME>
+<TUV xml:lang='en-US'>($3D) WriteMemoryByAddress</TUV>
+</NAME>
+<QUAL>WriteMemoryByAddress</QUAL>
+<REQ>
+<NAME>
+<TUV xml:lang='en-US'>WriteMemoryByAddress-RQ</TUV>
+</NAME>
+<QUAL>WriteMemoryByAddress_RQ</QUAL>
+<CONSTCOMP id='_0x04c33f30' must='1' spec='sid' bl='8' v='61'>
+<NAME>
+<TUV xml:lang='en-US'>SID-RQ</TUV>
+</NAME>
+<QUAL>SID_RQ</QUAL>
+</CONSTCOMP>
+<SIMPLEPROXYCOMP id='_0x04c34068' must='0' dest='any' minbl='8'>
+<NAME>
+<TUV xml:lang='en-US'>Data</TUV>
+</NAME>
+<QUAL>Data</QUAL>
+</SIMPLEPROXYCOMP>
+</REQ>
+<POS>
+<NAME>
+<TUV xml:lang='en-US'>WriteMemoryByAddress-PR</TUV>
+</NAME>
+<QUAL>WriteMemoryByAddress_PR</QUAL>
+<CONSTCOMP id='_0x04c34308' must='1' spec='sid' bl='8' v='125'>
+<NAME>
+<TUV xml:lang='en-US'>SID-PR</TUV>
+</NAME>
+<QUAL>SID_PR</QUAL>
+</CONSTCOMP>
+<SIMPLEPROXYCOMP id='_0x04c34440' must='0' dest='any' minbl='8'>
+<NAME>
+<TUV xml:lang='en-US'>Data</TUV>
+</NAME>
+<QUAL>Data</QUAL>
+</SIMPLEPROXYCOMP>
+</POS>
+<NEG>
+<NAME>
+<TUV xml:lang='en-US'>WriteMemoryByAddress-NR</TUV>
+</NAME>
+<QUAL>WriteMemoryByAddress_NR</QUAL>
+<CONSTCOMP id='_0x04c346e0' must='1' spec='sid' bl='8' v='127'>
+<NAME>
+<TUV xml:lang='en-US'>SID-NR</TUV>
+</NAME>
+<QUAL>SID_NR</QUAL>
+</CONSTCOMP>
+<CONSTCOMP id='_0x04c34818' must='1' spec='sid' bl='8' v='61'>
+<NAME>
+<TUV xml:lang='en-US'>SIDRQ-NR</TUV>
+</NAME>
+<QUAL>SIDRQ_NR</QUAL>
+</CONSTCOMP>
+<SIMPLEPROXYCOMP id='_0x04c34950' must='1' dest='resCode' minbl='8' maxbl='8'>
+<NAME>
+<TUV xml:lang='en-US'>Response Code</TUV>
+</NAME>
+<QUAL>RC</QUAL>
+</SIMPLEPROXYCOMP>
+</NEG>
+<NEGRESCODEPROXIES>
+<NEGRESCODEPROXY idref='_0x02adac30'/>
+<NEGRESCODEPROXY idref='_0x02adad50'/>
+<NEGRESCODEPROXY idref='_0x02adae70'/>
+<NEGRESCODEPROXY idref='_0x02adb410'/>
+</NEGRESCODEPROXIES>
+</PROTOCOLSERVICE>
+<PROTOCOLSERVICE id='_0x04c34c48' func='1' phys='1' mresp='0' respOnPhys='1' respOnFunc='1'>
+<NAME>
+<TUV xml:lang='en-US'>($14) ClearDiagnosticInformation</TUV>
+</NAME>
+<QUAL>ClearDiagnosticInformation</QUAL>
+<REQ>
+<NAME>
+<TUV xml:lang='en-US'>ClearDiagnosticInformation-RQ</TUV>
+</NAME>
+<QUAL>ClearDiagnosticInformation_RQ</QUAL>
+<CONSTCOMP id='_0x04c34f10' must='1' spec='sid' bl='8' v='20'>
+<NAME>
+<TUV xml:lang='en-US'>SID-RQ</TUV>
+</NAME>
+<QUAL>SID_RQ</QUAL>
+</CONSTCOMP>
+<SIMPLEPROXYCOMP id='_0x04c35048' must='0' dest='any' minbl='8'>
+<NAME>
+<TUV xml:lang='en-US'>Data</TUV>
+</NAME>
+<QUAL>Data</QUAL>
+</SIMPLEPROXYCOMP>
+</REQ>
+<POS>
+<NAME>
+<TUV xml:lang='en-US'>ClearDiagnosticInformation-PR</TUV>
+</NAME>
+<QUAL>ClearDiagnosticInformation_PR</QUAL>
+<CONSTCOMP id='_0x04c352e8' must='1' spec='sid' bl='8' v='84'>
+<NAME>
+<TUV xml:lang='en-US'>SID-PR</TUV>
+</NAME>
+<QUAL>SID_PR</QUAL>
+</CONSTCOMP>
+</POS>
+<NEG>
+<NAME>
+<TUV xml:lang='en-US'>ClearDiagnosticInformation-NR</TUV>
+</NAME>
+<QUAL>ClearDiagnosticInformation_NR</QUAL>
+<CONSTCOMP id='_0x04c35588' must='1' spec='sid' bl='8' v='127'>
+<NAME>
+<TUV xml:lang='en-US'>SID-NR</TUV>
+</NAME>
+<QUAL>SID_NR</QUAL>
+</CONSTCOMP>
+<CONSTCOMP id='_0x04c356c0' must='1' spec='sid' bl='8' v='20'>
+<NAME>
+<TUV xml:lang='en-US'>SIDRQ-NR</TUV>
+</NAME>
+<QUAL>SIDRQ_NR</QUAL>
+</CONSTCOMP>
+<SIMPLEPROXYCOMP id='_0x04c357f8' must='1' dest='resCode' minbl='8' maxbl='8'>
+<NAME>
+<TUV xml:lang='en-US'>Response Code</TUV>
+</NAME>
+<QUAL>RC</QUAL>
+</SIMPLEPROXYCOMP>
+</NEG>
+<NEGRESCODEPROXIES>
+<NEGRESCODEPROXY idref='_0x02adac30'/>
+<NEGRESCODEPROXY idref='_0x02adad50'/>
+<NEGRESCODEPROXY idref='_0x02adae70'/>
+</NEGRESCODEPROXIES>
+</PROTOCOLSERVICE>
+<PROTOCOLSERVICE id='_0x04c35a80' func='1' phys='1' mresp='0' respOnPhys='1' respOnFunc='1'>
+<NAME>
+<TUV xml:lang='en-US'>($19) ReadDtcInformation</TUV>
+</NAME>
+<QUAL>ReadDtcInformation</QUAL>
+<REQ>
+<NAME>
+<TUV xml:lang='en-US'>ReadDtcInformation-RQ</TUV>
+</NAME>
+<QUAL>ReadDtcInformation_RQ</QUAL>
+<CONSTCOMP id='_0x04c35d48' must='1' spec='sid' bl='8' v='25'>
+<NAME>
+<TUV xml:lang='en-US'>SID-RQ</TUV>
+</NAME>
+<QUAL>SID_RQ</QUAL>
+</CONSTCOMP>
+<SIMPLEPROXYCOMP id='_0x04c35e80' must='0' dest='any' minbl='8' respsupbit='1'>
+<NAME>
+<TUV xml:lang='en-US'>Data</TUV>
+</NAME>
+<QUAL>Data</QUAL>
+</SIMPLEPROXYCOMP>
+</REQ>
+<POS>
+<NAME>
+<TUV xml:lang='en-US'>ReadDtcInformation-PR</TUV>
+</NAME>
+<QUAL>ReadDtcInformation_PR</QUAL>
+<CONSTCOMP id='_0x04c36120' must='1' spec='sid' bl='8' v='89'>
+<NAME>
+<TUV xml:lang='en-US'>SID-PR</TUV>
+</NAME>
+<QUAL>SID_PR</QUAL>
+</CONSTCOMP>
+<SIMPLEPROXYCOMP id='_0x04c36258' must='0' dest='any' minbl='8'>
+<NAME>
+<TUV xml:lang='en-US'>Data</TUV>
+</NAME>
+<QUAL>Data</QUAL>
+</SIMPLEPROXYCOMP>
+</POS>
+<NEG>
+<NAME>
+<TUV xml:lang='en-US'>ReadDtcInformation-NR</TUV>
+</NAME>
+<QUAL>ReadDtcInformation_NR</QUAL>
+<CONSTCOMP id='_0x04c364f8' must='1' spec='sid' bl='8' v='127'>
+<NAME>
+<TUV xml:lang='en-US'>SID-NR</TUV>
+</NAME>
+<QUAL>SID_NR</QUAL>
+</CONSTCOMP>
+<CONSTCOMP id='_0x04c36630' must='1' spec='sid' bl='8' v='25'>
+<NAME>
+<TUV xml:lang='en-US'>SIDRQ-NR</TUV>
+</NAME>
+<QUAL>SIDRQ_NR</QUAL>
+</CONSTCOMP>
+<SIMPLEPROXYCOMP id='_0x04c36768' must='1' dest='resCode' minbl='8' maxbl='8'>
+<NAME>
+<TUV xml:lang='en-US'>Response Code</TUV>
+</NAME>
+<QUAL>RC</QUAL>
+</SIMPLEPROXYCOMP>
+</NEG>
+<NEGRESCODEPROXIES>
+<NEGRESCODEPROXY idref='_0x02adab10'/>
+<NEGRESCODEPROXY idref='_0x02adac30'/>
+<NEGRESCODEPROXY idref='_0x02adae70'/>
+</NEGRESCODEPROXIES>
+</PROTOCOLSERVICE>
+<PROTOCOLSERVICE id='_0x04c369f0' func='1' phys='1' mresp='0' respOnPhys='1' respOnFunc='1'>
+<NAME>
+<TUV xml:lang='en-US'>($2F) InputOutputControlByIdentifier</TUV>
+</NAME>
+<QUAL>InputOutputControlByIdentifier</QUAL>
+<REQ>
+<NAME>
+<TUV xml:lang='en-US'>InputOutputControlByIdentifier-RQ</TUV>
+</NAME>
+<QUAL>InputOutputControlByIdentifier_RQ</QUAL>
+<CONSTCOMP id='_0x04c36cb8' must='1' spec='sid' bl='8' v='47'>
+<NAME>
+<TUV xml:lang='en-US'>SID-RQ</TUV>
+</NAME>
+<QUAL>SID_RQ</QUAL>
+</CONSTCOMP>
+<SIMPLEPROXYCOMP id='_0x04c36df0' must='0' dest='any' minbl='8'>
+<NAME>
+<TUV xml:lang='en-US'>Data</TUV>
+</NAME>
+<QUAL>Data</QUAL>
+</SIMPLEPROXYCOMP>
+</REQ>
+<POS>
+<NAME>
+<TUV xml:lang='en-US'>InputOutputControlByIdentifier-PR</TUV>
+</NAME>
+<QUAL>InputOutputControlByIdentifier_PR</QUAL>
+<CONSTCOMP id='_0x04c37090' must='1' spec='sid' bl='8' v='111'>
+<NAME>
+<TUV xml:lang='en-US'>SID-PR</TUV>
+</NAME>
+<QUAL>SID_PR</QUAL>
+</CONSTCOMP>
+<SIMPLEPROXYCOMP id='_0x04c371c8' must='0' dest='any' minbl='8'>
+<NAME>
+<TUV xml:lang='en-US'>Data</TUV>
+</NAME>
+<QUAL>Data</QUAL>
+</SIMPLEPROXYCOMP>
+</POS>
+<NEG>
+<NAME>
+<TUV xml:lang='en-US'>InputOutputControlByIdentifier-NR</TUV>
+</NAME>
+<QUAL>InputOutputControlByIdentifier_NR</QUAL>
+<CONSTCOMP id='_0x04c37468' must='1' spec='sid' bl='8' v='127'>
+<NAME>
+<TUV xml:lang='en-US'>SID-NR</TUV>
+</NAME>
+<QUAL>SID_NR</QUAL>
+</CONSTCOMP>
+<CONSTCOMP id='_0x04c375a0' must='1' spec='sid' bl='8' v='47'>
+<NAME>
+<TUV xml:lang='en-US'>SIDRQ-NR</TUV>
+</NAME>
+<QUAL>SIDRQ_NR</QUAL>
+</CONSTCOMP>
+<SIMPLEPROXYCOMP id='_0x04c376d8' must='1' dest='resCode' minbl='8' maxbl='8'>
+<NAME>
+<TUV xml:lang='en-US'>Response Code</TUV>
+</NAME>
+<QUAL>RC</QUAL>
+</SIMPLEPROXYCOMP>
+</NEG>
+<NEGRESCODEPROXIES>
+<NEGRESCODEPROXY idref='_0x02adac30'/>
+<NEGRESCODEPROXY idref='_0x02adad50'/>
+<NEGRESCODEPROXY idref='_0x02adae70'/>
+<NEGRESCODEPROXY idref='_0x02adb410'/>
+</NEGRESCODEPROXIES>
+</PROTOCOLSERVICE>
+<PROTOCOLSERVICE id='_0x04c379d0' func='1' phys='1' mresp='0' respOnPhys='1' respOnFunc='1'>
+<NAME>
+<TUV xml:lang='en-US'>($31) RoutineControl</TUV>
+</NAME>
+<QUAL>RoutineControl</QUAL>
+<REQ>
+<NAME>
+<TUV xml:lang='en-US'>RoutineControl-RQ</TUV>
+</NAME>
+<QUAL>RoutineControl_RQ</QUAL>
+<CONSTCOMP id='_0x04c37c98' must='1' spec='sid' bl='8' v='49'>
+<NAME>
+<TUV xml:lang='en-US'>SID-RQ</TUV>
+</NAME>
+<QUAL>SID_RQ</QUAL>
+</CONSTCOMP>
+<SIMPLEPROXYCOMP id='_0x04c37dd0' must='0' dest='any' minbl='8' respsupbit='1'>
+<NAME>
+<TUV xml:lang='en-US'>Data</TUV>
+</NAME>
+<QUAL>Data</QUAL>
+</SIMPLEPROXYCOMP>
+</REQ>
+<POS>
+<NAME>
+<TUV xml:lang='en-US'>RoutineControl-PR</TUV>
+</NAME>
+<QUAL>RoutineControl_PR</QUAL>
+<CONSTCOMP id='_0x04c38070' must='1' spec='sid' bl='8' v='113'>
+<NAME>
+<TUV xml:lang='en-US'>SID-PR</TUV>
+</NAME>
+<QUAL>SID_PR</QUAL>
+</CONSTCOMP>
+<SIMPLEPROXYCOMP id='_0x04c381a8' must='0' dest='any' minbl='8'>
+<NAME>
+<TUV xml:lang='en-US'>Data</TUV>
+</NAME>
+<QUAL>Data</QUAL>
+</SIMPLEPROXYCOMP>
+</POS>
+<NEG>
+<NAME>
+<TUV xml:lang='en-US'>RoutineControl-NR</TUV>
+</NAME>
+<QUAL>RoutineControl_NR</QUAL>
+<CONSTCOMP id='_0x04c38448' must='1' spec='sid' bl='8' v='127'>
+<NAME>
+<TUV xml:lang='en-US'>SID-NR</TUV>
+</NAME>
+<QUAL>SID_NR</QUAL>
+</CONSTCOMP>
+<CONSTCOMP id='_0x04c38580' must='1' spec='sid' bl='8' v='49'>
+<NAME>
+<TUV xml:lang='en-US'>SIDRQ-NR</TUV>
+</NAME>
+<QUAL>SIDRQ_NR</QUAL>
+</CONSTCOMP>
+<SIMPLEPROXYCOMP id='_0x04c386b8' must='1' dest='resCode' minbl='8' maxbl='8'>
+<NAME>
+<TUV xml:lang='en-US'>Response Code</TUV>
+</NAME>
+<QUAL>RC</QUAL>
+</SIMPLEPROXYCOMP>
+</NEG>
+<NEGRESCODEPROXIES>
+<NEGRESCODEPROXY idref='_0x02adab10'/>
+<NEGRESCODEPROXY idref='_0x02adac30'/>
+<NEGRESCODEPROXY idref='_0x02adad50'/>
+<NEGRESCODEPROXY idref='_0x02adae70'/>
+<NEGRESCODEPROXY idref='_0x02adb410'/>
+<NEGRESCODEPROXY idref='_0x02adb530'/>
+</NEGRESCODEPROXIES>
+</PROTOCOLSERVICE>
+<PROTOCOLSERVICE id='_0x04c38a90' func='1' phys='1' mresp='0' respOnPhys='1' respOnFunc='1'>
+<NAME>
+<TUV xml:lang='en-US'>($34) RequestDownload</TUV>
+</NAME>
+<QUAL>RequestDownload</QUAL>
+<REQ>
+<NAME>
+<TUV xml:lang='en-US'>RequestDownload-RQ</TUV>
+</NAME>
+<QUAL>RequestDownload_RQ</QUAL>
+<CONSTCOMP id='_0x04c38d58' must='1' spec='sid' bl='8' v='52'>
+<NAME>
+<TUV xml:lang='en-US'>SID-RQ</TUV>
+</NAME>
+<QUAL>SID_RQ</QUAL>
+</CONSTCOMP>
+<SIMPLEPROXYCOMP id='_0x04c38e90' must='0' dest='any' minbl='8'>
+<NAME>
+<TUV xml:lang='en-US'>Data</TUV>
+</NAME>
+<QUAL>Data</QUAL>
+</SIMPLEPROXYCOMP>
+</REQ>
+<POS>
+<NAME>
+<TUV xml:lang='en-US'>RequestDownload-PR</TUV>
+</NAME>
+<QUAL>RequestDownload_PR</QUAL>
+<CONSTCOMP id='_0x04c39130' must='1' spec='sid' bl='8' v='116'>
+<NAME>
+<TUV xml:lang='en-US'>SID-PR</TUV>
+</NAME>
+<QUAL>SID_PR</QUAL>
+</CONSTCOMP>
+<SIMPLEPROXYCOMP id='_0x04c39268' must='0' dest='any' minbl='8'>
+<NAME>
+<TUV xml:lang='en-US'>Data</TUV>
+</NAME>
+<QUAL>Data</QUAL>
+</SIMPLEPROXYCOMP>
+</POS>
+<NEG>
+<NAME>
+<TUV xml:lang='en-US'>RequestDownload-NR</TUV>
+</NAME>
+<QUAL>RequestDownload_NR</QUAL>
+<CONSTCOMP id='_0x04c39508' must='1' spec='sid' bl='8' v='127'>
+<NAME>
+<TUV xml:lang='en-US'>SID-NR</TUV>
+</NAME>
+<QUAL>SID_NR</QUAL>
+</CONSTCOMP>
+<CONSTCOMP id='_0x04c39640' must='1' spec='sid' bl='8' v='52'>
+<NAME>
+<TUV xml:lang='en-US'>SIDRQ-NR</TUV>
+</NAME>
+<QUAL>SIDRQ_NR</QUAL>
+</CONSTCOMP>
+<SIMPLEPROXYCOMP id='_0x04c39778' must='1' dest='resCode' minbl='8' maxbl='8'>
+<NAME>
+<TUV xml:lang='en-US'>Response Code</TUV>
+</NAME>
+<QUAL>RC</QUAL>
+</SIMPLEPROXYCOMP>
+</NEG>
+<NEGRESCODEPROXIES>
+<NEGRESCODEPROXY idref='_0x02adac30'/>
+<NEGRESCODEPROXY idref='_0x02adad50'/>
+<NEGRESCODEPROXY idref='_0x02adae70'/>
+<NEGRESCODEPROXY idref='_0x02adb410'/>
+<NEGRESCODEPROXY idref='_0x02adb650'/>
+</NEGRESCODEPROXIES>
+</PROTOCOLSERVICE>
+<PROTOCOLSERVICE id='_0x04c39ae0' func='1' phys='1' mresp='0' respOnPhys='1' respOnFunc='1'>
+<NAME>
+<TUV xml:lang='en-US'>($35) RequestUpload</TUV>
+</NAME>
+<QUAL>RequestUpload</QUAL>
+<REQ>
+<NAME>
+<TUV xml:lang='en-US'>RequestUpload-RQ</TUV>
+</NAME>
+<QUAL>RequestUpload_RQ</QUAL>
+<CONSTCOMP id='_0x04c39da8' must='1' spec='sid' bl='8' v='53'>
+<NAME>
+<TUV xml:lang='en-US'>SID-RQ</TUV>
+</NAME>
+<QUAL>SID_RQ</QUAL>
+</CONSTCOMP>
+<SIMPLEPROXYCOMP id='_0x04c39ee0' must='0' dest='any' minbl='8'>
+<NAME>
+<TUV xml:lang='en-US'>Data</TUV>
+</NAME>
+<QUAL>Data</QUAL>
+</SIMPLEPROXYCOMP>
+</REQ>
+<POS>
+<NAME>
+<TUV xml:lang='en-US'>RequestUpload-PR</TUV>
+</NAME>
+<QUAL>RequestUpload_PR</QUAL>
+<CONSTCOMP id='_0x04c3a180' must='1' spec='sid' bl='8' v='117'>
+<NAME>
+<TUV xml:lang='en-US'>SID-PR</TUV>
+</NAME>
+<QUAL>SID_PR</QUAL>
+</CONSTCOMP>
+<SIMPLEPROXYCOMP id='_0x04c3a2b8' must='0' dest='any' minbl='8'>
+<NAME>
+<TUV xml:lang='en-US'>Data</TUV>
+</NAME>
+<QUAL>Data</QUAL>
+</SIMPLEPROXYCOMP>
+</POS>
+<NEG>
+<NAME>
+<TUV xml:lang='en-US'>RequestUpload-NR</TUV>
+</NAME>
+<QUAL>RequestUpload_NR</QUAL>
+<CONSTCOMP id='_0x04c3a558' must='1' spec='sid' bl='8' v='127'>
+<NAME>
+<TUV xml:lang='en-US'>SID-NR</TUV>
+</NAME>
+<QUAL>SID_NR</QUAL>
+</CONSTCOMP>
+<CONSTCOMP id='_0x04c3a690' must='1' spec='sid' bl='8' v='53'>
+<NAME>
+<TUV xml:lang='en-US'>SIDRQ-NR</TUV>
+</NAME>
+<QUAL>SIDRQ_NR</QUAL>
+</CONSTCOMP>
+<SIMPLEPROXYCOMP id='_0x04c3a7c8' must='1' dest='resCode' minbl='8' maxbl='8'>
+<NAME>
+<TUV xml:lang='en-US'>Response Code</TUV>
+</NAME>
+<QUAL>RC</QUAL>
+</SIMPLEPROXYCOMP>
+</NEG>
+<NEGRESCODEPROXIES>
+<NEGRESCODEPROXY idref='_0x02adac30'/>
+<NEGRESCODEPROXY idref='_0x02adad50'/>
+<NEGRESCODEPROXY idref='_0x02adae70'/>
+<NEGRESCODEPROXY idref='_0x02adb410'/>
+<NEGRESCODEPROXY idref='_0x02adb650'/>
+</NEGRESCODEPROXIES>
+</PROTOCOLSERVICE>
+<PROTOCOLSERVICE id='_0x04c3ab30' func='1' phys='1' mresp='0' respOnPhys='1' respOnFunc='1'>
+<NAME>
+<TUV xml:lang='en-US'>($36) TransferData</TUV>
+</NAME>
+<QUAL>TransferData</QUAL>
+<REQ>
+<NAME>
+<TUV xml:lang='en-US'>TransferData-RQ</TUV>
+</NAME>
+<QUAL>TransferData_RQ</QUAL>
+<CONSTCOMP id='_0x04c3adf8' must='1' spec='sid' bl='8' v='54'>
+<NAME>
+<TUV xml:lang='en-US'>SID-RQ</TUV>
+</NAME>
+<QUAL>SID_RQ</QUAL>
+</CONSTCOMP>
+<SIMPLEPROXYCOMP id='_0x04c3af30' must='0' dest='any' minbl='8'>
+<NAME>
+<TUV xml:lang='en-US'>Data</TUV>
+</NAME>
+<QUAL>Data</QUAL>
+</SIMPLEPROXYCOMP>
+</REQ>
+<POS>
+<NAME>
+<TUV xml:lang='en-US'>TransferData-PR</TUV>
+</NAME>
+<QUAL>TransferData_PR</QUAL>
+<CONSTCOMP id='_0x04c3b1d0' must='1' spec='sid' bl='8' v='118'>
+<NAME>
+<TUV xml:lang='en-US'>SID-PR</TUV>
+</NAME>
+<QUAL>SID_PR</QUAL>
+</CONSTCOMP>
+</POS>
+<NEG>
+<NAME>
+<TUV xml:lang='en-US'>TransferData-NR</TUV>
+</NAME>
+<QUAL>TransferData_NR</QUAL>
+<CONSTCOMP id='_0x04c3b470' must='1' spec='sid' bl='8' v='127'>
+<NAME>
+<TUV xml:lang='en-US'>SID-NR</TUV>
+</NAME>
+<QUAL>SID_NR</QUAL>
+</CONSTCOMP>
+<CONSTCOMP id='_0x04c3b5a8' must='1' spec='sid' bl='8' v='54'>
+<NAME>
+<TUV xml:lang='en-US'>SIDRQ-NR</TUV>
+</NAME>
+<QUAL>SIDRQ_NR</QUAL>
+</CONSTCOMP>
+<SIMPLEPROXYCOMP id='_0x04c3b6e0' must='1' dest='resCode' minbl='8' maxbl='8'>
+<NAME>
+<TUV xml:lang='en-US'>Response Code</TUV>
+</NAME>
+<QUAL>RC</QUAL>
+</SIMPLEPROXYCOMP>
+</NEG>
+<NEGRESCODEPROXIES>
+<NEGRESCODEPROXY idref='_0x02adac30'/>
+<NEGRESCODEPROXY idref='_0x02adad50'/>
+<NEGRESCODEPROXY idref='_0x02adaf90'/>
+<NEGRESCODEPROXY idref='_0x02adae70'/>
+<NEGRESCODEPROXY idref='_0x02adb770'/>
+<NEGRESCODEPROXY idref='_0x02adb530'/>
+<NEGRESCODEPROXY idref='_0x02adb890'/>
+<NEGRESCODEPROXY idref='_0x02adb9b0'/>
+</NEGRESCODEPROXIES>
+</PROTOCOLSERVICE>
+<PROTOCOLSERVICE id='_0x04c3bb98' func='1' phys='1' mresp='0' respOnPhys='1' respOnFunc='1'>
+<NAME>
+<TUV xml:lang='en-US'>($37) RequestTransferExit</TUV>
+</NAME>
+<QUAL>RequestTransferExit</QUAL>
+<REQ>
+<NAME>
+<TUV xml:lang='en-US'>RequestTransferExit-RQ</TUV>
+</NAME>
+<QUAL>RequestTransferExit_RQ</QUAL>
+<CONSTCOMP id='_0x04c3be60' must='1' spec='sid' bl='8' v='55'>
+<NAME>
+<TUV xml:lang='en-US'>SID-RQ</TUV>
+</NAME>
+<QUAL>SID_RQ</QUAL>
+</CONSTCOMP>
+<SIMPLEPROXYCOMP id='_0x04c3bf98' must='0' dest='any' minbl='8'>
+<NAME>
+<TUV xml:lang='en-US'>Data</TUV>
+</NAME>
+<QUAL>Data</QUAL>
+</SIMPLEPROXYCOMP>
+</REQ>
+<POS>
+<NAME>
+<TUV xml:lang='en-US'>RequestTransferExit-PR</TUV>
+</NAME>
+<QUAL>RequestTransferExit_PR</QUAL>
+<CONSTCOMP id='_0x04c3c238' must='1' spec='sid' bl='8' v='119'>
+<NAME>
+<TUV xml:lang='en-US'>SID-PR</TUV>
+</NAME>
+<QUAL>SID_PR</QUAL>
+</CONSTCOMP>
+</POS>
+<NEG>
+<NAME>
+<TUV xml:lang='en-US'>RequestTransferExit-NR</TUV>
+</NAME>
+<QUAL>RequestTransferExit_NR</QUAL>
+<CONSTCOMP id='_0x04c3c4d8' must='1' spec='sid' bl='8' v='127'>
+<NAME>
+<TUV xml:lang='en-US'>SID-NR</TUV>
+</NAME>
+<QUAL>SID_NR</QUAL>
+</CONSTCOMP>
+<CONSTCOMP id='_0x04c3c610' must='1' spec='sid' bl='8' v='55'>
+<NAME>
+<TUV xml:lang='en-US'>SIDRQ-NR</TUV>
+</NAME>
+<QUAL>SIDRQ_NR</QUAL>
+</CONSTCOMP>
+<SIMPLEPROXYCOMP id='_0x04c3c748' must='1' dest='resCode' minbl='8' maxbl='8'>
+<NAME>
+<TUV xml:lang='en-US'>Response Code</TUV>
+</NAME>
+<QUAL>RC</QUAL>
+</SIMPLEPROXYCOMP>
+</NEG>
+<NEGRESCODEPROXIES>
+<NEGRESCODEPROXY idref='_0x02adac30'/>
+<NEGRESCODEPROXY idref='_0x02adad50'/>
+<NEGRESCODEPROXY idref='_0x02adaf90'/>
+</NEGRESCODEPROXIES>
+</PROTOCOLSERVICE>
+</PROTOCOLSERVICES>
+<DCLTMPLS>
+<DCLTMPL id='_0x04c3c9d0' cls='fun' single='1'>
+<NAME>
+<TUV xml:lang='en-US'>RequestCurrentPowertrainDiagnosticData</TUV>
+</NAME>
+<QUAL>RequestCurrentPowertrainDiagnosticData</QUAL>
+<DCLSRVTMPL id='_0x04c3cbd0' tmplref='_0x02adf050' conv='req'>
+<NAME>
+<TUV xml:lang='en-US'>Process</TUV>
+</NAME>
+<QUAL>Process</QUAL>
+</DCLSRVTMPL>
+<SHPROXY id='_0x04c3cd50' dest='resCode'>
+<NAME>
+<TUV xml:lang='en-US'>Process NR</TUV>
+</NAME>
+<QUAL>Process_NR</QUAL>
+<PROXYCOMPREF idref='_0x02adfd38'/>
+</SHPROXY>
+</DCLTMPL>
+<DCLTMPL id='_0x04c3cea8' cls='fun' single='1'>
+<NAME>
+<TUV xml:lang='en-US'>RequestPowertrainFreezeFrameData</TUV>
+</NAME>
+<QUAL>RequestPowertrainFreezeFrameData</QUAL>
+<DCLSRVTMPL id='_0x04c3d0a8' tmplref='_0x04c20048' conv='req'>
+<NAME>
+<TUV xml:lang='en-US'>Process</TUV>
+</NAME>
+<QUAL>Process</QUAL>
+</DCLSRVTMPL>
+<SHPROXY id='_0x04c3d228' dest='resCode'>
+<NAME>
+<TUV xml:lang='en-US'>Process NR</TUV>
+</NAME>
+<QUAL>Process_NR</QUAL>
+<PROXYCOMPREF idref='_0x04c20cf0'/>
+</SHPROXY>
+</DCLTMPL>
+<DCLTMPL id='_0x04c3d380' cls='fun' single='1'>
+<NAME>
+<TUV xml:lang='en-US'>RequestEmissionRelatedDiagnosticTroubleCodes</TUV>
+</NAME>
+<QUAL>RequestEmissionRelatedDiagnosticTroubleCodes</QUAL>
+<DCLSRVTMPL id='_0x04c3d580' tmplref='_0x04c20f78' conv='req'>
+<NAME>
+<TUV xml:lang='en-US'>Process</TUV>
+</NAME>
+<QUAL>Process</QUAL>
+</DCLSRVTMPL>
+<SHPROXY id='_0x04c3d700' dest='resCode'>
+<NAME>
+<TUV xml:lang='en-US'>Process NR</TUV>
+</NAME>
+<QUAL>Process_NR</QUAL>
+<PROXYCOMPREF idref='_0x04c21c60'/>
+</SHPROXY>
+</DCLTMPL>
+<DCLTMPL id='_0x04c3d858' cls='fun' single='1'>
+<NAME>
+<TUV xml:lang='en-US'>ClearResetEmissionRelatedDiagnosticInformation</TUV>
+</NAME>
+<QUAL>ClearResetEmissionRelatedDiagnosticInformation</QUAL>
+<DCLSRVTMPL id='_0x04c3da58' tmplref='_0x04c21ee8' conv='req'>
+<NAME>
+<TUV xml:lang='en-US'>Process</TUV>
+</NAME>
+<QUAL>Process</QUAL>
+</DCLSRVTMPL>
+<SHPROXY id='_0x04c3dbd8' dest='resCode'>
+<NAME>
+<TUV xml:lang='en-US'>Process NR</TUV>
+</NAME>
+<QUAL>Process_NR</QUAL>
+<PROXYCOMPREF idref='_0x04c22bd0'/>
+</SHPROXY>
+</DCLTMPL>
+<DCLTMPL id='_0x04c3dd30' cls='fun' single='1'>
+<NAME>
+<TUV xml:lang='en-US'>RequestOnBoardMonitoringTestResultsForSpecificMonitoredSystems</TUV>
+</NAME>
+<QUAL>RequestOnBoardMonitoringTestResultsForSpecificMonitoredSystems</QUAL>
+<DCLSRVTMPL id='_0x04c3df30' tmplref='_0x04c22e58' conv='req'>
+<NAME>
+<TUV xml:lang='en-US'>Process</TUV>
+</NAME>
+<QUAL>Process</QUAL>
+</DCLSRVTMPL>
+<SHPROXY id='_0x04c3e0b0' dest='resCode'>
+<NAME>
+<TUV xml:lang='en-US'>Process NR</TUV>
+</NAME>
+<QUAL>Process_NR</QUAL>
+<PROXYCOMPREF idref='_0x04c23b40'/>
+</SHPROXY>
+</DCLTMPL>
+<DCLTMPL id='_0x04c3e208' cls='fun' single='1'>
+<NAME>
+<TUV xml:lang='en-US'>RequestEmissionRelatedDTCsDetectedDuringCurrentOrLastCycle</TUV>
+</NAME>
+<QUAL>RequestEmissionRelatedDTCsDetectedDuringCurrentOrLastCycle</QUAL>
+<DCLSRVTMPL id='_0x04c3e408' tmplref='_0x04c23dc8' conv='req'>
+<NAME>
+<TUV xml:lang='en-US'>Process</TUV>
+</NAME>
+<QUAL>Process</QUAL>
+</DCLSRVTMPL>
+<SHPROXY id='_0x04c3e588' dest='resCode'>
+<NAME>
+<TUV xml:lang='en-US'>Process NR</TUV>
+</NAME>
+<QUAL>Process_NR</QUAL>
+<PROXYCOMPREF idref='_0x04c24ab0'/>
+</SHPROXY>
+</DCLTMPL>
+<DCLTMPL id='_0x04c3e6e0' cls='fun' single='1'>
+<NAME>
+<TUV xml:lang='en-US'>RequestControlOfOnBoardSystemTestOrComponent</TUV>
+</NAME>
+<QUAL>RequestControlOfOnBoardSystemTestOrComponent</QUAL>
+<DCLSRVTMPL id='_0x04c3e8e0' tmplref='_0x04c24d38' conv='req'>
+<NAME>
+<TUV xml:lang='en-US'>Process</TUV>
+</NAME>
+<QUAL>Process</QUAL>
+</DCLSRVTMPL>
+<SHPROXY id='_0x04c3ea60' dest='resCode'>
+<NAME>
+<TUV xml:lang='en-US'>Process NR</TUV>
+</NAME>
+<QUAL>Process_NR</QUAL>
+<PROXYCOMPREF idref='_0x04c25a28'/>
+</SHPROXY>
+</DCLTMPL>
+<DCLTMPL id='_0x04c3ebb8' cls='fun' single='1'>
+<NAME>
+<TUV xml:lang='en-US'>RequestVehicleInformation</TUV>
+</NAME>
+<QUAL>RequestVehicleInformation</QUAL>
+<DCLSRVTMPL id='_0x04c3edb8' tmplref='_0x04c25cb0' conv='req'>
+<NAME>
+<TUV xml:lang='en-US'>Process</TUV>
+</NAME>
+<QUAL>Process</QUAL>
+</DCLSRVTMPL>
+<SHPROXY id='_0x04c3ef38' dest='resCode'>
+<NAME>
+<TUV xml:lang='en-US'>Process NR</TUV>
+</NAME>
+<QUAL>Process_NR</QUAL>
+<PROXYCOMPREF idref='_0x04c26998'/>
+</SHPROXY>
+</DCLTMPL>
+<DCLTMPL id='_0x04c3f090' cls='ses' single='0'>
+<NAME>
+<TUV xml:lang='en-US'>DiagnosticSessionControl</TUV>
+</NAME>
+<QUAL>DiagnosticSessionControl</QUAL>
+<DCLSRVTMPL id='_0x04c3f290' tmplref='_0x04c26c20' conv='req'>
+<NAME>
+<TUV xml:lang='en-US'>Start</TUV>
+</NAME>
+<QUAL>Start</QUAL>
+</DCLSRVTMPL>
+<SHSTATIC id='_0x04c3f410' spec='sub'>
+<NAME>
+<TUV xml:lang='en-US'>DiagnosticSessionType</TUV>
+</NAME>
+<QUAL>DiagSessionType</QUAL>
+<STATICCOMPREF idref='_0x04c27020'/>
+<STATICCOMPREF idref='_0x04c273f0'/>
+</SHSTATIC>
+<SHPROXY id='_0x04c3f560' dest='data'>
+<NAME>
+<TUV xml:lang='en-US'>Data</TUV>
+</NAME>
+<QUAL>Data</QUAL>
+<PROXYCOMPREF idref='_0x04c27520'/>
+</SHPROXY>
+<SHPROXY id='_0x04c3f6b8' dest='resCode'>
+<NAME>
+<TUV xml:lang='en-US'>Start NR</TUV>
+</NAME>
+<QUAL>Start_NR</QUAL>
+<PROXYCOMPREF idref='_0x04c27a30'/>
+</SHPROXY>
+</DCLTMPL>
+<DCLTMPL id='_0x04c3f810' cls='fun' single='1'>
+<NAME>
+<TUV xml:lang='en-US'>EcuReset</TUV>
+</NAME>
+<QUAL>EcuReset</QUAL>
+<DCLSRVTMPL id='_0x04c3fa10' tmplref='_0x04c27cb8' conv='req'>
+<NAME>
+<TUV xml:lang='en-US'>Process</TUV>
+</NAME>
+<QUAL>Process</QUAL>
+</DCLSRVTMPL>
+<SHPROXY id='_0x04c3fb90' dest='resCode'>
+<NAME>
+<TUV xml:lang='en-US'>Process NR</TUV>
+</NAME>
+<QUAL>Process_NR</QUAL>
+<PROXYCOMPREF idref='_0x04c289a0'/>
+</SHPROXY>
+</DCLTMPL>
+<DCLTMPL id='_0x04c3fce8' cls='sec' single='1'>
+<NAME>
+<TUV xml:lang='en-US'>SecurityAccess</TUV>
+</NAME>
+<QUAL>SecurityAccess</QUAL>
+<DCLSRVTMPL id='_0x04c3fee8' tmplref='_0x04c28c28' conv='req'>
+<NAME>
+<TUV xml:lang='en-US'>Process</TUV>
+</NAME>
+<QUAL>Process</QUAL>
+</DCLSRVTMPL>
+<SHPROXY id='_0x04c40068' dest='resCode'>
+<NAME>
+<TUV xml:lang='en-US'>Process NR</TUV>
+</NAME>
+<QUAL>Process_NR</QUAL>
+<PROXYCOMPREF idref='_0x04c29910'/>
+</SHPROXY>
+</DCLTMPL>
+<DCLTMPL id='_0x04c401c0' cls='com' single='0'>
+<NAME>
+<TUV xml:lang='en-US'>CommunicationControl</TUV>
+</NAME>
+<QUAL>CommunicationControl</QUAL>
+<DCLSRVTMPL id='_0x04c403c0' tmplref='_0x04c29dc8' conv='req'>
+<NAME>
+<TUV xml:lang='en-US'>Control</TUV>
+</NAME>
+<QUAL>Control</QUAL>
+</DCLSRVTMPL>
+<SHSTATIC id='_0x04c40540' spec='sub'>
+<NAME>
+<TUV xml:lang='en-US'>ControlType</TUV>
+</NAME>
+<QUAL>ControlType</QUAL>
+<STATICCOMPREF idref='_0x04c2a1c8'/>
+<STATICCOMPREF idref='_0x04c2a6d0'/>
+</SHSTATIC>
+<SHPROXY id='_0x04c40690' dest='data'>
+<NAME>
+<TUV xml:lang='en-US'>Data</TUV>
+</NAME>
+<QUAL>Data</QUAL>
+<PROXYCOMPREF idref='_0x04c2a2f8'/>
+</SHPROXY>
+<SHPROXY id='_0x04c407e8' dest='resCode'>
+<NAME>
+<TUV xml:lang='en-US'>Control NR</TUV>
+</NAME>
+<QUAL>Control_NR</QUAL>
+<PROXYCOMPREF idref='_0x04c2abd8'/>
+</SHPROXY>
+</DCLTMPL>
+<DCLTMPL id='_0x04c40940' cls='tpr' single='1'>
+<NAME>
+<TUV xml:lang='en-US'>TesterPresent</TUV>
+</NAME>
+<QUAL>TesterPresent</QUAL>
+<DCLSRVTMPL id='_0x04c40b40' tmplref='_0x04c2aed0' conv='req'>
+<NAME>
+<TUV xml:lang='en-US'>Process</TUV>
+</NAME>
+<QUAL>Process</QUAL>
+</DCLSRVTMPL>
+<SHPROXY id='_0x04c40cc0' dest='resCode'>
+<NAME>
+<TUV xml:lang='en-US'>Process NR</TUV>
+</NAME>
+<QUAL>Process_NR</QUAL>
+<PROXYCOMPREF idref='_0x04c2bbb8'/>
+</SHPROXY>
+</DCLTMPL>
+<DCLTMPL id='_0x04c40e18' cls='com' single='1'>
+<NAME>
+<TUV xml:lang='en-US'>SecuredDataTransmission</TUV>
+</NAME>
+<QUAL>SecuredDataTransmission</QUAL>
+<DCLSRVTMPL id='_0x04c41018' tmplref='_0x04c2bdd0' conv='req'>
+<NAME>
+<TUV xml:lang='en-US'>Process</TUV>
+</NAME>
+<QUAL>Process</QUAL>
+</DCLSRVTMPL>
+<SHPROXY id='_0x04c41198' dest='resCode'>
+<NAME>
+<TUV xml:lang='en-US'>Process NR</TUV>
+</NAME>
+<QUAL>Process_NR</QUAL>
+<PROXYCOMPREF idref='_0x04c2cab8'/>
+</SHPROXY>
+</DCLTMPL>
+<DCLTMPL id='_0x04c412f0' cls='fun' single='1'>
+<NAME>
+<TUV xml:lang='en-US'>ControlDTCSetting</TUV>
+</NAME>
+<QUAL>ControlDTCSetting</QUAL>
+<DCLSRVTMPL id='_0x04c414f0' tmplref='_0x04c2cc60' conv='req'>
+<NAME>
+<TUV xml:lang='en-US'>Process</TUV>
+</NAME>
+<QUAL>Process</QUAL>
+</DCLSRVTMPL>
+<SHPROXY id='_0x04c41670' dest='resCode'>
+<NAME>
+<TUV xml:lang='en-US'>Process NR</TUV>
+</NAME>
+<QUAL>Process_NR</QUAL>
+<PROXYCOMPREF idref='_0x04c2d948'/>
+</SHPROXY>
+</DCLTMPL>
+<DCLTMPL id='_0x04c417c8' cls='fun' single='1'>
+<NAME>
+<TUV xml:lang='en-US'>ResponseOnEvent</TUV>
+</NAME>
+<QUAL>ResponseOnEvent</QUAL>
+<DCLSRVTMPL id='_0x04c419c8' tmplref='_0x04c2dc40' conv='req'>
+<NAME>
+<TUV xml:lang='en-US'>Process</TUV>
+</NAME>
+<QUAL>Process</QUAL>
+</DCLSRVTMPL>
+<SHPROXY id='_0x04c41b48' dest='resCode'>
+<NAME>
+<TUV xml:lang='en-US'>Process NR</TUV>
+</NAME>
+<QUAL>Process_NR</QUAL>
+<PROXYCOMPREF idref='_0x04c2e928'/>
+</SHPROXY>
+</DCLTMPL>
+<DCLTMPL id='_0x04c41ca0' cls='act' single='1'>
+<NAME>
+<TUV xml:lang='en-US'>ReadDataByIdentifier</TUV>
+</NAME>
+<QUAL>ReadDataByIdentifier</QUAL>
+<DCLSRVTMPL id='_0x04c41ea0' tmplref='_0x04c2ec20' conv='req'>
+<NAME>
+<TUV xml:lang='en-US'>Process</TUV>
+</NAME>
+<QUAL>Process</QUAL>
+</DCLSRVTMPL>
+<SHPROXY id='_0x04c42038' dest='resCode'>
+<NAME>
+<TUV xml:lang='en-US'>Process NR</TUV>
+</NAME>
+<QUAL>Process_NR</QUAL>
+<PROXYCOMPREF idref='_0x04c2f908'/>
+</SHPROXY>
+</DCLTMPL>
+<DCLTMPL id='_0x04c42190' cls='act' single='1'>
+<NAME>
+<TUV xml:lang='en-US'>ReadScalingDataByIdentifier</TUV>
+</NAME>
+<QUAL>ReadScalingDataByIdentifier</QUAL>
+<DCLSRVTMPL id='_0x04c42390' tmplref='_0x04c2fc00' conv='req'>
+<NAME>
+<TUV xml:lang='en-US'>Process</TUV>
+</NAME>
+<QUAL>Process</QUAL>
+</DCLSRVTMPL>
+<SHPROXY id='_0x04c42510' dest='resCode'>
+<NAME>
+<TUV xml:lang='en-US'>Process NR</TUV>
+</NAME>
+<QUAL>Process_NR</QUAL>
+<PROXYCOMPREF idref='_0x04c308f0'/>
+</SHPROXY>
+</DCLTMPL>
+<DCLTMPL id='_0x04c42668' cls='mem' single='1'>
+<NAME>
+<TUV xml:lang='en-US'>ReadMemoryByAddress</TUV>
+</NAME>
+<QUAL>ReadMemoryByAddress</QUAL>
+<DCLSRVTMPL id='_0x04c42868' tmplref='_0x04c30be8' conv='req'>
+<NAME>
+<TUV xml:lang='en-US'>Process</TUV>
+</NAME>
+<QUAL>Process</QUAL>
+</DCLSRVTMPL>
+<SHPROXY id='_0x04c429e8' dest='resCode'>
+<NAME>
+<TUV xml:lang='en-US'>Process NR</TUV>
+</NAME>
+<QUAL>Process_NR</QUAL>
+<PROXYCOMPREF idref='_0x04c318d0'/>
+</SHPROXY>
+</DCLTMPL>
+<DCLTMPL id='_0x04c42b40' cls='fun' single='1'>
+<NAME>
+<TUV xml:lang='en-US'>DynamicallyDefineDataIdentifier</TUV>
+</NAME>
+<QUAL>DynamicallyDefineDataIdentifier</QUAL>
+<DCLSRVTMPL id='_0x04c42d40' tmplref='_0x04c31bc8' conv='req'>
+<NAME>
+<TUV xml:lang='en-US'>Process</TUV>
+</NAME>
+<QUAL>Process</QUAL>
+</DCLSRVTMPL>
+<SHPROXY id='_0x04c42ec0' dest='resCode'>
+<NAME>
+<TUV xml:lang='en-US'>Process NR</TUV>
+</NAME>
+<QUAL>Process_NR</QUAL>
+<PROXYCOMPREF idref='_0x04c328b0'/>
+</SHPROXY>
+</DCLTMPL>
+<DCLTMPL id='_0x04c43018' cls='std' single='1'>
+<NAME>
+<TUV xml:lang='en-US'>WriteDataByIdentifier</TUV>
+</NAME>
+<QUAL>WriteDataByIdentifier</QUAL>
+<DCLSRVTMPL id='_0x04c43218' tmplref='_0x04c32c18' conv='req'>
+<NAME>
+<TUV xml:lang='en-US'>Process</TUV>
+</NAME>
+<QUAL>Process</QUAL>
+</DCLSRVTMPL>
+<SHPROXY id='_0x04c43398' dest='resCode'>
+<NAME>
+<TUV xml:lang='en-US'>Process NR</TUV>
+</NAME>
+<QUAL>Process_NR</QUAL>
+<PROXYCOMPREF idref='_0x04c33900'/>
+</SHPROXY>
+</DCLTMPL>
+<DCLTMPL id='_0x04c434f0' cls='mem' single='1'>
+<NAME>
+<TUV xml:lang='en-US'>WriteMemoryByAddress</TUV>
+</NAME>
+<QUAL>WriteMemoryByAddress</QUAL>
+<DCLSRVTMPL id='_0x04c436f0' tmplref='_0x04c33c68' conv='req'>
+<NAME>
+<TUV xml:lang='en-US'>Process</TUV>
+</NAME>
+<QUAL>Process</QUAL>
+</DCLSRVTMPL>
+<SHPROXY id='_0x04c43870' dest='resCode'>
+<NAME>
+<TUV xml:lang='en-US'>Process NR</TUV>
+</NAME>
+<QUAL>Process_NR</QUAL>
+<PROXYCOMPREF idref='_0x04c34950'/>
+</SHPROXY>
+</DCLTMPL>
+<DCLTMPL id='_0x04c439c8' cls='ftm' single='1'>
+<NAME>
+<TUV xml:lang='en-US'>ClearDiagnosticInformation</TUV>
+</NAME>
+<QUAL>ClearDiagnosticInformation</QUAL>
+<DCLSRVTMPL id='_0x04c43bc8' tmplref='_0x04c34c48' conv='req'>
+<NAME>
+<TUV xml:lang='en-US'>Process</TUV>
+</NAME>
+<QUAL>Process</QUAL>
+</DCLSRVTMPL>
+<SHPROXY id='_0x04c43d48' dest='resCode'>
+<NAME>
+<TUV xml:lang='en-US'>Process NR</TUV>
+</NAME>
+<QUAL>Process_NR</QUAL>
+<PROXYCOMPREF idref='_0x04c357f8'/>
+</SHPROXY>
+</DCLTMPL>
+<DCLTMPL id='_0x04c43ea0' cls='ftm' single='1'>
+<NAME>
+<TUV xml:lang='en-US'>ReadDtcInformation</TUV>
+</NAME>
+<QUAL>ReadDtcInformation</QUAL>
+<DCLSRVTMPL id='_0x04c440a8' tmplref='_0x04c35a80' conv='req'>
+<NAME>
+<TUV xml:lang='en-US'>Process</TUV>
+</NAME>
+<QUAL>Process</QUAL>
+</DCLSRVTMPL>
+<SHPROXY id='_0x04c44228' dest='resCode'>
+<NAME>
+<TUV xml:lang='en-US'>Process NR</TUV>
+</NAME>
+<QUAL>Process_NR</QUAL>
+<PROXYCOMPREF idref='_0x04c36768'/>
+</SHPROXY>
+</DCLTMPL>
+<DCLTMPL id='_0x04c44380' cls='ctl' single='1'>
+<NAME>
+<TUV xml:lang='en-US'>InputOutputControlByIdentifier</TUV>
+</NAME>
+<QUAL>InputOutputControlByIdentifier</QUAL>
+<DCLSRVTMPL id='_0x04c44580' tmplref='_0x04c369f0' conv='req'>
+<NAME>
+<TUV xml:lang='en-US'>Process</TUV>
+</NAME>
+<QUAL>Process</QUAL>
+</DCLSRVTMPL>
+<SHPROXY id='_0x04c44700' dest='resCode'>
+<NAME>
+<TUV xml:lang='en-US'>Process NR</TUV>
+</NAME>
+<QUAL>Process_NR</QUAL>
+<PROXYCOMPREF idref='_0x04c376d8'/>
+</SHPROXY>
+</DCLTMPL>
+<DCLTMPL id='_0x04c44858' cls='rtn' single='1'>
+<NAME>
+<TUV xml:lang='en-US'>RoutineControl</TUV>
+</NAME>
+<QUAL>RoutineControl</QUAL>
+<DCLSRVTMPL id='_0x04c44a58' tmplref='_0x04c379d0' conv='req'>
+<NAME>
+<TUV xml:lang='en-US'>Process</TUV>
+</NAME>
+<QUAL>Process</QUAL>
+</DCLSRVTMPL>
+<SHPROXY id='_0x04c44bd8' dest='resCode'>
+<NAME>
+<TUV xml:lang='en-US'>Process NR</TUV>
+</NAME>
+<QUAL>Process_NR</QUAL>
+<PROXYCOMPREF idref='_0x04c386b8'/>
+</SHPROXY>
+</DCLTMPL>
+<DCLTMPL id='_0x04c44d30' cls='dwn' single='1'>
+<NAME>
+<TUV xml:lang='en-US'>RequestDownload</TUV>
+</NAME>
+<QUAL>RequestDownload</QUAL>
+<DCLSRVTMPL id='_0x04c44f30' tmplref='_0x04c38a90' conv='req'>
+<NAME>
+<TUV xml:lang='en-US'>Process</TUV>
+</NAME>
+<QUAL>Process</QUAL>
+</DCLSRVTMPL>
+<SHPROXY id='_0x04c450b0' dest='resCode'>
+<NAME>
+<TUV xml:lang='en-US'>Process NR</TUV>
+</NAME>
+<QUAL>Process_NR</QUAL>
+<PROXYCOMPREF idref='_0x04c39778'/>
+</SHPROXY>
+</DCLTMPL>
+<DCLTMPL id='_0x04c45208' cls='upl' single='1'>
+<NAME>
+<TUV xml:lang='en-US'>RequestUpload</TUV>
+</NAME>
+<QUAL>RequestUpload</QUAL>
+<DCLSRVTMPL id='_0x04c45408' tmplref='_0x04c39ae0' conv='req'>
+<NAME>
+<TUV xml:lang='en-US'>Process</TUV>
+</NAME>
+<QUAL>Process</QUAL>
+</DCLSRVTMPL>
+<SHPROXY id='_0x04c45588' dest='resCode'>
+<NAME>
+<TUV xml:lang='en-US'>Process NR</TUV>
+</NAME>
+<QUAL>Process_NR</QUAL>
+<PROXYCOMPREF idref='_0x04c3a7c8'/>
+</SHPROXY>
+</DCLTMPL>
+<DCLTMPL id='_0x04c456e0' cls='fun' single='1'>
+<NAME>
+<TUV xml:lang='en-US'>TransferData</TUV>
+</NAME>
+<QUAL>TransferData</QUAL>
+<DCLSRVTMPL id='_0x04c458e0' tmplref='_0x04c3ab30' conv='req'>
+<NAME>
+<TUV xml:lang='en-US'>Process</TUV>
+</NAME>
+<QUAL>Process</QUAL>
+</DCLSRVTMPL>
+<SHPROXY id='_0x04c45a60' dest='resCode'>
+<NAME>
+<TUV xml:lang='en-US'>Process NR</TUV>
+</NAME>
+<QUAL>Process_NR</QUAL>
+<PROXYCOMPREF idref='_0x04c3b6e0'/>
+</SHPROXY>
+</DCLTMPL>
+<DCLTMPL id='_0x04c45bb8' cls='fun' single='1'>
+<NAME>
+<TUV xml:lang='en-US'>RequestTransferExit</TUV>
+</NAME>
+<QUAL>RequestTransferExit</QUAL>
+<DCLSRVTMPL id='_0x04c45db8' tmplref='_0x04c3bb98' conv='req'>
+<NAME>
+<TUV xml:lang='en-US'>Process</TUV>
+</NAME>
+<QUAL>Process</QUAL>
+</DCLSRVTMPL>
+<SHPROXY id='_0x04c45f38' dest='resCode'>
+<NAME>
+<TUV xml:lang='en-US'>Process NR</TUV>
+</NAME>
+<QUAL>Process_NR</QUAL>
+<PROXYCOMPREF idref='_0x04c3c748'/>
+</SHPROXY>
+</DCLTMPL>
+</DCLTMPLS>
+<ECU id='_0x02ad5310' maxCombinedServiceIds='5'>
+<NAME>
+<TUV xml:lang='en-US'>PAG ECU</TUV>
+</NAME>
+<QUAL>PAG_ECU</QUAL>
+<VAR id='_0x02ad5470' base='1'>
+<NAME>
+<TUV xml:lang='en-US'>Common Diagnostics</TUV>
+</NAME>
+<QUAL>CommonDiagnostics</QUAL>
+<DIAGINST id='_0x04c46090' tmplref='_0x04c3c9d0' act='0' req='0'>
+<NAME>
+<TUV xml:lang='en-US'>RequestCurrentPowertrainDiagnosticData</TUV>
+</NAME>
+<QUAL>RequestCurrentPowertrainDiagnosticData</QUAL>
+<SERVICE id='_0x04c462f0' tmplref='_0x04c3cbd0' func='1' phys='1' respOnPhys='1' respOnFunc='1' req='0'>
+<NAME>
+<TUV xml:lang='en-US'>Process</TUV>
+</NAME>
+<QUAL>Process</QUAL>
+</SERVICE>
+<SIMPLECOMPCONT shproxyref='_0x04c3cd50'>
+<SPECDATAOBJ>
+<NAME>
+<TUV xml:lang='en-US'>Process NR</TUV>
+</NAME>
+<QUAL>Process_NR</QUAL>
+<NEGRESCODEPROXIES>
+<NEGRESCODEPROXY idref='_0x02adab10'/>
+<NEGRESCODEPROXY idref='_0x02adac30'/>
+<NEGRESCODEPROXY idref='_0x02adad50'/>
+</NEGRESCODEPROXIES>
+</SPECDATAOBJ>
+</SIMPLECOMPCONT>
+</DIAGINST>
+<DIAGINST id='_0x04c46960' tmplref='_0x04c3cea8' act='0' req='0'>
+<NAME>
+<TUV xml:lang='en-US'>RequestPowertrainFreezeFrameData</TUV>
+</NAME>
+<QUAL>RequestPowertrainFreezeFrameData</QUAL>
+<SERVICE id='_0x04c46ba8' tmplref='_0x04c3d0a8' func='1' phys='1' respOnPhys='1' respOnFunc='1' req='0'>
+<NAME>
+<TUV xml:lang='en-US'>Process</TUV>
+</NAME>
+<QUAL>Process</QUAL>
+</SERVICE>
+<SIMPLECOMPCONT shproxyref='_0x04c3d228'>
+<SPECDATAOBJ>
+<NAME>
+<TUV xml:lang='en-US'>Process NR</TUV>
+</NAME>
+<QUAL>Process_NR</QUAL>
+<NEGRESCODEPROXIES>
+<NEGRESCODEPROXY idref='_0x02adab10'/>
+<NEGRESCODEPROXY idref='_0x02adac30'/>
+<NEGRESCODEPROXY idref='_0x02adad50'/>
+</NEGRESCODEPROXIES>
+</SPECDATAOBJ>
+</SIMPLECOMPCONT>
+</DIAGINST>
+<DIAGINST id='_0x04c47200' tmplref='_0x04c3d380' act='0' req='0'>
+<NAME>
+<TUV xml:lang='en-US'>RequestEmissionRelatedDiagnosticTroubleCodes</TUV>
+</NAME>
+<QUAL>RequestEmissionRelatedDiagnosticTroubleCodes</QUAL>
+<SERVICE id='_0x04c47448' tmplref='_0x04c3d580' func='1' phys='1' respOnPhys='1' respOnFunc='1' req='0'>
+<NAME>
+<TUV xml:lang='en-US'>Process</TUV>
+</NAME>
+<QUAL>Process</QUAL>
+</SERVICE>
+<SIMPLECOMPCONT shproxyref='_0x04c3d700'>
+<SPECDATAOBJ>
+<NAME>
+<TUV xml:lang='en-US'>Process NR</TUV>
+</NAME>
+<QUAL>Process_NR</QUAL>
+<NEGRESCODEPROXIES>
+<NEGRESCODEPROXY idref='_0x02adab10'/>
+<NEGRESCODEPROXY idref='_0x02adac30'/>
+<NEGRESCODEPROXY idref='_0x02adad50'/>
+</NEGRESCODEPROXIES>
+</SPECDATAOBJ>
+</SIMPLECOMPCONT>
+</DIAGINST>
+<DIAGINST id='_0x04c47aa0' tmplref='_0x04c3d858' act='0' req='0'>
+<NAME>
+<TUV xml:lang='en-US'>ClearResetEmissionRelatedDiagnosticInformation</TUV>
+</NAME>
+<QUAL>ClearResetEmissionRelatedDiagnosticInformation</QUAL>
+<SERVICE id='_0x04c47ce8' tmplref='_0x04c3da58' func='1' phys='1' respOnPhys='1' respOnFunc='1' req='0'>
+<NAME>
+<TUV xml:lang='en-US'>Process</TUV>
+</NAME>
+<QUAL>Process</QUAL>
+</SERVICE>
+<SIMPLECOMPCONT shproxyref='_0x04c3dbd8'>
+<SPECDATAOBJ>
+<NAME>
+<TUV xml:lang='en-US'>Process NR</TUV>
+</NAME>
+<QUAL>Process_NR</QUAL>
+<NEGRESCODEPROXIES>
+<NEGRESCODEPROXY idref='_0x02adab10'/>
+<NEGRESCODEPROXY idref='_0x02adac30'/>
+<NEGRESCODEPROXY idref='_0x02adad50'/>
+</NEGRESCODEPROXIES>
+</SPECDATAOBJ>
+</SIMPLECOMPCONT>
+</DIAGINST>
+<DIAGINST id='_0x04c48340' tmplref='_0x04c3dd30' act='0' req='0'>
+<NAME>
+<TUV xml:lang='en-US'>RequestOnBoardMonitoringTestResultsForSpecificMonitoredSystems</TUV>
+</NAME>
+<QUAL>RequestOnBoardMonitoringTestResultsForSpecificMonitoredSystems</QUAL>
+<SERVICE id='_0x04c48588' tmplref='_0x04c3df30' func='1' phys='1' respOnPhys='1' respOnFunc='1' req='0'>
+<NAME>
+<TUV xml:lang='en-US'>Process</TUV>
+</NAME>
+<QUAL>Process</QUAL>
+</SERVICE>
+<SIMPLECOMPCONT shproxyref='_0x04c3e0b0'>
+<SPECDATAOBJ>
+<NAME>
+<TUV xml:lang='en-US'>Process NR</TUV>
+</NAME>
+<QUAL>Process_NR</QUAL>
+<NEGRESCODEPROXIES>
+<NEGRESCODEPROXY idref='_0x02adab10'/>
+<NEGRESCODEPROXY idref='_0x02adac30'/>
+<NEGRESCODEPROXY idref='_0x02adad50'/>
+</NEGRESCODEPROXIES>
+</SPECDATAOBJ>
+</SIMPLECOMPCONT>
+</DIAGINST>
+<DIAGINST id='_0x04c48be0' tmplref='_0x04c3e208' act='0' req='0'>
+<NAME>
+<TUV xml:lang='en-US'>RequestEmissionRelatedDTCsDetectedDuringCurrentOrLastCycle</TUV>
+</NAME>
+<QUAL>RequestEmissionRelatedDTCsDetectedDuringCurrentOrLastCycle</QUAL>
+<SERVICE id='_0x04c48e28' tmplref='_0x04c3e408' func='1' phys='1' respOnPhys='1' respOnFunc='1' req='0'>
+<NAME>
+<TUV xml:lang='en-US'>Process</TUV>
+</NAME>
+<QUAL>Process</QUAL>
+</SERVICE>
+<SIMPLECOMPCONT shproxyref='_0x04c3e588'>
+<SPECDATAOBJ>
+<NAME>
+<TUV xml:lang='en-US'>Process NR</TUV>
+</NAME>
+<QUAL>Process_NR</QUAL>
+<NEGRESCODEPROXIES>
+<NEGRESCODEPROXY idref='_0x02adab10'/>
+<NEGRESCODEPROXY idref='_0x02adac30'/>
+<NEGRESCODEPROXY idref='_0x02adad50'/>
+</NEGRESCODEPROXIES>
+</SPECDATAOBJ>
+</SIMPLECOMPCONT>
+</DIAGINST>
+<DIAGINST id='_0x04c49480' tmplref='_0x04c3e6e0' act='0' req='0'>
+<NAME>
+<TUV xml:lang='en-US'>RequestControlOfOnBoardSystemTestOrComponent</TUV>
+</NAME>
+<QUAL>RequestControlOfOnBoardSystemTestOrComponent</QUAL>
+<SERVICE id='_0x04c496c8' tmplref='_0x04c3e8e0' func='1' phys='1' respOnPhys='1' respOnFunc='1' req='0'>
+<NAME>
+<TUV xml:lang='en-US'>Process</TUV>
+</NAME>
+<QUAL>Process</QUAL>
+</SERVICE>
+<SIMPLECOMPCONT shproxyref='_0x04c3ea60'>
+<SPECDATAOBJ>
+<NAME>
+<TUV xml:lang='en-US'>Process NR</TUV>
+</NAME>
+<QUAL>Process_NR</QUAL>
+<NEGRESCODEPROXIES>
+<NEGRESCODEPROXY idref='_0x02adab10'/>
+<NEGRESCODEPROXY idref='_0x02adac30'/>
+<NEGRESCODEPROXY idref='_0x02adad50'/>
+</NEGRESCODEPROXIES>
+</SPECDATAOBJ>
+</SIMPLECOMPCONT>
+</DIAGINST>
+<DIAGINST id='_0x04c49d20' tmplref='_0x04c3ebb8' act='0' req='0'>
+<NAME>
+<TUV xml:lang='en-US'>RequestVehicleInformation</TUV>
+</NAME>
+<QUAL>RequestVehicleInformation</QUAL>
+<SERVICE id='_0x04c49f68' tmplref='_0x04c3edb8' func='1' phys='1' respOnPhys='1' respOnFunc='1' req='0'>
+<NAME>
+<TUV xml:lang='en-US'>Process</TUV>
+</NAME>
+<QUAL>Process</QUAL>
+</SERVICE>
+<SIMPLECOMPCONT shproxyref='_0x04c3ef38'>
+<SPECDATAOBJ>
+<NAME>
+<TUV xml:lang='en-US'>Process NR</TUV>
+</NAME>
+<QUAL>Process_NR</QUAL>
+<NEGRESCODEPROXIES>
+<NEGRESCODEPROXY idref='_0x02adab10'/>
+<NEGRESCODEPROXY idref='_0x02adac30'/>
+<NEGRESCODEPROXY idref='_0x02adad50'/>
+</NEGRESCODEPROXIES>
+</SPECDATAOBJ>
+</SIMPLECOMPCONT>
+</DIAGINST>
+<DIAGCLASS id='_0x04c4a5c0' tmplref='_0x04c3f090'>
+<NAME>
+<TUV xml:lang='en-US'>DiagnosticSessionControl</TUV>
+</NAME>
+<QUAL>DiagnosticSessionControl</QUAL>
+<DIAGINST id='_0x04c4a7a0' tmplref='_0x04c3f090' req='1'>
+<NAME>
+<TUV xml:lang='en-US'>Development</TUV>
+</NAME>
+<QUAL>Development</QUAL>
+<SERVICE id='_0x04c4a9e8' tmplref='_0x04c3f290' func='1' phys='1' respOnPhys='1' respOnFunc='1' req='0' mayBeExec='(1,3,4,5,6)' trans='(1,6,3,6,4,6,5,6,6,6)'>
+<NAME>
+<TUV xml:lang='en-US'>Start</TUV>
+</NAME>
+<QUAL>Start</QUAL>
+<ENUM attrref='_0x02ad8850' v='1'/>
+<ENUM attrref='_0x02ad93c0' v='1'/>
+</SERVICE>
+<STATICVALUE shstaticref='_0x04c3f410' v='79'/>
+<SIMPLECOMPCONT shproxyref='_0x04c3f560'>
+</SIMPLECOMPCONT>
+<SIMPLECOMPCONT shproxyref='_0x04c3f6b8'>
+<SPECDATAOBJ>
+<NAME>
+<TUV xml:lang='en-US'>Start NR</TUV>
+</NAME>
+<QUAL>Start_NR</QUAL>
+<NEGRESCODEPROXIES>
+<NEGRESCODEPROXY idref='_0x02adab10'/>
+<NEGRESCODEPROXY idref='_0x02adac30'/>
+<NEGRESCODEPROXY idref='_0x02adad50'/>
+</NEGRESCODEPROXIES>
+</SPECDATAOBJ>
+</SIMPLECOMPCONT>
+</DIAGINST>
+<DIAGINST id='_0x04c4b8a8' tmplref='_0x04c3f090' req='1'>
+<NAME>
+<TUV xml:lang='en-US'>ECOS</TUV>
+</NAME>
+<QUAL>ECOS</QUAL>
+<SERVICE id='_0x04c4baf0' tmplref='_0x04c3f290' func='1' phys='1' respOnPhys='1' respOnFunc='1' req='0' mayBeExec='(1,3,4,5,6)' trans='(1,5,3,5,4,5,5,5,6,5)'>
+<NAME>
+<TUV xml:lang='en-US'>Start</TUV>
+</NAME>
+<QUAL>Start</QUAL>
+<ENUM attrref='_0x02ad8850' v='1'/>
+<ENUM attrref='_0x02ad93c0' v='1'/>
+</SERVICE>
+<STATICVALUE shstaticref='_0x04c3f410' v='65'/>
+<SIMPLECOMPCONT shproxyref='_0x04c3f560'>
+</SIMPLECOMPCONT>
+<SIMPLECOMPCONT shproxyref='_0x04c3f6b8'>
+<SPECDATAOBJ>
+<NAME>
+<TUV xml:lang='en-US'>Start NR</TUV>
+</NAME>
+<QUAL>Start_NR</QUAL>
+<NEGRESCODEPROXIES>
+<NEGRESCODEPROXY idref='_0x02adab10'/>
+<NEGRESCODEPROXY idref='_0x02adac30'/>
+<NEGRESCODEPROXY idref='_0x02adad50'/>
+</NEGRESCODEPROXIES>
+</SPECDATAOBJ>
+</SIMPLECOMPCONT>
+</DIAGINST>
+<DIAGINST id='_0x04c4c9b0' tmplref='_0x04c3f090' req='1'>
+<NAME>
+<TUV xml:lang='en-US'>EndOfLine</TUV>
+</NAME>
+<QUAL>EndOfLine</QUAL>
+<SERVICE id='_0x04c4cbf8' tmplref='_0x04c3f290' func='1' phys='1' respOnPhys='1' respOnFunc='1' req='0' mayBeExec='(1,3,4,5,6)' trans='(1,4,3,4,4,4,5,4,6,4)'>
+<NAME>
+<TUV xml:lang='en-US'>Start</TUV>
+</NAME>
+<QUAL>Start</QUAL>
+<ENUM attrref='_0x02ad8850' v='1'/>
+<ENUM attrref='_0x02ad93c0' v='1'/>
+</SERVICE>
+<STATICVALUE shstaticref='_0x04c3f410' v='64'/>
+<SIMPLECOMPCONT shproxyref='_0x04c3f560'>
+</SIMPLECOMPCONT>
+<SIMPLECOMPCONT shproxyref='_0x04c3f6b8'>
+<SPECDATAOBJ>
+<NAME>
+<TUV xml:lang='en-US'>Start NR</TUV>
+</NAME>
+<QUAL>Start_NR</QUAL>
+<NEGRESCODEPROXIES>
+<NEGRESCODEPROXY idref='_0x02adab10'/>
+<NEGRESCODEPROXY idref='_0x02adac30'/>
+<NEGRESCODEPROXY idref='_0x02adad50'/>
+</NEGRESCODEPROXIES>
+</SPECDATAOBJ>
+</SIMPLECOMPCONT>
+</DIAGINST>
+<DIAGINST id='_0x04c4dab8' tmplref='_0x04c3f090' req='1' xauth='ap'>
+<NAME>
+<TUV xml:lang='en-US'>Default</TUV>
+</NAME>
+<QUAL>Default</QUAL>
+<SERVICE id='_0x04c4dd00' tmplref='_0x04c3f290' func='1' phys='1' respOnPhys='1' respOnFunc='1' req='0' mayBeExec='(1,2,3,4,5,6)' trans='(1,1,2,1,3,1,4,1,5,1,6,1)'>
+<NAME>
+<TUV xml:lang='en-US'>Start</TUV>
+</NAME>
+<QUAL>Start</QUAL>
+<ENUM attrref='_0x02ad8850' v='1'/>
+<ENUM attrref='_0x02ad8c68' v='2'/>
+<ENUM attrref='_0x02ad93c0' v='1'/>
+</SERVICE>
+<STATICVALUE shstaticref='_0x04c3f410' v='1'/>
+<SIMPLECOMPCONT shproxyref='_0x04c3f560'>
+</SIMPLECOMPCONT>
+<SIMPLECOMPCONT shproxyref='_0x04c3f6b8'>
+<SPECDATAOBJ>
+<NAME>
+<TUV xml:lang='en-US'>NEGATIVE RESPONSE CODES</TUV>
+</NAME>
+<QUAL>NRC</QUAL>
+<NEGRESCODEPROXIES>
+<NEGRESCODEPROXY idref='_0x02adab10'/>
+<NEGRESCODEPROXY idref='_0x02adac30'/>
+<NEGRESCODEPROXY idref='_0x02adad50'/>
+</NEGRESCODEPROXIES>
+</SPECDATAOBJ>
+</SIMPLECOMPCONT>
+</DIAGINST>
+<DIAGINST id='_0x04c4ee08' tmplref='_0x04c3f090' req='1' xauth='ap'>
+<NAME>
+<TUV xml:lang='en-US'>Programming</TUV>
+</NAME>
+<QUAL>Programming</QUAL>
+<SERVICE id='_0x04c4f050' tmplref='_0x04c3f290' func='1' phys='1' respOnPhys='1' respOnFunc='1' req='0' mayBeExec='(1,2,3,4,5,6)' trans='(1,2,2,2,3,2,4,2,5,2,6,2)'>
+<NAME>
+<TUV xml:lang='en-US'>Start</TUV>
+</NAME>
+<QUAL>Start</QUAL>
+<ENUM attrref='_0x02ad8850' v='1'/>
+<ENUM attrref='_0x02ad8c68' v='2'/>
+<ENUM attrref='_0x02ad93c0' v='1'/>
+</SERVICE>
+<STATICVALUE shstaticref='_0x04c3f410' v='2'/>
+<SIMPLECOMPCONT shproxyref='_0x04c3f560'>
+</SIMPLECOMPCONT>
+<SIMPLECOMPCONT shproxyref='_0x04c3f6b8'>
+<SPECDATAOBJ>
+<NAME>
+<TUV xml:lang='en-US'>NEGATIVE RESPONSE CODES</TUV>
+</NAME>
+<QUAL>NRC</QUAL>
+<NEGRESCODEPROXIES>
+<NEGRESCODEPROXY idref='_0x02adab10'/>
+<NEGRESCODEPROXY idref='_0x02adac30'/>
+<NEGRESCODEPROXY idref='_0x02adad50'/>
+</NEGRESCODEPROXIES>
+</SPECDATAOBJ>
+</SIMPLECOMPCONT>
+</DIAGINST>
+<DIAGINST id='_0x04c50158' tmplref='_0x04c3f090' req='1' xauth='ap'>
+<NAME>
+<TUV xml:lang='en-US'>Extended</TUV>
+</NAME>
+<QUAL>Extended</QUAL>
+<SERVICE id='_0x04c503a0' tmplref='_0x04c3f290' func='1' phys='1' respOnPhys='1' respOnFunc='1' req='0' mayBeExec='(1,3,4,5,6)' trans='(1,3,3,3,4,3,5,3,6,3)'>
+<NAME>
+<TUV xml:lang='en-US'>Start</TUV>
+</NAME>
+<QUAL>Start</QUAL>
+<ENUM attrref='_0x02ad8850' v='1'/>
+<ENUM attrref='_0x02ad8c68' v='2'/>
+<ENUM attrref='_0x02ad93c0' v='1'/>
+</SERVICE>
+<STATICVALUE shstaticref='_0x04c3f410' v='3'/>
+<SIMPLECOMPCONT shproxyref='_0x04c3f560'>
+</SIMPLECOMPCONT>
+<SIMPLECOMPCONT shproxyref='_0x04c3f6b8'>
+<SPECDATAOBJ>
+<NAME>
+<TUV xml:lang='en-US'>NEGATIVE RESPONSE CODES</TUV>
+</NAME>
+<QUAL>NRC</QUAL>
+<NEGRESCODEPROXIES>
+<NEGRESCODEPROXY idref='_0x02adab10'/>
+<NEGRESCODEPROXY idref='_0x02adac30'/>
+<NEGRESCODEPROXY idref='_0x02adad50'/>
+</NEGRESCODEPROXIES>
+</SPECDATAOBJ>
+</SIMPLECOMPCONT>
+</DIAGINST>
+</DIAGCLASS>
+<DIAGINST id='_0x04c514b0' tmplref='_0x04c3f810' req='1' xauth='ap'>
+<NAME>
+<TUV xml:lang='en-US'>EcuReset</TUV>
+</NAME>
+<QUAL>EcuReset</QUAL>
+<SERVICE id='_0x04c516f8' tmplref='_0x04c3fa10' func='1' phys='1' respOnPhys='1' respOnFunc='1' req='0'>
+<NAME>
+<TUV xml:lang='en-US'>Process</TUV>
+</NAME>
+<QUAL>Process</QUAL>
+<ENUM attrref='_0x02ad8850' v='0'/>
+<ENUM attrref='_0x02ad8c68' v='0'/>
+<ENUM attrref='_0x02ad93c0' v='0'/>
+</SERVICE>
+<SIMPLECOMPCONT shproxyref='_0x04c3fb90'>
+<SPECDATAOBJ>
+<NAME>
+<TUV xml:lang='en-US'>NEGATIVE RESPONSE CODES</TUV>
+</NAME>
+<QUAL>NRC</QUAL>
+<NEGRESCODEPROXIES>
+<NEGRESCODEPROXY idref='_0x02adab10'/>
+<NEGRESCODEPROXY idref='_0x02adac30'/>
+<NEGRESCODEPROXY idref='_0x02adad50'/>
+</NEGRESCODEPROXIES>
+</SPECDATAOBJ>
+</SIMPLECOMPCONT>
+</DIAGINST>
+<DIAGINST id='_0x04c52468' tmplref='_0x04c3fce8' req='1' xauth='p'>
+<NAME>
+<TUV xml:lang='en-US'>SecurityAccess</TUV>
+</NAME>
+<QUAL>SecurityAccess</QUAL>
+<SERVICE id='_0x04c526b0' tmplref='_0x04c3fee8' func='1' phys='1' respOnPhys='1' respOnFunc='1' req='0' mayBeExec='(2,3,4,6)'>
+<NAME>
+<TUV xml:lang='en-US'>Process</TUV>
+</NAME>
+<QUAL>Process</QUAL>
+<ENUM attrref='_0x02ad8850' v='0'/>
+<ENUM attrref='_0x02ad8c68' v='0'/>
+<ENUM attrref='_0x02ad93c0' v='0'/>
+</SERVICE>
+<SIMPLECOMPCONT shproxyref='_0x04c40068'>
+<SPECDATAOBJ>
+<NAME>
+<TUV xml:lang='en-US'>NEGATIVE RESPONSE CODES</TUV>
+</NAME>
+<QUAL>NRC</QUAL>
+<NEGRESCODEPROXIES>
+<NEGRESCODEPROXY idref='_0x02adab10'/>
+<NEGRESCODEPROXY idref='_0x02adac30'/>
+<NEGRESCODEPROXY idref='_0x02adad50'/>
+<NEGRESCODEPROXY idref='_0x02adaf90'/>
+<NEGRESCODEPROXY idref='_0x02adae70'/>
+<NEGRESCODEPROXY idref='_0x02adb0b0'/>
+<NEGRESCODEPROXY idref='_0x02adb1d0'/>
+<NEGRESCODEPROXY idref='_0x02adb2f0'/>
+</NEGRESCODEPROXIES>
+</SPECDATAOBJ>
+</SIMPLECOMPCONT>
+</DIAGINST>
+<DIAGCLASS id='_0x04c53650' tmplref='_0x04c401c0'>
+<NAME>
+<TUV xml:lang='en-US'>CommunicationControl</TUV>
+</NAME>
+<QUAL>CommunicationControl</QUAL>
+<DIAGINST id='_0x04c53830' tmplref='_0x04c401c0' req='1' xauth='ap'>
+<NAME>
+<TUV xml:lang='en-US'>EnableRxAndEnableTx</TUV>
+</NAME>
+<QUAL>EnableRxAndEnableTx</QUAL>
+<SERVICE id='_0x04c53a78' tmplref='_0x04c403c0' func='1' phys='1' respOnPhys='1' respOnFunc='1' req='0' mayBeExec='(3,4,6)'>
+<NAME>
+<TUV xml:lang='en-US'>Control</TUV>
+</NAME>
+<QUAL>Control</QUAL>
+<ENUM attrref='_0x02ad8850' v='1'/>
+<ENUM attrref='_0x02ad8c68' v='0'/>
+<ENUM attrref='_0x02ad93c0' v='1'/>
+<STR attrref='_0x02ad97d8'><STRING>
+<TUV xml:lang='en-US'>CommonCommCtrlProcess</TUV>
+</STRING>
+</STR>
+</SERVICE>
+<STATICVALUE shstaticref='_0x04c40540' v='0'/>
+<SIMPLECOMPCONT shproxyref='_0x04c40690'>
+<STRUCT spec='no' dtref='_0x02adc8c8'>
+<NAME>
+<TUV xml:lang='en-US'>CommType</TUV>
+</NAME>
+<QUAL>CommType</QUAL>
+<DATAOBJ spec='no' dtref='_0x02addb10'>
+<NAME>
+<TUV xml:lang='en-US'>NormalCommunicationMessages</TUV>
+</NAME>
+<QUAL>NormalCommunicationMessages</QUAL>
+</DATAOBJ>
+<DATAOBJ spec='no' dtref='_0x02addb10'>
+<NAME>
+<TUV xml:lang='en-US'>NetworkCommunicationCommunicationMessages</TUV>
+</NAME>
+<QUAL>NetworkCommunicationCommunicationMessages</QUAL>
+</DATAOBJ>
+<DATAOBJ spec='no' dtref='_0x02addb10'>
+<NAME>
+<TUV xml:lang='en-US'>DiagnosticCommunicationMessages</TUV>
+</NAME>
+<QUAL>DiagnosticCommunicationMessages</QUAL>
+</DATAOBJ>
+<DATAOBJ spec='no' dtref='_0x02add908'>
+<NAME>
+<TUV xml:lang='en-US'>(reserved)</TUV>
+</NAME>
+<QUAL>_reserved</QUAL>
+</DATAOBJ>
+</STRUCT>
+</SIMPLECOMPCONT>
+<SIMPLECOMPCONT shproxyref='_0x04c407e8'>
+<SPECDATAOBJ>
+<NAME>
+<TUV xml:lang='en-US'>NEGATIVE RESPONSE CODES</TUV>
+</NAME>
+<QUAL>NRC</QUAL>
+<NEGRESCODEPROXIES>
+<NEGRESCODEPROXY idref='_0x02adab10'/>
+<NEGRESCODEPROXY idref='_0x02adac30'/>
+<NEGRESCODEPROXY idref='_0x02adad50'/>
+<NEGRESCODEPROXY idref='_0x02adae70'/>
+</NEGRESCODEPROXIES>
+</SPECDATAOBJ>
+</SIMPLECOMPCONT>
+</DIAGINST>
+<DIAGINST id='_0x04c562f0' tmplref='_0x04c401c0' req='1' xauth='ap'>
+<NAME>
+<TUV xml:lang='en-US'>EnableRxAndDisableTx</TUV>
+</NAME>
+<QUAL>EnableRxAndDisableTx</QUAL>
+<SERVICE id='_0x04c56538' tmplref='_0x04c403c0' func='1' phys='1' respOnPhys='1' respOnFunc='1' req='0' mayBeExec='(3,4,6)'>
+<NAME>
+<TUV xml:lang='en-US'>Control</TUV>
+</NAME>
+<QUAL>Control</QUAL>
+<ENUM attrref='_0x02ad8850' v='1'/>
+<ENUM attrref='_0x02ad8c68' v='0'/>
+<ENUM attrref='_0x02ad93c0' v='1'/>
+<STR attrref='_0x02ad97d8'><STRING>
+<TUV xml:lang='en-US'>CommonCommCtrlProcess</TUV>
+</STRING>
+</STR>
+</SERVICE>
+<STATICVALUE shstaticref='_0x04c40540' v='1'/>
+<SIMPLECOMPCONT shproxyref='_0x04c40690'>
+<STRUCT spec='no' dtref='_0x02adc8c8'>
+<NAME>
+<TUV xml:lang='en-US'>CommType</TUV>
+</NAME>
+<QUAL>CommType</QUAL>
+<DATAOBJ spec='no' dtref='_0x02addb10'>
+<NAME>
+<TUV xml:lang='en-US'>NormalCommunicationMessages</TUV>
+</NAME>
+<QUAL>NormalCommunicationMessages</QUAL>
+</DATAOBJ>
+<DATAOBJ spec='no' dtref='_0x02addb10'>
+<NAME>
+<TUV xml:lang='en-US'>NetworkCommunicationCommunicationMessages</TUV>
+</NAME>
+<QUAL>NetworkCommunicationCommunicationMessages</QUAL>
+</DATAOBJ>
+<DATAOBJ spec='no' dtref='_0x02addb10'>
+<NAME>
+<TUV xml:lang='en-US'>DiagnosticCommunicationMessages</TUV>
+</NAME>
+<QUAL>DiagnosticCommunicationMessages</QUAL>
+</DATAOBJ>
+<DATAOBJ spec='no' dtref='_0x02add908'>
+<NAME>
+<TUV xml:lang='en-US'>(reserved)</TUV>
+</NAME>
+<QUAL>_reserved</QUAL>
+</DATAOBJ>
+</STRUCT>
+</SIMPLECOMPCONT>
+<SIMPLECOMPCONT shproxyref='_0x04c407e8'>
+<SPECDATAOBJ>
+<NAME>
+<TUV xml:lang='en-US'>NEGATIVE RESPONSE CODES</TUV>
+</NAME>
+<QUAL>NRC</QUAL>
+<NEGRESCODEPROXIES>
+<NEGRESCODEPROXY idref='_0x02adab10'/>
+<NEGRESCODEPROXY idref='_0x02adac30'/>
+<NEGRESCODEPROXY idref='_0x02adad50'/>
+<NEGRESCODEPROXY idref='_0x02adae70'/>
+</NEGRESCODEPROXIES>
+</SPECDATAOBJ>
+</SIMPLECOMPCONT>
+</DIAGINST>
+</DIAGCLASS>
+<DIAGINST id='_0x04c58db0' tmplref='_0x04c40940' req='1' xauth='ap'>
+<NAME>
+<TUV xml:lang='en-US'>TesterPresent</TUV>
+</NAME>
+<QUAL>TesterPresent</QUAL>
+<SERVICE id='_0x04c58ff8' tmplref='_0x04c40b40' func='1' phys='1' respOnPhys='1' respOnFunc='1' req='0'>
+<NAME>
+<TUV xml:lang='en-US'>Process</TUV>
+</NAME>
+<QUAL>Process</QUAL>
+<ENUM attrref='_0x02ad8850' v='1'/>
+<ENUM attrref='_0x02ad8c68' v='0'/>
+<ENUM attrref='_0x02ad93c0' v='0'/>
+</SERVICE>
+<SIMPLECOMPCONT shproxyref='_0x04c40cc0'>
+<SPECDATAOBJ>
+<NAME>
+<TUV xml:lang='en-US'>NEGATIVE RESPONSE CODES</TUV>
+</NAME>
+<QUAL>NRC</QUAL>
+<NEGRESCODEPROXIES>
+<NEGRESCODEPROXY idref='_0x02adab10'/>
+<NEGRESCODEPROXY idref='_0x02adac30'/>
+</NEGRESCODEPROXIES>
+</SPECDATAOBJ>
+</SIMPLECOMPCONT>
+</DIAGINST>
+<DIAGINST id='_0x04c59cb8' tmplref='_0x04c412f0' req='1' xauth='ap'>
+<NAME>
+<TUV xml:lang='en-US'>ControlDTCSetting</TUV>
+</NAME>
+<QUAL>ControlDTCSetting</QUAL>
+<SERVICE id='_0x04c59f00' tmplref='_0x04c414f0' func='1' phys='1' respOnPhys='1' respOnFunc='1' req='0' mayBeExec='(3,4,5,6)'>
+<NAME>
+<TUV xml:lang='en-US'>Process</TUV>
+</NAME>
+<QUAL>Process</QUAL>
+<ENUM attrref='_0x02ad8850' v='0'/>
+<ENUM attrref='_0x02ad8c68' v='0'/>
+<ENUM attrref='_0x02ad93c0' v='0'/>
+</SERVICE>
+<SIMPLECOMPCONT shproxyref='_0x04c41670'>
+<SPECDATAOBJ>
+<NAME>
+<TUV xml:lang='en-US'>NEGATIVE RESPONSE CODES</TUV>
+</NAME>
+<QUAL>NRC</QUAL>
+<NEGRESCODEPROXIES>
+<NEGRESCODEPROXY idref='_0x02adab10'/>
+<NEGRESCODEPROXY idref='_0x02adac30'/>
+<NEGRESCODEPROXY idref='_0x02adad50'/>
+<NEGRESCODEPROXY idref='_0x02adae70'/>
+</NEGRESCODEPROXIES>
+</SPECDATAOBJ>
+</SIMPLECOMPCONT>
+</DIAGINST>
+<DIAGINST id='_0x04c5ace0' tmplref='_0x04c41ca0' req='1' xauth='ap'>
+<NAME>
+<TUV xml:lang='en-US'>ReadDataByIdentifier</TUV>
+</NAME>
+<QUAL>ReadDataByIdentifier</QUAL>
+<SERVICE id='_0x04c5af28' tmplref='_0x04c41ea0' func='1' phys='1' respOnPhys='1' respOnFunc='1' req='0'>
+<NAME>
+<TUV xml:lang='en-US'>Process</TUV>
+</NAME>
+<QUAL>Process</QUAL>
+<ENUM attrref='_0x02ad8850' v='0'/>
+<ENUM attrref='_0x02ad8c68' v='0'/>
+<ENUM attrref='_0x02ad93c0' v='0'/>
+</SERVICE>
+<SIMPLECOMPCONT shproxyref='_0x04c42038'>
+<SPECDATAOBJ>
+<NAME>
+<TUV xml:lang='en-US'>NEGATIVE RESPONSE CODES</TUV>
+</NAME>
+<QUAL>NRC</QUAL>
+<NEGRESCODEPROXIES>
+<NEGRESCODEPROXY idref='_0x02adab10'/>
+<NEGRESCODEPROXY idref='_0x02adac30'/>
+<NEGRESCODEPROXY idref='_0x02adae70'/>
+<NEGRESCODEPROXY idref='_0x02adb410'/>
+</NEGRESCODEPROXIES>
+</SPECDATAOBJ>
+</SIMPLECOMPCONT>
+</DIAGINST>
+<DIAGINST id='_0x04c5bcc8' tmplref='_0x04c42668' req='1' xauth='p'>
+<NAME>
+<TUV xml:lang='en-US'>ReadMemoryByAddress</TUV>
+</NAME>
+<QUAL>ReadMemoryByAddress</QUAL>
+<SERVICE id='_0x04c5bf10' tmplref='_0x04c42868' func='1' phys='1' respOnPhys='1' respOnFunc='1' req='0' mayBeExec='(6)'>
+<NAME>
+<TUV xml:lang='en-US'>Process</TUV>
+</NAME>
+<QUAL>Process</QUAL>
+<ENUM attrref='_0x02ad8850' v='0'/>
+<ENUM attrref='_0x02ad8c68' v='0'/>
+<ENUM attrref='_0x02ad93c0' v='0'/>
+</SERVICE>
+<SIMPLECOMPCONT shproxyref='_0x04c429e8'>
+<SPECDATAOBJ>
+<NAME>
+<TUV xml:lang='en-US'>NEGATIVE RESPONSE CODES</TUV>
+</NAME>
+<QUAL>NRC</QUAL>
+<NEGRESCODEPROXIES>
+<NEGRESCODEPROXY idref='_0x02adab10'/>
+<NEGRESCODEPROXY idref='_0x02adac30'/>
+<NEGRESCODEPROXY idref='_0x02adae70'/>
+<NEGRESCODEPROXY idref='_0x02adb410'/>
+</NEGRESCODEPROXIES>
+</SPECDATAOBJ>
+</SIMPLECOMPCONT>
+</DIAGINST>
+<DIAGINST id='_0x04c5ccf0' tmplref='_0x04c43018' req='1' xauth='ap'>
+<NAME>
+<TUV xml:lang='en-US'>WriteDataByIdentifier</TUV>
+</NAME>
+<QUAL>WriteDataByIdentifier</QUAL>
+<SERVICE id='_0x04c5cf38' tmplref='_0x04c43218' func='1' phys='1' respOnPhys='1' respOnFunc='1' req='0' mayBeExec='(2,3,4,6)'>
+<NAME>
+<TUV xml:lang='en-US'>Process</TUV>
+</NAME>
+<QUAL>Process</QUAL>
+<ENUM attrref='_0x02ad8850' v='0'/>
+<ENUM attrref='_0x02ad8c68' v='0'/>
+<ENUM attrref='_0x02ad93c0' v='0'/>
+</SERVICE>
+<SIMPLECOMPCONT shproxyref='_0x04c43398'>
+<SPECDATAOBJ>
+<NAME>
+<TUV xml:lang='en-US'>NEGATIVE RESPONSE CODES</TUV>
+</NAME>
+<QUAL>NRC</QUAL>
+<NEGRESCODEPROXIES>
+<NEGRESCODEPROXY idref='_0x02adac30'/>
+<NEGRESCODEPROXY idref='_0x02adad50'/>
+<NEGRESCODEPROXY idref='_0x02adae70'/>
+<NEGRESCODEPROXY idref='_0x02adb410'/>
+<NEGRESCODEPROXY idref='_0x02adb530'/>
+</NEGRESCODEPROXIES>
+</SPECDATAOBJ>
+</SIMPLECOMPCONT>
+</DIAGINST>
+<DIAGINST id='_0x04c5dd88' tmplref='_0x04c434f0' req='1' xauth='p'>
+<NAME>
+<TUV xml:lang='en-US'>WriteMemoryByAddress</TUV>
+</NAME>
+<QUAL>WriteMemoryByAddress</QUAL>
+<SERVICE id='_0x04c5dfd0' tmplref='_0x04c436f0' func='1' phys='1' respOnPhys='1' respOnFunc='1' req='0' mayBeExec='(6)'>
+<NAME>
+<TUV xml:lang='en-US'>Process</TUV>
+</NAME>
+<QUAL>Process</QUAL>
+<ENUM attrref='_0x02ad8850' v='0'/>
+<ENUM attrref='_0x02ad8c68' v='0'/>
+<ENUM attrref='_0x02ad93c0' v='0'/>
+</SERVICE>
+<SIMPLECOMPCONT shproxyref='_0x04c43870'>
+<SPECDATAOBJ>
+<NAME>
+<TUV xml:lang='en-US'>NEGATIVE RESPONSE CODES</TUV>
+</NAME>
+<QUAL>NRC</QUAL>
+<NEGRESCODEPROXIES>
+<NEGRESCODEPROXY idref='_0x02adac30'/>
+<NEGRESCODEPROXY idref='_0x02adad50'/>
+<NEGRESCODEPROXY idref='_0x02adae70'/>
+<NEGRESCODEPROXY idref='_0x02adb410'/>
+</NEGRESCODEPROXIES>
+</SPECDATAOBJ>
+</SIMPLECOMPCONT>
+</DIAGINST>
+<DIAGINST id='_0x04c5edb0' tmplref='_0x04c439c8' req='1' xauth='ap'>
+<NAME>
+<TUV xml:lang='en-US'>ClearDiagnosticInformation</TUV>
+</NAME>
+<QUAL>ClearDiagnosticInformation</QUAL>
+<SERVICE id='_0x04c5eff8' tmplref='_0x04c43bc8' func='1' phys='1' respOnPhys='1' respOnFunc='1' req='0' mayBeExec='(1,3,4,6)'>
+<NAME>
+<TUV xml:lang='en-US'>Process</TUV>
+</NAME>
+<QUAL>Process</QUAL>
+<ENUM attrref='_0x02ad8850' v='0'/>
+<ENUM attrref='_0x02ad8c68' v='0'/>
+<ENUM attrref='_0x02ad93c0' v='0'/>
+</SERVICE>
+<SIMPLECOMPCONT shproxyref='_0x04c43d48'>
+<SPECDATAOBJ>
+<NAME>
+<TUV xml:lang='en-US'>NEGATIVE RESPONSE CODES</TUV>
+</NAME>
+<QUAL>NRC</QUAL>
+<NEGRESCODEPROXIES>
+<NEGRESCODEPROXY idref='_0x02adac30'/>
+<NEGRESCODEPROXY idref='_0x02adad50'/>
+<NEGRESCODEPROXY idref='_0x02adae70'/>
+</NEGRESCODEPROXIES>
+</SPECDATAOBJ>
+</SIMPLECOMPCONT>
+</DIAGINST>
+<DIAGINST id='_0x04c5fd68' tmplref='_0x04c43ea0' req='1' xauth='ap'>
+<NAME>
+<TUV xml:lang='en-US'>ReadDtcInformation</TUV>
+</NAME>
+<QUAL>ReadDtcInformation</QUAL>
+<SERVICE id='_0x04c5ffb0' tmplref='_0x04c440a8' func='1' phys='1' respOnPhys='1' respOnFunc='1' req='0' mayBeExec='(1,3,4,5,6)'>
+<NAME>
+<TUV xml:lang='en-US'>Process</TUV>
+</NAME>
+<QUAL>Process</QUAL>
+<ENUM attrref='_0x02ad8850' v='0'/>
+<ENUM attrref='_0x02ad8c68' v='0'/>
+<ENUM attrref='_0x02ad93c0' v='0'/>
+</SERVICE>
+<SIMPLECOMPCONT shproxyref='_0x04c44228'>
+<SPECDATAOBJ>
+<NAME>
+<TUV xml:lang='en-US'>NEGATIVE RESPONSE CODES</TUV>
+</NAME>
+<QUAL>NRC</QUAL>
+<NEGRESCODEPROXIES>
+<NEGRESCODEPROXY idref='_0x02adab10'/>
+<NEGRESCODEPROXY idref='_0x02adac30'/>
+<NEGRESCODEPROXY idref='_0x02adae70'/>
+</NEGRESCODEPROXIES>
+</SPECDATAOBJ>
+</SIMPLECOMPCONT>
+</DIAGINST>
+<DIAGINST id='_0x04c60d20' tmplref='_0x04c44380' req='1' xauth='p'>
+<NAME>
+<TUV xml:lang='en-US'>InputOutputControlByIdentifier</TUV>
+</NAME>
+<QUAL>InputOutputControlByIdentifier</QUAL>
+<SERVICE id='_0x04c60f68' tmplref='_0x04c44580' func='1' phys='1' respOnPhys='1' respOnFunc='1' req='0' mayBeExec='(3,4,5,6)'>
+<NAME>
+<TUV xml:lang='en-US'>Process</TUV>
+</NAME>
+<QUAL>Process</QUAL>
+<ENUM attrref='_0x02ad8850' v='0'/>
+<ENUM attrref='_0x02ad8c68' v='0'/>
+<ENUM attrref='_0x02ad93c0' v='0'/>
+</SERVICE>
+<SIMPLECOMPCONT shproxyref='_0x04c44700'>
+<SPECDATAOBJ>
+<NAME>
+<TUV xml:lang='en-US'>NEGATIVE RESPONSE CODES</TUV>
+</NAME>
+<QUAL>NRC</QUAL>
+<NEGRESCODEPROXIES>
+<NEGRESCODEPROXY idref='_0x02adac30'/>
+<NEGRESCODEPROXY idref='_0x02adad50'/>
+<NEGRESCODEPROXY idref='_0x02adae70'/>
+<NEGRESCODEPROXY idref='_0x02adb410'/>
+</NEGRESCODEPROXIES>
+</SPECDATAOBJ>
+</SIMPLECOMPCONT>
+</DIAGINST>
+<DIAGINST id='_0x04c61d48' tmplref='_0x04c44858' req='1' xauth='p'>
+<NAME>
+<TUV xml:lang='en-US'>RoutineControl</TUV>
+</NAME>
+<QUAL>RoutineControl</QUAL>
+<SERVICE id='_0x04c61f90' tmplref='_0x04c44a58' func='1' phys='1' respOnPhys='1' respOnFunc='1' req='0' mayBeExec='(2,3,4,6)'>
+<NAME>
+<TUV xml:lang='en-US'>Process</TUV>
+</NAME>
+<QUAL>Process</QUAL>
+<ENUM attrref='_0x02ad8850' v='0'/>
+<ENUM attrref='_0x02ad8c68' v='0'/>
+<ENUM attrref='_0x02ad93c0' v='0'/>
+</SERVICE>
+<SIMPLECOMPCONT shproxyref='_0x04c44bd8'>
+<SPECDATAOBJ>
+<NAME>
+<TUV xml:lang='en-US'>NEGATIVE RESPONSE CODES</TUV>
+</NAME>
+<QUAL>NRC</QUAL>
+<NEGRESCODEPROXIES>
+<NEGRESCODEPROXY idref='_0x02adab10'/>
+<NEGRESCODEPROXY idref='_0x02adac30'/>
+<NEGRESCODEPROXY idref='_0x02adad50'/>
+<NEGRESCODEPROXY idref='_0x02adae70'/>
+<NEGRESCODEPROXY idref='_0x02adb410'/>
+<NEGRESCODEPROXY idref='_0x02adb530'/>
+</NEGRESCODEPROXIES>
+</SPECDATAOBJ>
+</SIMPLECOMPCONT>
+</DIAGINST>
+<DIAGINST id='_0x04c62e50' tmplref='_0x04c44d30' req='1' xauth='p'>
+<NAME>
+<TUV xml:lang='en-US'>RequestDownload</TUV>
+</NAME>
+<QUAL>RequestDownload</QUAL>
+<SERVICE id='_0x04c63098' tmplref='_0x04c44f30' func='1' phys='1' respOnPhys='1' respOnFunc='1' req='0' mayBeExec='(2,4,6)'>
+<NAME>
+<TUV xml:lang='en-US'>Process</TUV>
+</NAME>
+<QUAL>Process</QUAL>
+<ENUM attrref='_0x02ad8850' v='0'/>
+<ENUM attrref='_0x02ad8c68' v='0'/>
+<ENUM attrref='_0x02ad93c0' v='0'/>
+</SERVICE>
+<SIMPLECOMPCONT shproxyref='_0x04c450b0'>
+<SPECDATAOBJ>
+<NAME>
+<TUV xml:lang='en-US'>NEGATIVE RESPONSE CODES</TUV>
+</NAME>
+<QUAL>NRC</QUAL>
+<NEGRESCODEPROXIES>
+<NEGRESCODEPROXY idref='_0x02adac30'/>
+<NEGRESCODEPROXY idref='_0x02adad50'/>
+<NEGRESCODEPROXY idref='_0x02adae70'/>
+<NEGRESCODEPROXY idref='_0x02adb410'/>
+<NEGRESCODEPROXY idref='_0x02adb650'/>
+</NEGRESCODEPROXIES>
+</SPECDATAOBJ>
+</SIMPLECOMPCONT>
+</DIAGINST>
+<DIAGINST id='_0x04c63ee8' tmplref='_0x04c45208' req='1' xauth='p'>
+<NAME>
+<TUV xml:lang='en-US'>RequestUpload</TUV>
+</NAME>
+<QUAL>RequestUpload</QUAL>
+<SERVICE id='_0x04c64130' tmplref='_0x04c45408' func='1' phys='1' respOnPhys='1' respOnFunc='1' req='0' mayBeExec='(4,6)'>
+<NAME>
+<TUV xml:lang='en-US'>Process</TUV>
+</NAME>
+<QUAL>Process</QUAL>
+<ENUM attrref='_0x02ad8850' v='0'/>
+<ENUM attrref='_0x02ad8c68' v='0'/>
+<ENUM attrref='_0x02ad93c0' v='0'/>
+</SERVICE>
+<SIMPLECOMPCONT shproxyref='_0x04c45588'>
+<SPECDATAOBJ>
+<NAME>
+<TUV xml:lang='en-US'>NEGATIVE RESPONSE CODES</TUV>
+</NAME>
+<QUAL>NRC</QUAL>
+<NEGRESCODEPROXIES>
+<NEGRESCODEPROXY idref='_0x02adac30'/>
+<NEGRESCODEPROXY idref='_0x02adad50'/>
+<NEGRESCODEPROXY idref='_0x02adae70'/>
+<NEGRESCODEPROXY idref='_0x02adb410'/>
+<NEGRESCODEPROXY idref='_0x02adb650'/>
+</NEGRESCODEPROXIES>
+</SPECDATAOBJ>
+</SIMPLECOMPCONT>
+</DIAGINST>
+<DIAGINST id='_0x04c64f80' tmplref='_0x04c456e0' req='1' xauth='p'>
+<NAME>
+<TUV xml:lang='en-US'>TransferData</TUV>
+</NAME>
+<QUAL>TransferData</QUAL>
+<SERVICE id='_0x04c651c8' tmplref='_0x04c458e0' func='1' phys='1' respOnPhys='1' respOnFunc='1' req='0' mayBeExec='(2,4,6)'>
+<NAME>
+<TUV xml:lang='en-US'>Process</TUV>
+</NAME>
+<QUAL>Process</QUAL>
+<ENUM attrref='_0x02ad8850' v='0'/>
+<ENUM attrref='_0x02ad8c68' v='0'/>
+<ENUM attrref='_0x02ad93c0' v='0'/>
+</SERVICE>
+<SIMPLECOMPCONT shproxyref='_0x04c45a60'>
+<SPECDATAOBJ>
+<NAME>
+<TUV xml:lang='en-US'>NEGATIVE RESPONSE CODES</TUV>
+</NAME>
+<QUAL>NRC</QUAL>
+<NEGRESCODEPROXIES>
+<NEGRESCODEPROXY idref='_0x02adac30'/>
+<NEGRESCODEPROXY idref='_0x02adad50'/>
+<NEGRESCODEPROXY idref='_0x02adaf90'/>
+<NEGRESCODEPROXY idref='_0x02adae70'/>
+<NEGRESCODEPROXY idref='_0x02adb770'/>
+<NEGRESCODEPROXY idref='_0x02adb530'/>
+<NEGRESCODEPROXY idref='_0x02adb890'/>
+<NEGRESCODEPROXY idref='_0x02adb9b0'/>
+</NEGRESCODEPROXIES>
+</SPECDATAOBJ>
+</SIMPLECOMPCONT>
+</DIAGINST>
+<DIAGINST id='_0x04c66168' tmplref='_0x04c45bb8' req='1' xauth='p'>
+<NAME>
+<TUV xml:lang='en-US'>RequestTransferExit</TUV>
+</NAME>
+<QUAL>RequestTransferExit</QUAL>
+<SERVICE id='_0x04c663b0' tmplref='_0x04c45db8' func='1' phys='1' respOnPhys='1' respOnFunc='1' req='0' mayBeExec='(2,4,6)'>
+<NAME>
+<TUV xml:lang='en-US'>Process</TUV>
+</NAME>
+<QUAL>Process</QUAL>
+<ENUM attrref='_0x02ad8850' v='0'/>
+<ENUM attrref='_0x02ad8c68' v='0'/>
+<ENUM attrref='_0x02ad93c0' v='0'/>
+</SERVICE>
+<SIMPLECOMPCONT shproxyref='_0x04c45f38'>
+<SPECDATAOBJ>
+<NAME>
+<TUV xml:lang='en-US'>NEGATIVE RESPONSE CODES</TUV>
+</NAME>
+<QUAL>NRC</QUAL>
+<NEGRESCODEPROXIES>
+<NEGRESCODEPROXY idref='_0x02adac30'/>
+<NEGRESCODEPROXY idref='_0x02adad50'/>
+<NEGRESCODEPROXY idref='_0x02adaf90'/>
+</NEGRESCODEPROXIES>
+</SPECDATAOBJ>
+</SIMPLECOMPCONT>
+</DIAGINST>
+</VAR>
+</ECU>
+</ECUDOC>
+</CANDELA>

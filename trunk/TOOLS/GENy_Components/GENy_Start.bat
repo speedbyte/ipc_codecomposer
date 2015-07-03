@@ -1,0 +1,1 @@
+start "GENy" "c:\Programme\Vector GENy 1.4\GENy.exe" /m Components

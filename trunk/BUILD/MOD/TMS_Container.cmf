@@ -1,0 +1,10 @@
+../../../OUT/SCM1.out
+-o ../../../OUT/SCM_Container.hex
+
+-image
+-i
+
+ROMS
+{
+   ROW1: origin=0x00008000 len=0x000B8000 romwidth=32 fill=0xFFFFFFFF
+}

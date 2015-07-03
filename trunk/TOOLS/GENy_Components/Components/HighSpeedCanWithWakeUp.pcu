@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2006 sp1 U (http://www.altova.com) by Tri (Vector Informatik GmbH) -->
+<!-- edited with XMLSPY v2004 rel. 4 U (http://www.xmlspy.com) by Milena de Schrevel (Vector Informatik GmbH) -->
+<config name="PAG_SLP3_HighSpeedCanWithWakeUp" guid="11223799-3996-43d1-aa55-0f8393c75235" version="1.0" default="no" xmlns="http://www.vector-informatik.de/CANGen/ModulePreconfig" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.vector-informatik.de/CANGen/ModulePreconfig
+R:\GENTOOL\NextCANGen\VersionCurrent_Develop\PreconfigFiles\preconfig.xsd">
+	<description>UseCase-Preconfiguration file for OEM PAG. SLP 2007+. UseCase HighSpeedCanWithWakeUp</description>
+	<module name="Nm_PwrTrain_Vag" version="1.0">
+		<description>Configuration of Nm_PwrTrain_Vag module</description>
+		<attribute name="NmhExtendedCallbacks" class="OTModuleInstance">
+			<!--The NM-High Wrapper provides 'Extended Callback Functions', which have to be implemented by the application.-->
+			<default value="1"/>
+			<access value="none"/>
+			<configurable value="yes"/>
+		</attribute>
+		<attribute name="NmhCarWakeUp" class="OTModuleInstance">
+			<!---->
+			<default value="0"/>
+			<access value="none"/>
+			<configurable value="yes"/>
+		</attribute>
+		<attribute name="NmhImplementsWakeUpCallback" class="OTModuleInstance">
+			<!---->
+			<default value="0"/>
+			<access value="none"/>
+			<configurable value="yes"/>
+		</attribute>
+		<attribute name="NmhImplementsBusOffCallback" class="OTModuleInstance">
+			<!---->
+			<default value="1"/>
+			<access value="rdwr"/>
+			<configurable value="yes"/>
+		</attribute>
+		<attribute name="NmhImplementsMessageReceiveFunction" class="OTModuleInstance">
+			<!---->
+			<default value="0"/>
+			<access value="none"/>
+			<configurable value="yes"/>
+		</attribute>
+		<attribute name="NmhCallCycle" class="OTChannel">
+			<!--Cycle time of the main function of NM-High Core: 'NmhTask'.-->
+			<default value="10"/>
+			<access value="rdwr"/>
+			<configurable value="yes"/>
+		</attribute>
+		<attribute name="NmhMsgTxTimeoutTime" class="OTChannel">
+			<!--Transmission Timeout Time of network management message.-->
+			<default value="1000"/>
+			<access value="rdwr"/>
+			<configurable value="yes"/>
+		</attribute>
+		<attribute name="NmhRepeatMsgCount" class="OTChannel">
+			<!--Transmission Timeout Time of network management message.-->
+			<default value="5"/>
+			<access value="rdwr"/>
+			<configurable value="yes"/>
+		</attribute>
+		<attribute name="NmhBusOffRecoveryTimeOfFirstBusOff" class="OTChannel">
+			<!--Transmission Timeout Time of network management message.-->
+			<default value="50"/>
+			<access value="rdwr"/>
+			<configurable value="yes"/>
+		</attribute>
+		<attribute name="NmhBusOffRecoveryTimeOfConsecutiveBusOff" class="OTChannel">
+			<!--Transmission Timeout Time of network management message.-->
+			<default value="200"/>
+			<access value="rdwr"/>
+			<configurable value="yes"/>
+		</attribute>
+	</module>
+	<module name="CCL" version="2.0">
+		<description>Configuration of the component CCL (NPM)</description>
+		<attribute name="AttrCclNpmMsgName" class="OTChannel">
+			<!--This attribute is fixed. It contains the prefix of the NPM message. As the name is fixed in the DBC, the value does not have to be modified by the user.-->
+			<default value="NPM_"/>
+			<access value="none"/>
+			<settingkind value="system"/>
+			<configurable value="yes"/>
+		</attribute>
+		<attribute name="AttrCclNMHighAwakeTimer" class="OTChannel">
+			<!--2006-08-21, mds: set attribute to <400, so that startup timer does not have any influence on the configuration (startup behaviour is handled by repeat message state).-->
+			<default value="350"/>
+			<access value="read"/>
+			<configurable value="no"/>
+		</attribute>
+		<attribute name="AttrCclNpmMsgTimeout" class="OTChannel">
+			<!--2006-02-22, mas, pet:Value defined by Porsche: 10*cycle time=5000ms. However, still adaptable.-->
+			<default value="5000"/>
+			<access value="rdwr"/>
+		</attribute>
+	</module>
+</config>

@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2008 rel. 2 sp1 (http://www.altova.com) by Vector Employee (Vector Informatik GmbH) -->
+<!-- edited with XMLSPY v2004 rel. 4 U (http://www.xmlspy.com) by Milena de Schrevel (Vector Informatik GmbH) -->
+<config name="PAG_SLP3_Generic" guid="11223799-3996-43d1-aa55-0f8393c75235" version="1.0" default="yes" xmlns="http://www.vector-informatik.de/CANGen/ModulePreconfig" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.vector-informatik.de/CANGen/ModulePreconfig
+R:\GENTOOL\NextCANGen\VersionCurrent_Develop\PreconfigFiles\preconfig.xsd">
+	<description>OEM-Preconfiguration file for OEM PAG. SLP3.</description>
+	<module name="TpMC" version="1.0">
+		<description>Configuration of TP_Iso15765 module</description>
+		<attribute name="TxTimeoutFC" class="OTModuleInstance">
+			<!--Value is predefined according to Porsche user requirements.-->
+			<default value="70"/>
+			<access value="rdwr"/>
+			<configurable value="yes"/>
+		</attribute>
+		<attribute name="RxTimeoutCF" class="OTModuleInstance">
+			<!--Value is predefined according to Porsche user requirements.-->
+			<default value="70"/>
+			<access value="rdwr"/>
+			<configurable value="yes"/>
+		</attribute>
+		<attribute name="TxTransmitCF" class="OTModuleInstance">
+			<!--Value is predefined according to Porsche user requirements.-->
+			<default value="0"/>
+			<access value="rdonly"/>
+			<configurable value="yes"/>
+		</attribute>
+		<attribute name="Blocksize" class="OTModuleInstance">
+			<!--Value is predefined according to Porsche user requirements.-->
+			<default value="16"/>
+			<access value="rdwr"/>
+			<configurable value="yes"/>
+		</attribute>
+		<attribute name="STMin" class="OTModuleInstance">
+			<!--Value is predefined according to Porsche user requirements.-->
+			<default value="5"/>
+			<access value="rdwr"/>
+			<configurable value="yes"/>
+		</attribute>
+		<attribute name="UseFCSTMin" class="OTModuleInstance">
+			<!--Value is predefined according to Porsche user requirements.-->
+			<default value="1"/>
+			<access value="rdonly"/>
+			<configurable value="yes"/>
+		</attribute>
+		<attribute name="TpDlcCheck" class="OTModuleInstance">
+			<!--Not relevant for Porsche.-->
+			<default value="1"/>
+			<access value="none"/>
+			<configurable value="no"/>
+		</attribute>
+		<attribute name="UseOnlyFirstFC" class="OTModuleInstance">
+			<!--Not relevant for Porsche.-->
+			<default value="1"/>
+			<access value="none"/>
+			<configurable value="yes"/>
+		</attribute>
+		<attribute name="ExtApiVarBlocksize" class="OTModuleInstance">
+			<!--Not relevant for Porsche.-->
+			<default value="0"/>
+			<access value="none"/>
+			<configurable value="yes"/>
+		</attribute>
+		<attribute name="ExtApiVarStmin" class="OTModuleInstance">
+			<!--Not relevant for Porsche.-->
+			<default value="0"/>
+			<access value="none"/>
+			<configurable value="yes"/>
+		</attribute>
+		<attribute name="UseGatewayApi" class="OTModuleInstance">
+			<!--Not relevant for Porsche.-->
+			<default value="0"/>
+			<access value="none"/>
+			<configurable value="yes"/>
+		</attribute>
+		<attribute name="UseTxOfFcInISR" class="OTModuleInstance">
+			<default value="1"/>
+			<access value="rdonly"/>
+			<configurable value="yes"/>
+		</attribute>
+		<attribute name="UseOverrunIndication" class="OTModuleInstance">
+			<!--Not relevant for Porsche.-->
+			<default value="0"/>
+			<access value="none"/>
+			<configurable value="yes"/>
+		</attribute>
+		<attribute name="UseFastTxTransmission" class="OTModuleInstance">
+			<!--Not relevant for Porsche.-->
+			<default value="0"/>
+			<access value="none"/>
+			<configurable value="yes"/>
+		</attribute>
+		<attribute name="UseNoStMinAfterFC" class="OTModuleInstance">
+			<!--Not relevant for Porsche.-->
+			<default value="0"/>
+			<access value="none"/>
+			<configurable value="yes"/>
+		</attribute>
+		<attribute name="UseGuaranteedStMin" class="OTModuleInstance">
+			<!--Not relevant for Porsche.-->
+			<default value="1"/>
+			<access value="none"/>
+			<configurable value="yes"/>
+		</attribute>
+		<attribute name="TpTxVariableDlc" class="OTModuleInstance">
+			<!--Not relevant for Porsche.-->
+			<default value="0"/>
+			<access value="none"/>
+			<configurable value="yes"/>
+		</attribute>
+		<attribute name="TpForceFuncExtendedAddressing" class="OTModuleInstance">
+			<!--Not relevant for Porsche.-->
+			<default value="0"/>
+			<access value="none"/>
+			<configurable value="yes"/>
+		</attribute>
+		<attribute name="TpIsoStandard" class="OTModuleInstance">
+			<!--Value is predefined according to Porsche user requirements.-->
+			<default value="ISO 15765-2:2004"/>
+			<userlevel value="normal"/>
+			<access value="rdonly"/>
+			<configurable value="yes"/>
+		</attribute>
+		<attribute name="TpFramePadding" class="OTModuleInstance">
+			<!--Not relevant for Porsche.-->
+			<default value="0"/>
+			<access value="none"/>
+			<configurable value="yes"/>
+		</attribute>
+		<attribute name="TpFcWaitCount " class="OTModuleInstance">
+			<!--Specify the maximum number of Wait Frames (N_WFTmax) to be sent consecutively. -->
+			<default value="15"/>
+			<access value="rdwr"/>
+			<configurable value="yes"/>
+		</attribute>
+		<attribute name="TpMixed11AddressInfoPool" class="OTChannel">
+			<access value="none"/>
+			<configurable value="no"/>
+		</attribute>
+		<attribute name="TpMixed11FuncAddrInfoPool" class="OTChannel">
+			<access value="none"/>
+			<configurable value="no"/>
+		</attribute>
+	</module>
+	<module name="CANdescBasic" version="1.0">
+		<description>Configuration of Diag_CanDesc_Basic module</description>
+		<attribute name="S3Timeout" class="OTModuleInstance">
+			<!--Value is predefined according to Porsche user requirements.-->
+			<default value="5000"/>
+			<access value="rdwr"/>
+			<configurable value="yes"/>
+		</attribute>
+		<attribute name="ImportCDD" class="OTModuleInstance">
+			<!--no cdd file should be read in in PAG use case (Herr Grothe 2010-09-27)-->
+			<access value="hide"/>
+			<configurable value="no"/>
+		</attribute>
+		<attribute name="LastImportFileName" class="OTModuleInstance">
+			<!--no cdd file should be read in in PAG use case (Herr Grothe 2010-09-27)-->
+			<access value="hide"/>
+			<configurable value="no"/>
+		</attribute>
+		<attribute name="LastImportVariant" class="OTModuleInstance">
+			<!--no cdd file should be read in in PAG use case (Herr Grothe 2010-09-27)-->
+			<access value="hide"/>
+			<configurable value="no"/>
+		</attribute>
+		<attribute name="LastImportDate" class="OTModuleInstance">
+			<!--no cdd file should be read in in PAG use case (Herr Grothe 2010-09-27)-->
+			<access value="hide"/>
+			<configurable value="no"/>
+		</attribute>
+	</module>
+	<module name="CANdescBase" version="1.0">
+		<description>Configuration of Diag_CanDesc_Basic module</description>
+		<attribute name="DiagBufferSize" class="OTModuleInstance">
+			<!--Value is predefined according to Porsche user requirements.-->
+			<default value="35"/>
+			<access value="rdwr"/>
+			<configurable value="yes"/>
+		</attribute>
+		<attribute name="ProductionSwitch" class="OTModuleInstance">
+			<!--This option is not necessary for Porsche. This feature is hidden in order to minimize the configuration effort of the user.-->
+			<default value="0"/>
+			<access value="none"/>
+			<configurable value="yes"/>
+		</attribute>
+		<attribute name="FlashableECU" class="OTModuleInstance">
+			<!--This option is not necessary for Porsche. This feature is hidden in order to minimize the configuration effort of the user.-->
+			<default value="0"/>
+			<access value="none"/>
+			<configurable value="yes"/>
+		</attribute>
+		<attribute name="ApiDebugSupport" class="OTModuleInstance">
+			<!--All debug options within the Porsche SLP3 are initially switched off.-->
+			<default value="0"/>
+			<access value="rdwr"/>
+			<configurable value="yes"/>
+		</attribute>
+		<attribute name="InternalDebugSupport" class="OTModuleInstance">
+			<!--All debug options within the Porsche SLP3 are initially switched off.-->
+			<default value="0"/>
+			<access value="rdwr"/>
+			<configurable value="yes"/>
+		</attribute>
+	</module>
+	<module name="CCL" version="2.0">
+		<description>Configuration of the component CCL (NPM)</description>
+		<attribute name="AttrCclIsrPrefix" class="OTModuleInstance">
+			<!--The attribute defines the prefix of generated CCL interrupt routines. The atribute is not visible because the prefix is not more necessary.-->
+			<default value="Ccl"/>
+			<access value="none"/>
+			<configurable value="yes"/>
+		</attribute>
+		<attribute name="AttrST10IsrNumber" class="OTChannel">
+			<default value=""/>
+			<access value="none"/>
+			<settingkind value="system"/>
+			<configurable value="yes"/>
+		</attribute>
+		<attribute name="AttrST10IsrRegBank" class="OTChannel">
+			<default value=""/>
+			<access value="none"/>
+			<settingkind value="system"/>
+			<configurable value="yes"/>
+		</attribute>
+		<attribute name="AttrWakeUpIntOsekCat2" class="OTModuleInstance">
+			<!--Not relevant for Porsche.-->
+			<access value="none"/>
+		</attribute>
+		<attribute name="AttrStopTimerByBusOff" class="OTModuleInstance">
+			<!--This feature has been discussed with Porsche: Not relevant for them. Default is OFF.-->
+			<access value="none"/>
+		</attribute>
+		<attribute name="AttrTrcvWakeUpConcept" class="OTModuleInstance">
+			<!--2006-02-02, mas, pet: Currenty only one concept is supported, therefore no need to use this attribute.-->
+			<access value="none"/>
+		</attribute>
+		<attribute name="AttrWakeConcept" class="OTModuleInstance">
+			<!--2006-02-02, mas, pet: No influence for Porsche.-->
+			<access value="none"/>
+		</attribute>
+	</module>
+	<module name="VectorIL" version="1.0">
+		<description>Configuration of Il_Vector module</description>
+		<attribute name="VIlUseRxTimeoutDelay" class="OTModuleInstance">
+			<!--This option is not necessary for Porsche. This feature is hidden in order to minimize the configuration effort of the user.-->
+			<access value="none"/>
+		</attribute>
+		<attribute name="VIlAutosarSpecificationVersion" class="OTModuleInstance">
+			<!--This option is not necessary for Porsche-->
+			<default value="0"/>
+			<access value="none"/>
+			<configurable value="no"/>
+		</attribute>
+		<attribute name="VIlUseAutosarSignalAPI" class="OTModuleInstance">
+			<!--This option is not necessary for Porsche. This feature is hidden in order to minimize the configuration effort of the user.-->
+			<access value="none"/>
+		</attribute>
+		<attribute name="VIlEnableDlcDependentIndication" class="OTModuleInstance">
+			<!--This option is not necessary for Porsche. This feature is hidden in order to minimize the configuration effort of the user.-->
+			<default value="false"/>
+			<access value="none"/>
+		</attribute>
+	</module>
+	<module name="DriverCANPartOfflineMgr13" version="1.0">
+		<description>Configuration of Offline Modes</description>
+		<attribute name="OfflineMode0Name " class="OTModuleInstance">
+			<!--Define Offlinemode Name-->
+			<default value="APPL"/>
+			<access value="rdonly"/>
+		</attribute>
+		<attribute name="MsgClass1" class="OTModuleInstance">
+			<attribute name="OfflineMode0" class="OTModuleInstance">
+				<!--Offlinemode mapping-->
+				<default value="true"/>
+				<access value="rdonly"/>
+			</attribute>
+		</attribute>
+		<attribute name="MsgClass5" class="OTModuleInstance">
+			<attribute name="OfflineMode0" class="OTModuleInstance">
+				<!--Offlinemode mapping-->
+				<default value="true"/>
+				<access value="rdonly"/>
+			</attribute>
+		</attribute>
+	</module>
+	<module name="DriverCAN13" version="1.0">
+		<description>Configuration of DLC Failed</description>
+		<attribute name="DLCFailed" class="OTModuleInstance">
+			<!--Enable DLC Failed-->
+			<default value="true"/>
+			<access value="rdwr"/>
+			<configurable value="yes"/>
+		</attribute>
+	</module>
+	<module name="BaseEnv" version="1.0">
+		<description>Configuration of VCfgNameDecorator</description>
+		<attribute name="GeneratePreconfigVersion" class="OTModuleInstance">
+			<!--This option is necessary for Porsche. This is an internal attribute that allows to generate the version of the preconfiguration files to v_cfg.h.-->
+			<default value="true"/>
+		</attribute>
+	</module>
+	<module name="Nm_DirOsekPwrTrainCwmExt_Vag" version="1.0">
+		<attribute name="CwmNativeApi" class="OTModuleInstance">
+			<default value="true"/>
+			<access value="rdonly"/>
+		</attribute>
+	</module>
+	<module name="CpuMCS12X_MSCAN" version="1.0">
+		<attribute name="ConstantsInGlobalPages" class="OTModuleInstance">
+			<default value="false"/>
+			<access value="none"/>
+		</attribute>
+	</module>
+</config>

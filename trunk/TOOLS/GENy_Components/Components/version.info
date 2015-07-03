@@ -1,0 +1,854 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CANbeddedVersionInfo Version="2.6">
+    <Properties>
+        <DeliveryDate>2011-09-30</DeliveryDate>
+        <MaintenanceExpiryDate>2021-09-30</MaintenanceExpiryDate>
+        <Expired>FALSE</Expired>
+        <CreatedDate>2011-09-29</CreatedDate>
+        <CBD>CBD1100279</CBD>
+        <SalesSite>VI</SalesSite>
+        <IntegrationSite>VI</IntegrationSite>
+        <SIP>03.20.21</SIP>
+        <Release>00</Release>
+        <ProjectNumber>5011291</ProjectNumber>
+        <Eval>false</Eval>
+        <ErrataContacts>
+            <ErrataContact>
+                <Firstname>Björn</Firstname>
+                <Surname>Schrickel</Surname>
+                <Email>bjoern.schrickel@porsche.de</Email>
+            </ErrataContact>
+            <ErrataContact>
+                <Firstname>Christian</Firstname>
+                <Surname>Grothe</Surname>
+                <Email>ssp@porsche.de</Email>
+            </ErrataContact>
+        </ErrataContacts>
+        <CustomerContact>
+            <Firstname/>
+            <Surname/>
+            <Email>PorscheEmbedded@de.vector.com</Email>
+        </CustomerContact>
+        <Customer>Dr. Ing. h. c. F. Porsche AG&#13;
+CBD / Porsche 2007+&#13;
+Texas Instruments TMS470 / TMS470 R1SF55&#13;
+Texas Instruments 4.6.6 Compiler</Customer>
+        <DeliveryType>Initial delivery</DeliveryType>
+        <ReleaseType>Serial production release (complete functionality, fully tested, full process, incl. serial production release)</ReleaseType>
+        <DeliveryReason/>
+        <OEM>Pag</OEM>
+        <SLP>CBD PAG SLP3</SLP>
+        <UseCases>
+            <UseCase>
+                <Name>HighSpeedWakeUp</Name>
+                <Description>HighSpeed Wakeup</Description>
+            </UseCase>
+        </UseCases>
+        <Controller>Tmsx70</Controller>
+        <CanCell>Heccscc</CanCell>
+        <Compiler>TexasInstruments</Compiler>
+        <DeliveryPath>\\vistrpesfs1\Project\CAN_pag\A2011\2011-09-30_CBD_PAG_SLP3_TMS470_TI_Release1</DeliveryPath>
+        <TestedDerivative>TMS470 R1B31</TestedDerivative>
+        <OrderedDerivative>TMS470 R1SF55</OrderedDerivative>
+        <NDA>false</NDA>
+    </Properties>
+    <ComponentCheck>
+        <Component Component="Implementation" Delivered="True" Lib="false" Project="Ccl_Pag" ProjectGroup="Ccl" ScanPattern="Ccl_Pag" Version="01.07.00">
+            <RelativeFileSpec>.\Ccl\Ccl_inc.h</RelativeFileSpec>
+        </Component>
+        <Component Component="GenTool_Geny" Delivered="True" Lib="false" Project="Ccl__core" ProjectGroup="Ccl" Version="03.08.11">
+            <RelativeFileSpec>.\_Gentool\Components\Ccl.dll;.\_Gentool\Components\Ccl__core.dll;.\Generators\Components\Ccl.dll;.\Generators\Components\Ccl__core.dll</RelativeFileSpec>
+        </Component>
+        <Component Component="Implementation" Delivered="True" Lib="false" Project="Ccl__core" ProjectGroup="Ccl" ScanPattern="CCL__CORE" Version="02.47.00">
+            <RelativeFileSpec>.\Ccl\Ccl_inc.h</RelativeFileSpec>
+        </Component>
+        <Component Component="Implementation" Delivered="True" Lib="false" Project="Common_SipVersionCheck" ProjectGroup="Common" ScanPattern="Common_SipVersionCheck" Version="03.01.68">
+            <RelativeFileSpec>.\_Common\Sip_vers.h</RelativeFileSpec>
+        </Component>
+        <Component Component="Implementation" Delivered="True" Lib="false" Project="Common_Vdef" ProjectGroup="Common" ScanPattern="COMMON_VDEF" Version="03.17.00">
+            <RelativeFileSpec>.\_Common\v_def.h</RelativeFileSpec>
+        </Component>
+        <Component Component="GenTool_Geny" Delivered="True" Lib="false" Project="Diag_CanDesc_Basic" ProjectGroup="Diag" Version="03.06.02">
+            <RelativeFileSpec>.\_Gentool\Components\Diag_CanDesc__coreBasic.dll;.\_Gentool\Components\CanDescBasic.dll;.\Generators\Components\Diag_CanDesc__coreBasic.dll;.\Generators\Components\CanDescBasic.dll</RelativeFileSpec>
+        </Component>
+        <Component Component="Implementation" Delivered="True" Lib="false" Project="Diag_CanDesc__coreBase" ProjectGroup="Diag" Version="05.07.37">
+            <RelativeFileSpec>.\_Gentool\Components\CANdelaGen.dll;.\_Gentool\CANdelaGen.dll;.\_Gentool\CANdescGen.dll;.\_Gentool\Components\CANdescGen.dll</RelativeFileSpec>
+        </Component>
+        <Component Component="Implementation" Delivered="True" Lib="false" Project="Diag_CanDesc__coreBase" ProjectGroup="Diag" Version="05.07.37">
+            <RelativeFileSpec>.\_Gentool\Components\CANdelaGen.dll;.\_Gentool\CANdelaGen.dll;.\_Gentool\CANdescGen.dll;.\_Gentool\Components\CANdescGen.dll</RelativeFileSpec>
+        </Component>
+        <Component Component="GenTool_Geny" Delivered="True" Lib="false" Project="Diag_Geny_coreBase" ProjectGroup="Diag" Version="03.11.18">
+            <RelativeFileSpec>.\_Gentool\Components\Diag_CanDesc__coreBase.dll</RelativeFileSpec>
+        </Component>
+        <Component Component="GenTool_Geny" Delivered="True" Lib="false" Project="DrvCan_Tms470HeccsccHll" ProjectGroup="DrvCan" Version="02.06.01">
+            <RelativeFileSpec>.\_Gentool\Components\DrvCan_Tms470HeccsccHll.dll;.\_Gentool\Components\DriverTMS470.dll;.\Generators\Components\DrvCan_Tms470HeccsccHll.dll;.\Generators\Components\DriverTMS470.dll</RelativeFileSpec>
+        </Component>
+        <Component Component="Implementation" Delivered="True" Lib="false" Project="DrvCan_Tms470HeccsccHll" ProjectGroup="DrvCan" ScanPattern="DrvCan_Tms470HeccSccHll" Version="05.03.00">
+            <RelativeFileSpec>.\Drv\can_def.h</RelativeFileSpec>
+        </Component>
+        <Component Component="Implementation" Delivered="True" Lib="false" Project="DrvCan_Tms470HeccsccLl" ProjectGroup="DrvCan" ScanPattern="DrvCan_Tms470HeccsccHll;DrvCan_Tms470HeccsccAsr" Version="05.03.00">
+            <RelativeFileSpec>.\Drv\can_def.h;.\Can\Can.h</RelativeFileSpec>
+        </Component>
+        <Component Component="GenTool_Geny" Delivered="True" Lib="false" Project="DrvCan__base" ProjectGroup="DrvCan" Version="03.21.03">
+            <RelativeFileSpec>.\_Gentool\Components\DriverCan.dll;DriverCan.dll;.\_Gentool\Components\DrvCan__base.dll;DrvCan__base.dll</RelativeFileSpec>
+        </Component>
+        <Component Component="GenTool_Geny" Delivered="True" Lib="false" Project="DrvCan__baseHll" ProjectGroup="DrvCan" Version="03.05.01">
+            <RelativeFileSpec>.\_Gentool\Components\DrvCan__baseHll.dll;.\_Gentool\Components\DrvCan__baseHll.dll</RelativeFileSpec>
+        </Component>
+        <Component Component="GenTool_Geny" Delivered="True" Lib="false" Project="DrvCan__baseRi14" ProjectGroup="DrvCan" Version="02.09.01">
+            <RelativeFileSpec>.\_Gentool\Components\DrvCan__baseRi14.dll;.\_Gentool\Components\DrvCan__baseRi14.dll</RelativeFileSpec>
+        </Component>
+        <Component Component="GenTool_Geny" Delivered="True" Lib="false" Project="DrvCan__baseRi14Hll" ProjectGroup="DrvCan" Version="02.05.01">
+            <RelativeFileSpec>.\_Gentool\Components\DrvCan__baseRi14Hll.dll;.\_Gentool\Components\DriverHLVL14.dll</RelativeFileSpec>
+        </Component>
+        <Component Component="GenTool_Geny" Delivered="True" Lib="false" Project="DrvCan__baseRi15" ProjectGroup="DrvCan" Version="01.04.09">
+            <RelativeFileSpec>.\_Gentool\Components\DrvCan__baseRi15.dll</RelativeFileSpec>
+        </Component>
+        <Component Component="GenTool_Geny" Delivered="True" Lib="false" Project="DrvCan__baseRi15Hll" ProjectGroup="DrvCan" Version="01.01.03">
+            <RelativeFileSpec>.\_Gentool\Components\DrvCan__baseRi15Hll.dll</RelativeFileSpec>
+        </Component>
+        <Component Component="Implementation" Delivered="True" Lib="false" Project="DrvCan__coreHll" ProjectGroup="DrvCan" ScanPattern="DrvCan__coreHll" Version="02.07.00">
+            <RelativeFileSpec>.\Drv\can_def.h</RelativeFileSpec>
+        </Component>
+        <Component Component="GenTool_Geny" Delivered="True" Lib="false" Project="GenTool_GenyDriverBase" ProjectGroup="GenTool" Version="02.08.02">
+            <RelativeFileSpec>.\_GenTool\Components\GenTool_GenyDriverBase.dll</RelativeFileSpec>
+        </Component>
+        <Component Component="GenTool_Geny" Delivered="True" Lib="false" Project="GenTool_GenyFrameworkCsyntax" ProjectGroup="GenTool" Version="02.08.00">
+            <RelativeFileSpec>.\_Gentool\Components\CSyntax.dll</RelativeFileSpec>
+        </Component>
+        <Component Component="GenTool_Geny" Delivered="True" Lib="false" Project="GenTool_GenyFrameworkGenXml" ProjectGroup="GenTool" Version="01.11.00">
+            <RelativeFileSpec>.\_Gentool\Components\GenXML.dll</RelativeFileSpec>
+        </Component>
+        <Component Component="GenTool_Geny" Delivered="True" Lib="false" Project="GenTool_GenyGraphicsLibCan" ProjectGroup="GenTool" Version="01.03.00">
+            <RelativeFileSpec>.\_Gentool\Components\ohcanglar.dll</RelativeFileSpec>
+        </Component>
+        <Component Component="GenTool_Geny" Delivered="True" Lib="false" Project="GenTool_GenyGuiChannelCfg" ProjectGroup="GenTool" Version="01.05.01">
+            <RelativeFileSpec>.\_Gentool\Components\CanLinCfgar.dll</RelativeFileSpec>
+        </Component>
+        <Component Component="GenTool_Geny" Delivered="True" Lib="false" Project="GenTool_GenyObjectHierarchyCan" ProjectGroup="GenTool" Version="01.22.00">
+            <RelativeFileSpec>.\_Gentool\Components\ohcanar.dll</RelativeFileSpec>
+        </Component>
+        <Component Component="GenTool_Geny" Delivered="True" Lib="false" Project="GenTool_GenyPluginConfigDocumentor" ProjectGroup="GenTool" Version="02.02.02">
+            <RelativeFileSpec>.\_Gentool\Components\ConfigDocumentor.dll;.\_Gentool\Components\GenTool_GenyPluginConfigDocumentor.dll</RelativeFileSpec>
+        </Component>
+        <Component Component="Description" Delivered="True" Lib="false" Project="GenTool_GenyVcfgNameDecorator" ProjectGroup="GenTool" Version="01.01.00">
+            <RelativeFileSpec/>
+        </Component>
+        <Component Component="GenTool_Geny" Delivered="True" Lib="false" Project="GenTool_GenyVcfgNameDecorator" ProjectGroup="GenTool" Version="02.21.02">
+            <RelativeFileSpec>.\_GenTool\Components\GenTool_GenyVcfgNameDecorator.dll</RelativeFileSpec>
+        </Component>
+        <Component Component="GenTool_Geny" Delivered="True" Lib="false" Project="GenTool_XChecksumcrc" ProjectGroup="GenTool" Version="01.00.00">
+            <RelativeFileSpec/>
+        </Component>
+        <Component Component="GenTool_Geny" Delivered="True" Lib="false" Project="Hw_Tms470Cpu" ProjectGroup="Hw" Version="02.07.00">
+            <RelativeFileSpec>.\_Gentool\Components\Hw_Tms470Cpu.dll;.\_Gentool\Components\CPUTMS470.dll;.\Generators\Components\Hw_Tms470Cpu.dll;.\Generators\Components\CPUTMS470.dll</RelativeFileSpec>
+        </Component>
+        <Component Component="GenTool_Geny" Delivered="True" Lib="false" Project="Hw_Tms470HeccsccCpuCan" ProjectGroup="Hw" Version="02.08.00">
+            <RelativeFileSpec>.\_Gentool\Components\Hw_Tms470HeccSccCpuCan.dll;.\_Gentool\Components\CPUCanTMS470.dll;.\Generators\Components\Hw_Tms470HeccSccCpuCan.dll;.\Generators\Components\CPUCanTMS470.dll</RelativeFileSpec>
+        </Component>
+        <Component Component="GenTool_Geny" Delivered="True" Lib="false" Project="Hw__baseCpuCan" ProjectGroup="Hw" Version="02.22.10">
+            <RelativeFileSpec>.\_Gentool\Components\CPUCanBase.dll;.\_Gentool\Components\Hw__baseCpuCan.dll</RelativeFileSpec>
+        </Component>
+        <Component Component="GenTool_Geny" Delivered="True" Lib="false" Project="Il_Vector" ProjectGroup="Il" Version="01.14.03">
+            <RelativeFileSpec>.\_Gentool\Components\Il_Vector.dll;.\_Gentool\Components\VectorIL.dll</RelativeFileSpec>
+        </Component>
+        <Component Component="Implementation" Delivered="True" Lib="false" Project="Il_Vector" ProjectGroup="Il" ScanPattern="IL_VECTOR" Version="05.06.01">
+            <RelativeFileSpec>.\Il\il_def.h;.\Com\il_def.h</RelativeFileSpec>
+        </Component>
+        <Component Component="Implementation" Delivered="True" Lib="false" Project="Nm_PwrTrainWrapperExt_Vag" ProjectGroup="Nm" ScanPattern="Nm_PwrTrainWrapperExt_Vag" Version="01.12.04">
+            <RelativeFileSpec>.\nm\nmh_can.h</RelativeFileSpec>
+        </Component>
+        <Component Component="GenTool_Geny" Delivered="True" Lib="false" Project="Nm_PwrTrain_Vag" ProjectGroup="Nm" Version="02.05.01">
+            <RelativeFileSpec>.\_GenTool\Components\Nm_PwrTrain_Vag.dll</RelativeFileSpec>
+        </Component>
+        <Component Component="Implementation" Delivered="True" Lib="false" Project="Nm_PwrTrain_Vag" ProjectGroup="Nm" ScanPattern="Nm_PwrTrain_Vag" Version="01.12.04">
+            <RelativeFileSpec>.\Nm\Nmh.h</RelativeFileSpec>
+        </Component>
+        <Component Component="GenTool_Geny" Delivered="True" Lib="false" Project="Tp_Iso15765" ProjectGroup="Tp" Version="02.32.00">
+            <RelativeFileSpec>.\_Gentool\Components\TpMC.dll;.\_Gentool\Components\Tp_Iso15765.dll;.\Generators\Components\TpMC.dll;.\Generators\Components\Tp_Iso15765.dll</RelativeFileSpec>
+        </Component>
+        <Component Component="Implementation" Delivered="True" Lib="false" Project="Tp_Iso15765" ProjectGroup="Tp" ScanPattern="TP_ISO15765" Version="03.06.04">
+            <RelativeFileSpec>.\CanTp\tpmc.h;.\tp\tpmc.h</RelativeFileSpec>
+        </Component>
+        <Component Component="Implementation" Delivered="True" Lib="false" Project="VStdLib_Arm7" ProjectGroup="VStdLib" ScanPattern="VStdLib_Arm7" Version="01.28.03">
+            <RelativeFileSpec>.\_Common\vstdlib.h</RelativeFileSpec>
+        </Component>
+        <Component Component="GenTool_Geny" Delivered="True" Lib="false" Project="VStdLib__base" ProjectGroup="VStdLib" Version="01.01.02">
+            <RelativeFileSpec>.\_Gentool\Components\VStdLib__base.dll;.\Generators\Components\VStdLib__base.dll</RelativeFileSpec>
+        </Component>
+        <Component Component="Implementation" Delivered="True" Lib="false" Project="VStdLib__coreHll" ProjectGroup="VStdLib" ScanPattern="VStdLib__coreHll" Version="03.05.01">
+            <RelativeFileSpec>.\_Common\vstdlib.h</RelativeFileSpec>
+        </Component>
+    </ComponentCheck>
+    <DeliveryVersionNumber>
+        <Byte>03</Byte>
+        <Byte>20</Byte>
+        <Byte>21</Byte>
+        <Byte>01</Byte>
+        <Byte>10</Byte>
+        <Byte>02</Byte>
+        <Byte>79</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+    </DeliveryVersionNumber>
+    <Transformators>
+	<!--Major = Modification of the SAP Data Structure-->
+	<!--Minor = added or removed transformator-->
+	<!--Fix = Modification of the transformator code-->
+	<Version Fix="2" Major="1" Minor="2"/>
+	<DataMaxVersion Major="1" Minor="1"/>
+	<SourceHeader>
+		<xsl:stylesheet xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+			<xsl:output method="text"/>
+		</xsl:stylesheet>
+	</SourceHeader>
+	<HtmlOutput>
+		<xsl:stylesheet xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0">
+			<xsl:output method="html"/>
+			<!-- 
+########################################################################
+Copyright Vector Informatik GmbH 2011
+
+Transformator for License Information
+
+2011-04-08  visBk  1st Release to handle merged version.info
+2011-06-28  visBk  a) Template "SAP_UsageRestriction": subbranches made accessible for case of not merged version; Reference changed from "Compiler" to "CompilerVendor" b) statements of SourceHeader removed 
+########################################################################
+-->
+			<!-- Vorlage Tabellenrumpf -->
+			<xsl:template match="/">
+				<html>
+					<head>
+						<title>
+							<xsl:text>Delivery description </xsl:text>
+							<xsl:value-of select="/CANbeddedVersionInfo/Properties/CBD"/>
+						</title>
+						<style>
+			     * {
+					  font-family: Verdana, Helvetica, sans-serif;
+					  color:black;
+				 }
+
+				  body {
+					  background: #F7F7F7;
+					  margin: 0;
+					  padding: 0;
+					  link=#234691; 
+					  vlink=#234691;
+				 }
+				 h1 {
+					  font-size: 16pt;
+					  color: white;
+					  text-align: center;
+					  background: #AD0829;
+					  padding:	20px 10px 20px 10px;
+				  }
+				  h3 {
+					  font-size: 12pt;
+					  color: black;
+					  padding: 4px 10px 4px 10px;
+					  border-bottom: medium solid;
+					  border-bottom-color: #AD0829;				  }
+                  h4 {
+					  font-size: 10pt;
+					  font-weight:  bold;
+					  padding: 4px 10px 4px 10px;
+				  }
+				  table {
+					  width: 90%;
+					  border-collapse: collapse;  /* separate*/
+					  margin-left: auto;    /* center table horizontally */
+					  margin-right: auto;
+				  }
+				  th {
+					  text-align:   left;
+					  font-weight:  bold;
+					  background: #DEDEDE;
+				  }
+				  tr.even {
+					  background: #EEEEEE;
+				  }
+				 p, td, th, li {
+					  font-size: 10pt;
+					  vertical-align: top;
+					  padding-right: 1em;
+				  }
+				 td.highlight {
+					  width: 20%;
+					  text-align: right;
+					  color: #AD0829;
+				  }
+				 td.bold {
+					  font-weight:  bold;
+				  }
+				 .small-text {
+					  font-size: 8pt;
+				  }
+			 </style>
+					</head>
+					<!-- ################################################################ -->
+					<body>
+						<!-- define Variable indicating merging -->
+						<xsl:variable name="vIsMerged">
+							<xsl:choose>
+								<xsl:when test="count(/CANbeddedVersionInfo/MergedPackage)&gt;0">
+									<xsl:text>True</xsl:text>
+								</xsl:when>
+								<xsl:otherwise>
+									<xsl:text>False</xsl:text>
+								</xsl:otherwise>
+							</xsl:choose>
+						</xsl:variable>
+						<!-- define Variable with base address -->
+						<xsl:variable name="vBaseAddress" select="/CANbeddedVersionInfo/MergedPackage[$vIsMerged='True']|/CANbeddedVersionInfo[$vIsMerged='False']"/>
+						<!-- define Variable indicating SAP Info -->
+						<xsl:variable name="vIsSap">
+							<xsl:choose>
+								<xsl:when test="count($vBaseAddress//PES_SAP_LicenseInfo)&gt;0">
+									<xsl:text>True</xsl:text>
+								</xsl:when>
+								<xsl:otherwise>
+									<xsl:text>False</xsl:text>
+								</xsl:otherwise>
+							</xsl:choose>
+						</xsl:variable>
+						<!-- define Variable indicating Build Info -->
+						<xsl:variable name="vIsBuild">
+							<xsl:choose>
+								<xsl:when test="count($vBaseAddress//makesupport)&gt;0">
+									<xsl:text>True</xsl:text>
+								</xsl:when>
+								<xsl:otherwise>
+									<xsl:text>False</xsl:text>
+								</xsl:otherwise>
+							</xsl:choose>
+						</xsl:variable>
+						<!-- general Title -->
+						<h1>
+							<xsl:text>Delivery Description </xsl:text>
+							<xsl:value-of select="/CANbeddedVersionInfo/Properties/CBD"/>
+							<xsl:if test="$vIsMerged='True'">
+								<xsl:text> with </xsl:text>
+								<xsl:for-each select="$vBaseAddress//SubPackage">
+									<xsl:value-of select=".//CBD"/>
+									<xsl:text> </xsl:text>
+								</xsl:for-each>
+							</xsl:if>
+						</h1>
+						<!-- Navigation link list-->
+						<h4>Delivery Information</h4>
+						<ul type="disc">
+							<xsl:for-each select="$vBaseAddress//Properties">
+								<xsl:sort select=".//CBD"/>
+								<xsl:variable name="vDeliverLink">
+									<xsl:text>#_Delivery_Information_</xsl:text>
+									<xsl:value-of select="position()"/>
+								</xsl:variable>
+								<xsl:variable name="vDeliverName">
+									<xsl:choose>
+										<xsl:when test="$vIsMerged='True'">
+											<xsl:text>Delivery Information - </xsl:text>
+											<xsl:value-of select=".//CBD"/>
+										</xsl:when>
+										<xsl:otherwise>
+											<xsl:text>Delivery Information</xsl:text>
+										</xsl:otherwise>
+									</xsl:choose>
+								</xsl:variable>
+								<li>
+									<a href="{$vDeliverLink}">
+										<xsl:value-of select="$vDeliverName"/>
+									</a>
+								</li>
+							</xsl:for-each>
+							<!-- if SAP Info is contained -->
+							<xsl:if test="$vIsSap='True'">
+								<li>
+									<a href="#_Usage_Restriction">Usage Restriction</a>
+								</li>
+								<li>
+									<a href="#_Cluster_License_Information">License Information</a>
+								</li>
+							</xsl:if>
+							<!-- immer	-->
+							<li>
+								<a href="#_Detailed_Version_Information">Detailed Version Information</a>
+							</li>
+						</ul>
+						<!-- Link Build Environment -->
+						<xsl:if test="$vIsBuild='True'">
+							<h4>Build Environment</h4>
+							<ul type="disc">
+								<xsl:for-each select="$vBaseAddress//makesupport">
+									<xsl:sort select="..//CBD"/>
+									<li>
+										<xsl:variable name="vDeliverLink">
+											<xsl:text>#_BuildEnvironment_</xsl:text>
+											<xsl:value-of select="position()"/>
+										</xsl:variable>
+										<xsl:variable name="vDeliverName">
+											<xsl:choose>
+												<xsl:when test="$vIsMerged='True'">
+													<xsl:text>Versions and Options - </xsl:text>
+													<xsl:value-of select="../Properties/CBD"/>
+												</xsl:when>
+												<xsl:otherwise>
+													<xsl:text>Versions and Options</xsl:text>
+												</xsl:otherwise>
+											</xsl:choose>
+										</xsl:variable>
+										<a href="{$vDeliverLink}">
+											<xsl:value-of select="$vDeliverName"/>
+										</a>
+									</li>
+								</xsl:for-each>
+							</ul>
+						</xsl:if>
+						<br/>
+						<!-- Content templates -->
+						<!-- Template Delivery Information -->
+						<xsl:for-each select="$vBaseAddress[$vIsMerged!='True']|$vBaseAddress/*[$vIsMerged='True']">
+							<xsl:sort select=".//CBD"/>
+							<xsl:choose>
+								<!-- if with SAP Info -->
+								<xsl:when test="count(.//PES_SAP_LicenseInfo)&gt;0">
+									<xsl:call-template name="SAP_DeliveryInfo"/>
+								</xsl:when>
+								<xsl:otherwise>
+									<xsl:call-template name="CBD_DeliveryInfo"/>
+								</xsl:otherwise>
+							</xsl:choose>
+						</xsl:for-each>
+						<!-- if SAP Info is contained -->
+						<xsl:if test="$vIsSap='True'">
+							<xsl:for-each select="$vBaseAddress">
+								<!-- Template Usage Restriction -->
+								<xsl:call-template name="SAP_UsageRestriction"/>
+								<!-- Template Cluster License Information -->
+								<xsl:call-template name="SAP_ClusterLicense">
+									<xsl:with-param name="pIsMerged" select="$vIsMerged"/>
+								</xsl:call-template>
+							</xsl:for-each>
+						</xsl:if>
+						<!-- Template Detailed Version Information -->
+						<xsl:call-template name="DetailedVersionInfo"/>
+						<!-- Template Build Environment -->
+						<xsl:if test="$vIsBuild='True'">
+							<h2>Build Environment</h2>
+							<xsl:for-each select="$vBaseAddress//makesupport[$vIsMerged!='True']|$vBaseAddress/*//makesupport[$vIsMerged='True']">
+								<xsl:sort select="..//CBD"/>
+								<xsl:call-template name="BuildEnvironment"/>
+							</xsl:for-each>
+						</xsl:if>
+					</body>
+				</html>
+			</xsl:template>
+			<!-- ################################################################ -->
+			<!-- Template for CBD Delivery Information	-->
+			<xsl:template name="CBD_DeliveryInfo">
+				<xsl:variable name="varID">
+					<xsl:text>_Delivery_Information_</xsl:text>
+					<xsl:value-of select="position()"/>
+				</xsl:variable>
+				<h3>
+					<a id="{$varID}">Delivery Information <xsl:value-of select=".//Properties/CBD "/>
+					</a>
+				</h3>
+				<table>
+					<!-- Delivery ID -->
+					<xsl:call-template name="DeliveryId"/>
+					<!-- License Info -->
+					<tr>
+						<td class="highlight">License Information</td>
+						<td>
+							<xsl:value-of select=".//Properties/Customer"/>
+						</td>
+					</tr>
+					<!-- Evaluation -->
+					<xsl:if test=".//Properties/Eval='true'">
+						<tr>
+							<td class="highlight">Evaluation License</td>
+							<td class="bold">
+								<xsl:text>This license is for evaluation and prototyping purposes only.</xsl:text>
+							</td>
+						</tr>
+					</xsl:if>
+					<!-- Kunden Kontakt ausgeben -->
+					<xsl:call-template name="CustomerContacts"/>
+					<!-- Vector Sales Kontakt ausgeben -->
+					<xsl:call-template name="VectorContact"/>
+					<!-- remaining Info -->
+					<xsl:call-template name="DeliveryInfoGeneral"/>
+				</table>
+			</xsl:template>
+			<!-- ################################################################ -->
+			<!-- Template for SAP Delivery Information	-->
+			<xsl:template name="SAP_DeliveryInfo">
+				<xsl:variable name="varID">
+					<xsl:text>_Delivery_Information_</xsl:text>
+					<xsl:value-of select="position()"/>
+				</xsl:variable>
+				<h3>
+					<a id="{$varID}">Delivery Information <xsl:value-of select=".//Properties/CBD "/>
+					</a>
+				</h3>
+				<table>
+					<!-- Delivery ID -->
+					<xsl:call-template name="DeliveryId"/>
+					<!-- Licensee -->
+					<tr>
+						<td class="highlight">Licensee</td>
+						<td>
+							<xsl:value-of select=".//PES_SAP_LicenseInfo/LicenseOverview/Customer"/>
+						</td>
+					</tr>
+					<!-- SIP Type -->
+					<tr>
+						<td class="highlight">SIP Type</td>
+						<td>
+							<xsl:value-of select=".//PES_SAP_LicenseInfo/LicenseOverview/SipType"/>
+						</td>
+					</tr>
+					<!-- Kontakt ausgeben -->
+					<xsl:call-template name="CustomerContacts"/>
+					<!-- Vector Sales Kontakt ausgeben -->
+					<xsl:call-template name="VectorContact"/>
+					<!-- Serial Number -->
+					<tr>
+						<td class="highlight">Serial Number</td>
+						<td>
+							<xsl:value-of select=".//PES_SAP_LicenseInfo/LicenseOverview/SAP_SerialNo"/>
+						</td>
+					</tr>
+					<!-- remaining Info -->
+					<xsl:call-template name="DeliveryInfoGeneral"/>
+				</table>
+			</xsl:template>
+			<!-- ################################################################ -->
+			<!-- Template for SAP Usage Restriction -->
+			<xsl:template name="SAP_UsageRestriction">
+				<h3>
+					<a id="UsageRestriction" name="_Usage_Restriction"/> Usage restriction 
+		</h3>
+				<table>
+					<!-- Der Absatz License Description wird immer ausgegeben, auch wenn in Version.Info das Element LicenseTexts fehlt -->
+					<tr>
+						<td class="bold"/>
+						<td>
+							<xsl:text>This delivery contains software modules that might have different license restrictions. Details are shown in section 'License Information'. Please note that the usage of this delivery is restricted to the most constraining license included.						
+							</xsl:text>
+							<br/>
+							<br/>
+							<xsl:text>The usage of this delivery is restricted to:
+							</xsl:text>
+						</td>
+					</tr>
+					<xsl:for-each select="./*[count(.//LicenseOverview/LicenseRestriction/RestrictionText)&gt;0]">
+						<tr>
+							<td class="highlight">
+								<xsl:value-of select=".//CBD"/>
+							</td>
+							<td class="bold">
+								<xsl:for-each select=".//LicenseOverview/LicenseRestriction/RestrictionText">
+									<xsl:text> - </xsl:text>
+									<xsl:value-of select="."/>
+									<br/>
+								</xsl:for-each>
+								<!-- Die Absaetze für Controller und Compiler sollen nicht ausgegeben werden, wenn in Version.Info keine Wert eingetragen ist -->
+								<xsl:if test="not(*[.//LicenseOverview/Controller=''])">
+									<xsl:text> - Controller </xsl:text>
+									<xsl:value-of select=".//LicenseOverview/Controller"/>
+									<br/>
+								</xsl:if>
+								<xsl:if test="not(*[.//LicenseOverview/CompilerVendor=''])">
+									<xsl:text> - Compiler </xsl:text>
+									<xsl:value-of select=".//LicenseOverview/CompilerVendor"/>
+									<br/>
+								</xsl:if>
+								<br/>
+							</td>
+						</tr>
+					</xsl:for-each>
+					<tr>
+						<td class="highlight"/>
+						<td>
+							<xsl:text>Please contact Vector Informatik whenever you need further information concerning the license conditions.
+					</xsl:text>
+						</td>
+					</tr>
+				</table>
+			</xsl:template>
+			<!-- ################################################################ -->
+			<!-- Template for SAP Cluster License Information -->
+			<xsl:template name="SAP_ClusterLicense">
+				<xsl:param name="pIsMerged"/>
+				<h3>
+					<a id="_Cluster_License_Information">License Information</a>
+				</h3>
+				<table>
+					<colgroup>
+						<col width="15%"/>
+						<col width="10%"/>
+						<col width="5%"/>
+						<col width="10%"/>
+						<col width="60%"/>
+					</colgroup>
+					<tbody>
+						<tr>
+							<th>Cluster</th>
+							<th>SNR</th>
+							<th>Modules</th>
+							<th>License Type</th>
+							<th>License Restrictions</th>
+						</tr>
+						<xsl:for-each select=".//PES_SAP_LicenseInfo/LicensedClusters/LicensedClusterDetail">
+							<xsl:sort select="SAP_ClusterName"/>
+							<xsl:sort select="SAP_Module_SerNo"/>
+							<xsl:variable name="vCBD">
+								<xsl:if test="$pIsMerged='True'">
+									<xsl:text>
+							</xsl:text>
+									<xsl:value-of select="../../..//CBD"/>
+								</xsl:if>
+							</xsl:variable>
+							<xsl:variable name="class">
+								<xsl:choose>
+									<xsl:when test="position() mod 2 = 1">odd</xsl:when>
+									<xsl:otherwise>even</xsl:otherwise>
+								</xsl:choose>
+							</xsl:variable>
+							<tr class="{$class}">
+								<td>
+									<xsl:value-of select="SAP_ClusterName"/>
+									<br/>
+									<xsl:value-of select="$vCBD"/>
+								</td>
+								<td>
+									<xsl:value-of select="SAP_Module_SerNo"/>
+								</td>
+								<td>
+									<xsl:for-each select="LicensedModules/ModuleName">
+										<xsl:sort select="."/>
+										<xsl:value-of select="."/>
+										<br/>
+									</xsl:for-each>
+								</td>
+								<td>
+									<xsl:value-of select="LicenseType"/>
+								</td>
+								<td>
+									<!-- Der Absatz LicenseRestriction soll nicht ausgegeben werden, wenn in Version.Info kein Element RestrictionText eingetragen ist -->
+									<xsl:if test="count(LicenseRestriction/RestrictionText) &gt; 0">
+										<xsl:text>The license is restricted to</xsl:text>
+										<br/>
+										<xsl:for-each select="LicenseRestriction/RestrictionText">
+											<xsl:text> - </xsl:text>
+											<xsl:value-of select="."/>
+											<br/>
+										</xsl:for-each>
+										<!-- If the element Controller exists, additional text and the elements Controller and Compiler shall be displayed -->
+										<xsl:if test="count(Controller) &gt; 0">
+											<span style="text-ident=1cm">
+												<xsl:text> - Controller </xsl:text>
+												<xsl:value-of select="Controller"/>
+												<br/>
+												<xsl:text> - Compiler </xsl:text>
+												<xsl:value-of select="Compiler"/>
+											</span>
+											<br/>
+										</xsl:if>
+									</xsl:if>
+								</td>
+							</tr>
+						</xsl:for-each>
+					</tbody>
+				</table>
+			</xsl:template>
+			<!-- ################################################################ -->
+			<!-- Template for Detailed Version Information	-->
+			<xsl:template name="DetailedVersionInfo">
+				<h3>
+					<a id="_Detailed_Version_Information">Detailed Version Information</a>
+				</h3>
+				<table>
+					<tbody>
+						<tr>
+							<th>Project</th>
+							<th>Component</th>
+							<th>Version</th>
+						</tr>
+						<xsl:for-each select="/CANbeddedVersionInfo/ComponentCheck/Component">
+							<xsl:variable name="class">
+								<xsl:choose>
+									<xsl:when test="position() mod 2 = 1">odd</xsl:when>
+									<xsl:otherwise>even</xsl:otherwise>
+								</xsl:choose>
+							</xsl:variable>
+							<tr class="{$class}">
+								<td>
+									<xsl:value-of select="@Project"/>
+								</td>
+								<td>
+									<xsl:value-of select="@Component"/>
+								</td>
+								<td>
+									<xsl:value-of select="@Version"/>
+								</td>
+							</tr>
+						</xsl:for-each>
+					</tbody>
+				</table>
+			</xsl:template>
+			<!-- ################################################################ -->
+			<!-- Template for Build Environment -->
+			<xsl:template name="BuildEnvironment">
+				<xsl:variable name="vDeliverLink">
+					<xsl:text>_BuildEnvironment_</xsl:text>
+					<xsl:value-of select="position()"/>
+				</xsl:variable>
+				<h3>
+					<a id="{$vDeliverLink}">Versions and Options - <xsl:value-of select="..//CBD"/>
+					</a>
+				</h3>
+				<table>
+					<xsl:for-each select="./devtoolinfo/tool">
+						<tr class="even">
+							<!-- ??Spaltenbreite ??-->
+							<td colspan="2">
+								<xsl:value-of select="@type"/>
+							</td>
+						</tr>
+						<xsl:for-each select="./entry">
+							<tr>
+								<td class="highlight">
+									<xsl:value-of select="@type"/>
+								</td>
+								<td>
+									<xsl:value-of select="."/>
+								</td>
+							</tr>
+						</xsl:for-each>
+					</xsl:for-each>
+				</table>
+			</xsl:template>
+			<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+			<!-- SubTemplate for Delivery Info General -->
+			<xsl:template name="DeliveryInfoGeneral">
+				<!-- Order Confirmation No -->
+				<tr>
+					<td class="highlight">Order Confirmation Number</td>
+					<td>
+						<xsl:value-of select=".//Properties/ProjectNumber"/>
+					</td>
+				</tr>
+				<!-- Delivery Number -->
+				<tr>
+					<td class="highlight">Delivery Number</td>
+					<td>
+						<xsl:value-of select=".//Properties/Release"/>
+					</td>
+				</tr>
+				<!-- Delivery type -->
+				<tr>
+					<td class="highlight">Delivery Type</td>
+					<td>
+						<xsl:value-of select=".//Properties/DeliveryType"/>
+					</td>
+				</tr>
+				<!-- Release type -->
+				<tr>
+					<td class="highlight">Release Type</td>
+					<td>
+						<xsl:value-of select=".//Properties/ReleaseType"/>
+					</td>
+				</tr>
+				<!-- Ordered Derivative -->
+				<tr>
+					<td class="highlight">Ordered Derivative</td>
+					<td>
+						<xsl:value-of select=".//Properties/OrderedDerivative"/>
+					</td>
+				</tr>
+				<!-- SIP Version -->
+				<tr>
+					<td class="highlight">SIP Version</td>
+					<td>
+						<xsl:value-of select=".//Properties/SIP"/>
+					</td>
+				</tr>
+			</xsl:template>
+			<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+			<!-- SubTemplate for Customer Contacts -->
+			<xsl:template name="CustomerContacts">
+				<xsl:if test="count(.//Properties/ErrataContacts) &gt; 0">
+					<tr>
+						<td class="highlight">Customer Contacts</td>
+						<td>
+							<xsl:for-each select=".//Properties/ErrataContacts/ErrataContact">
+								<xsl:value-of select="Firstname"/>
+								<xsl:text> </xsl:text>
+								<xsl:value-of select="Surname"/>
+								<xsl:text>   </xsl:text>
+								<span color="blue">
+									<a>
+										<xsl:attribute name="href">
+                                                <xsl:text>Mailto:</xsl:text>
+                                                <xsl:value-of select="Email"/>
+                                            </xsl:attribute>
+										<xsl:value-of select="Email"/>
+									</a>
+								</span>
+								<br/>
+							</xsl:for-each>
+							<span class="small-text">Contact address for Vector for all topics concerning this license. This includes questions and issue reports. Please inform Vector if this contact changes.</span>
+						</td>
+					</tr>
+				</xsl:if>
+				<!-- Falls kein Kontakt angegeben, dann warnen -->
+				<xsl:if test="count(.//Properties/ErrataContacts)&lt;= 0">
+					<tr>
+						<td class="highlight">Customer Contacts</td>
+						<td>
+							<xsl:text>You have not defined any contact. Therefore Vector will not be able to inform you about potential issues</xsl:text>
+						</td>
+					</tr>
+				</xsl:if>
+			</xsl:template>
+			<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+			<!-- SubTemplate for Vector Contact -->
+			<xsl:template name="VectorContact">
+				<tr>
+					<td class="highlight">Vector Contact</td>
+					<td>
+						<a>
+							<xsl:attribute name="href">
+                                    <xsl:text>Mailto:</xsl:text>
+                                    <xsl:value-of select=".//Properties/CustomerContact/Email"/>
+                                </xsl:attribute>
+							<xsl:value-of select=".//Properties/CustomerContact/Email"/>
+						</a>
+						<br/>
+						<span class="small-text">Contact address at Vector for all questions concerning this delivery.</span>
+					</td>
+				</tr>
+			</xsl:template>
+			<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+			<!-- SubTemplate for Delivery ID -->
+			<xsl:template name="DeliveryId">
+				<tr>
+					<td class="highlight">Delivery ID</td>
+					<td>
+						<xsl:for-each select=".//DeliveryVersionNumber/Byte">
+							<xsl:value-of select="."/>
+							<xsl:text>.</xsl:text>
+						</xsl:for-each>
+						<br/>
+						<span class="small-text">This is the unique identification number of this delivery. Please have this number ready at hand when contacting Vector customer support.</span>
+					</td>
+				</tr>
+			</xsl:template>
+		</xsl:stylesheet>
+	</HtmlOutput>
+</Transformators>
+</CANbeddedVersionInfo>

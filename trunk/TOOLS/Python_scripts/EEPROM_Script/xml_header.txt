@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--A.Kleinert (Audi AG), Abt.I/EE-61, Tel.0841-89-42341
+Version 1.3-->
+<!--[PRG_xy_XXX_SERIE_XX]
+-->
+<MESSAGE DTD="XMLMSG" VERSION="1.1"><RESULT><RESPONSE NAME="GetParametrizeData" DTD="RepairHints" VERSION="1.4.0.0" ID="0"><DATA><PARAMETER_DATA DIAGNOSTIC_ADDRESS="0x77" START_ADDRESS="000000" PR_IDX="0" ZDC_NAME="-----------" ZDC_VERSION="----" LOGIN="20103" LOGIN_IND="">

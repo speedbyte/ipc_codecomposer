@@ -1,0 +1,440 @@
+******************************************************************************
+             TMS470 COFF Linker PC Version 2.71                
+******************************************************************************
+>> Linked Tue Jan 24 12:56:52 2012
+
+OUTPUT FILE NAME:   <../05_out/ADLATUS_cc_TMS470_VW_UDS.out>
+ENTRY POINT SYMBOL: "_c_int00"  address: 00004004
+
+
+MEMORY CONFIGURATION
+
+                  name            origin    length      used    attr    fill
+         ----------------------  --------  ---------  --------  ----  --------
+         VECTORS                 00000000   00000024  00000024  R IX
+         ADLATUS                 00000030   00003fc0  00000042  R IX
+         PROTECTION              00003ff0   00000010  00000010  R     ffffffff
+         ADLATUS2                00004000   00001be0  000004ec  R IX
+         ROMHAL                  00005be0   000000a0  00000054  R IX
+         ROMWDT                  00005c80   00000370  00000000  R IX
+         ADLATUS3                00006000   00001000  00000000  R IX
+         CHKS1                   00007ffc   00000004  00000004  R     12345678
+         VECTORS2                00008000   00000024  00000020  R IX
+         ASW_ENTRY               00008024   00000010  00000000  R IX
+         ASW_DATA                00008100   00000100  00000000  R IX
+         ROMCONST                00009000   00000100  00000000  R IX
+         ROMEXEC                 00009100   00000f00  00000000  R IX
+         CHKS2x                  00010000   00000004  00000004  R     cafebabe
+         CHKS2y                  00018000   00000004  00000004  R     cabebabe
+         CHKS2z                  00020000   00000004  00000004  R     cabebabe
+         CHKS2                   000bfffc   00000004  00000004  R     ffffffff
+         FLASH_REQ               00400000   00000004  00000004  RW  
+         RAMDATA1                00400004   000000a0  00000025  RWIX
+         RAMDATA2                004000a4   00000e5c  00000000  RWIX
+         HISDATA                 00400f10   00000040  00000000  RW  
+         HISCONST                00401000   00000100  00000000  RW  
+         HISTEXT                 00401100   00000a00  00000000  RWIX
+         RAM_RES                 00401b00   00000050  00000000  RW  
+         RAMWDT                  00401b50   00000370  00000000  RWIX
+         RAMHAL                  00402000   000000a0  00000054  RWIX
+         USTACK                  00402200   00000200  00000000  RW  
+         SYSSTA                  00402400   00000400  00000000  RW  
+         HET0PROG                00800000   00000800  00000000  RW  
+         SCC3                    fff7d000   00000200  00000000  RW  
+         CAN_MBOX3               fff7d200   00000200  00000000  RW  
+         SPI2                    fff7d400   00000100  00000000  RW  
+         SPI3                    fff7d500   00000100  00000000  RW  
+         SPI4                    fff7d600   00000100  00000000  RW  
+         SPI5                    fff7d700   00000100  00000000  RW  
+         CAN_MBOX                fff7e400   00000200  00000000  RW  
+         CAN_MBOX2               fff7e600   00000200  00000000  RW  
+         SCC                     fff7e800   00000200  00000000  RW  
+         SCC2                    fff7ea00   00000200  00000000  RW  
+         GIO0                    fff7ec00   00000100  00000000  RW  
+         ADC0                    fff7f000   00000400  00000000  RW  
+         SPI1                    fff7f800   00000100  00000000  RW  
+         HET0CTRL                fff7fc00   00000400  00000000  RW  
+         MMC                     fffffd00   00000040  00000000  RW  
+         DEC                     fffffe00   000000f0  00000000  RW  
+         CMRTI                   ffffff00   00000020  00000000  RW  
+         CIM                     ffffff20   00000014  00000000  RW  
+         SYS                     ffffffd0   00000030  00000000  RW  
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+.SCC3      0    fff7d000    00000000     UNINITIALIZED
+
+.CAN_MB3   0    fff7d200    00000000     UNINITIALIZED
+
+.SPI2      0    fff7d400    00000000     UNINITIALIZED
+
+.SPI3      0    fff7d500    00000000     UNINITIALIZED
+
+.SPI4      0    fff7d600    00000000     UNINITIALIZED
+
+.SPI5      0    fff7d700    00000000     UNINITIALIZED
+
+.CAN_MB    0    fff7e400    00000000     UNINITIALIZED
+
+.CAN_MB2   0    fff7e600    00000000     UNINITIALIZED
+
+.SCC       0    fff7e800    00000000     UNINITIALIZED
+
+.SCC2      0    fff7ea00    00000000     UNINITIALIZED
+
+.GIO0      0    fff7ec00    00000000     UNINITIALIZED
+
+.ADC0      0    fff7f000    00000000     UNINITIALIZED
+
+.SPI1      0    fff7f800    00000000     UNINITIALIZED
+
+.HET0      0    fff7fc00    00000000     UNINITIALIZED
+
+.MMC       0    fffffd00    00000000     UNINITIALIZED
+
+.DEC       0    fffffe00    00000000     UNINITIALIZED
+
+.CMRTI     0    ffffff00    00000000     UNINITIALIZED
+
+.CIM       0    ffffff20    00000000     UNINITIALIZED
+
+.SYS       0    ffffffd0    00000000     UNINITIALIZED
+
+.watchdog 
+*          0    ffffffff    00000000     UNINITIALIZED
+
+.vectors   0    00000000    00000024     
+                  00000000    00000024     ADLATUS_vectors.obj (.vectors)
+
+.data_set 
+*          0    00000030    00000000     UNINITIALIZED
+
+.const     0    00000030    00000032     
+                  00000030    00000018     ADLATUS_ConfigProject.obj (.const)
+                  00000048    0000000c     lld_SPI.obj (.const)
+                  00000054    00000008     AUDILIB_cc_tms470_VW_UDS.lib : ADLATUS_Main.obj (.const)
+                  0000005c    00000004     ADLATUS_Startup.obj (.const)
+                  00000060    00000002     HALLIB_cc_tms470_VW_UDS.lib : ADLATUS_Hal.obj (.const)
+
+.cinit     0    00000064    00000010     
+                  00000064    00000009     ADLATUS_ExternalWatchdog.obj (.cinit)
+                  0000006d    00000007     --HOLE-- [fill = 0]
+
+$fill000   0    00003ff0    00000010     
+                  00003ff0    00000010     --HOLE-- [fill = ffffffff]
+
+.text      0    00004000    000004ec     
+                  00004000    00000188     ADLATUS_Startup.obj (.text)
+                  00004188    0000017c     HALLIB_cc_tms470_VW_UDS.lib : ADLATUS_Hal.obj (.text)
+                  00004304    000000e0     u_div32.obj (.text)
+                  000043e4    00000050     AUDILIB_cc_tms470_VW_UDS.lib : ADLATUS_Main.obj (.text)
+                  00004434    0000004c                                  : ADLATUS_Timer.obj (.text)
+                  00004480    00000028     ADLATUS_ApplicationInterface.obj (.text)
+                  000044a8    00000018     AUDILIB_cc_tms470_VW_UDS.lib : ADLATUS_Main.obj (.text:v$1)
+                  000044c0    00000018                                  : ADLATUS_Main.obj (.text:v$0)
+                  000044d8    00000014     icall16.obj (.text)
+
+.HALROM    0    00005be0    00000000     UNINITIALIZED
+
+.halfunctions 
+*          0    00005be0    00000054     RUN ADDR = 00402000
+                  00005be0    00000054     HALLIB_cc_tms470_VW_UDS.lib : ADLATUS_HalRAM.obj (.text)
+
+.WDTROM    0    00005c80    00000000     UNINITIALIZED
+
+$fill001   0    00007ffc    00000004     
+                  00007ffc    00000004     --HOLE-- [fill = 12345678]
+
+.intvecs   0    00008000    00000020     
+                  00008000    00000020     ADLATUS_vectors2.obj (.intvecs)
+
+.fsw_entry 
+*          0    00008024    00000000     UNINITIALIZED
+
+$fill002   0    00010000    00000004     
+                  00010000    00000004     --HOLE-- [fill = cafebabe]
+
+$fill003   0    00018000    00000004     
+                  00018000    00000004     --HOLE-- [fill = cabebabe]
+
+$fill004   0    00020000    00000004     
+                  00020000    00000004     --HOLE-- [fill = cabebabe]
+
+.CHCKSUM2 
+*          0    000bfffc    00000004     UNINITIALIZED
+                  000bfffc    00000004     AUDILIB_cc_tms470_VW_UDS.lib : ADLATUS_Main.obj (.CHCKSUM2)
+
+.REQUEST   0    00400000    00000004     UNINITIALIZED
+                  00400000    00000004     ADLATUS_ApplicationInterface.obj (.REQUEST)
+
+.data      0    00400004    00000000     UNINITIALIZED
+
+.RAMSTART 
+*          0    00400004    00000000     UNINITIALIZED
+
+.bss       0    00400004    00000025     UNINITIALIZED
+                  00400004    00000014     HALLIB_cc_tms470_VW_UDS.lib : ADLATUS_Hal.obj (.bss)
+                  00400018    00000008     ADLATUS_ExternalWatchdogFlash.obj (.bss)
+                  00400020    00000004     AUDILIB_cc_tms470_VW_UDS.lib : ADLATUS_Timer.obj (.bss)
+                  00400024    00000003                                  : ADLATUS_Main.obj (.bss)
+                  00400027    00000001     ADLATUS_ExternalWatchdog.obj (.bss)
+                  00400028    00000001     lld_SPI.obj (.bss)
+
+.sysmem    0    004000a4    00000000     UNINITIALIZED
+
+.WDTRAM    0    00401b50    00000000     UNINITIALIZED
+
+.HALRAM    0    00402000    00000000     UNINITIALIZED
+
+.ustack    0    00402200    00000000     UNINITIALIZED
+
+.stack     0    00402400    00000000     UNINITIALIZED
+
+.HET0PROG 
+*          0    00800000    00000000     UNINITIALIZED
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+address    name
+--------   ----
+00004492   $FUN_CCapplint_CheckFlashRequest_UB
+00004480   $FUN_CCapplint_JumpToFSW_V
+00004496   $FUN_CCapplint_ResetFlashRequest_V
+0000449e   $FUN_CCapplint_SetFlashRequest_V
+000041b6   $FUN_CChal_DisGlobalInterrupt_V
+00004230   $FUN_CChal_DisableIntWatchdog_V
+00004232   $FUN_CChal_EnableIntWatchdog_V
+000041f0   $FUN_CChal_GetHWTimerValue_UW
+00004248   $FUN_CChal_GetPerfCntTicks_UL
+0000423e   $FUN_CChal_GetPerformanceCounter_UL
+00402000   $FUN_CChal_HardwareTimerCheck_UW
+00004188   $FUN_CChal_InitHAL_V
+000041c0   $FUN_CChal_InitHardwareTimer_V
+00004224   $FUN_CChal_InitIntWatchdog_V
+00004210   $FUN_CChal_SWReset_V
+000041fe   $FUN_CChal_StoreHwTimerValue_V
+0000429c   $FUN_CChal_TimeoutOccured_B
+00004290   $FUN_CChal_TimeoutStart_V
+00402034   $FUN_CChal_TriggerIntWatchdog_V
+00004250   $FUN_CChal_WaitTime_V
+000043ec   $FUN_CCmain_Main_V
+00004404   $FUN_CCmain_SysStateEvaluation_V
+00004434   $FUN_CCtim_InitSWTimerHandler_V
+0000443c   $FUN_CCtim_SystemTimerCheck_V
+000043e4   $main
+00400004   .bss
+00400004   .data
+00004000   .text
+000044d8   IND$CALL
+00004304   U$DIV
+00004304   U$MOD
+00004308   U_DIV
+00004308   U_MOD
+00000040   _C_FlashDelay_UL
+000044a8   _FUN_CCmain_Main_V
+0000801c   _FiqDisp2
+00008010   _ISR_DA
+0000800c   _ISR_Pre
+00008014   _ISR_RESEVED
+00008004   _ISR_Undef
+00008018   _IrqDisp2
+00402000   _RAMHAL
+00401b50   _RAMWDT
+00005be0   _ROMHAL
+00005c80   _ROMWDT
+00000048   _SPI2_st_EepromMode
+0000004e   _SPI2_st_Pins
+000bfffc   _START_ADR_APP_CRC
+004025e8   _StackABORT_
+00402510   _StackFIQ_
+004025e0   _StackIRQ_
+00402600   _StackSUPER_
+004025f0   _StackUND_
+00402500   _StackUSER_
+00008008   _SwiDisp2
+ffffffff   ___binit__
+00400004   ___bss__
+ffffffff   ___c_args__
+00000064   ___cinit__
+00400004   ___data__
+00400004   ___edata__
+00400029   ___end__
+000044ec   ___etext__
+ffffffff   ___pinit__
+00004000   ___text__
+0000005c   _c_BBSuperStackTop_UL
+00000034   _c_CCconprj_CanClockFrequency_UL
+00000030   _c_CCconprj_ClockFrequency_UL
+00000044   _c_CCconprj_DisableReset_UB
+0000003c   _c_CCconprj_IntWdtTimeout_UW
+00000046   _c_CCconprj_StartValue_CRC16_UW
+00000038   _c_CCconprj_TimerFrequency_UL
+00000054   _c_CCconsys_HalInterface_ST
+00000060   _c_VerSMART_Hallib_V111_UW
+00004004   _c_int00
+fff7f000   _e_ADC0_ST
+fff7e600   _e_CAN2_MB
+fff7d200   _e_CAN3_MB
+fff7e400   _e_CAN_MB
+fff7ec00   _e_GIO_ST
+fff7fc00   _e_HET0_ST
+00800000   _e_HETPROGRAM0_UN
+ffffff20   _e_SARCIM_ST
+fffffe00   _e_SARDEC_ST
+fffffd00   _e_SARMMC_ST
+ffffff00   _e_SARRTI_ST
+ffffffd0   _e_SARSYS_ST
+fff7ea00   _e_SCC2_ST
+fff7d000   _e_SCC3_ST
+fff7e800   _e_SCC_ST
+fff7f800   _e_SPI1_ST
+fff7d400   _e_SPI2_ST
+fff7d500   _e_SPI3_ST
+fff7d600   _e_SPI4_ST
+fff7d700   _e_SPI5_ST
+00402300   _g_BBSuperStack_UL
+00400028   _g_buf_UB
+00400000   _gt_CCapplint_FlashRequest_UL
+000044c0   _main
+000bfffc   _r_F_CHCKSUM2
+00400004   _r_F_RAMSTART
+00400000   _r_F_REQUEST
+00400024   _t_AdlatusInitState_UB
+00400004   _t_CChal_HalCtrl_ST
+00400018   _t_CCper_WatchdogCtrl_ST
+00400020   _t_CCtime_TimerCtrl_ST
+00400025   _t_InitCtrl_ST
+00400027   _wdStatus
+ffffffff   binit
+00000064   cinit
+00400004   edata
+00400029   end
+000044ec   etext
+ffffffff   pinit
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+address    name
+--------   ----
+00000030   _c_CCconprj_ClockFrequency_UL
+00000034   _c_CCconprj_CanClockFrequency_UL
+00000038   _c_CCconprj_TimerFrequency_UL
+0000003c   _c_CCconprj_IntWdtTimeout_UW
+00000040   _C_FlashDelay_UL
+00000044   _c_CCconprj_DisableReset_UB
+00000046   _c_CCconprj_StartValue_CRC16_UW
+00000048   _SPI2_st_EepromMode
+0000004e   _SPI2_st_Pins
+00000054   _c_CCconsys_HalInterface_ST
+0000005c   _c_BBSuperStackTop_UL
+00000060   _c_VerSMART_Hallib_V111_UW
+00000064   ___cinit__
+00000064   cinit
+00004000   .text
+00004000   ___text__
+00004004   _c_int00
+00004188   $FUN_CChal_InitHAL_V
+000041b6   $FUN_CChal_DisGlobalInterrupt_V
+000041c0   $FUN_CChal_InitHardwareTimer_V
+000041f0   $FUN_CChal_GetHWTimerValue_UW
+000041fe   $FUN_CChal_StoreHwTimerValue_V
+00004210   $FUN_CChal_SWReset_V
+00004224   $FUN_CChal_InitIntWatchdog_V
+00004230   $FUN_CChal_DisableIntWatchdog_V
+00004232   $FUN_CChal_EnableIntWatchdog_V
+0000423e   $FUN_CChal_GetPerformanceCounter_UL
+00004248   $FUN_CChal_GetPerfCntTicks_UL
+00004250   $FUN_CChal_WaitTime_V
+00004290   $FUN_CChal_TimeoutStart_V
+0000429c   $FUN_CChal_TimeoutOccured_B
+00004304   U$DIV
+00004304   U$MOD
+00004308   U_DIV
+00004308   U_MOD
+000043e4   $main
+000043ec   $FUN_CCmain_Main_V
+00004404   $FUN_CCmain_SysStateEvaluation_V
+00004434   $FUN_CCtim_InitSWTimerHandler_V
+0000443c   $FUN_CCtim_SystemTimerCheck_V
+00004480   $FUN_CCapplint_JumpToFSW_V
+00004492   $FUN_CCapplint_CheckFlashRequest_UB
+00004496   $FUN_CCapplint_ResetFlashRequest_V
+0000449e   $FUN_CCapplint_SetFlashRequest_V
+000044a8   _FUN_CCmain_Main_V
+000044c0   _main
+000044d8   IND$CALL
+000044ec   etext
+000044ec   ___etext__
+00005be0   _ROMHAL
+00005c80   _ROMWDT
+00008004   _ISR_Undef
+00008008   _SwiDisp2
+0000800c   _ISR_Pre
+00008010   _ISR_DA
+00008014   _ISR_RESEVED
+00008018   _IrqDisp2
+0000801c   _FiqDisp2
+000bfffc   _r_F_CHCKSUM2
+000bfffc   _START_ADR_APP_CRC
+00400000   _r_F_REQUEST
+00400000   _gt_CCapplint_FlashRequest_UL
+00400004   _r_F_RAMSTART
+00400004   _t_CChal_HalCtrl_ST
+00400004   edata
+00400004   ___data__
+00400004   ___bss__
+00400004   ___edata__
+00400004   .data
+00400004   .bss
+00400018   _t_CCper_WatchdogCtrl_ST
+00400020   _t_CCtime_TimerCtrl_ST
+00400024   _t_AdlatusInitState_UB
+00400025   _t_InitCtrl_ST
+00400027   _wdStatus
+00400028   _g_buf_UB
+00400029   end
+00400029   ___end__
+00401b50   _RAMWDT
+00402000   $FUN_CChal_HardwareTimerCheck_UW
+00402000   _RAMHAL
+00402034   $FUN_CChal_TriggerIntWatchdog_V
+00402300   _g_BBSuperStack_UL
+00402500   _StackUSER_
+00402510   _StackFIQ_
+004025e0   _StackIRQ_
+004025e8   _StackABORT_
+004025f0   _StackUND_
+00402600   _StackSUPER_
+00800000   _e_HETPROGRAM0_UN
+fff7d000   _e_SCC3_ST
+fff7d200   _e_CAN3_MB
+fff7d400   _e_SPI2_ST
+fff7d500   _e_SPI3_ST
+fff7d600   _e_SPI4_ST
+fff7d700   _e_SPI5_ST
+fff7e400   _e_CAN_MB
+fff7e600   _e_CAN2_MB
+fff7e800   _e_SCC_ST
+fff7ea00   _e_SCC2_ST
+fff7ec00   _e_GIO_ST
+fff7f000   _e_ADC0_ST
+fff7f800   _e_SPI1_ST
+fff7fc00   _e_HET0_ST
+fffffd00   _e_SARMMC_ST
+fffffe00   _e_SARDEC_ST
+ffffff00   _e_SARRTI_ST
+ffffff20   _e_SARCIM_ST
+ffffffd0   _e_SARSYS_ST
+ffffffff   ___pinit__
+ffffffff   pinit
+ffffffff   ___c_args__
+ffffffff   binit
+ffffffff   ___binit__
+
+[114 symbols]

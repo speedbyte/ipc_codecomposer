@@ -1,0 +1,4 @@
+      </DATEN>
+		</DATENBEREICH>
+	</DATENBEREICHE>
+</SW-CNT>

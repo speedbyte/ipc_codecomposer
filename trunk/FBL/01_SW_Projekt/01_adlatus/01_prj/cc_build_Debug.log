@@ -1,0 +1,19 @@
+--------------------  ADLATUS_cc_TMS470_VW_UDS.pjt - Debug  --------------------
+[Linking...] "C:\CCStudio_v3.3\tms470\cgtools_271\bin\cl470" -@"Debug.lkf"
+>> WARNING: invalid compiler option --abi=tiabi (ignored)
+>> warning: load address of uninitialized section .watchdog ignored
+
+R:\01_adlatus\01_prj\t470_adl.bat
+
+R:\01_adlatus\01_prj>hex470 -@ t470_adl.cmf  1>error.log 
+>> WARNING: invalid option: -@
+>> WARNING: section '.const' was padded by 2 bytes to a size of 52 to satisfy
+            the specified memory width of 4
+>> WARNING: section '.intvecs' at 08000h falls in unconfigured memory (skipped)
+>> WARNING: section '$fill002' at 010000h falls in unconfigured memory (skipped)
+>> WARNING: section '$fill003' at 018000h falls in unconfigured memory (skipped)
+>> WARNING: section '$fill004' at 020000h falls in unconfigured memory (skipped)
+
+Build Complete,
+  0 Errors, 2 Warnings, 0 Remarks.
+  Please view the build output for errors and warnings for any custom steps.

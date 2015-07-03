@@ -1,0 +1,11 @@
+--------------------  AUDILIB_cc_tms470_VW_UDS.pjt - Debug  --------------------
+[ADLATUS_Main.c] "C:\CCStudio_v3.3\tms470\cgtools_271\bin\cl470" -g -q -ps -o2 -fr"r:/09_audilib/03_obj" -fs"r:/09_audilib/04_lst" -ft"r:/09_audilib/04_lst" -fb"r:/09_audilib/04_lst" -i"r:/05_header/int" -i"r:/05_header/ext" -d"_DEBUG" -mf -mt -@"../01_prj/Debug.lkf" "ADLATUS_Main.c"
+
+[Archiving...] "C:\CCStudio_v3.3\tms470\cgtools_271\bin\ar470" @"Debug.lkf"
+  ==>  new archive 'r:\09_audilib\05_out\AUDILIB_cc_tms470_VW_UDS.lib'
+  ==>  add 'r:\09_audilib\03_obj\ADLATUS_Main.obj'
+  ==>  add 'r:\09_audilib\03_obj\ADLATUS_Timer.obj'
+  ==>  building archive 'r:\09_audilib\05_out\AUDILIB_cc_tms470_VW_UDS.lib'
+
+Build Complete,
+  0 Errors, 0 Warnings, 0 Remarks.

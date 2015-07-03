@@ -1,0 +1,32 @@
+-----------------
+GenerateTraceID.py
+06.09.2011
+Release Notes:
+1. The _old.tr will be automatically deleted from the OUT directory.
+2. The *.enum and _old.tr will be automatically deleted from the C:\AllTraceFiles Directory.
+
+-----------------
+
+GenerateTraceID.py
+12.10.2011
+Release Notes:
+1. Added automatic generation of makefile.
+
+----------------
+
+GenerateTraceID.py
+24.10.2011
+Release Notes:
+#14897: Add ignore list in generation of makefiles.
+
+------------------
+
+GenerateTraceID.py
+13.01.2012
+Releaes Notes:
+#16057: Build Tool automatic generation of makefiles.
+The makefiles and makefilemodules would be automatically generated. With this, the developer is decoupled from the build process, makefiles etc..The developer can simply add a C file and run Build without bothering about the makefiles.
+A file ignoreMakefileList.txt in BUILD/SYS directory  prevents the generation of makefiles of the modules mentioned in the ignoreMakefileList.txt,.
+
+
+

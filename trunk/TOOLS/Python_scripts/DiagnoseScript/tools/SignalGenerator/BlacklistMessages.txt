@@ -1,0 +1,14 @@
+VIN_01
+NMH_CDR_PCM
+NMH_Gateway
+NMH_GSM
+NMH_Klima
+NMH_Kombi
+NMH_Miko
+NMH_RDK
+Diagnose_01
+Systeminfo_01
+Klemmen_Status_01
+ISO_Funktionaler_Req_All
+ISO_Info_El_Req
+ISO_Info_El_Resp

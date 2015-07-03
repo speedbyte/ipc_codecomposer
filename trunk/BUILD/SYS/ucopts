@@ -1,0 +1,64 @@
+# $Id$
+
+#
+#  Options
+
+COPTIONS=	-d"TEST1"  -d osdSuppressDefVectWarning\
+			-u"TEST"   -d"SYSTEM_TARGET_PRINT"\
+			-d PROCESSOR_TMS470R1SF55BA\
+			-d SDSEXT_SERVICE86_ALLOWED\
+			-d SDSEXT_SERVICE23_ALLOWED\
+			-d SDSEXT_SERVICE3D_ALLOWED\
+			-d SUPPORT_BT_UPDATE\
+            -d ENABLE_ERM_JINGLE\
+            -d ERM_USE_SIGNED_BT_UPDATE\
+            -d ERM_FULL_DEVICE_TABLE\
+            -d UHV_ACTIVATE_COMPLETE_USER_HANDLING\
+            -d CRADLE_RESTRICTION_ACTIVE\
+            -d USE_DEBUGGING_WITH_TRACE_ID\
+            -d READ_EEPROM_AT_STARTUP\
+            -d E2P_NEW_CONCEPT\
+            -d USE_AUTOMATIC_LEVEL_CONTROL_IN_RX\
+            -d ERM_USE_SIGNED_UPDATE\
+            -d FORD_SCM\
+            -d USE_CUSTOMER_CONFIRMATION_AFTER_RECORDING_VOICETAG\
+            -d USE_PLAY_ALL_VOICETAGS_AFTER_DELETE_NAME_NOT_RECOGNIZED
+
+# –d"SYSTEM_HOST_PRINT"
+
+#####################################################
+# define part for options which was shifted to later
+
+# SMS support activated or deactivated
+# -d UHV_ACTIVATE_FEATURE_SMS\                                          --> entfällt
+# seperate cancelling from a conference call activated or deactivated
+# -d UHV_ACTIVATE_FEATURE_CCSPLIT\                                      --> entfällt
+# audio mode activated or deactivated
+# -d UHV_ACTIVATE_FEATURE_SET_AUDIO_MODE\                               --> entfällt
+# alternating ringtone activated or deactivated
+# -d UHV_ACTIVATE_FEATURE_PLAY_CALLER_NAME\                             --> entfällt
+# headset support activated or deactivated
+# -d UHV_ACTIVATE_FEATURE_HEADSET\                                      --> entfällt
+# BAP functionality for Media Player enabled or disabled
+# -d UHV_ACTIVATE_FEATURE_BAP_MDI\                                      --> SOP2
+# Complete user handling
+# -d UHV_ACTIVATE_COMPLETE_USER_HANDLING\                               --> SOP2
+# Signed Bluetooth Update enabled or disabled
+# -d ERM_USE_SIGNED_UPDATE\                                          --> SOP1
+# LED support activated or deactivated
+# -d UHV_ACTIVATE_FEATURE_LED                                           --> entfällt
+# CRADLE RESTRICTION
+#-d CRADLE_RESTRICTION_ACTIVE                                           --> POLO/SOP2
+# Debug Trace is using ID
+#-d USE_DEBUGGING_WITH_TRACE_ID\                                        --> SOP2
+# A part of Future EEProm Design
+#-d READ_EEPROM_AT_STARTUP                                              --> SOP2
+# E2P new concept
+#-d E2P_NEW_CONCEPT                                                     --> SOP2
+# Audioparameter: Automated Level Control in Rx
+#-d USE_AUTOMATIC_LEVEL_CONTROL_IN_RX                                   --> SOP2
+# Store Voicetag ask for customer confirmation when recorded
+#-d USE_CUSTOMER_CONFIRMATION_AFTER_RECORDING_VOICETAG    
+# Play all voicetags and ask if the actual should be deleteted i no voicetag recognized in menu delete name
+#-d USE_CUSTOMER_CONFIRMATION_AFTER_RECORDING_VOICETAG   
+#####################################################

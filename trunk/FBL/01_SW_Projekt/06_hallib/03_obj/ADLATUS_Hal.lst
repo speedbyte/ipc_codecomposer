@@ -1,0 +1,2636 @@
+TMS470 COFF Assembler PC Version 2.71 Tue Jan 24 12:32:24 2012
+
+Tools Copyright (c) 1996-2008 Texas Instruments Incorporated
+r:/06_hallib/04_lst/ADLATUS_Hal.asm                                  PAGE    1
+
+       1                    ;******************************************************************************
+       2                    ;* TMS470 C/C++ Codegen                                       PC Version 2.71 *
+       3                    ;* Date/Time created: Tue Jan 24 12:32:24 2012                                *
+       4                    ;******************************************************************************
+       5 00000000                   .state16
+       6                    
+       7                    DWCU    .dwtag  DW_TAG_compile_unit
+       8                            .dwattr DWCU, DW_AT_name("ADLATUS_Hal.c")
+       9                            .dwattr DWCU, DW_AT_producer("TMS470 C/C++ Codegen PC Version 2.71 Copyright (c) 1996-2008 Tex
+      10                            .dwattr DWCU, DW_AT_stmt_list(0x00)
+      11                            .dwattr DWCU, DW_AT_TI_VERSION(0x01)
+      12                    
+      13                    DW$1    .dwtag  DW_TAG_subprogram, DW_AT_name("FUN_CCtim_SystemTimerCheck_V"), DW_AT_symbol_name("$FUN
+      14                            .dwattr DW$1, DW_AT_declaration(0x01)
+      15                            .dwattr DW$1, DW_AT_external(0x01)
+      16                    DW$2    .dwtag  DW_TAG_variable, DW_AT_name("RAMHAL"), DW_AT_symbol_name("_RAMHAL")
+      17                            .dwattr DW$2, DW_AT_type(*DWT$1052)
+      18                            .dwattr DW$2, DW_AT_declaration(0x01)
+      19                            .dwattr DW$2, DW_AT_external(0x01)
+      20                    DW$3    .dwtag  DW_TAG_variable, DW_AT_name("ROMHAL"), DW_AT_symbol_name("_ROMHAL")
+      21                            .dwattr DW$3, DW_AT_type(*DWT$1052)
+      22                            .dwattr DW$3, DW_AT_declaration(0x01)
+      23                            .dwattr DW$3, DW_AT_external(0x01)
+      24                    DW$4    .dwtag  DW_TAG_variable, DW_AT_name("e_SARCIM_ST"), DW_AT_symbol_name("_e_SARCIM_ST")
+      25                            .dwattr DW$4, DW_AT_type(*DWT$1074)
+      26                            .dwattr DW$4, DW_AT_declaration(0x01)
+      27                            .dwattr DW$4, DW_AT_external(0x01)
+      28                    DW$5    .dwtag  DW_TAG_variable, DW_AT_name("e_SARSYS_ST"), DW_AT_symbol_name("_e_SARSYS_ST")
+      29                            .dwattr DW$5, DW_AT_type(*DWT$1078)
+      30                            .dwattr DW$5, DW_AT_declaration(0x01)
+      31                            .dwattr DW$5, DW_AT_external(0x01)
+      32                    DW$6    .dwtag  DW_TAG_variable, DW_AT_name("e_SARRTI_ST"), DW_AT_symbol_name("_e_SARRTI_ST")
+      33                            .dwattr DW$6, DW_AT_type(*DWT$1095)
+      34                            .dwattr DW$6, DW_AT_declaration(0x01)
+      35                            .dwattr DW$6, DW_AT_external(0x01)
+      36                    DW$7    .dwtag  DW_TAG_variable, DW_AT_name("c_CCconprj_ClockFrequency_UL"), DW_AT_symbol_name("_c_CCc
+      37                            .dwattr DW$7, DW_AT_type(*DWT$1052)
+      38                            .dwattr DW$7, DW_AT_declaration(0x01)
+      39                            .dwattr DW$7, DW_AT_external(0x01)
+      40                    DW$8    .dwtag  DW_TAG_variable, DW_AT_name("c_CCconprj_DisableReset_UB"), DW_AT_symbol_name("_c_CCcon
+      41                            .dwattr DW$8, DW_AT_type(*DWT$1026)
+      42                            .dwattr DW$8, DW_AT_declaration(0x01)
+      43                            .dwattr DW$8, DW_AT_external(0x01)
+      44                    
+      45 00000000                   .sect   ".const"
+      46                            .align  2
+      47 00000000           _c_VerSMART_Hallib_V111_UW:
+      48 00000000 01110000          .field          273,16                  ; _c_VerSMART_Hallib_V111_UW @ 0
+      49                    
+      50 00000000                   .sect   ".text"
+      51                            .global _c_VerSMART_Hallib_V111_UW
+      52                    DW$9    .dwtag  DW_TAG_variable, DW_AT_name("c_VerSMART_Hallib_V111_UW"), DW_AT_symbol_name("_c_VerSMA
+      53                            .dwattr DW$9, DW_AT_type(*DWT$1035)
+      54                            .dwattr DW$9, DW_AT_location[DW_OP_addr _c_VerSMART_Hallib_V111_UW]
+      55                            .dwattr DW$9, DW_AT_external(0x01)
+TMS470 COFF Assembler PC Version 2.71 Tue Jan 24 12:32:24 2012
+
+Tools Copyright (c) 1996-2008 Texas Instruments Incorporated
+r:/06_hallib/04_lst/ADLATUS_Hal.asm                                  PAGE    2
+
+      56                            .global _t_CChal_HalCtrl_ST
+      57 00000000                   .bss    _t_CChal_HalCtrl_ST,20,4
+      58                    DW$10   .dwtag  DW_TAG_variable, DW_AT_name("t_CChal_HalCtrl_ST"), DW_AT_symbol_name("_t_CChal_HalCtrl
+      59                            .dwattr DW$10, DW_AT_type(*DWT$1098)
+      60                            .dwattr DW$10, DW_AT_location[DW_OP_addr _t_CChal_HalCtrl_ST]
+      61                            .dwattr DW$10, DW_AT_external(0x01)
+      62                    ;       C:\CCStudio_v3.3\tms470\cgtools_271\bin\opt470.exe -v1 -q -s -O2 -e r:/06_hallib/04_lst/ADLATU
+      63                    
+      64 00000000                   .sect   ".text:v$0"
+      65                            .clink
+      66                            .global _FUN_CChal_InitHAL_V
+      67                    
+      68                    DW$11   .dwtag  DW_TAG_subprogram, DW_AT_name("FUN_CChal_InitHAL_V"), DW_AT_symbol_name("_FUN_CChal_In
+      69                            .dwattr DW$11, DW_AT_veneer(0x01)
+      70                            .dwattr DW$11, DW_AT_low_pc(_FUN_CChal_InitHAL_V)
+      71                            .dwattr DW$11, DW_AT_high_pc(0x00)
+      72                            .dwattr DW$11, DW_AT_external(0x01)
+      73 00000000                   .state32
+      74                    
+      75                    ;*****************************************************************************
+      76                    ;* FUNCTION VENEER: _FUN_CChal_InitHAL_V                                     *
+      77                    ;*****************************************************************************
+      78 00000000           _FUN_CChal_InitHAL_V:
+      79 00000000 E59FC000           LDR       ip, [pc]
+      80 00000004 E12FFF1C           BX        ip
+      81 00000008 00000001'         .field     $FUN_CChal_InitHAL_V+1, 32
+      82 0000000c                   .state16
+      83                            .dwendtag DW$11
+      84                    
+      85                    
+      86                    
+      87 00000000                   .sect   ".text"
+      88                            .clink
+      89                            .global $FUN_CChal_InitHAL_V
+      90                    
+      91                    DW$12   .dwtag  DW_TAG_subprogram, DW_AT_name("FUN_CChal_InitHAL_V"), DW_AT_symbol_name("$FUN_CChal_In
+      92                            .dwattr DW$12, DW_AT_low_pc($FUN_CChal_InitHAL_V)
+      93                            .dwattr DW$12, DW_AT_high_pc(0x00)
+      94                            .dwpsn  "ADLATUS_Hal.c",149,1
+      95                    
+      96                            .dwfde DW$CIE
+      97                    ;----------------------------------------------------------------------
+      98                    ; 148 | void FUN_CChal_InitHAL_V (const HALINTERFACE_ST* t_HalInterface_PST)   
+      99                    ;----------------------------------------------------------------------
+     100                    
+     101                    ;*****************************************************************************
+     102                    ;* FUNCTION NAME: FUN_CChal_InitHAL_V                                        *
+     103                    ;*                                                                           *
+     104                    ;*   Regs Modified     : A1,A2,A3,A4,SR                                      *
+     105                    ;*   Regs Used         : A1,A2,A3,A4,SR                                      *
+     106                    ;*   Local Frame Size  : 0 Args + 0 Auto + 0 Save = 0 byte                   *
+     107                    ;*****************************************************************************
+     108                    
+     109                    ;******************************************************************************
+     110                    ;*                                                                            *
+TMS470 COFF Assembler PC Version 2.71 Tue Jan 24 12:32:24 2012
+
+Tools Copyright (c) 1996-2008 Texas Instruments Incorporated
+r:/06_hallib/04_lst/ADLATUS_Hal.asm                                  PAGE    3
+
+     111                    ;* Using -g (debug) with optimization (-o2) may disable key optimizations!    *
+     112                    ;*                                                                            *
+     113                    ;******************************************************************************
+     114                    $FUN_CChal_InitHAL_V:
+     115                    ;* --------------------------------------------------------------------------*
+     116                            .dwcfa  0x09, 26, 14
+     117                    ;* A1    assigned to _t_HalInterface_PST
+     118                    DW$13   .dwtag  DW_TAG_formal_parameter, DW_AT_name("t_HalInterface_PST"), DW_AT_symbol_name("_t_HalIn
+     119                            .dwattr DW$13, DW_AT_type(*DWT$1060)
+     120                            .dwattr DW$13, DW_AT_location[DW_OP_reg0]
+     121                    ;* A2    assigned to C$1
+     122                    DW$14   .dwtag  DW_TAG_variable, DW_AT_name("C$1"), DW_AT_symbol_name("C$1")
+     123                            .dwattr DW$14, DW_AT_type(*DWT$1100)
+     124                            .dwattr DW$14, DW_AT_location[DW_OP_reg1]
+     125                    ;* A1    assigned to _t_HalInterface_PST
+     126                    DW$15   .dwtag  DW_TAG_variable, DW_AT_name("t_HalInterface_PST"), DW_AT_symbol_name("_t_HalInterface_
+     127                            .dwattr DW$15, DW_AT_type(*DWT$1064)
+     128                            .dwattr DW$15, DW_AT_location[DW_OP_reg0]
+     129                    ;* A2    assigned to _t_HALRAM_PUB
+     130                    DW$16   .dwtag  DW_TAG_variable, DW_AT_name("t_HALRAM_PUB"), DW_AT_symbol_name("_t_HALRAM_PUB")
+     131                            .dwattr DW$16, DW_AT_type(*DWT$1027)
+     132                            .dwattr DW$16, DW_AT_location[DW_OP_reg1]
+     133                    ;* A1    assigned to _t_HALFlash_PUB
+     134                    DW$17   .dwtag  DW_TAG_variable, DW_AT_name("t_HALFlash_PUB"), DW_AT_symbol_name("_t_HALFlash_PUB")
+     135                            .dwattr DW$17, DW_AT_type(*DWT$1027)
+     136                            .dwattr DW$17, DW_AT_location[DW_OP_reg0]
+     137                    ;* A3    assigned to L$1
+     138                    DW$18   .dwtag  DW_TAG_variable, DW_AT_name("L$1"), DW_AT_symbol_name("L$1")
+     139                            .dwattr DW$18, DW_AT_type(*DWT$11)
+     140                            .dwattr DW$18, DW_AT_location[DW_OP_reg2]
+     141                    ;----------------------------------------------------------------------
+     142                    ; 150 | UWORD  t_Counter_UW;                                                   
+     143                    ; 151 | UWORD  t_HALSize_UW;                                                   
+     144                    ; 152 | UBYTE* t_HALRAM_PUB;                                                   
+     145                    ; 153 | UBYTE* t_HALFlash_PUB;                                                 
+     146                    ;----------------------------------------------------------------------
+     147                    ;** 167 -----------------------    C$1 = &t_CChal_HalCtrl_ST;
+     148                            .dwpsn  "ADLATUS_Hal.c",167,3
+     149                    ;----------------------------------------------------------------------
+     150                    ; 167 | t_CChal_HalCtrl_ST.IntClockFrequency_UL      = *t_HalInterface_PST->Int
+     151                    ;     | ClkFrequency_UL;                                                       
+     152                    ;----------------------------------------------------------------------
+     153 00000000 4956              LDR       A2, CON1              ; |167| 
+     154                    ;** 167 -----------------------    C$1->IntClockFrequency_UL = *t_HalInterface_PST->IntClkFrequency_UL
+     155 00000002 6802              LDR       A3, [A1, #0]          ; |167| 
+     156 00000004 6812              LDR       A3, [A3, #0]          ; |167| 
+     157 00000006 600A              STR       A3, [A2, #0]          ; |167| 
+     158                    ;** 168 -----------------------    C$1->IntWatchdogTriggerTime_UW = *t_HalInterface_PST->IntWdtTimeout
+     159                            .dwpsn  "ADLATUS_Hal.c",168,3
+     160                    ;----------------------------------------------------------------------
+     161                    ; 168 | t_CChal_HalCtrl_ST.IntWatchdogTriggerTime_UW = *t_HalInterface_PST->Int
+     162                    ;     | WdtTimeout_UW;                                                         
+     163                    ;----------------------------------------------------------------------
+     164 00000008 6840              LDR       A1, [A1, #4]          ; |168| 
+     165 0000000a 8800              LDRH      A1, [A1, #0]          ; |168| 
+TMS470 COFF Assembler PC Version 2.71 Tue Jan 24 12:32:24 2012
+
+Tools Copyright (c) 1996-2008 Texas Instruments Incorporated
+r:/06_hallib/04_lst/ADLATUS_Hal.asm                                  PAGE    4
+
+     166 0000000c 8088              STRH      A1, [A2, #4]          ; |168| 
+     167                    ;** 170 -----------------------    C$1->HWTimerValue_UW = 0;
+     168                            .dwpsn  "ADLATUS_Hal.c",170,3
+     169                    ;----------------------------------------------------------------------
+     170                    ; 170 | t_CChal_HalCtrl_ST.HWTimerValue_UW = 0u;                               
+     171                    ; 174 | t_HALFlash_PUB = (UBYTE*) ((ULONG) &ROMHAL);                   /*l_int
+     172                    ;     | !e923 */                                                               
+     173                    ; 176 | t_HALRAM_PUB   = (UBYTE*) ((ULONG) &RAMHAL);                   /*l_int
+     174                    ;     | !e923 */                                                               
+     175                    ; 182 | t_HALSize_UW   = 0x00A0u;                                              
+     176                    ;----------------------------------------------------------------------
+     177 0000000e 2000              MOV       A1, #0                ; |170| 
+     178 00000010 8108              STRH      A1, [A2, #8]          ; |170| 
+     179                    ;**     -----------------------    #pragma MUST_ITERATE(160, 160, 160)
+     180                    ;**     -----------------------    #pragma LOOP_FLAGS(4096u)
+     181                    ;** 187 -----------------------    L$1 = 80;
+     182                            .dwpsn  "ADLATUS_Hal.c",187,9
+     183                    ;----------------------------------------------------------------------
+     184                    ; 187 | for ( t_Counter_UW = 0x0000u;                                          
+     185                    ; 188 |       t_Counter_UW < t_HALSize_UW;                                     
+     186                    ; 189 |       t_Counter_UW ++ )                                                
+     187                    ;----------------------------------------------------------------------
+     188 00000012 2250              MOV       A3, #80               ; |187| 
+     189                    ;** 174 -----------------------    t_HALFlash_PUB = (unsigned char *)(unsigned)&ROMHAL;
+     190                            .dwpsn  "ADLATUS_Hal.c",174,3
+     191 00000014 4852              LDR       A1, CON2              ; |174| 
+     192                    ;** 176 -----------------------    t_HALRAM_PUB = (unsigned char *)(unsigned)&RAMHAL;
+     193                            .dwpsn  "ADLATUS_Hal.c",176,3
+     194 00000016 4953              LDR       A2, CON3              ; |176| 
+     195                    ;* --------------------------------------------------------------------------*
+     196                    ;*   BEGIN LOOP L1
+     197                    ;*
+     198                    ;*   Loop source line                : 187
+     199                    ;*   Loop closing brace source line  : 195
+     200                    ;*   Known Minimum Trip Count        : 160
+     201                    ;*   Known Maximum Trip Count        : 160
+     202                    ;*   Known Max Trip Count Factor     : 160
+     203                    ;* --------------------------------------------------------------------------*
+     204                    L1:    
+     205                    DWL$$FUN_CChal_InitHAL_V$2$B:
+     206                    ;**     -----------------------g2:
+     207                    ;** 191 -----------------------    *t_HALRAM_PUB = *t_HALFlash_PUB;
+     208                            .dwpsn  "ADLATUS_Hal.c",191,5
+     209                    ;----------------------------------------------------------------------
+     210                    ; 191 | *t_HALRAM_PUB = *t_HALFlash_PUB;                                       
+     211                    ;----------------------------------------------------------------------
+     212 00000018 7803              LDRB      A4, [A1, #0]          ; |191| 
+     213 0000001a 700B              STRB      A4, [A2, #0]          ; |191| 
+     214                    ;** 191 -----------------------    *(++t_HALRAM_PUB) = *(++t_HALFlash_PUB);
+     215 0000001c 7843              LDRB      A4, [A1, #1]          ; |191| 
+     216 0000001e 3001              ADD       A1, #1                ; |191| 
+     217 00000020 704B              STRB      A4, [A2, #1]          ; |191| 
+     218 00000022 3101              ADD       A2, #1                ; |191| 
+     219                    ;** 192 -----------------------    ++t_HALRAM_PUB;
+     220                            .dwpsn  "ADLATUS_Hal.c",192,5
+TMS470 COFF Assembler PC Version 2.71 Tue Jan 24 12:32:24 2012
+
+Tools Copyright (c) 1996-2008 Texas Instruments Incorporated
+r:/06_hallib/04_lst/ADLATUS_Hal.asm                                  PAGE    5
+
+     221                    ;----------------------------------------------------------------------
+     222                    ; 192 | t_HALRAM_PUB++;                                                        
+     223                    ;----------------------------------------------------------------------
+     224 00000024 3101              ADD       A2, #1                ; |192| 
+     225                    ;** 193 -----------------------    ++t_HALFlash_PUB;
+     226                            .dwpsn  "ADLATUS_Hal.c",193,5
+     227                    ;----------------------------------------------------------------------
+     228                    ; 193 | t_HALFlash_PUB++;                                                      
+     229                    ;----------------------------------------------------------------------
+     230 00000026 3001              ADD       A1, #1                ; |193| 
+     231                    ;** 195 -----------------------    if ( --L$1 ) goto g2;
+     232                            .dwpsn  "ADLATUS_Hal.c",195,3
+     233                    ;----------------------------------------------------------------------
+     234                    ; 197 | return ;                                                               
+     235                    ;----------------------------------------------------------------------
+     236 00000028 3A01              SUB       A3, #1                ; |195| 
+     237 0000002a D1F5              BNE       L1                    ; |195| 
+     238                            ; |195| 
+     239                    ;**     -----------------------    return;
+     240                    DWL$$FUN_CChal_InitHAL_V$2$E:
+     241                    ;* --------------------------------------------------------------------------*
+     242                            .dwpsn  "ADLATUS_Hal.c",199,1
+     243 0000002c 4770              BX        LR
+     244                    
+     245                    DW$19   .dwtag  DW_TAG_loop
+     246                            .dwattr DW$19, DW_AT_name("r:/06_hallib/04_lst/ADLATUS_Hal.asm:L1:1:1327404744")
+     247                            .dwattr DW$19, DW_AT_begin_file("ADLATUS_Hal.c")
+     248                            .dwattr DW$19, DW_AT_begin_line(0xbb)
+     249                            .dwattr DW$19, DW_AT_end_line(0xc3)
+     250                    DW$20   .dwtag  DW_TAG_loop_range
+     251                            .dwattr DW$20, DW_AT_low_pc(DWL$$FUN_CChal_InitHAL_V$2$B)
+     252                            .dwattr DW$20, DW_AT_high_pc(DWL$$FUN_CChal_InitHAL_V$2$E)
+     253                            .dwendtag DW$19
+     254                    
+     255                            .dwendentry
+     256                            .dwendtag DW$12
+     257                    
+     258                    
+     259                    
+     260                    
+     261 00000000                   .sect   ".text:v$1"
+     262                            .clink
+     263                            .global _FUN_CChal_DisGlobalInterrupt_V
+     264                    
+     265                    DW$21   .dwtag  DW_TAG_subprogram, DW_AT_name("FUN_CChal_DisGlobalInterrupt_V"), DW_AT_symbol_name("_F
+     266                            .dwattr DW$21, DW_AT_veneer(0x01)
+     267                            .dwattr DW$21, DW_AT_low_pc(_FUN_CChal_DisGlobalInterrupt_V)
+     268                            .dwattr DW$21, DW_AT_high_pc(0x00)
+     269                            .dwattr DW$21, DW_AT_external(0x01)
+     270 00000000                   .state32
+     271                    
+     272                    ;*****************************************************************************
+     273                    ;* FUNCTION VENEER: _FUN_CChal_DisGlobalInterrupt_V                          *
+     274                    ;*****************************************************************************
+     275 00000000           _FUN_CChal_DisGlobalInterrupt_V:
+TMS470 COFF Assembler PC Version 2.71 Tue Jan 24 12:32:24 2012
+
+Tools Copyright (c) 1996-2008 Texas Instruments Incorporated
+r:/06_hallib/04_lst/ADLATUS_Hal.asm                                  PAGE    6
+
+     276 00000000 E59FC000           LDR       ip, [pc]
+     277 00000004 E12FFF1C           BX        ip
+     278 00000008 0000002F'         .field     $FUN_CChal_DisGlobalInterrupt_V+1, 32
+     279 0000000c                   .state16
+     280                            .dwendtag DW$21
+     281                    
+     282                    
+     283                    
+     284 0000002e                   .sect   ".text"
+     285                            .clink
+     286                            .global $FUN_CChal_DisGlobalInterrupt_V
+     287                    
+     288                    DW$22   .dwtag  DW_TAG_subprogram, DW_AT_name("FUN_CChal_DisGlobalInterrupt_V"), DW_AT_symbol_name("$F
+     289                            .dwattr DW$22, DW_AT_low_pc($FUN_CChal_DisGlobalInterrupt_V)
+     290                            .dwattr DW$22, DW_AT_high_pc(0x00)
+     291                            .dwpsn  "ADLATUS_Hal.c",218,1
+     292                    
+     293                            .dwfde DW$CIE
+     294                    ;----------------------------------------------------------------------
+     295                    ; 217 | void FUN_CChal_DisGlobalInterrupt_V ( void)                            
+     296                    ;----------------------------------------------------------------------
+     297                    
+     298                    ;*****************************************************************************
+     299                    ;* FUNCTION NAME: FUN_CChal_DisGlobalInterrupt_V                             *
+     300                    ;*                                                                           *
+     301                    ;*   Regs Modified     : A1,A2,SR                                            *
+     302                    ;*   Regs Used         : A1,A2,SR                                            *
+     303                    ;*   Local Frame Size  : 0 Args + 0 Auto + 0 Save = 0 byte                   *
+     304                    ;*****************************************************************************
+     305                    
+     306                    ;******************************************************************************
+     307                    ;*                                                                            *
+     308                    ;* Using -g (debug) with optimization (-o2) may disable key optimizations!    *
+     309                    ;*                                                                            *
+     310                    ;******************************************************************************
+     311                    $FUN_CChal_DisGlobalInterrupt_V:
+     312                    ;* --------------------------------------------------------------------------*
+     313                            .dwcfa  0x09, 26, 14
+     314                    ;* A1    assigned to C$1
+     315                    DW$23   .dwtag  DW_TAG_variable, DW_AT_name("C$1"), DW_AT_symbol_name("C$1")
+     316                            .dwattr DW$23, DW_AT_type(*DWT$1075)
+     317                            .dwattr DW$23, DW_AT_location[DW_OP_reg0]
+     318                    ;* A2    assigned to C$2
+     319                    DW$24   .dwtag  DW_TAG_variable, DW_AT_name("C$2"), DW_AT_symbol_name("C$2")
+     320                            .dwattr DW$24, DW_AT_type(*DWT$10)
+     321                            .dwattr DW$24, DW_AT_location[DW_OP_reg1]
+     322                    ;** 221 -----------------------    C$1 = &e_SARCIM_ST;
+     323                            .dwpsn  "ADLATUS_Hal.c",221,3
+     324                    ;----------------------------------------------------------------------
+     325                    ; 221 | e_SARCIM_ST.Reqmask_UL = 0ul;                                          
+     326                    ;----------------------------------------------------------------------
+     327 0000002e 484E              LDR       A1, CON4              ; |221| 
+     328                    ;** 221 -----------------------    C$1->Reqmask_UL = C$2 = 0u;
+     329 00000030 2100              MOV       A2, #0                ; |221| 
+     330 00000032 6141              STR       A2, [A1, #20]         ; |221| 
+TMS470 COFF Assembler PC Version 2.71 Tue Jan 24 12:32:24 2012
+
+Tools Copyright (c) 1996-2008 Texas Instruments Incorporated
+r:/06_hallib/04_lst/ADLATUS_Hal.asm                                  PAGE    7
+
+     331                    ;** 224 -----------------------    C$1->Firqpr_UL = C$2;
+     332                            .dwpsn  "ADLATUS_Hal.c",224,3
+     333                    ;----------------------------------------------------------------------
+     334                    ; 224 | e_SARCIM_ST.Firqpr_UL  = 0ul;                                          
+     335                    ;----------------------------------------------------------------------
+     336 00000034 60C1              STR       A2, [A1, #12]         ; |224| 
+     337                    ;** 226 -----------------------    return;
+     338                            .dwpsn  "ADLATUS_Hal.c",226,3
+     339                    ;----------------------------------------------------------------------
+     340                    ; 226 | return ;                                                               
+     341                    ;----------------------------------------------------------------------
+     342                            .dwpsn  "ADLATUS_Hal.c",228,1
+     343 00000036 4770              BX        LR
+     344                            .dwendentry
+     345                            .dwendtag DW$22
+     346                    
+     347                    
+     348                    
+     349                    
+     350 00000000                   .sect   ".text:v$2"
+     351                            .clink
+     352                            .global _FUN_CChal_InitHardwareTimer_V
+     353                    
+     354                    DW$25   .dwtag  DW_TAG_subprogram, DW_AT_name("FUN_CChal_InitHardwareTimer_V"), DW_AT_symbol_name("_FU
+     355                            .dwattr DW$25, DW_AT_veneer(0x01)
+     356                            .dwattr DW$25, DW_AT_low_pc(_FUN_CChal_InitHardwareTimer_V)
+     357                            .dwattr DW$25, DW_AT_high_pc(0x00)
+     358                            .dwattr DW$25, DW_AT_external(0x01)
+     359 00000000                   .state32
+     360                    
+     361                    ;*****************************************************************************
+     362                    ;* FUNCTION VENEER: _FUN_CChal_InitHardwareTimer_V                           *
+     363                    ;*****************************************************************************
+     364 00000000           _FUN_CChal_InitHardwareTimer_V:
+     365 00000000 E92D4000           STMFD     sp!, {lr}
+     366 00000004 E28FE001           ADD       lr, pc, #1
+     367 00000008 E12FFF1E           BX        lr
+     368 0000000c                   .state16
+     369 0000000c F000'              BL        $FUN_CChal_InitHardwareTimer_V
+         0000000e F814     
+     370 00000010 4778               BX        pc
+     371 00000012 46C0               NOP
+     372 00000014                   .state32
+     373 00000014 E8BD8000           LDMFD     sp!, {pc}
+     374 00000018                   .state16
+     375                            .dwendtag DW$25
+     376                    
+     377                    
+     378                    
+     379 00000038                   .sect   ".text"
+     380                            .clink
+     381                            .global $FUN_CChal_InitHardwareTimer_V
+     382                    
+     383                    DW$26   .dwtag  DW_TAG_subprogram, DW_AT_name("FUN_CChal_InitHardwareTimer_V"), DW_AT_symbol_name("$FU
+     384                            .dwattr DW$26, DW_AT_low_pc($FUN_CChal_InitHardwareTimer_V)
+TMS470 COFF Assembler PC Version 2.71 Tue Jan 24 12:32:24 2012
+
+Tools Copyright (c) 1996-2008 Texas Instruments Incorporated
+r:/06_hallib/04_lst/ADLATUS_Hal.asm                                  PAGE    8
+
+     385                            .dwattr DW$26, DW_AT_high_pc(0x00)
+     386                            .dwpsn  "ADLATUS_Hal.c",248,1
+     387                    
+     388                            .dwfde DW$CIE
+     389                    ;----------------------------------------------------------------------
+     390                    ; 247 | void FUN_CChal_InitHardwareTimer_V (void)                              
+     391                    ;----------------------------------------------------------------------
+     392                    
+     393                    ;*****************************************************************************
+     394                    ;* FUNCTION NAME: FUN_CChal_InitHardwareTimer_V                              *
+     395                    ;*                                                                           *
+     396                    ;*   Regs Modified     : A1,A2,A3,A4,SP,LR,SR                                *
+     397                    ;*   Regs Used         : A1,A2,A3,A4,SP,LR,SR                                *
+     398                    ;*   Local Frame Size  : 0 Args + 0 Auto + 4 Save = 4 byte                   *
+     399                    ;*****************************************************************************
+     400                    
+     401                    ;******************************************************************************
+     402                    ;*                                                                            *
+     403                    ;* Using -g (debug) with optimization (-o2) may disable key optimizations!    *
+     404                    ;*                                                                            *
+     405                    ;******************************************************************************
+     406                    $FUN_CChal_InitHardwareTimer_V:
+     407                    ;* --------------------------------------------------------------------------*
+     408                            .dwcfa  0x09, 26, 14
+     409 00000038 B500              PUSH      {LR}
+     410                            .dwcfa  0x0e, 4
+     411                            .dwcfa  0x80, 14, 1
+     412                            .dwcfa  0x0e, 4
+     413                    ;* A3    assigned to C$1
+     414                    DW$27   .dwtag  DW_TAG_variable, DW_AT_name("C$1"), DW_AT_symbol_name("C$1")
+     415                            .dwattr DW$27, DW_AT_type(*DWT$1100)
+     416                            .dwattr DW$27, DW_AT_location[DW_OP_reg2]
+     417                    ;* A1    assigned to C$2
+     418                    DW$28   .dwtag  DW_TAG_variable, DW_AT_name("C$2"), DW_AT_symbol_name("C$2")
+     419                            .dwattr DW$28, DW_AT_type(*DWT$1081)
+     420                            .dwattr DW$28, DW_AT_location[DW_OP_reg0]
+     421                    ;** 262 -----------------------    C$1 = &t_CChal_HalCtrl_ST;
+     422                            .dwpsn  "ADLATUS_Hal.c",262,3
+     423                    ;----------------------------------------------------------------------
+     424                    ; 262 | t_CChal_HalCtrl_ST.TimerTicksForOneMilliSecond_UL =                    
+     425                    ; 263 |                                     (c_CCconprj_ClockFrequency_UL/(2000
+     426                    ;     | ul));                                                                  
+     427                    ;----------------------------------------------------------------------
+     428 0000003a 4A48              LDR       A3, CON1              ; |262| 
+     429                    ;** 262 -----------------------    C$1->TimerTicksForOneMilliSecond_UL = c_CCconprj_ClockFrequency_UL/
+     430 0000003c 484B              LDR       A1, CON5              ; |262| 
+     431 0000003e 6800              LDR       A1, [A1, #0]          ; |262| 
+     432 00000040 217D              MOV       A2, #125
+     433 00000042 0109              LSL       A2, A2, #4
+     434 00000044 F7FF!             BL        U$DIV                 ; |262| 
+         00000046 FFDC     
+     435                            ; |262| 
+     436 00000048 6111              STR       A2, [A3, #16]         ; |262| 
+     437                    ;** 276 -----------------------    C$2 = &e_SARRTI_ST;
+     438                            .dwpsn  "ADLATUS_Hal.c",276,3
+TMS470 COFF Assembler PC Version 2.71 Tue Jan 24 12:32:24 2012
+
+Tools Copyright (c) 1996-2008 Texas Instruments Incorporated
+r:/06_hallib/04_lst/ADLATUS_Hal.asm                                  PAGE    9
+
+     439                    ;----------------------------------------------------------------------
+     440                    ; 276 | e_SARRTI_ST.DRTIPCTL_UN.DRTIPCTL_ST.PREDL_B11 = 0x0001u;               
+     441                    ;----------------------------------------------------------------------
+     442 0000004a 4849              LDR       A1, CON7              ; |276| 
+     443                    ;** 276 -----------------------    ((volatile unsigned short *)C$2)[3] = ((volatile unsigned short *)C
+     444 0000004c 88C1              LDRH      A2, [A1, #6]          ; |276| 
+     445 0000004e 0AC9              LSR       A2, A2, #11           ; |276| 
+     446 00000050 02CB              LSL       A4, A2, #11           ; |276| 
+     447 00000052 2101              MOV       A2, #1                ; |276| 
+     448 00000054 4319              ORR       A2, A4                ; |276| 
+     449 00000056 80C1              STRH      A2, [A1, #6]          ; |276| 
+     450                    ;** 279 -----------------------    *((volatile struct $$fake6 *)C$2+31) &= 0xfcu;
+     451                            .dwpsn  "ADLATUS_Hal.c",279,3
+     452                    ;----------------------------------------------------------------------
+     453                    ; 279 | e_SARRTI_ST.DRTICNTEN_UN.DRTICNTEN_ST.CNTEN_B2 = 0x00u;                
+     454                    ;----------------------------------------------------------------------
+     455 00000058 7FC3              LDRB      A4, [A1, #31]         ; |279| 
+     456 0000005a 21FC              MOV       A2, #252              ; |279| 
+     457 0000005c 4019              AND       A2, A4                ; |279| 
+     458 0000005e 77C1              STRB      A2, [A1, #31]         ; |279| 
+     459                    ;** 282 -----------------------    C$1->OldTimerValue_UL = *(volatile unsigned *)C$2>>11;
+     460                            .dwpsn  "ADLATUS_Hal.c",282,3
+     461                    ;----------------------------------------------------------------------
+     462                    ; 282 | t_CChal_HalCtrl_ST.OldTimerValue_UL = e_SARRTI_ST.DRTICNTR_UN.DRTICNTR_
+     463                    ;     | ST.DRTICNTR_B21;                                                       
+     464                    ;----------------------------------------------------------------------
+     465 00000060 6800              LDR       A1, [A1, #0]          ; |282| 
+     466 00000062 0AC0              LSR       A1, A1, #11           ; |282| 
+     467 00000064 60D0              STR       A1, [A3, #12]         ; |282| 
+     468                    ;** 284 -----------------------    return;
+     469                            .dwpsn  "ADLATUS_Hal.c",284,3
+     470                    ;----------------------------------------------------------------------
+     471                    ; 284 | return;                                                                
+     472                    ;----------------------------------------------------------------------
+     473                            .dwpsn  "ADLATUS_Hal.c",286,1
+     474                            .dwcfa  0x0e, 4
+     475 00000066 BD00              POP       {PC}
+     476                            .dwendentry
+     477                            .dwendtag DW$26
+     478                    
+     479                    
+     480                    
+     481                    
+     482 00000000                   .sect   ".text:v$3"
+     483                            .clink
+     484                            .global _FUN_CChal_GetHWTimerValue_UW
+     485                    
+     486                    DW$29   .dwtag  DW_TAG_subprogram, DW_AT_name("FUN_CChal_GetHWTimerValue_UW"), DW_AT_symbol_name("_FUN
+     487                            .dwattr DW$29, DW_AT_veneer(0x01)
+     488                            .dwattr DW$29, DW_AT_low_pc(_FUN_CChal_GetHWTimerValue_UW)
+     489                            .dwattr DW$29, DW_AT_high_pc(0x00)
+     490                            .dwattr DW$29, DW_AT_external(0x01)
+     491 00000000                   .state32
+     492                    
+     493                    ;*****************************************************************************
+TMS470 COFF Assembler PC Version 2.71 Tue Jan 24 12:32:24 2012
+
+Tools Copyright (c) 1996-2008 Texas Instruments Incorporated
+r:/06_hallib/04_lst/ADLATUS_Hal.asm                                  PAGE   10
+
+     494                    ;* FUNCTION VENEER: _FUN_CChal_GetHWTimerValue_UW                            *
+     495                    ;*****************************************************************************
+     496 00000000           _FUN_CChal_GetHWTimerValue_UW:
+     497 00000000 E59FC000           LDR       ip, [pc]
+     498 00000004 E12FFF1C           BX        ip
+     499 00000008 00000069'         .field     $FUN_CChal_GetHWTimerValue_UW+1, 32
+     500 0000000c                   .state16
+     501                            .dwendtag DW$29
+     502                    
+     503                    
+     504                    
+     505 00000068                   .sect   ".text"
+     506                            .clink
+     507                            .global $FUN_CChal_GetHWTimerValue_UW
+     508                    
+     509                    DW$30   .dwtag  DW_TAG_subprogram, DW_AT_name("FUN_CChal_GetHWTimerValue_UW"), DW_AT_symbol_name("$FUN
+     510                            .dwattr DW$30, DW_AT_low_pc($FUN_CChal_GetHWTimerValue_UW)
+     511                            .dwattr DW$30, DW_AT_high_pc(0x00)
+     512                            .dwpsn  "ADLATUS_Hal.c",307,1
+     513                    
+     514                            .dwfde DW$CIE
+     515                    ;----------------------------------------------------------------------
+     516                    ; 306 | UWORD FUN_CChal_GetHWTimerValue_UW (void )                             
+     517                    ;----------------------------------------------------------------------
+     518                    
+     519                    ;*****************************************************************************
+     520                    ;* FUNCTION NAME: FUN_CChal_GetHWTimerValue_UW                               *
+     521                    ;*                                                                           *
+     522                    ;*   Regs Modified     : A1,A2,SR                                            *
+     523                    ;*   Regs Used         : A1,A2,SR                                            *
+     524                    ;*   Local Frame Size  : 0 Args + 0 Auto + 0 Save = 0 byte                   *
+     525                    ;*****************************************************************************
+     526                    
+     527                    ;******************************************************************************
+     528                    ;*                                                                            *
+     529                    ;* Using -g (debug) with optimization (-o2) may disable key optimizations!    *
+     530                    ;*                                                                            *
+     531                    ;******************************************************************************
+     532                    $FUN_CChal_GetHWTimerValue_UW:
+     533                    ;* --------------------------------------------------------------------------*
+     534                    ;----------------------------------------------------------------------
+     535                    ; 308 | UWORD t_TimerValue_UW;                                                 
+     536                    ;----------------------------------------------------------------------
+     537                            .dwcfa  0x09, 26, 14
+     538                    ;* A2    assigned to C$1
+     539                    DW$31   .dwtag  DW_TAG_variable, DW_AT_name("C$1"), DW_AT_symbol_name("C$1")
+     540                            .dwattr DW$31, DW_AT_type(*DWT$1100)
+     541                            .dwattr DW$31, DW_AT_location[DW_OP_reg1]
+     542                    ;* A1    assigned to _t_TimerValue_UW
+     543                    DW$32   .dwtag  DW_TAG_variable, DW_AT_name("t_TimerValue_UW"), DW_AT_symbol_name("_t_TimerValue_UW")
+     544                            .dwattr DW$32, DW_AT_type(*DWT$1021)
+     545                            .dwattr DW$32, DW_AT_location[DW_OP_reg0]
+     546                    ;* A1    assigned to U$3
+     547                    DW$33   .dwtag  DW_TAG_variable, DW_AT_name("U$3"), DW_AT_symbol_name("U$3")
+     548                            .dwattr DW$33, DW_AT_type(*DWT$1021)
+TMS470 COFF Assembler PC Version 2.71 Tue Jan 24 12:32:24 2012
+
+Tools Copyright (c) 1996-2008 Texas Instruments Incorporated
+r:/06_hallib/04_lst/ADLATUS_Hal.asm                                  PAGE   11
+
+     549                            .dwattr DW$33, DW_AT_location[DW_OP_reg0]
+     550                    ;* A2    assigned to K$2
+     551                    DW$34   .dwtag  DW_TAG_variable, DW_AT_name("K$2"), DW_AT_symbol_name("K$2")
+     552                            .dwattr DW$34, DW_AT_type(*DWT$1099)
+     553                            .dwattr DW$34, DW_AT_location[DW_OP_reg1]
+     554                    ;** 311 -----------------------    C$1 = &t_CChal_HalCtrl_ST;
+     555                            .dwpsn  "ADLATUS_Hal.c",311,3
+     556                    ;----------------------------------------------------------------------
+     557                    ; 311 | if (t_CChal_HalCtrl_ST.HWTimerValue_UW == 0u)                          
+     558                    ;----------------------------------------------------------------------
+     559 00000068 493C              LDR       A2, CON1              ; |311| 
+     560                    ;** 311 -----------------------    if ( U$3 = C$1->HWTimerValue_UW ) goto g2;
+     561 0000006a 8908              LDRH      A1, [A2, #8]          ; |311| 
+     562 0000006c 2800              CMP       A1, #0                ; |311| 
+     563 0000006e D101              BNE       L2                    ; |311| 
+     564                            ; |311| 
+     565                    ;* --------------------------------------------------------------------------*
+     566                    ;** 311 -----------------------    K$2 = C$1;
+     567                    ;** 313 -----------------------    t_TimerValue_UW = K$2->OldTimerValue_UL;
+     568                            .dwpsn  "ADLATUS_Hal.c",313,5
+     569                    ;----------------------------------------------------------------------
+     570                    ; 313 | t_TimerValue_UW = (UWORD)t_CChal_HalCtrl_ST.OldTimerValue_UL;          
+     571                    ;----------------------------------------------------------------------
+     572 00000070 89C8              LDRH      A1, [A2, #14]         ; |313| 
+     573                    ;** 314 -----------------------    goto g3;
+     574                            .dwpsn  "ADLATUS_Hal.c",314,3
+     575                    ;----------------------------------------------------------------------
+     576                    ; 315 | else                                                                   
+     577                    ;----------------------------------------------------------------------
+     578 00000072 4770              BX        LR
+     579                    ;* --------------------------------------------------------------------------*
+     580                    L2:    
+     581                    ;**     -----------------------g2:
+     582                    ;** 317 -----------------------    t_TimerValue_UW = U$3;
+     583                            .dwpsn  "ADLATUS_Hal.c",317,5
+     584                    ;----------------------------------------------------------------------
+     585                    ; 317 | t_TimerValue_UW = t_CChal_HalCtrl_ST.HWTimerValue_UW;                  
+     586                    ;----------------------------------------------------------------------
+     587                    ;**     -----------------------g3:
+     588                    ;** 320 -----------------------    return t_TimerValue_UW;
+     589                            .dwpsn  "ADLATUS_Hal.c",320,3
+     590                    ;----------------------------------------------------------------------
+     591                    ; 320 | return (t_TimerValue_UW);                                              
+     592                    ;----------------------------------------------------------------------
+     593                            .dwpsn  "ADLATUS_Hal.c",322,1
+     594 00000074 4770              BX        LR
+     595                            .dwendentry
+     596                            .dwendtag DW$30
+     597                    
+     598                    
+     599                    
+     600                    
+     601 00000000                   .sect   ".text:v$4"
+     602                            .clink
+     603                            .global _FUN_CChal_StoreHwTimerValue_V
+TMS470 COFF Assembler PC Version 2.71 Tue Jan 24 12:32:24 2012
+
+Tools Copyright (c) 1996-2008 Texas Instruments Incorporated
+r:/06_hallib/04_lst/ADLATUS_Hal.asm                                  PAGE   12
+
+     604                    
+     605                    DW$35   .dwtag  DW_TAG_subprogram, DW_AT_name("FUN_CChal_StoreHwTimerValue_V"), DW_AT_symbol_name("_FU
+     606                            .dwattr DW$35, DW_AT_veneer(0x01)
+     607                            .dwattr DW$35, DW_AT_low_pc(_FUN_CChal_StoreHwTimerValue_V)
+     608                            .dwattr DW$35, DW_AT_high_pc(0x00)
+     609                            .dwattr DW$35, DW_AT_external(0x01)
+     610 00000000                   .state32
+     611                    
+     612                    ;*****************************************************************************
+     613                    ;* FUNCTION VENEER: _FUN_CChal_StoreHwTimerValue_V                           *
+     614                    ;*****************************************************************************
+     615 00000000           _FUN_CChal_StoreHwTimerValue_V:
+     616 00000000 E59FC000           LDR       ip, [pc]
+     617 00000004 E12FFF1C           BX        ip
+     618 00000008 00000077'         .field     $FUN_CChal_StoreHwTimerValue_V+1, 32
+     619 0000000c                   .state16
+     620                            .dwendtag DW$35
+     621                    
+     622                    
+     623                    
+     624 00000076                   .sect   ".text"
+     625                            .clink
+     626                            .global $FUN_CChal_StoreHwTimerValue_V
+     627                    
+     628                    DW$36   .dwtag  DW_TAG_subprogram, DW_AT_name("FUN_CChal_StoreHwTimerValue_V"), DW_AT_symbol_name("$FU
+     629                            .dwattr DW$36, DW_AT_low_pc($FUN_CChal_StoreHwTimerValue_V)
+     630                            .dwattr DW$36, DW_AT_high_pc(0x00)
+     631                            .dwpsn  "ADLATUS_Hal.c",343,1
+     632                    
+     633                            .dwfde DW$CIE
+     634                    ;----------------------------------------------------------------------
+     635                    ; 342 | void FUN_CChal_StoreHwTimerValue_V (void )                             
+     636                    ;----------------------------------------------------------------------
+     637                    
+     638                    ;*****************************************************************************
+     639                    ;* FUNCTION NAME: FUN_CChal_StoreHwTimerValue_V                              *
+     640                    ;*                                                                           *
+     641                    ;*   Regs Modified     : A1,A2,A3,SR                                         *
+     642                    ;*   Regs Used         : A1,A2,A3,SR                                         *
+     643                    ;*   Local Frame Size  : 0 Args + 0 Auto + 0 Save = 0 byte                   *
+     644                    ;*****************************************************************************
+     645                    
+     646                    ;******************************************************************************
+     647                    ;*                                                                            *
+     648                    ;* Using -g (debug) with optimization (-o2) may disable key optimizations!    *
+     649                    ;*                                                                            *
+     650                    ;******************************************************************************
+     651                    $FUN_CChal_StoreHwTimerValue_V:
+     652                    ;* --------------------------------------------------------------------------*
+     653                    ;----------------------------------------------------------------------
+     654                    ; 344 | ULONG t_TimerValue_UL;                                                 
+     655                    ;----------------------------------------------------------------------
+     656                            .dwcfa  0x09, 26, 14
+     657                    ;* A1    assigned to _t_TimerValue_UL
+     658                    DW$37   .dwtag  DW_TAG_variable, DW_AT_name("t_TimerValue_UL"), DW_AT_symbol_name("_t_TimerValue_UL")
+TMS470 COFF Assembler PC Version 2.71 Tue Jan 24 12:32:24 2012
+
+Tools Copyright (c) 1996-2008 Texas Instruments Incorporated
+r:/06_hallib/04_lst/ADLATUS_Hal.asm                                  PAGE   13
+
+     659                            .dwattr DW$37, DW_AT_type(*DWT$1019)
+     660                            .dwattr DW$37, DW_AT_location[DW_OP_reg0]
+     661                    ;** 349 -----------------------    t_TimerValue_UL = *&e_SARRTI_ST>>11;
+     662                            .dwpsn  "ADLATUS_Hal.c",349,3
+     663                    ;----------------------------------------------------------------------
+     664                    ; 349 | t_TimerValue_UL = e_SARRTI_ST.DRTICNTR_UN.DRTICNTR_ST.DRTICNTR_B21;    
+     665                    ;----------------------------------------------------------------------
+     666 00000076 483E              LDR       A1, CON7              ; |349| 
+     667 00000078 6800              LDR       A1, [A1, #0]          ; |349| 
+     668 0000007a 0AC0              LSR       A1, A1, #11           ; |349| 
+     669                    ;** 354 -----------------------    t_CChal_HalCtrl_ST.HWTimerValue_UW += ~t_TimerValue_UL;
+     670                            .dwpsn  "ADLATUS_Hal.c",354,3
+     671                    ;----------------------------------------------------------------------
+     672                    ; 354 | t_CChal_HalCtrl_ST.HWTimerValue_UW += (UWORD)~t_TimerValue_UL;         
+     673                    ;----------------------------------------------------------------------
+     674 0000007c 4A37              LDR       A3, CON1              ; |354| 
+     675 0000007e 8911              LDRH      A2, [A3, #8]          ; |354| 
+     676 00000080 43C0              MVN       A1, A1                ; |354| 
+     677 00000082 1840              ADD       A1, A1, A2            ; |354| 
+     678 00000084 8110              STRH      A1, [A3, #8]          ; |354| 
+     679                    ;** 356 -----------------------    return;
+     680                            .dwpsn  "ADLATUS_Hal.c",356,3
+     681                    ;----------------------------------------------------------------------
+     682                    ; 356 | return;                                                                
+     683                    ;----------------------------------------------------------------------
+     684                            .dwpsn  "ADLATUS_Hal.c",358,1
+     685 00000086 4770              BX        LR
+     686                            .dwendentry
+     687                            .dwendtag DW$36
+     688                    
+     689                    
+     690                    
+     691                    
+     692 00000000                   .sect   ".text:v$5"
+     693                            .clink
+     694                            .global _FUN_CChal_SWReset_V
+     695                    
+     696                    DW$38   .dwtag  DW_TAG_subprogram, DW_AT_name("FUN_CChal_SWReset_V"), DW_AT_symbol_name("_FUN_CChal_SW
+     697                            .dwattr DW$38, DW_AT_veneer(0x01)
+     698                            .dwattr DW$38, DW_AT_low_pc(_FUN_CChal_SWReset_V)
+     699                            .dwattr DW$38, DW_AT_high_pc(0x00)
+     700                            .dwattr DW$38, DW_AT_external(0x01)
+     701 00000000                   .state32
+     702                    
+     703                    ;*****************************************************************************
+     704                    ;* FUNCTION VENEER: _FUN_CChal_SWReset_V                                     *
+     705                    ;*****************************************************************************
+     706 00000000           _FUN_CChal_SWReset_V:
+     707 00000000 E59FC000           LDR       ip, [pc]
+     708 00000004 E12FFF1C           BX        ip
+     709 00000008 00000089'         .field     $FUN_CChal_SWReset_V+1, 32
+     710 0000000c                   .state16
+     711                            .dwendtag DW$38
+     712                    
+     713                    
+TMS470 COFF Assembler PC Version 2.71 Tue Jan 24 12:32:24 2012
+
+Tools Copyright (c) 1996-2008 Texas Instruments Incorporated
+r:/06_hallib/04_lst/ADLATUS_Hal.asm                                  PAGE   14
+
+     714                    
+     715 00000088                   .sect   ".text"
+     716                            .clink
+     717                            .global $FUN_CChal_SWReset_V
+     718                    
+     719                    DW$39   .dwtag  DW_TAG_subprogram, DW_AT_name("FUN_CChal_SWReset_V"), DW_AT_symbol_name("$FUN_CChal_SW
+     720                            .dwattr DW$39, DW_AT_low_pc($FUN_CChal_SWReset_V)
+     721                            .dwattr DW$39, DW_AT_high_pc(0x00)
+     722                            .dwpsn  "ADLATUS_Hal.c",379,1
+     723                    
+     724                            .dwfde DW$CIE
+     725                    ;----------------------------------------------------------------------
+     726                    ; 378 | void FUN_CChal_SWReset_V (void )                                       
+     727                    ;----------------------------------------------------------------------
+     728                    
+     729                    ;*****************************************************************************
+     730                    ;* FUNCTION NAME: FUN_CChal_SWReset_V                                        *
+     731                    ;*                                                                           *
+     732                    ;*   Regs Modified     : A1,A2,SR                                            *
+     733                    ;*   Regs Used         : A1,A2,SR                                            *
+     734                    ;*   Local Frame Size  : 0 Args + 0 Auto + 0 Save = 0 byte                   *
+     735                    ;*****************************************************************************
+     736                    
+     737                    ;******************************************************************************
+     738                    ;*                                                                            *
+     739                    ;* Using -g (debug) with optimization (-o2) may disable key optimizations!    *
+     740                    ;*                                                                            *
+     741                    ;******************************************************************************
+     742                    $FUN_CChal_SWReset_V:
+     743                    ;* --------------------------------------------------------------------------*
+     744                            .dwcfa  0x09, 26, 14
+     745                    ;** 381 -----------------------    if ( c_CCconprj_DisableReset_UB == 90 ) goto g2;
+     746                            .dwpsn  "ADLATUS_Hal.c",381,3
+     747                    ;----------------------------------------------------------------------
+     748                    ; 381 | if (d_CCglo_ResetViaWdt == c_CCconprj_DisableReset_UB)         /*lint !
+     749                    ;     | e506 */                                                                
+     750                    ; 384 |   while(1)                                                             
+     751                    ; 386 |      ;                                                                 
+     752                    ; 389 | else                                                                   
+     753                    ;----------------------------------------------------------------------
+     754 00000088 483A              LDR       A1, CON9              ; |381| 
+     755 0000008a 7800              LDRB      A1, [A1, #0]          ; |381| 
+     756 0000008c 285A              CMP       A1, #90               ; |381| 
+     757 0000008e D004              BEQ       L3                    ; |381| 
+     758                            ; |381| 
+     759                    ;* --------------------------------------------------------------------------*
+     760                    ;** 392 -----------------------    e_SARSYS_ST.SysECR_UW = 49152;
+     761                            .dwpsn  "ADLATUS_Hal.c",392,5
+     762                    ;----------------------------------------------------------------------
+     763                    ; 392 | e_SARSYS_ST.SysECR_UW = 0xc000u;                                       
+     764                    ;----------------------------------------------------------------------
+     765 00000090 2103              MOV       A2, #3
+     766 00000092 0389              LSL       A2, A2, #14
+     767 00000094 4838              LDR       A1, CON10             ; |392| 
+     768 00000096 8001              STRH      A2, [A1, #0]          ; |392| 
+TMS470 COFF Assembler PC Version 2.71 Tue Jan 24 12:32:24 2012
+
+Tools Copyright (c) 1996-2008 Texas Instruments Incorporated
+r:/06_hallib/04_lst/ADLATUS_Hal.asm                                  PAGE   15
+
+     769                    ;** 392 -----------------------    return;
+     770 00000098 4770              BX        LR
+     771                    ;**     -----------------------g2:
+     772                    ;**     -----------------------    #pragma LOOP_FLAGS(4096u)
+     773                    ;* --------------------------------------------------------------------------*
+     774                    ;*   BEGIN LOOP L3
+     775                    ;*
+     776                    ;*   Loop source line                : 384
+     777                    ;*   Loop closing brace source line  : 387
+     778                    ;*   Known Minimum Trip Count        : 1
+     779                    ;*   Known Maximum Trip Count        : 4294967295
+     780                    ;*   Known Max Trip Count Factor     : 1
+     781                    ;* --------------------------------------------------------------------------*
+     782                    L3:    
+     783                    DWL$$FUN_CChal_SWReset_V$3$B:
+     784                    ;**     -----------------------g4:
+     785                    ;** 387 -----------------------    goto g4;
+     786                            .dwpsn  "ADLATUS_Hal.c",387,5
+     787 0000009a E7FE              B         L3                    ; |387| 
+     788                            ; |387| 
+     789                    DWL$$FUN_CChal_SWReset_V$3$E:
+     790                    ;* --------------------------------------------------------------------------*
+     791                    
+     792                    DW$40   .dwtag  DW_TAG_loop
+     793                            .dwattr DW$40, DW_AT_name("r:/06_hallib/04_lst/ADLATUS_Hal.asm:L3:1:1327404744")
+     794                            .dwattr DW$40, DW_AT_begin_file("ADLATUS_Hal.c")
+     795                            .dwattr DW$40, DW_AT_begin_line(0x180)
+     796                            .dwattr DW$40, DW_AT_end_line(0x183)
+     797                    DW$41   .dwtag  DW_TAG_loop_range
+     798                            .dwattr DW$41, DW_AT_low_pc(DWL$$FUN_CChal_SWReset_V$3$B)
+     799                            .dwattr DW$41, DW_AT_high_pc(DWL$$FUN_CChal_SWReset_V$3$E)
+     800                            .dwendtag DW$40
+     801                    
+     802                            .dwendentry
+     803                            .dwendtag DW$39
+     804                    
+     805                    
+     806                    
+     807                    
+     808 00000000                   .sect   ".text:v$6"
+     809                            .clink
+     810                            .global _FUN_CChal_InitIntWatchdog_V
+     811                    
+     812                    DW$42   .dwtag  DW_TAG_subprogram, DW_AT_name("FUN_CChal_InitIntWatchdog_V"), DW_AT_symbol_name("_FUN_
+     813                            .dwattr DW$42, DW_AT_veneer(0x01)
+     814                            .dwattr DW$42, DW_AT_low_pc(_FUN_CChal_InitIntWatchdog_V)
+     815                            .dwattr DW$42, DW_AT_high_pc(0x00)
+     816                            .dwattr DW$42, DW_AT_external(0x01)
+     817 00000000                   .state32
+     818                    
+     819                    ;*****************************************************************************
+     820                    ;* FUNCTION VENEER: _FUN_CChal_InitIntWatchdog_V                             *
+     821                    ;*****************************************************************************
+     822 00000000           _FUN_CChal_InitIntWatchdog_V:
+     823 00000000 E59FC000           LDR       ip, [pc]
+TMS470 COFF Assembler PC Version 2.71 Tue Jan 24 12:32:24 2012
+
+Tools Copyright (c) 1996-2008 Texas Instruments Incorporated
+r:/06_hallib/04_lst/ADLATUS_Hal.asm                                  PAGE   16
+
+     824 00000004 E12FFF1C           BX        ip
+     825 00000008 0000009D'         .field     $FUN_CChal_InitIntWatchdog_V+1, 32
+     826 0000000c                   .state16
+     827                            .dwendtag DW$42
+     828                    
+     829                    
+     830                    
+     831 0000009c                   .sect   ".text"
+     832                            .clink
+     833                            .global $FUN_CChal_InitIntWatchdog_V
+     834                    
+     835                    DW$43   .dwtag  DW_TAG_subprogram, DW_AT_name("FUN_CChal_InitIntWatchdog_V"), DW_AT_symbol_name("$FUN_
+     836                            .dwattr DW$43, DW_AT_low_pc($FUN_CChal_InitIntWatchdog_V)
+     837                            .dwattr DW$43, DW_AT_high_pc(0x00)
+     838                            .dwpsn  "ADLATUS_Hal.c",413,1
+     839                    
+     840                            .dwfde DW$CIE
+     841                    ;----------------------------------------------------------------------
+     842                    ; 412 | void FUN_CChal_InitIntWatchdog_V (void )                               
+     843                    ;----------------------------------------------------------------------
+     844                    
+     845                    ;*****************************************************************************
+     846                    ;* FUNCTION NAME: FUN_CChal_InitIntWatchdog_V                                *
+     847                    ;*                                                                           *
+     848                    ;*   Regs Modified     : A1,A2,SR                                            *
+     849                    ;*   Regs Used         : A1,A2,SR                                            *
+     850                    ;*   Local Frame Size  : 0 Args + 0 Auto + 0 Save = 0 byte                   *
+     851                    ;*****************************************************************************
+     852                    
+     853                    ;******************************************************************************
+     854                    ;*                                                                            *
+     855                    ;* Using -g (debug) with optimization (-o2) may disable key optimizations!    *
+     856                    ;*                                                                            *
+     857                    ;******************************************************************************
+     858                    $FUN_CChal_InitIntWatchdog_V:
+     859                    ;* --------------------------------------------------------------------------*
+     860                            .dwcfa  0x09, 26, 14
+     861                    ;* A1    assigned to C$1
+     862                    DW$44   .dwtag  DW_TAG_variable, DW_AT_name("C$1"), DW_AT_symbol_name("C$1")
+     863                            .dwattr DW$44, DW_AT_type(*DWT$1096)
+     864                            .dwattr DW$44, DW_AT_location[DW_OP_reg0]
+     865                    ;** 415 -----------------------    C$1 = &e_SARRTI_ST;
+     866                            .dwpsn  "ADLATUS_Hal.c",415,3
+     867                    ;----------------------------------------------------------------------
+     868                    ; 415 | e_SARRTI_ST.WKEY_UL = (UBYTE) 0xE5u;                                   
+     869                    ;----------------------------------------------------------------------
+     870 0000009c 4834              LDR       A1, CON7              ; |415| 
+     871                    ;** 415 -----------------------    C$1->WKEY_UL = 229u;
+     872 0000009e 21E5              MOV       A2, #229              ; |415| 
+     873 000000a0 60C1              STR       A2, [A1, #12]         ; |415| 
+     874                    ;** 416 -----------------------    C$1->WKEY_UL = 163u;
+     875                            .dwpsn  "ADLATUS_Hal.c",416,3
+     876                    ;----------------------------------------------------------------------
+     877                    ; 416 | e_SARRTI_ST.WKEY_UL = (UBYTE) 0xA3u;                                   
+     878                    ;----------------------------------------------------------------------
+TMS470 COFF Assembler PC Version 2.71 Tue Jan 24 12:32:24 2012
+
+Tools Copyright (c) 1996-2008 Texas Instruments Incorporated
+r:/06_hallib/04_lst/ADLATUS_Hal.asm                                  PAGE   17
+
+     879 000000a2 21A3              MOV       A2, #163              ; |416| 
+     880 000000a4 60C1              STR       A2, [A1, #12]         ; |416| 
+     881                    ;** 418 -----------------------    return;
+     882                            .dwpsn  "ADLATUS_Hal.c",418,3
+     883                    ;----------------------------------------------------------------------
+     884                    ; 418 | return;                                                                
+     885                    ;----------------------------------------------------------------------
+     886                            .dwpsn  "ADLATUS_Hal.c",420,1
+     887 000000a6 4770              BX        LR
+     888                            .dwendentry
+     889                            .dwendtag DW$43
+     890                    
+     891                    
+     892                    
+     893                    
+     894 00000000                   .sect   ".text:v$7"
+     895                            .clink
+     896                            .global _FUN_CChal_DisableIntWatchdog_V
+     897                    
+     898                    DW$45   .dwtag  DW_TAG_subprogram, DW_AT_name("FUN_CChal_DisableIntWatchdog_V"), DW_AT_symbol_name("_F
+     899                            .dwattr DW$45, DW_AT_veneer(0x01)
+     900                            .dwattr DW$45, DW_AT_low_pc(_FUN_CChal_DisableIntWatchdog_V)
+     901                            .dwattr DW$45, DW_AT_high_pc(0x00)
+     902                            .dwattr DW$45, DW_AT_external(0x01)
+     903 00000000                   .state32
+     904                    
+     905                    ;*****************************************************************************
+     906                    ;* FUNCTION VENEER: _FUN_CChal_DisableIntWatchdog_V                          *
+     907                    ;*****************************************************************************
+     908 00000000           _FUN_CChal_DisableIntWatchdog_V:
+     909 00000000 E59FC000           LDR       ip, [pc]
+     910 00000004 E12FFF1C           BX        ip
+     911 00000008 000000A9'         .field     $FUN_CChal_DisableIntWatchdog_V+1, 32
+     912 0000000c                   .state16
+     913                            .dwendtag DW$45
+     914                    
+     915                    
+     916                    
+     917 000000a8                   .sect   ".text"
+     918                            .clink
+     919                            .global $FUN_CChal_DisableIntWatchdog_V
+     920                    
+     921                    DW$46   .dwtag  DW_TAG_subprogram, DW_AT_name("FUN_CChal_DisableIntWatchdog_V"), DW_AT_symbol_name("$F
+     922                            .dwattr DW$46, DW_AT_low_pc($FUN_CChal_DisableIntWatchdog_V)
+     923                            .dwattr DW$46, DW_AT_high_pc(0x00)
+     924                            .dwpsn  "ADLATUS_Hal.c",439,1
+     925                    
+     926                            .dwfde DW$CIE
+     927                    ;----------------------------------------------------------------------
+     928                    ; 438 | void FUN_CChal_DisableIntWatchdog_V (void )                            
+     929                    ;----------------------------------------------------------------------
+     930                    
+     931                    ;*****************************************************************************
+     932                    ;* FUNCTION NAME: FUN_CChal_DisableIntWatchdog_V                             *
+     933                    ;*                                                                           *
+TMS470 COFF Assembler PC Version 2.71 Tue Jan 24 12:32:24 2012
+
+Tools Copyright (c) 1996-2008 Texas Instruments Incorporated
+r:/06_hallib/04_lst/ADLATUS_Hal.asm                                  PAGE   18
+
+     934                    ;*   Regs Modified     :                                                     *
+     935                    ;*   Regs Used         :                                                     *
+     936                    ;*   Local Frame Size  : 0 Args + 0 Auto + 0 Save = 0 byte                   *
+     937                    ;*****************************************************************************
+     938                    
+     939                    ;******************************************************************************
+     940                    ;*                                                                            *
+     941                    ;* Using -g (debug) with optimization (-o2) may disable key optimizations!    *
+     942                    ;*                                                                            *
+     943                    ;******************************************************************************
+     944                    $FUN_CChal_DisableIntWatchdog_V:
+     945                    ;* --------------------------------------------------------------------------*
+     946                            .dwcfa  0x09, 26, 14
+     947                    ;** 440 -----------------------    return;
+     948                            .dwpsn  "ADLATUS_Hal.c",440,3
+     949                    ;----------------------------------------------------------------------
+     950                    ; 440 | return;                                                                
+     951                    ;----------------------------------------------------------------------
+     952                            .dwpsn  "ADLATUS_Hal.c",441,1
+     953 000000a8 4770              BX        LR
+     954                            .dwendentry
+     955                            .dwendtag DW$46
+     956                    
+     957                    
+     958                    
+     959                    
+     960 00000000                   .sect   ".text:v$8"
+     961                            .clink
+     962                            .global _FUN_CChal_EnableIntWatchdog_V
+     963                    
+     964                    DW$47   .dwtag  DW_TAG_subprogram, DW_AT_name("FUN_CChal_EnableIntWatchdog_V"), DW_AT_symbol_name("_FU
+     965                            .dwattr DW$47, DW_AT_veneer(0x01)
+     966                            .dwattr DW$47, DW_AT_low_pc(_FUN_CChal_EnableIntWatchdog_V)
+     967                            .dwattr DW$47, DW_AT_high_pc(0x00)
+     968                            .dwattr DW$47, DW_AT_external(0x01)
+     969 00000000                   .state32
+     970                    
+     971                    ;*****************************************************************************
+     972                    ;* FUNCTION VENEER: _FUN_CChal_EnableIntWatchdog_V                           *
+     973                    ;*****************************************************************************
+     974 00000000           _FUN_CChal_EnableIntWatchdog_V:
+     975 00000000 E59FC000           LDR       ip, [pc]
+     976 00000004 E12FFF1C           BX        ip
+     977 00000008 000000AB'         .field     $FUN_CChal_EnableIntWatchdog_V+1, 32
+     978 0000000c                   .state16
+     979                            .dwendtag DW$47
+     980                    
+     981                    
+     982                    
+     983 000000aa                   .sect   ".text"
+     984                            .clink
+     985                            .global $FUN_CChal_EnableIntWatchdog_V
+     986                    
+     987                    DW$48   .dwtag  DW_TAG_subprogram, DW_AT_name("FUN_CChal_EnableIntWatchdog_V"), DW_AT_symbol_name("$FU
+     988                            .dwattr DW$48, DW_AT_low_pc($FUN_CChal_EnableIntWatchdog_V)
+TMS470 COFF Assembler PC Version 2.71 Tue Jan 24 12:32:24 2012
+
+Tools Copyright (c) 1996-2008 Texas Instruments Incorporated
+r:/06_hallib/04_lst/ADLATUS_Hal.asm                                  PAGE   19
+
+     989                            .dwattr DW$48, DW_AT_high_pc(0x00)
+     990                            .dwpsn  "ADLATUS_Hal.c",460,1
+     991                    
+     992                            .dwfde DW$CIE
+     993                    ;----------------------------------------------------------------------
+     994                    ; 459 | void FUN_CChal_EnableIntWatchdog_V (void )                             
+     995                    ;----------------------------------------------------------------------
+     996                    
+     997                    ;*****************************************************************************
+     998                    ;* FUNCTION NAME: FUN_CChal_EnableIntWatchdog_V                              *
+     999                    ;*                                                                           *
+    1000                    ;*   Regs Modified     : A1,A2,SR                                            *
+    1001                    ;*   Regs Used         : A1,A2,SR                                            *
+    1002                    ;*   Local Frame Size  : 0 Args + 0 Auto + 0 Save = 0 byte                   *
+    1003                    ;*****************************************************************************
+    1004                    
+    1005                    ;******************************************************************************
+    1006                    ;*                                                                            *
+    1007                    ;* Using -g (debug) with optimization (-o2) may disable key optimizations!    *
+    1008                    ;*                                                                            *
+    1009                    ;******************************************************************************
+    1010                    $FUN_CChal_EnableIntWatchdog_V:
+    1011                    ;* --------------------------------------------------------------------------*
+    1012                            .dwcfa  0x09, 26, 14
+    1013                    ;* A1    assigned to C$1
+    1014                    DW$49   .dwtag  DW_TAG_variable, DW_AT_name("C$1"), DW_AT_symbol_name("C$1")
+    1015                            .dwattr DW$49, DW_AT_type(*DWT$1096)
+    1016                            .dwattr DW$49, DW_AT_location[DW_OP_reg0]
+    1017                    ;** 462 -----------------------    C$1 = &e_SARRTI_ST;
+    1018                            .dwpsn  "ADLATUS_Hal.c",462,3
+    1019                    ;----------------------------------------------------------------------
+    1020                    ; 462 | e_SARRTI_ST.WKEY_UL = (UBYTE) 0xE5u;                                   
+    1021                    ;----------------------------------------------------------------------
+    1022 000000aa 4831              LDR       A1, CON7              ; |462| 
+    1023                    ;** 462 -----------------------    C$1->WKEY_UL = 229u;
+    1024 000000ac 21E5              MOV       A2, #229              ; |462| 
+    1025 000000ae 60C1              STR       A2, [A1, #12]         ; |462| 
+    1026                    ;** 463 -----------------------    C$1->WKEY_UL = 163u;
+    1027                            .dwpsn  "ADLATUS_Hal.c",463,3
+    1028                    ;----------------------------------------------------------------------
+    1029                    ; 463 | e_SARRTI_ST.WKEY_UL = (UBYTE) 0xA3u;                                   
+    1030                    ;----------------------------------------------------------------------
+    1031 000000b0 21A3              MOV       A2, #163              ; |463| 
+    1032 000000b2 60C1              STR       A2, [A1, #12]         ; |463| 
+    1033                    ;** 465 -----------------------    return;
+    1034                            .dwpsn  "ADLATUS_Hal.c",465,3
+    1035                    ;----------------------------------------------------------------------
+    1036                    ; 465 | return;                                                                
+    1037                    ;----------------------------------------------------------------------
+    1038                            .dwpsn  "ADLATUS_Hal.c",467,1
+    1039 000000b4 4770              BX        LR
+    1040                            .dwendentry
+    1041                            .dwendtag DW$48
+    1042                    
+    1043                    
+TMS470 COFF Assembler PC Version 2.71 Tue Jan 24 12:32:24 2012
+
+Tools Copyright (c) 1996-2008 Texas Instruments Incorporated
+r:/06_hallib/04_lst/ADLATUS_Hal.asm                                  PAGE   20
+
+    1044                    
+    1045                    
+    1046 00000000                   .sect   ".text:v$9"
+    1047                            .clink
+    1048                            .global _FUN_CChal_GetPerformanceCounter_UL
+    1049                    
+    1050                    DW$50   .dwtag  DW_TAG_subprogram, DW_AT_name("FUN_CChal_GetPerformanceCounter_UL"), DW_AT_symbol_name
+    1051                            .dwattr DW$50, DW_AT_veneer(0x01)
+    1052                            .dwattr DW$50, DW_AT_low_pc(_FUN_CChal_GetPerformanceCounter_UL)
+    1053                            .dwattr DW$50, DW_AT_high_pc(0x00)
+    1054                            .dwattr DW$50, DW_AT_external(0x01)
+    1055 00000000                   .state32
+    1056                    
+    1057                    ;*****************************************************************************
+    1058                    ;* FUNCTION VENEER: _FUN_CChal_GetPerformanceCounter_UL                      *
+    1059                    ;*****************************************************************************
+    1060 00000000           _FUN_CChal_GetPerformanceCounter_UL:
+    1061 00000000 E59FC000           LDR       ip, [pc]
+    1062 00000004 E12FFF1C           BX        ip
+    1063 00000008 000000B7'         .field     $FUN_CChal_GetPerformanceCounter_UL+1, 32
+    1064 0000000c                   .state16
+    1065                            .dwendtag DW$50
+    1066                    
+    1067                    
+    1068                    
+    1069 000000b6                   .sect   ".text"
+    1070                            .clink
+    1071                            .global $FUN_CChal_GetPerformanceCounter_UL
+    1072                    
+    1073                    DW$51   .dwtag  DW_TAG_subprogram, DW_AT_name("FUN_CChal_GetPerformanceCounter_UL"), DW_AT_symbol_name
+    1074                            .dwattr DW$51, DW_AT_low_pc($FUN_CChal_GetPerformanceCounter_UL)
+    1075                            .dwattr DW$51, DW_AT_high_pc(0x00)
+    1076                            .dwpsn  "ADLATUS_Hal.c",490,1
+    1077                    
+    1078                            .dwfde DW$CIE
+    1079                    ;----------------------------------------------------------------------
+    1080                    ; 489 | ULONG  FUN_CChal_GetPerformanceCounter_UL (void)                       
+    1081                    ;----------------------------------------------------------------------
+    1082                    
+    1083                    ;*****************************************************************************
+    1084                    ;* FUNCTION NAME: FUN_CChal_GetPerformanceCounter_UL                         *
+    1085                    ;*                                                                           *
+    1086                    ;*   Regs Modified     : A1,SR                                               *
+    1087                    ;*   Regs Used         : A1,SR                                               *
+    1088                    ;*   Local Frame Size  : 0 Args + 0 Auto + 0 Save = 0 byte                   *
+    1089                    ;*****************************************************************************
+    1090                    
+    1091                    ;******************************************************************************
+    1092                    ;*                                                                            *
+    1093                    ;* Using -g (debug) with optimization (-o2) may disable key optimizations!    *
+    1094                    ;*                                                                            *
+    1095                    ;******************************************************************************
+    1096                    $FUN_CChal_GetPerformanceCounter_UL:
+    1097                    ;* --------------------------------------------------------------------------*
+    1098                    ;----------------------------------------------------------------------
+TMS470 COFF Assembler PC Version 2.71 Tue Jan 24 12:32:24 2012
+
+Tools Copyright (c) 1996-2008 Texas Instruments Incorporated
+r:/06_hallib/04_lst/ADLATUS_Hal.asm                                  PAGE   21
+
+    1099                    ; 491 | ULONG t_return_UL;                                                     
+    1100                    ;----------------------------------------------------------------------
+    1101                            .dwcfa  0x09, 26, 14
+    1102                    ;* A1    assigned to _t_return_UL
+    1103                    DW$52   .dwtag  DW_TAG_variable, DW_AT_name("t_return_UL"), DW_AT_symbol_name("_t_return_UL")
+    1104                            .dwattr DW$52, DW_AT_type(*DWT$1019)
+    1105                            .dwattr DW$52, DW_AT_location[DW_OP_reg0]
+    1106                    ;** 494 -----------------------    t_return_UL = *&e_SARRTI_ST&0xfffff800u;
+    1107                            .dwpsn  "ADLATUS_Hal.c",494,3
+    1108                    ;----------------------------------------------------------------------
+    1109                    ; 494 | t_return_UL = e_SARRTI_ST.DRTICNTR_UN.DRTICNTR_ST.DRTICNTR_B21 << 0x0Bu
+    1110                    ;     | ;                                                                      
+    1111                    ;----------------------------------------------------------------------
+    1112 000000b6 482E              LDR       A1, CON7              ; |494| 
+    1113 000000b8 6800              LDR       A1, [A1, #0]          ; |494| 
+    1114 000000ba 12C0              ASR       A1, A1, #11           ; |496| 
+    1115 000000bc 02C0              LSL       A1, A1, #11           ; |496| 
+    1116                    ;** 496 -----------------------    return t_return_UL;
+    1117                            .dwpsn  "ADLATUS_Hal.c",496,3
+    1118                    ;----------------------------------------------------------------------
+    1119                    ; 496 | return t_return_UL;                                                    
+    1120                    ;----------------------------------------------------------------------
+    1121                            .dwpsn  "ADLATUS_Hal.c",497,1
+    1122 000000be 4770              BX        LR
+    1123                            .dwendentry
+    1124                            .dwendtag DW$51
+    1125                    
+    1126                    
+    1127                    
+    1128                    
+    1129 00000000                   .sect   ".text:v$10"
+    1130                            .clink
+    1131                            .global _FUN_CChal_GetPerfCntTicks_UL
+    1132                    
+    1133                    DW$53   .dwtag  DW_TAG_subprogram, DW_AT_name("FUN_CChal_GetPerfCntTicks_UL"), DW_AT_symbol_name("_FUN
+    1134                            .dwattr DW$53, DW_AT_veneer(0x01)
+    1135                            .dwattr DW$53, DW_AT_low_pc(_FUN_CChal_GetPerfCntTicks_UL)
+    1136                            .dwattr DW$53, DW_AT_high_pc(0x00)
+    1137                            .dwattr DW$53, DW_AT_external(0x01)
+    1138 00000000                   .state32
+    1139                    
+    1140                    ;*****************************************************************************
+    1141                    ;* FUNCTION VENEER: _FUN_CChal_GetPerfCntTicks_UL                            *
+    1142                    ;*****************************************************************************
+    1143 00000000           _FUN_CChal_GetPerfCntTicks_UL:
+    1144 00000000 E59FC000           LDR       ip, [pc]
+    1145 00000004 E12FFF1C           BX        ip
+    1146 00000008 000000C1'         .field     $FUN_CChal_GetPerfCntTicks_UL+1, 32
+    1147 0000000c                   .state16
+    1148                            .dwendtag DW$53
+    1149                    
+    1150                    
+    1151                    
+    1152 000000c0                   .sect   ".text"
+    1153                            .clink
+TMS470 COFF Assembler PC Version 2.71 Tue Jan 24 12:32:24 2012
+
+Tools Copyright (c) 1996-2008 Texas Instruments Incorporated
+r:/06_hallib/04_lst/ADLATUS_Hal.asm                                  PAGE   22
+
+    1154                            .global $FUN_CChal_GetPerfCntTicks_UL
+    1155                    
+    1156                    DW$54   .dwtag  DW_TAG_subprogram, DW_AT_name("FUN_CChal_GetPerfCntTicks_UL"), DW_AT_symbol_name("$FUN
+    1157                            .dwattr DW$54, DW_AT_low_pc($FUN_CChal_GetPerfCntTicks_UL)
+    1158                            .dwattr DW$54, DW_AT_high_pc(0x00)
+    1159                            .dwpsn  "ADLATUS_Hal.c",517,1
+    1160                    
+    1161                            .dwfde DW$CIE
+    1162                    ;----------------------------------------------------------------------
+    1163                    ; 516 | ULONG  FUN_CChal_GetPerfCntTicks_UL (void)                             
+    1164                    ;----------------------------------------------------------------------
+    1165                    
+    1166                    ;*****************************************************************************
+    1167                    ;* FUNCTION NAME: FUN_CChal_GetPerfCntTicks_UL                               *
+    1168                    ;*                                                                           *
+    1169                    ;*   Regs Modified     : A1,SR                                               *
+    1170                    ;*   Regs Used         : A1,SR                                               *
+    1171                    ;*   Local Frame Size  : 0 Args + 0 Auto + 0 Save = 0 byte                   *
+    1172                    ;*****************************************************************************
+    1173                    
+    1174                    ;******************************************************************************
+    1175                    ;*                                                                            *
+    1176                    ;* Using -g (debug) with optimization (-o2) may disable key optimizations!    *
+    1177                    ;*                                                                            *
+    1178                    ;******************************************************************************
+    1179                    $FUN_CChal_GetPerfCntTicks_UL:
+    1180                    ;* --------------------------------------------------------------------------*
+    1181                    ;----------------------------------------------------------------------
+    1182                    ; 518 | ULONG t_return_UL;                                                     
+    1183                    ; 522 | t_return_UL = (t_CChal_HalCtrl_ST.TimerTicksForOneMilliSecond_UL) << 11
+    1184                    ;     | ;                                                                      
+    1185                    ;----------------------------------------------------------------------
+    1186                            .dwcfa  0x09, 26, 14
+    1187                    ;** 525 -----------------------    return t_CChal_HalCtrl_ST.TimerTicksForOneMilliSecond_UL<<11;
+    1188                            .dwpsn  "ADLATUS_Hal.c",525,3
+    1189                    ;----------------------------------------------------------------------
+    1190                    ; 525 | return t_return_UL;                                                    
+    1191                    ;----------------------------------------------------------------------
+    1192 000000c0 4826              LDR       A1, CON1              ; |525| 
+    1193 000000c2 6900              LDR       A1, [A1, #16]         ; |525| 
+    1194 000000c4 02C0              LSL       A1, A1, #11           ; |525| 
+    1195                            .dwpsn  "ADLATUS_Hal.c",526,1
+    1196 000000c6 4770              BX        LR
+    1197                            .dwendentry
+    1198                            .dwendtag DW$54
+    1199                    
+    1200                    
+    1201                    
+    1202                    
+    1203 00000000                   .sect   ".text:v$11"
+    1204                            .clink
+    1205                            .global _FUN_CChal_WaitTime_V
+    1206                    
+    1207                    DW$55   .dwtag  DW_TAG_subprogram, DW_AT_name("FUN_CChal_WaitTime_V"), DW_AT_symbol_name("_FUN_CChal_W
+    1208                            .dwattr DW$55, DW_AT_veneer(0x01)
+TMS470 COFF Assembler PC Version 2.71 Tue Jan 24 12:32:24 2012
+
+Tools Copyright (c) 1996-2008 Texas Instruments Incorporated
+r:/06_hallib/04_lst/ADLATUS_Hal.asm                                  PAGE   23
+
+    1209                            .dwattr DW$55, DW_AT_low_pc(_FUN_CChal_WaitTime_V)
+    1210                            .dwattr DW$55, DW_AT_high_pc(0x00)
+    1211                            .dwattr DW$55, DW_AT_external(0x01)
+    1212 00000000                   .state32
+    1213                    
+    1214                    ;*****************************************************************************
+    1215                    ;* FUNCTION VENEER: _FUN_CChal_WaitTime_V                                    *
+    1216                    ;*****************************************************************************
+    1217 00000000           _FUN_CChal_WaitTime_V:
+    1218 00000000 E92D4000           STMFD     sp!, {lr}
+    1219 00000004 E28FE001           ADD       lr, pc, #1
+    1220 00000008 E12FFF1E           BX        lr
+    1221 0000000c                   .state16
+    1222 0000000c F000'              BL        $FUN_CChal_WaitTime_V
+         0000000e F85C     
+    1223 00000010 4778               BX        pc
+    1224 00000012 46C0               NOP
+    1225 00000014                   .state32
+    1226 00000014 E8BD8000           LDMFD     sp!, {pc}
+    1227 00000018                   .state16
+    1228                            .dwendtag DW$55
+    1229                    
+    1230                    
+    1231                    
+    1232 000000c8                   .sect   ".text"
+    1233                            .clink
+    1234                            .global $FUN_CChal_WaitTime_V
+    1235                    
+    1236                    DW$56   .dwtag  DW_TAG_subprogram, DW_AT_name("FUN_CChal_WaitTime_V"), DW_AT_symbol_name("$FUN_CChal_W
+    1237                            .dwattr DW$56, DW_AT_low_pc($FUN_CChal_WaitTime_V)
+    1238                            .dwattr DW$56, DW_AT_high_pc(0x00)
+    1239                            .dwpsn  "ADLATUS_Hal.c",546,1
+    1240                    
+    1241                            .dwfde DW$CIE
+    1242                    ;----------------------------------------------------------------------
+    1243                    ; 545 | void FUN_CChal_WaitTime_V(UWORD t_Time_UW, BOOL t_Unit_B) /* FIXME: is
+    1244                    ;     | the method of handling an underflow of the t_Time_UL variable the best 
+    1245                    ;     | one? */                                                                
+    1246                    ;----------------------------------------------------------------------
+    1247                    
+    1248                    ;*****************************************************************************
+    1249                    ;* FUNCTION NAME: FUN_CChal_WaitTime_V                                       *
+    1250                    ;*                                                                           *
+    1251                    ;*   Regs Modified     : A1,A2,A3,A4,V1,V2,V3,V4,V9,SP,LR,SR                 *
+    1252                    ;*   Regs Used         : A1,A2,A3,A4,V1,V2,V3,V4,V9,SP,LR,SR                 *
+    1253                    ;*   Local Frame Size  : 0 Args + 0 Auto + 20 Save = 20 byte                 *
+    1254                    ;*****************************************************************************
+    1255                    
+    1256                    ;******************************************************************************
+    1257                    ;*                                                                            *
+    1258                    ;* Using -g (debug) with optimization (-o2) may disable key optimizations!    *
+    1259                    ;*                                                                            *
+    1260                    ;******************************************************************************
+    1261                    $FUN_CChal_WaitTime_V:
+    1262                    ;* --------------------------------------------------------------------------*
+TMS470 COFF Assembler PC Version 2.71 Tue Jan 24 12:32:24 2012
+
+Tools Copyright (c) 1996-2008 Texas Instruments Incorporated
+r:/06_hallib/04_lst/ADLATUS_Hal.asm                                  PAGE   24
+
+    1263                            .dwcfa  0x09, 26, 14
+    1264 000000c8 B5F0              PUSH      {V1, V2, V3, V4, LR}
+    1265                            .dwcfa  0x0e, 4
+    1266                            .dwcfa  0x80, 14, 1
+    1267                            .dwcfa  0x0e, 8
+    1268                            .dwcfa  0x80, 7, 2
+    1269                            .dwcfa  0x0e, 12
+    1270                            .dwcfa  0x80, 6, 3
+    1271                            .dwcfa  0x0e, 16
+    1272                            .dwcfa  0x80, 5, 4
+    1273                            .dwcfa  0x0e, 20
+    1274                            .dwcfa  0x80, 4, 5
+    1275                            .dwcfa  0x0e, 20
+    1276                    ;* A1    assigned to _t_Time_UW
+    1277                    DW$57   .dwtag  DW_TAG_formal_parameter, DW_AT_name("t_Time_UW"), DW_AT_symbol_name("_t_Time_UW")
+    1278                            .dwattr DW$57, DW_AT_type(*DWT$1021)
+    1279                            .dwattr DW$57, DW_AT_location[DW_OP_reg0]
+    1280                    ;* A2    assigned to _t_Unit_B
+    1281                    DW$58   .dwtag  DW_TAG_formal_parameter, DW_AT_name("t_Unit_B"), DW_AT_symbol_name("_t_Unit_B")
+    1282                            .dwattr DW$58, DW_AT_type(*DWT$1018)
+    1283                            .dwattr DW$58, DW_AT_location[DW_OP_reg1]
+    1284                    ;* V2    assigned to _t_Time_UL
+    1285                    DW$59   .dwtag  DW_TAG_variable, DW_AT_name("t_Time_UL"), DW_AT_symbol_name("_t_Time_UL")
+    1286                            .dwattr DW$59, DW_AT_type(*DWT$1019)
+    1287                            .dwattr DW$59, DW_AT_location[DW_OP_reg5]
+    1288                    ;* V3    assigned to _t_TimerTicksPerDivision_UL
+    1289                    DW$60   .dwtag  DW_TAG_variable, DW_AT_name("t_TimerTicksPerDivision_UL"), DW_AT_symbol_name("_t_Timer
+    1290                            .dwattr DW$60, DW_AT_type(*DWT$1019)
+    1291                            .dwattr DW$60, DW_AT_location[DW_OP_reg6]
+    1292                    ;* A1    assigned to _t_ActualTime_UL
+    1293                    DW$61   .dwtag  DW_TAG_variable, DW_AT_name("t_ActualTime_UL"), DW_AT_symbol_name("_t_ActualTime_UL")
+    1294                            .dwattr DW$61, DW_AT_type(*DWT$1019)
+    1295                            .dwattr DW$61, DW_AT_location[DW_OP_reg0]
+    1296                    ;* V1    assigned to _t_StartTime_UL
+    1297                    DW$62   .dwtag  DW_TAG_variable, DW_AT_name("t_StartTime_UL"), DW_AT_symbol_name("_t_StartTime_UL")
+    1298                            .dwattr DW$62, DW_AT_type(*DWT$1019)
+    1299                            .dwattr DW$62, DW_AT_location[DW_OP_reg4]
+    1300                    ;* A2    assigned to _t_Unit_B
+    1301                    DW$63   .dwtag  DW_TAG_variable, DW_AT_name("t_Unit_B"), DW_AT_symbol_name("_t_Unit_B")
+    1302                            .dwattr DW$63, DW_AT_type(*DWT$1024)
+    1303                            .dwattr DW$63, DW_AT_location[DW_OP_reg1]
+    1304                    ;* V4    assigned to _t_Time_UW
+    1305                    DW$64   .dwtag  DW_TAG_variable, DW_AT_name("t_Time_UW"), DW_AT_symbol_name("_t_Time_UW")
+    1306                            .dwattr DW$64, DW_AT_type(*DWT$1035)
+    1307                            .dwattr DW$64, DW_AT_location[DW_OP_reg7]
+    1308                    ;----------------------------------------------------------------------
+    1309                    ; 547 | ULONG t_StartTime_UL;                                                  
+    1310                    ; 548 | ULONG t_ActualTime_UL;                                                 
+    1311                    ; 549 | ULONG t_TimerTicksPerDivision_UL;                                      
+    1312                    ; 550 | ULONG t_TimeSetting_UL = (ULONG) t_Time_UW;                            
+    1313                    ;----------------------------------------------------------------------
+    1314 000000ca 1C07              MOV       V4, A1
+    1315                    ;** 551 -----------------------    t_Time_UL = t_Time_UW-1u;
+    1316                            .dwpsn  "ADLATUS_Hal.c",551,9
+    1317                    ;----------------------------------------------------------------------
+TMS470 COFF Assembler PC Version 2.71 Tue Jan 24 12:32:24 2012
+
+Tools Copyright (c) 1996-2008 Texas Instruments Incorporated
+r:/06_hallib/04_lst/ADLATUS_Hal.asm                                  PAGE   25
+
+    1318                    ; 551 | ULONG t_Time_UL = (ULONG) t_Time_UW-1;                                 
+    1319                    ;----------------------------------------------------------------------
+    1320 000000cc 1E7D              SUB       V2, V4, #1            ; |551| 
+    1321                    ;** 556 -----------------------    if ( t_Unit_B ) goto g2;
+    1322                            .dwpsn  "ADLATUS_Hal.c",556,3
+    1323                    ;----------------------------------------------------------------------
+    1324                    ; 556 | if (d_CChal_Unit100us_B == t_Unit_B)                                   
+    1325                    ;----------------------------------------------------------------------
+    1326 000000ce 2900              CMP       A2, #0                ; |556| 
+    1327 000000d0 D106              BNE       L4                    ; |556| 
+    1328                            ; |556| 
+    1329                    ;* --------------------------------------------------------------------------*
+    1330                    ;** 561 -----------------------    t_TimerTicksPerDivision_UL = FUN_CChal_GetPerfCntTicks_UL();
+    1331                            .dwpsn  "ADLATUS_Hal.c",561,5
+    1332                    ;----------------------------------------------------------------------
+    1333                    ; 561 | t_TimerTicksPerDivision_UL = FUN_CChal_GetPerfCntTicks_UL();           
+    1334                    ;----------------------------------------------------------------------
+    1335 000000d2 F7FF              BL        $FUN_CChal_GetPerfCntTicks_UL ; |561| 
+         000000d4 FFF5     
+    1336                            ; |561| 
+    1337                    ;** 562 -----------------------    t_TimerTicksPerDivision_UL /= 10u;
+    1338                            .dwpsn  "ADLATUS_Hal.c",562,5
+    1339                    ;----------------------------------------------------------------------
+    1340                    ; 562 | t_TimerTicksPerDivision_UL = t_TimerTicksPerDivision_UL / 10ul;        
+    1341                    ;----------------------------------------------------------------------
+    1342 000000d6 210A              MOV       A2, #10               ; |562| 
+    1343 000000d8 F7FF!             BL        U$DIV                 ; |562| 
+         000000da FF92     
+    1344                            ; |562| 
+    1345 000000dc 1C0E              MOV       V3, A2
+    1346                    ;** 564 -----------------------    goto g3;
+    1347                            .dwpsn  "ADLATUS_Hal.c",564,3
+    1348                    ;----------------------------------------------------------------------
+    1349                    ; 568 | else                                                                   
+    1350                    ;----------------------------------------------------------------------
+    1351 000000de E002              B         L5                    ; |564| 
+    1352                            ; |564| 
+    1353                    ;* --------------------------------------------------------------------------*
+    1354                    L4:    
+    1355                    ;**     -----------------------g2:
+    1356                    ;** 573 -----------------------    t_TimerTicksPerDivision_UL = FUN_CChal_GetPerfCntTicks_UL();
+    1357                            .dwpsn  "ADLATUS_Hal.c",573,5
+    1358                    ;----------------------------------------------------------------------
+    1359                    ; 573 | t_TimerTicksPerDivision_UL = FUN_CChal_GetPerfCntTicks_UL();           
+    1360                    ;----------------------------------------------------------------------
+    1361 000000e0 F7FF              BL        $FUN_CChal_GetPerfCntTicks_UL ; |573| 
+         000000e2 FFEE     
+    1362                            ; |573| 
+    1363 000000e4 1C06              MOV       V3, A1
+    1364                    ;* --------------------------------------------------------------------------*
+    1365                    L5:    
+    1366                    ;**     -----------------------g3:
+    1367                    ;** 580 -----------------------    t_StartTime_UL = FUN_CChal_GetPerformanceCounter_UL();
+    1368                            .dwpsn  "ADLATUS_Hal.c",580,3
+    1369                    ;----------------------------------------------------------------------
+TMS470 COFF Assembler PC Version 2.71 Tue Jan 24 12:32:24 2012
+
+Tools Copyright (c) 1996-2008 Texas Instruments Incorporated
+r:/06_hallib/04_lst/ADLATUS_Hal.asm                                  PAGE   26
+
+    1370                    ; 580 | t_StartTime_UL = FUN_CChal_GetPerformanceCounter_UL();                 
+    1371                    ;----------------------------------------------------------------------
+    1372 000000e6 F7FF              BL        $FUN_CChal_GetPerformanceCounter_UL ; |580| 
+         000000e8 FFE6     
+    1373                            ; |580| 
+    1374 000000ea 1C04              MOV       V1, A1
+    1375                    ;**     -----------------------    #pragma LOOP_FLAGS(5120u)
+    1376                    ;** 585 -----------------------    goto g8;
+    1377                            .dwpsn  "ADLATUS_Hal.c",585,3
+    1378                    ;----------------------------------------------------------------------
+    1379                    ; 585 | while(t_Time_UL <= t_TimeSetting_UL)                                   
+    1380                    ;----------------------------------------------------------------------
+    1381 000000ec E009              B         L9                    ; |585| 
+    1382                            ; |585| 
+    1383                    ;* --------------------------------------------------------------------------*
+    1384                    L6:    
+    1385                    DWL$$FUN_CChal_WaitTime_V$5$B:
+    1386                    ;**     -----------------------g4:
+    1387                    ;** 590 -----------------------    t_ActualTime_UL = FUN_CChal_GetPerformanceCounter_UL();
+    1388                            .dwpsn  "ADLATUS_Hal.c",590,5
+    1389                    ;----------------------------------------------------------------------
+    1390                    ; 590 | t_ActualTime_UL = FUN_CChal_GetPerformanceCounter_UL();                
+    1391                    ;----------------------------------------------------------------------
+    1392 000000ee F7FF              BL        $FUN_CChal_GetPerformanceCounter_UL ; |590| 
+         000000f0 FFE2     
+    1393                            ; |590| 
+    1394                    ;**     -----------------------    #pragma LOOP_FLAGS(4096u)
+    1395                    ;** 595 -----------------------    goto g6;
+    1396                            .dwpsn  "ADLATUS_Hal.c",595,5
+    1397                    ;----------------------------------------------------------------------
+    1398                    ; 595 | while ( (t_ActualTime_UL - t_StartTime_UL) > t_TimerTicksPerDivision_UL
+    1399                    ;     | )                                                                      
+    1400                    ;----------------------------------------------------------------------
+    1401 000000f2 E001              B         L8                    ; |595| 
+    1402                            ; |595| 
+    1403                    DWL$$FUN_CChal_WaitTime_V$5$E:
+    1404                    ;* --------------------------------------------------------------------------*
+    1405                    L7:    
+    1406                    DWL$$FUN_CChal_WaitTime_V$6$B:
+    1407                    ;**     -----------------------g5:
+    1408                    ;** 600 -----------------------    t_StartTime_UL += t_TimerTicksPerDivision_UL;
+    1409                            .dwpsn  "ADLATUS_Hal.c",600,7
+    1410                    ;----------------------------------------------------------------------
+    1411                    ; 600 | t_StartTime_UL += t_TimerTicksPerDivision_UL;                          
+    1412                    ;----------------------------------------------------------------------
+    1413 000000f4 1934              ADD       V1, V3, V1            ; |600| 
+    1414                    ;** 605 -----------------------    --t_Time_UL;
+    1415                            .dwpsn  "ADLATUS_Hal.c",605,7
+    1416                    ;----------------------------------------------------------------------
+    1417                    ; 605 | t_Time_UL--;                                                           
+    1418                    ;----------------------------------------------------------------------
+    1419 000000f6 3D01              SUB       V2, #1                ; |605| 
+    1420 000000f8           DWL$$FUN_CChal_WaitTime_V$6$E:
+    1421                    ;* --------------------------------------------------------------------------*
+    1422                    ;*   BEGIN LOOP L8
+TMS470 COFF Assembler PC Version 2.71 Tue Jan 24 12:32:24 2012
+
+Tools Copyright (c) 1996-2008 Texas Instruments Incorporated
+r:/06_hallib/04_lst/ADLATUS_Hal.asm                                  PAGE   27
+
+    1423                    ;* --------------------------------------------------------------------------*
+    1424 000000f8           L8:    
+    1425 000000f8           DWL$$FUN_CChal_WaitTime_V$7$B:
+    1426                    ;**     -----------------------g6:
+    1427                    ;** 605 -----------------------    if ( t_ActualTime_UL-t_StartTime_UL > t_TimerTicksPerDivision_UL ) 
+    1428 000000f8 1B01              SUB       A2, A1, V1            ; |605| 
+    1429 000000fa 42B1              CMP       A2, V3                ; |605| 
+    1430 000000fc D8FA              BHI       L7                    ; |605| 
+    1431                            ; |605| 
+    1432                    DWL$$FUN_CChal_WaitTime_V$7$E:
+    1433                    ;* --------------------------------------------------------------------------*
+    1434                    DWL$$FUN_CChal_WaitTime_V$8$B:
+    1435                    ;** 612 -----------------------    FUN_CCtim_SystemTimerCheck_V();
+    1436                            .dwpsn  "ADLATUS_Hal.c",612,5
+    1437                    ;----------------------------------------------------------------------
+    1438                    ; 612 | FUN_CCtim_SystemTimerCheck_V();                                        
+    1439                    ;----------------------------------------------------------------------
+    1440 000000fe F7FF!             BL        $FUN_CCtim_SystemTimerCheck_V ; |612| 
+         00000100 FF7F     
+    1441                            ; |612| 
+    1442                    DWL$$FUN_CChal_WaitTime_V$8$E:
+    1443                    ;* --------------------------------------------------------------------------*
+    1444                    ;*   BEGIN LOOP L9
+    1445                    ;* --------------------------------------------------------------------------*
+    1446                    L9:    
+    1447                    DWL$$FUN_CChal_WaitTime_V$9$B:
+    1448                    ;**     -----------------------g8:
+    1449                    ;** 614 -----------------------    if ( t_Time_UL <= t_Time_UW ) goto g4;
+    1450                            .dwpsn  "ADLATUS_Hal.c",614,3
+    1451                    ;----------------------------------------------------------------------
+    1452                    ; 619 | return;                                                                
+    1453                    ;----------------------------------------------------------------------
+    1454 00000102 42BD              CMP       V2, V4                ; |614| 
+    1455 00000104 D9F3              BLS       L6                    ; |614| 
+    1456                            ; |614| 
+    1457                    ;**     -----------------------    return;
+    1458                    DWL$$FUN_CChal_WaitTime_V$9$E:
+    1459                    ;* --------------------------------------------------------------------------*
+    1460                            .dwpsn  "ADLATUS_Hal.c",621,1
+    1461                            .dwcfa  0x0e, 20
+    1462 00000106 BDF0              POP       {V1, V2, V3, V4, PC}
+    1463                    
+    1464                    DW$65   .dwtag  DW_TAG_loop
+    1465                            .dwattr DW$65, DW_AT_name("r:/06_hallib/04_lst/ADLATUS_Hal.asm:L9:1:1327404744")
+    1466                            .dwattr DW$65, DW_AT_begin_file("ADLATUS_Hal.c")
+    1467                            .dwattr DW$65, DW_AT_begin_line(0x249)
+    1468                            .dwattr DW$65, DW_AT_end_line(0x266)
+    1469                    DW$66   .dwtag  DW_TAG_loop_range
+    1470                            .dwattr DW$66, DW_AT_low_pc(DWL$$FUN_CChal_WaitTime_V$9$B)
+    1471                            .dwattr DW$66, DW_AT_high_pc(DWL$$FUN_CChal_WaitTime_V$9$E)
+    1472                    DW$67   .dwtag  DW_TAG_loop_range
+    1473                            .dwattr DW$67, DW_AT_low_pc(DWL$$FUN_CChal_WaitTime_V$5$B)
+    1474                            .dwattr DW$67, DW_AT_high_pc(DWL$$FUN_CChal_WaitTime_V$5$E)
+    1475                    DW$68   .dwtag  DW_TAG_loop_range
+    1476                            .dwattr DW$68, DW_AT_low_pc(DWL$$FUN_CChal_WaitTime_V$8$B)
+TMS470 COFF Assembler PC Version 2.71 Tue Jan 24 12:32:24 2012
+
+Tools Copyright (c) 1996-2008 Texas Instruments Incorporated
+r:/06_hallib/04_lst/ADLATUS_Hal.asm                                  PAGE   28
+
+    1477                            .dwattr DW$68, DW_AT_high_pc(DWL$$FUN_CChal_WaitTime_V$8$E)
+    1478                    
+    1479                    DW$69   .dwtag  DW_TAG_loop
+    1480                            .dwattr DW$69, DW_AT_name("r:/06_hallib/04_lst/ADLATUS_Hal.asm:L8:2:1327404744")
+    1481                            .dwattr DW$69, DW_AT_begin_file("ADLATUS_Hal.c")
+    1482                            .dwattr DW$69, DW_AT_begin_line(0x253)
+    1483                            .dwattr DW$69, DW_AT_end_line(0x25d)
+    1484                    DW$70   .dwtag  DW_TAG_loop_range
+    1485                            .dwattr DW$70, DW_AT_low_pc(DWL$$FUN_CChal_WaitTime_V$7$B)
+    1486                            .dwattr DW$70, DW_AT_high_pc(DWL$$FUN_CChal_WaitTime_V$7$E)
+    1487                    DW$71   .dwtag  DW_TAG_loop_range
+    1488                            .dwattr DW$71, DW_AT_low_pc(DWL$$FUN_CChal_WaitTime_V$6$B)
+    1489                            .dwattr DW$71, DW_AT_high_pc(DWL$$FUN_CChal_WaitTime_V$6$E)
+    1490                            .dwendtag DW$69
+    1491                    
+    1492                            .dwendtag DW$65
+    1493                    
+    1494                            .dwendentry
+    1495                            .dwendtag DW$56
+    1496                    
+    1497                    
+    1498                    
+    1499                    
+    1500 00000000                   .sect   ".text:v$12"
+    1501                            .clink
+    1502                            .global _FUN_CChal_TimeoutStart_V
+    1503                    
+    1504                    DW$72   .dwtag  DW_TAG_subprogram, DW_AT_name("FUN_CChal_TimeoutStart_V"), DW_AT_symbol_name("_FUN_CCh
+    1505                            .dwattr DW$72, DW_AT_veneer(0x01)
+    1506                            .dwattr DW$72, DW_AT_low_pc(_FUN_CChal_TimeoutStart_V)
+    1507                            .dwattr DW$72, DW_AT_high_pc(0x00)
+    1508                            .dwattr DW$72, DW_AT_external(0x01)
+    1509 00000000                   .state32
+    1510                    
+    1511                    ;*****************************************************************************
+    1512                    ;* FUNCTION VENEER: _FUN_CChal_TimeoutStart_V                                *
+    1513                    ;*****************************************************************************
+    1514 00000000           _FUN_CChal_TimeoutStart_V:
+    1515 00000000 E92D4000           STMFD     sp!, {lr}
+    1516 00000004 E28FE001           ADD       lr, pc, #1
+    1517 00000008 E12FFF1E           BX        lr
+    1518 0000000c                   .state16
+    1519 0000000c F000'              BL        $FUN_CChal_TimeoutStart_V
+         0000000e F87C     
+    1520 00000010 4778               BX        pc
+    1521 00000012 46C0               NOP
+    1522 00000014                   .state32
+    1523 00000014 E8BD8000           LDMFD     sp!, {pc}
+    1524 00000018                   .state16
+    1525                            .dwendtag DW$72
+    1526                    
+    1527                    
+    1528                    
+    1529 00000108                   .sect   ".text"
+    1530                            .clink
+TMS470 COFF Assembler PC Version 2.71 Tue Jan 24 12:32:24 2012
+
+Tools Copyright (c) 1996-2008 Texas Instruments Incorporated
+r:/06_hallib/04_lst/ADLATUS_Hal.asm                                  PAGE   29
+
+    1531                            .global $FUN_CChal_TimeoutStart_V
+    1532                    
+    1533                    DW$73   .dwtag  DW_TAG_subprogram, DW_AT_name("FUN_CChal_TimeoutStart_V"), DW_AT_symbol_name("$FUN_CCh
+    1534                            .dwattr DW$73, DW_AT_low_pc($FUN_CChal_TimeoutStart_V)
+    1535                            .dwattr DW$73, DW_AT_high_pc(0x00)
+    1536                            .dwpsn  "ADLATUS_Hal.c",640,1
+    1537                    
+    1538                            .dwfde DW$CIE
+    1539                    ;----------------------------------------------------------------------
+    1540                    ; 639 | void FUN_CChal_TimeoutStart_V(ULONG* t_StartTime_PUL)                  
+    1541                    ;----------------------------------------------------------------------
+    1542                    
+    1543                    ;*****************************************************************************
+    1544                    ;* FUNCTION NAME: FUN_CChal_TimeoutStart_V                                   *
+    1545                    ;*                                                                           *
+    1546                    ;*   Regs Modified     : A1,A2,SP,LR,SR                                      *
+    1547                    ;*   Regs Used         : A1,A2,SP,LR,SR                                      *
+    1548                    ;*   Local Frame Size  : 0 Args + 0 Auto + 4 Save = 4 byte                   *
+    1549                    ;*****************************************************************************
+    1550                    
+    1551                    ;******************************************************************************
+    1552                    ;*                                                                            *
+    1553                    ;* Using -g (debug) with optimization (-o2) may disable key optimizations!    *
+    1554                    ;*                                                                            *
+    1555                    ;******************************************************************************
+    1556                    $FUN_CChal_TimeoutStart_V:
+    1557                    ;* --------------------------------------------------------------------------*
+    1558                            .dwcfa  0x09, 26, 14
+    1559 00000108 B500              PUSH      {LR}
+    1560                            .dwcfa  0x0e, 4
+    1561                            .dwcfa  0x80, 14, 1
+    1562                            .dwcfa  0x0e, 4
+    1563                    ;* A1    assigned to _t_StartTime_PUL
+    1564                    DW$74   .dwtag  DW_TAG_formal_parameter, DW_AT_name("t_StartTime_PUL"), DW_AT_symbol_name("_t_StartTim
+    1565                            .dwattr DW$74, DW_AT_type(*DWT$1020)
+    1566                            .dwattr DW$74, DW_AT_location[DW_OP_reg0]
+    1567                    ;* A2    assigned to _t_StartTime_PUL
+    1568                    DW$75   .dwtag  DW_TAG_variable, DW_AT_name("t_StartTime_PUL"), DW_AT_symbol_name("_t_StartTime_PUL")
+    1569                            .dwattr DW$75, DW_AT_type(*DWT$1050)
+    1570                            .dwattr DW$75, DW_AT_location[DW_OP_reg1]
+    1571 0000010a 1C01              MOV       A2, A1
+    1572                    ;** 644 -----------------------    *t_StartTime_PUL = FUN_CChal_GetPerformanceCounter_UL();
+    1573                            .dwpsn  "ADLATUS_Hal.c",644,3
+    1574                    ;----------------------------------------------------------------------
+    1575                    ; 644 | (*t_StartTime_PUL) = FUN_CChal_GetPerformanceCounter_UL();             
+    1576                    ;----------------------------------------------------------------------
+    1577 0000010c F7FF              BL        $FUN_CChal_GetPerformanceCounter_UL ; |644| 
+         0000010e FFD3     
+    1578                            ; |644| 
+    1579 00000110 6008              STR       A1, [A2, #0]          ; |644| 
+    1580                    ;** 649 -----------------------    return;
+    1581                            .dwpsn  "ADLATUS_Hal.c",649,3
+    1582                    ;----------------------------------------------------------------------
+    1583                    ; 649 | return;                                                                
+    1584                    ;----------------------------------------------------------------------
+TMS470 COFF Assembler PC Version 2.71 Tue Jan 24 12:32:24 2012
+
+Tools Copyright (c) 1996-2008 Texas Instruments Incorporated
+r:/06_hallib/04_lst/ADLATUS_Hal.asm                                  PAGE   30
+
+    1585                            .dwpsn  "ADLATUS_Hal.c",651,1
+    1586                            .dwcfa  0x0e, 4
+    1587 00000112 BD00              POP       {PC}
+    1588                            .dwendentry
+    1589                            .dwendtag DW$73
+    1590                    
+    1591                    
+    1592                    
+    1593                    
+    1594 00000000                   .sect   ".text:v$13"
+    1595                            .clink
+    1596                            .global _FUN_CChal_TimeoutOccured_B
+    1597                    
+    1598                    DW$76   .dwtag  DW_TAG_subprogram, DW_AT_name("FUN_CChal_TimeoutOccured_B"), DW_AT_symbol_name("_FUN_C
+    1599                            .dwattr DW$76, DW_AT_veneer(0x01)
+    1600                            .dwattr DW$76, DW_AT_low_pc(_FUN_CChal_TimeoutOccured_B)
+    1601                            .dwattr DW$76, DW_AT_high_pc(0x00)
+    1602                            .dwattr DW$76, DW_AT_external(0x01)
+    1603 00000000                   .state32
+    1604                    
+    1605                    ;*****************************************************************************
+    1606                    ;* FUNCTION VENEER: _FUN_CChal_TimeoutOccured_B                              *
+    1607                    ;*****************************************************************************
+    1608 00000000           _FUN_CChal_TimeoutOccured_B:
+    1609 00000000 E92D4000           STMFD     sp!, {lr}
+    1610 00000004 E28FE001           ADD       lr, pc, #1
+    1611 00000008 E12FFF1E           BX        lr
+    1612 0000000c                   .state16
+    1613 0000000c F000'              BL        $FUN_CChal_TimeoutOccured_B
+         0000000e F882     
+    1614 00000010 4778               BX        pc
+    1615 00000012 46C0               NOP
+    1616 00000014                   .state32
+    1617 00000014 E8BD8000           LDMFD     sp!, {pc}
+    1618 00000018                   .state16
+    1619                            .dwendtag DW$76
+    1620                    
+    1621                    
+    1622                    
+    1623 00000114                   .sect   ".text"
+    1624                            .clink
+    1625                            .global $FUN_CChal_TimeoutOccured_B
+    1626                    
+    1627                    DW$77   .dwtag  DW_TAG_subprogram, DW_AT_name("FUN_CChal_TimeoutOccured_B"), DW_AT_symbol_name("$FUN_C
+    1628                            .dwattr DW$77, DW_AT_low_pc($FUN_CChal_TimeoutOccured_B)
+    1629                            .dwattr DW$77, DW_AT_high_pc(0x00)
+    1630                            .dwpsn  "ADLATUS_Hal.c",673,1
+    1631                    
+    1632                            .dwfde DW$CIE
+    1633                    ;----------------------------------------------------------------------
+    1634                    ; 672 | BOOL FUN_CChal_TimeoutOccured_B(ULONG* t_StartTime_PUL, UWORD* t_Timeou
+    1635                    ;     | tMs_PUW)                                                               
+    1636                    ;----------------------------------------------------------------------
+    1637                    
+    1638                    ;*****************************************************************************
+TMS470 COFF Assembler PC Version 2.71 Tue Jan 24 12:32:24 2012
+
+Tools Copyright (c) 1996-2008 Texas Instruments Incorporated
+r:/06_hallib/04_lst/ADLATUS_Hal.asm                                  PAGE   31
+
+    1639                    ;* FUNCTION NAME: FUN_CChal_TimeoutOccured_B                                 *
+    1640                    ;*                                                                           *
+    1641                    ;*   Regs Modified     : A1,A2,A3,A4,V1,V2,V3,V9,SP,LR,SR                    *
+    1642                    ;*   Regs Used         : A1,A2,A3,A4,V1,V2,V3,V9,SP,LR,SR                    *
+    1643                    ;*   Local Frame Size  : 0 Args + 0 Auto + 16 Save = 16 byte                 *
+    1644                    ;*****************************************************************************
+    1645                    
+    1646                    ;******************************************************************************
+    1647                    ;*                                                                            *
+    1648                    ;* Using -g (debug) with optimization (-o2) may disable key optimizations!    *
+    1649                    ;*                                                                            *
+    1650                    ;******************************************************************************
+    1651                    $FUN_CChal_TimeoutOccured_B:
+    1652                    ;* --------------------------------------------------------------------------*
+    1653                            .dwcfa  0x09, 26, 14
+    1654 00000114 B570              PUSH      {V1, V2, V3, LR}
+    1655                            .dwcfa  0x0e, 4
+    1656                            .dwcfa  0x80, 14, 1
+    1657                            .dwcfa  0x0e, 8
+    1658                            .dwcfa  0x80, 6, 2
+    1659                            .dwcfa  0x0e, 12
+    1660                            .dwcfa  0x80, 5, 3
+    1661                            .dwcfa  0x0e, 16
+    1662                            .dwcfa  0x80, 4, 4
+    1663                            .dwcfa  0x0e, 16
+    1664                    ;* A1    assigned to _t_StartTime_PUL
+    1665                    DW$78   .dwtag  DW_TAG_formal_parameter, DW_AT_name("t_StartTime_PUL"), DW_AT_symbol_name("_t_StartTim
+    1666                            .dwattr DW$78, DW_AT_type(*DWT$1020)
+    1667                            .dwattr DW$78, DW_AT_location[DW_OP_reg0]
+    1668                    ;* A2    assigned to _t_TimeoutMs_PUW
+    1669                    DW$79   .dwtag  DW_TAG_formal_parameter, DW_AT_name("t_TimeoutMs_PUW"), DW_AT_symbol_name("_t_TimeoutM
+    1670                            .dwattr DW$79, DW_AT_type(*DWT$1022)
+    1671                            .dwattr DW$79, DW_AT_location[DW_OP_reg1]
+    1672                    ;* A2    assigned to C$1
+    1673                    DW$80   .dwtag  DW_TAG_variable, DW_AT_name("C$1"), DW_AT_symbol_name("C$1")
+    1674                            .dwattr DW$80, DW_AT_type(*DWT$10)
+    1675                            .dwattr DW$80, DW_AT_location[DW_OP_reg1]
+    1676                    ;* A2    assigned to V$0
+    1677                    DW$81   .dwtag  DW_TAG_variable, DW_AT_name("V$0"), DW_AT_symbol_name("V$0")
+    1678                            .dwattr DW$81, DW_AT_type(*DWT$10)
+    1679                            .dwattr DW$81, DW_AT_location[DW_OP_reg1]
+    1680                    ;* A4    assigned to V$1
+    1681                    DW$82   .dwtag  DW_TAG_variable, DW_AT_name("V$1"), DW_AT_symbol_name("V$1")
+    1682                            .dwattr DW$82, DW_AT_type(*DWT$8)
+    1683                            .dwattr DW$82, DW_AT_location[DW_OP_reg3]
+    1684                    ;* A3    assigned to _t_TimerTicksPerMillisec_UL
+    1685                    DW$83   .dwtag  DW_TAG_variable, DW_AT_name("t_TimerTicksPerMillisec_UL"), DW_AT_symbol_name("_t_Timer
+    1686                            .dwattr DW$83, DW_AT_type(*DWT$1019)
+    1687                            .dwattr DW$83, DW_AT_location[DW_OP_reg2]
+    1688                    ;* A1    assigned to _t_ActualTime_UL
+    1689                    DW$84   .dwtag  DW_TAG_variable, DW_AT_name("t_ActualTime_UL"), DW_AT_symbol_name("_t_ActualTime_UL")
+    1690                            .dwattr DW$84, DW_AT_type(*DWT$1019)
+    1691                            .dwattr DW$84, DW_AT_location[DW_OP_reg0]
+    1692                    ;* V1    assigned to _t_TimeoutMs_PUW
+    1693                    DW$85   .dwtag  DW_TAG_variable, DW_AT_name("t_TimeoutMs_PUW"), DW_AT_symbol_name("_t_TimeoutMs_PUW")
+TMS470 COFF Assembler PC Version 2.71 Tue Jan 24 12:32:24 2012
+
+Tools Copyright (c) 1996-2008 Texas Instruments Incorporated
+r:/06_hallib/04_lst/ADLATUS_Hal.asm                                  PAGE   32
+
+    1694                            .dwattr DW$85, DW_AT_type(*DWT$1033)
+    1695                            .dwattr DW$85, DW_AT_location[DW_OP_reg4]
+    1696                    ;* V2    assigned to _t_StartTime_PUL
+    1697                    DW$86   .dwtag  DW_TAG_variable, DW_AT_name("t_StartTime_PUL"), DW_AT_symbol_name("_t_StartTime_PUL")
+    1698                            .dwattr DW$86, DW_AT_type(*DWT$1050)
+    1699                            .dwattr DW$86, DW_AT_location[DW_OP_reg5]
+    1700                    ;----------------------------------------------------------------------
+    1701                    ; 674 | ULONG t_ActualTime_UL;                                                 
+    1702                    ; 675 | ULONG t_TimerTicksPerMillisec_UL;                                      
+    1703                    ; 676 | BOOL  t_ReturnValue_B;                                                 
+    1704                    ;----------------------------------------------------------------------
+    1705 00000116 1C0C              MOV       V1, A2
+    1706 00000118 1C05              MOV       V2, A1
+    1707                    ;** 681 -----------------------    FUN_CCtim_SystemTimerCheck_V();
+    1708                            .dwpsn  "ADLATUS_Hal.c",681,3
+    1709                    ;----------------------------------------------------------------------
+    1710                    ; 681 | FUN_CCtim_SystemTimerCheck_V();                                        
+    1711                    ;----------------------------------------------------------------------
+    1712 0000011a F7FF!             BL        $FUN_CCtim_SystemTimerCheck_V ; |681| 
+         0000011c FF71     
+    1713                            ; |681| 
+    1714                    ;** 686 -----------------------    t_TimerTicksPerMillisec_UL = FUN_CChal_GetPerfCntTicks_UL();
+    1715                            .dwpsn  "ADLATUS_Hal.c",686,3
+    1716                    ;----------------------------------------------------------------------
+    1717                    ; 686 | t_TimerTicksPerMillisec_UL = FUN_CChal_GetPerfCntTicks_UL();           
+    1718                    ;----------------------------------------------------------------------
+    1719 0000011e F7FF              BL        $FUN_CChal_GetPerfCntTicks_UL ; |686| 
+         00000120 FFCF     
+    1720                            ; |686| 
+    1721 00000122 1C02              MOV       A3, A1
+    1722                    ;** 691 -----------------------    t_ActualTime_UL = FUN_CChal_GetPerformanceCounter_UL();
+    1723                            .dwpsn  "ADLATUS_Hal.c",691,3
+    1724                    ;----------------------------------------------------------------------
+    1725                    ; 691 | t_ActualTime_UL = FUN_CChal_GetPerformanceCounter_UL();                
+    1726                    ;----------------------------------------------------------------------
+    1727 00000124 F7FF              BL        $FUN_CChal_GetPerformanceCounter_UL ; |691| 
+         00000126 FFC7     
+    1728                            ; |691| 
+    1729                    ;** 696 -----------------------    C$1 = *t_StartTime_PUL;
+    1730                            .dwpsn  "ADLATUS_Hal.c",696,3
+    1731                    ;----------------------------------------------------------------------
+    1732                    ; 696 | while ( ((t_ActualTime_UL - (*t_StartTime_PUL)) > t_TimerTicksPerMillis
+    1733                    ;     | ec_UL) && \                                                            
+    1734                    ; 697 |         (0x00u < (*t_TimeoutMs_PUW)) )                                 
+    1735                    ; 702 |   (*t_StartTime_PUL) += t_TimerTicksPerMillisec_UL;                    
+    1736                    ; 703 |   (*t_TimeoutMs_PUW) -= 0x01u;                                         
+    1737                    ;----------------------------------------------------------------------
+    1738 00000128 6829              LDR       A2, [V2, #0]          ; |696| 
+    1739                    ;** 696 -----------------------    if ( t_ActualTime_UL-C$1 <= t_TimerTicksPerMillisec_UL ) goto g6;
+    1740 0000012a 1A43              SUB       A4, A1, A2            ; |696| 
+    1741 0000012c 4293              CMP       A4, A3                ; |696| 
+    1742 0000012e D90B              BLS       L11                   ; |696| 
+    1743                            ; |696| 
+    1744                    ;* --------------------------------------------------------------------------*
+    1745                    ;**     -----------------------    V$1 = *t_TimeoutMs_PUW;
+TMS470 COFF Assembler PC Version 2.71 Tue Jan 24 12:32:24 2012
+
+Tools Copyright (c) 1996-2008 Texas Instruments Incorporated
+r:/06_hallib/04_lst/ADLATUS_Hal.asm                                  PAGE   33
+
+    1746 00000130 8823              LDRH      A4, [V1, #0]
+    1747                    ;**     -----------------------    V$0 = C$1;
+    1748                    ;**     -----------------------    #pragma LOOP_FLAGS(4352u)
+    1749                    ;* --------------------------------------------------------------------------*
+    1750                    ;*   BEGIN LOOP L10
+    1751                    ;*
+    1752                    ;*   Loop source line                : 696
+    1753                    ;*   Loop closing brace source line  : 705
+    1754                    ;*   Known Minimum Trip Count        : 1
+    1755                    ;*   Known Maximum Trip Count        : 4294967295
+    1756                    ;*   Known Max Trip Count Factor     : 1
+    1757                    ;* --------------------------------------------------------------------------*
+    1758                    L10:    
+    1759                    DWL$$FUN_CChal_TimeoutOccured_B$3$B:
+    1760                    ;**     -----------------------g3:
+    1761                    ;** 705 -----------------------    if ( !V$1 ) goto g8;
+    1762                            .dwpsn  "ADLATUS_Hal.c",705,3
+    1763 00000132 2B00              CMP       A4, #0                ; |705| 
+    1764 00000134 D00D              BEQ       L12                   ; |705| 
+    1765                            ; |705| 
+    1766                    DWL$$FUN_CChal_TimeoutOccured_B$3$E:
+    1767                    ;* --------------------------------------------------------------------------*
+    1768                    DWL$$FUN_CChal_TimeoutOccured_B$4$B:
+    1769                    ;** 702 -----------------------    V$0 += t_TimerTicksPerMillisec_UL;
+    1770                            .dwpsn  "ADLATUS_Hal.c",702,5
+    1771 00000136 1851              ADD       A2, A3, A2            ; |702| 
+    1772                    ;** 703 -----------------------    V$1 = (unsigned short)(V$1-1u);
+    1773                            .dwpsn  "ADLATUS_Hal.c",703,5
+    1774 00000138 1E5B              SUB       A4, A4, #1            ; |703| 
+    1775 0000013a 041B              LSL       A4, A4, #16           ; |714| 
+    1776 0000013c 0C1B              LSR       A4, A4, #16           ; |714| 
+    1777                    ;** 703 -----------------------    if ( t_ActualTime_UL-V$0 > t_TimerTicksPerMillisec_UL ) goto g3;
+    1778 0000013e 1A46              SUB       V3, A1, A2            ; |703| 
+    1779 00000140 4296              CMP       V3, A3                ; |703| 
+    1780 00000142 D8F6              BHI       L10                   ; |703| 
+    1781                            ; |703| 
+    1782 00000144           DWL$$FUN_CChal_TimeoutOccured_B$4$E:
+    1783                    ;* --------------------------------------------------------------------------*
+    1784                    ;**     -----------------------    *t_StartTime_PUL = V$0;
+    1785 00000144 6029              STR       A2, [V2, #0]
+    1786                    ;**     -----------------------    *t_TimeoutMs_PUW = V$1;
+    1787 00000146 8023              STRH      A4, [V1, #0]
+    1788                    ;* --------------------------------------------------------------------------*
+    1789                    L11:    
+    1790                    ;**     -----------------------g6:
+    1791                    ;** 710 -----------------------    if ( !*t_TimeoutMs_PUW ) goto g9;
+    1792                            .dwpsn  "ADLATUS_Hal.c",710,3
+    1793                    ;----------------------------------------------------------------------
+    1794                    ; 710 | if(0x00u == (*t_TimeoutMs_PUW))                                        
+    1795                    ; 712 |   t_ReturnValue_B = (BOOL)~FALSE;                                      
+    1796                    ; 718 | else                                                                   
+    1797                    ;----------------------------------------------------------------------
+    1798 00000148 8820              LDRH      A1, [V1, #0]          ; |710| 
+    1799 0000014a 2800              CMP       A1, #0                ; |710| 
+    1800 0000014c D003              BEQ       L13                   ; |710| 
+TMS470 COFF Assembler PC Version 2.71 Tue Jan 24 12:32:24 2012
+
+Tools Copyright (c) 1996-2008 Texas Instruments Incorporated
+r:/06_hallib/04_lst/ADLATUS_Hal.asm                                  PAGE   34
+
+    1801                            ; |710| 
+    1802                    ;* --------------------------------------------------------------------------*
+    1803                    ;** 720 -----------------------    return 0;
+    1804                            .dwpsn  "ADLATUS_Hal.c",720,5
+    1805                    ;----------------------------------------------------------------------
+    1806                    ; 720 | t_ReturnValue_B = FALSE;                                               
+    1807                    ; 727 | return  (t_ReturnValue_B);                                             
+    1808                    ;----------------------------------------------------------------------
+    1809 0000014e 2000              MOV       A1, #0                ; |720| 
+    1810 00000150 BD70              POP       {V1, V2, V3, PC}
+    1811                    ;* --------------------------------------------------------------------------*
+    1812 00000152           L12:    
+    1813                    ;**     -----------------------g8:
+    1814                    ;**     -----------------------    *t_StartTime_PUL = V$0;
+    1815 00000152 6029              STR       A2, [V2, #0]
+    1816                    ;**     -----------------------    *t_TimeoutMs_PUW = V$1;
+    1817 00000154 8023              STRH      A4, [V1, #0]
+    1818                    ;* --------------------------------------------------------------------------*
+    1819                    L13:    
+    1820                    ;**     -----------------------g9:
+    1821                    ;** 714 -----------------------    return 255;
+    1822                            .dwpsn  "ADLATUS_Hal.c",714,3
+    1823 00000156 20FF              MOV       A1, #255              ; |714| 
+    1824                            .dwpsn  "ADLATUS_Hal.c",729,1
+    1825                            .dwcfa  0x0e, 16
+    1826 00000158 BD70              POP       {V1, V2, V3, PC}
+    1827                    
+    1828                    DW$87   .dwtag  DW_TAG_loop
+    1829                            .dwattr DW$87, DW_AT_name("r:/06_hallib/04_lst/ADLATUS_Hal.asm:L10:1:1327404744")
+    1830                            .dwattr DW$87, DW_AT_begin_file("ADLATUS_Hal.c")
+    1831                            .dwattr DW$87, DW_AT_begin_line(0x2b8)
+    1832                            .dwattr DW$87, DW_AT_end_line(0x2c1)
+    1833                    DW$88   .dwtag  DW_TAG_loop_range
+    1834                            .dwattr DW$88, DW_AT_low_pc(DWL$$FUN_CChal_TimeoutOccured_B$3$B)
+    1835                            .dwattr DW$88, DW_AT_high_pc(DWL$$FUN_CChal_TimeoutOccured_B$3$E)
+    1836                    DW$89   .dwtag  DW_TAG_loop_range
+    1837                            .dwattr DW$89, DW_AT_low_pc(DWL$$FUN_CChal_TimeoutOccured_B$4$B)
+    1838                            .dwattr DW$89, DW_AT_high_pc(DWL$$FUN_CChal_TimeoutOccured_B$4$E)
+    1839                            .dwendtag DW$87
+    1840                    
+    1841                            .dwendentry
+    1842                            .dwendtag DW$77
+    1843                    
+    1844                    
+    1845                    
+    1846                    ;******************************************************************************
+    1847                    ;* CONSTANT TABLE                                                             *
+    1848                    ;******************************************************************************
+    1849 0000015a                   .sect   ".text"
+    1850                            .align  4
+    1851 0000015c 00000000- CON1:   .field          _t_CChal_HalCtrl_ST,32
+    1852                            .align  4
+    1853 00000160 00000000! CON2:   .field          _ROMHAL,32
+    1854                            .align  4
+    1855 00000164 00000000! CON3:   .field          _RAMHAL,32
+TMS470 COFF Assembler PC Version 2.71 Tue Jan 24 12:32:24 2012
+
+Tools Copyright (c) 1996-2008 Texas Instruments Incorporated
+r:/06_hallib/04_lst/ADLATUS_Hal.asm                                  PAGE   35
+
+    1856                            .align  4
+    1857 00000168 00000000! CON4:   .field          _e_SARCIM_ST,32
+    1858                            .align  4
+    1859 0000016c 00000000! CON5:   .field          _c_CCconprj_ClockFrequency_UL,32
+    1860                            .align  4
+    1861 00000170 00000000! CON7:   .field          _e_SARRTI_ST,32
+    1862                            .align  4
+    1863 00000174 00000000! CON9:   .field          _c_CCconprj_DisableReset_UB,32
+    1864                            .align  4
+    1865 00000178 00000012! CON10:  .field          _e_SARSYS_ST+18,32
+    1866                    ;******************************************************************************
+    1867                    ;* UNDEFINED EXTERNAL REFERENCES                                              *
+    1868                    ;******************************************************************************
+    1869                            .global $FUN_CCtim_SystemTimerCheck_V
+    1870                            .global _RAMHAL
+    1871                            .global _ROMHAL
+    1872                            .global _e_SARCIM_ST
+    1873                            .global _e_SARSYS_ST
+    1874                            .global _e_SARRTI_ST
+    1875                            .global _c_CCconprj_ClockFrequency_UL
+    1876                            .global _c_CCconprj_DisableReset_UB
+    1877                            .global U$DIV
+    1878                    
+    1879                    ;******************************************************************************
+    1880                    ;* TYPE INFORMATION                                                           *
+    1881                    ;******************************************************************************
+    1882                    DWT$1018        .dwtag  DW_TAG_typedef, DW_AT_name("BOOL"), DW_AT_type(*DWT$6)
+    1883                            .dwattr DWT$1018, DW_AT_language(DW_LANG_C)
+    1884                    
+    1885                    DWT$1023        .dwtag  DW_TAG_subroutine_type, DW_AT_type(*DWT$1018)
+    1886                            .dwattr DWT$1023, DW_AT_language(DW_LANG_C)
+    1887                    DW$90   .dwtag  DW_TAG_formal_parameter, DW_AT_type(*DWT$1020)
+    1888                    DW$91   .dwtag  DW_TAG_formal_parameter, DW_AT_type(*DWT$1022)
+    1889                            .dwendtag DWT$1023
+    1890                    
+    1891                    DWT$1024        .dwtag  DW_TAG_const_type, DW_AT_type(*DWT$1018)
+    1892                    DWT$1026        .dwtag  DW_TAG_const_type, DW_AT_type(*DWT$1025)
+    1893                    DWT$1027        .dwtag  DW_TAG_pointer_type, DW_AT_type(*DWT$1025)
+    1894                            .dwattr DWT$1027, DW_AT_address_class(0x20)
+    1895                    DWT$8   .dwtag  DW_TAG_base_type, DW_AT_name("unsigned short")
+    1896                            .dwattr DWT$8, DW_AT_encoding(DW_ATE_unsigned)
+    1897                            .dwattr DWT$8, DW_AT_byte_size(0x02)
+    1898                    DWT$1021        .dwtag  DW_TAG_typedef, DW_AT_name("UWORD"), DW_AT_type(*DWT$8)
+    1899                            .dwattr DWT$1021, DW_AT_language(DW_LANG_C)
+    1900                    DWT$1022        .dwtag  DW_TAG_pointer_type, DW_AT_type(*DWT$1021)
+    1901                            .dwattr DWT$1022, DW_AT_address_class(0x20)
+    1902                    DWT$1033        .dwtag  DW_TAG_const_type, DW_AT_type(*DWT$1022)
+    1903                    
+    1904                    DWT$1034        .dwtag  DW_TAG_subroutine_type, DW_AT_type(*DWT$1021)
+    1905                            .dwattr DWT$1034, DW_AT_language(DW_LANG_C)
+    1906                    DWT$1035        .dwtag  DW_TAG_const_type, DW_AT_type(*DWT$1021)
+    1907                    DWT$11  .dwtag  DW_TAG_base_type, DW_AT_name("int")
+    1908                            .dwattr DWT$11, DW_AT_encoding(DW_ATE_signed)
+    1909                            .dwattr DWT$11, DW_AT_byte_size(0x04)
+    1910                    DWT$10  .dwtag  DW_TAG_base_type, DW_AT_name("unsigned int")
+TMS470 COFF Assembler PC Version 2.71 Tue Jan 24 12:32:24 2012
+
+Tools Copyright (c) 1996-2008 Texas Instruments Incorporated
+r:/06_hallib/04_lst/ADLATUS_Hal.asm                                  PAGE   36
+
+    1911                            .dwattr DWT$10, DW_AT_encoding(DW_ATE_unsigned)
+    1912                            .dwattr DWT$10, DW_AT_byte_size(0x04)
+    1913                    DWT$1019        .dwtag  DW_TAG_typedef, DW_AT_name("ULONG"), DW_AT_type(*DWT$12)
+    1914                            .dwattr DWT$1019, DW_AT_language(DW_LANG_C)
+    1915                    DWT$1020        .dwtag  DW_TAG_pointer_type, DW_AT_type(*DWT$1019)
+    1916                            .dwattr DWT$1020, DW_AT_address_class(0x20)
+    1917                    DWT$1050        .dwtag  DW_TAG_const_type, DW_AT_type(*DWT$1020)
+    1918                    
+    1919                    DWT$1051        .dwtag  DW_TAG_subroutine_type, DW_AT_type(*DWT$1019)
+    1920                            .dwattr DWT$1051, DW_AT_language(DW_LANG_C)
+    1921                    DWT$1052        .dwtag  DW_TAG_const_type, DW_AT_type(*DWT$1019)
+    1922                    
+    1923                    DWT$1053        .dwtag  DW_TAG_subroutine_type
+    1924                            .dwattr DWT$1053, DW_AT_language(DW_LANG_C)
+    1925                    
+    1926                    DWT$1061        .dwtag  DW_TAG_subroutine_type
+    1927                            .dwattr DWT$1061, DW_AT_language(DW_LANG_C)
+    1928                    DW$92   .dwtag  DW_TAG_formal_parameter, DW_AT_type(*DWT$1060)
+    1929                            .dwendtag DWT$1061
+    1930                    
+    1931                    
+    1932                    DWT$1062        .dwtag  DW_TAG_subroutine_type
+    1933                            .dwattr DWT$1062, DW_AT_language(DW_LANG_C)
+    1934                    DW$93   .dwtag  DW_TAG_formal_parameter, DW_AT_type(*DWT$1021)
+    1935                    DW$94   .dwtag  DW_TAG_formal_parameter, DW_AT_type(*DWT$1018)
+    1936                            .dwendtag DWT$1062
+    1937                    
+    1938                    
+    1939                    DWT$1063        .dwtag  DW_TAG_subroutine_type
+    1940                            .dwattr DWT$1063, DW_AT_language(DW_LANG_C)
+    1941                    DW$95   .dwtag  DW_TAG_formal_parameter, DW_AT_type(*DWT$1020)
+    1942                            .dwendtag DWT$1063
+    1943                    
+    1944                    DWT$1060        .dwtag  DW_TAG_pointer_type, DW_AT_type(*DWT$1059)
+    1945                            .dwattr DWT$1060, DW_AT_address_class(0x20)
+    1946                    DWT$1064        .dwtag  DW_TAG_const_type, DW_AT_type(*DWT$1060)
+    1947                    DWT$1074        .dwtag  DW_TAG_typedef, DW_AT_name("SARCIM_ST"), DW_AT_type(*DWT$1073)
+    1948                            .dwattr DWT$1074, DW_AT_language(DW_LANG_C)
+    1949                    DWT$1075        .dwtag  DW_TAG_pointer_type, DW_AT_type(*DWT$1073)
+    1950                            .dwattr DWT$1075, DW_AT_address_class(0x20)
+    1951                    DWT$1078        .dwtag  DW_TAG_typedef, DW_AT_name("SARSYS_ST"), DW_AT_type(*DWT$1077)
+    1952                            .dwattr DWT$1078, DW_AT_language(DW_LANG_C)
+    1953                    DWT$1081        .dwtag  DW_TAG_pointer_type, DW_AT_type(*DWT$1080)
+    1954                            .dwattr DWT$1081, DW_AT_address_class(0x20)
+    1955                    DWT$1095        .dwtag  DW_TAG_typedef, DW_AT_name("SARRTI_ST"), DW_AT_type(*DWT$1094)
+    1956                            .dwattr DWT$1095, DW_AT_language(DW_LANG_C)
+    1957                    DWT$1096        .dwtag  DW_TAG_pointer_type, DW_AT_type(*DWT$1094)
+    1958                            .dwattr DWT$1096, DW_AT_address_class(0x20)
+    1959                    DWT$1098        .dwtag  DW_TAG_typedef, DW_AT_name("HALCONTROL_ST"), DW_AT_type(*DWT$1097)
+    1960                            .dwattr DWT$1098, DW_AT_language(DW_LANG_C)
+    1961                    DWT$1099        .dwtag  DW_TAG_pointer_type, DW_AT_type(*DWT$1098)
+    1962                            .dwattr DWT$1099, DW_AT_address_class(0x20)
+    1963                    DWT$1100        .dwtag  DW_TAG_pointer_type, DW_AT_type(*DWT$1097)
+    1964                            .dwattr DWT$1100, DW_AT_address_class(0x20)
+    1965                    DWT$6   .dwtag  DW_TAG_base_type, DW_AT_name("unsigned char")
+TMS470 COFF Assembler PC Version 2.71 Tue Jan 24 12:32:24 2012
+
+Tools Copyright (c) 1996-2008 Texas Instruments Incorporated
+r:/06_hallib/04_lst/ADLATUS_Hal.asm                                  PAGE   37
+
+    1966                            .dwattr DWT$6, DW_AT_encoding(DW_ATE_unsigned_char)
+    1967                            .dwattr DWT$6, DW_AT_byte_size(0x01)
+    1968                    DWT$1025        .dwtag  DW_TAG_typedef, DW_AT_name("UBYTE"), DW_AT_type(*DWT$6)
+    1969                            .dwattr DWT$1025, DW_AT_language(DW_LANG_C)
+    1970                    DWT$12  .dwtag  DW_TAG_base_type, DW_AT_name("unsigned long")
+    1971                            .dwattr DWT$12, DW_AT_encoding(DW_ATE_unsigned)
+    1972                            .dwattr DWT$12, DW_AT_byte_size(0x04)
+    1973                    DWT$1059        .dwtag  DW_TAG_const_type, DW_AT_type(*DWT$1058)
+    1974                    DWT$1073        .dwtag  DW_TAG_volatile_type, DW_AT_type(*DWT$1072)
+    1975                    DWT$1077        .dwtag  DW_TAG_volatile_type, DW_AT_type(*DWT$1076)
+    1976                    DWT$1080        .dwtag  DW_TAG_volatile_type, DW_AT_type(*DWT$1079)
+    1977                    DWT$1094        .dwtag  DW_TAG_volatile_type, DW_AT_type(*DWT$1093)
+    1978                    
+    1979                    DWT$1097        .dwtag  DW_TAG_structure_type
+    1980                            .dwattr DWT$1097, DW_AT_name("_HALCONTROL")
+    1981                            .dwattr DWT$1097, DW_AT_byte_size(0x14)
+    1982                    DW$96   .dwtag  DW_TAG_member, DW_AT_type(*DWT$1019)
+    1983                            .dwattr DW$96, DW_AT_name("IntClockFrequency_UL"), DW_AT_symbol_name("_IntClockFrequency_UL")
+    1984                            .dwattr DW$96, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1985                            .dwattr DW$96, DW_AT_accessibility(DW_ACCESS_public)
+    1986                    DW$97   .dwtag  DW_TAG_member, DW_AT_type(*DWT$1021)
+    1987                            .dwattr DW$97, DW_AT_name("IntWatchdogTriggerTime_UW"), DW_AT_symbol_name("_IntWatchdogTrigger
+    1988                            .dwattr DW$97, DW_AT_data_member_location[DW_OP_plus_uconst 0x4]
+    1989                            .dwattr DW$97, DW_AT_accessibility(DW_ACCESS_public)
+    1990                    DW$98   .dwtag  DW_TAG_member, DW_AT_type(*DWT$1021)
+    1991                            .dwattr DW$98, DW_AT_name("IntWtdTimerReloadValue_UW"), DW_AT_symbol_name("_IntWtdTimerReloadV
+    1992                            .dwattr DW$98, DW_AT_data_member_location[DW_OP_plus_uconst 0x6]
+    1993                            .dwattr DW$98, DW_AT_accessibility(DW_ACCESS_public)
+    1994                    DW$99   .dwtag  DW_TAG_member, DW_AT_type(*DWT$1021)
+    1995                            .dwattr DW$99, DW_AT_name("HWTimerValue_UW"), DW_AT_symbol_name("_HWTimerValue_UW")
+    1996                            .dwattr DW$99, DW_AT_data_member_location[DW_OP_plus_uconst 0x8]
+    1997                            .dwattr DW$99, DW_AT_accessibility(DW_ACCESS_public)
+    1998                    DW$100  .dwtag  DW_TAG_member, DW_AT_type(*DWT$1019)
+    1999                            .dwattr DW$100, DW_AT_name("OldTimerValue_UL"), DW_AT_symbol_name("_OldTimerValue_UL")
+    2000                            .dwattr DW$100, DW_AT_data_member_location[DW_OP_plus_uconst 0xc]
+    2001                            .dwattr DW$100, DW_AT_accessibility(DW_ACCESS_public)
+    2002                    DW$101  .dwtag  DW_TAG_member, DW_AT_type(*DWT$1019)
+    2003                            .dwattr DW$101, DW_AT_name("TimerTicksForOneMilliSecond_UL"), DW_AT_symbol_name("_TimerTicksFo
+    2004                            .dwattr DW$101, DW_AT_data_member_location[DW_OP_plus_uconst 0x10]
+    2005                            .dwattr DW$101, DW_AT_accessibility(DW_ACCESS_public)
+    2006                            .dwendtag DWT$1097
+    2007                    
+    2008                    DWT$1058        .dwtag  DW_TAG_typedef, DW_AT_name("HALINTERFACE_ST"), DW_AT_type(*DWT$1057)
+    2009                            .dwattr DWT$1058, DW_AT_language(DW_LANG_C)
+    2010                    
+    2011                    DWT$1072        .dwtag  DW_TAG_structure_type
+    2012                            .dwattr DWT$1072, DW_AT_byte_size(0x18)
+    2013                    DW$102  .dwtag  DW_TAG_member, DW_AT_type(*DWT$6)
+    2014                            .dwattr DW$102, DW_AT_name("IrqIVec_UB"), DW_AT_symbol_name("_IrqIVec_UB")
+    2015                            .dwattr DW$102, DW_AT_data_member_location[DW_OP_plus_uconst 0x3]
+    2016                            .dwattr DW$102, DW_AT_accessibility(DW_ACCESS_public)
+    2017                    DW$103  .dwtag  DW_TAG_member, DW_AT_type(*DWT$6)
+    2018                            .dwattr DW$103, DW_AT_name("FiqIVec_UB"), DW_AT_symbol_name("_FiqIVec_UB")
+    2019                            .dwattr DW$103, DW_AT_data_member_location[DW_OP_plus_uconst 0x7]
+    2020                            .dwattr DW$103, DW_AT_accessibility(DW_ACCESS_public)
+TMS470 COFF Assembler PC Version 2.71 Tue Jan 24 12:32:24 2012
+
+Tools Copyright (c) 1996-2008 Texas Instruments Incorporated
+r:/06_hallib/04_lst/ADLATUS_Hal.asm                                  PAGE   38
+
+    2021                    DW$104  .dwtag  DW_TAG_member, DW_AT_type(*DWT$6)
+    2022                            .dwattr DW$104, DW_AT_name("CimIVec_UB"), DW_AT_symbol_name("_CimIVec_UB")
+    2023                            .dwattr DW$104, DW_AT_data_member_location[DW_OP_plus_uconst 0xb]
+    2024                            .dwattr DW$104, DW_AT_accessibility(DW_ACCESS_public)
+    2025                    DW$105  .dwtag  DW_TAG_member, DW_AT_type(*DWT$12)
+    2026                            .dwattr DW$105, DW_AT_name("Firqpr_UL"), DW_AT_symbol_name("_Firqpr_UL")
+    2027                            .dwattr DW$105, DW_AT_data_member_location[DW_OP_plus_uconst 0xc]
+    2028                            .dwattr DW$105, DW_AT_accessibility(DW_ACCESS_public)
+    2029                    DW$106  .dwtag  DW_TAG_member, DW_AT_type(*DWT$12)
+    2030                            .dwattr DW$106, DW_AT_name("Intreq_UL"), DW_AT_symbol_name("_Intreq_UL")
+    2031                            .dwattr DW$106, DW_AT_data_member_location[DW_OP_plus_uconst 0x10]
+    2032                            .dwattr DW$106, DW_AT_accessibility(DW_ACCESS_public)
+    2033                    DW$107  .dwtag  DW_TAG_member, DW_AT_type(*DWT$12)
+    2034                            .dwattr DW$107, DW_AT_name("Reqmask_UL"), DW_AT_symbol_name("_Reqmask_UL")
+    2035                            .dwattr DW$107, DW_AT_data_member_location[DW_OP_plus_uconst 0x14]
+    2036                            .dwattr DW$107, DW_AT_accessibility(DW_ACCESS_public)
+    2037                            .dwendtag DWT$1072
+    2038                    
+    2039                    
+    2040                    DWT$1076        .dwtag  DW_TAG_structure_type
+    2041                            .dwattr DWT$1076, DW_AT_byte_size(0x30)
+    2042                    DW$108  .dwtag  DW_TAG_member, DW_AT_type(*DWT$8)
+    2043                            .dwattr DW$108, DW_AT_name("ClkCntl_UW"), DW_AT_symbol_name("_ClkCntl_UW")
+    2044                            .dwattr DW$108, DW_AT_data_member_location[DW_OP_plus_uconst 0x2]
+    2045                            .dwattr DW$108, DW_AT_accessibility(DW_ACCESS_public)
+    2046                    DW$109  .dwtag  DW_TAG_member, DW_AT_type(*DWT$8)
+    2047                            .dwattr DW$109, DW_AT_name("CramCR_UW"), DW_AT_symbol_name("_CramCR_UW")
+    2048                            .dwattr DW$109, DW_AT_data_member_location[DW_OP_plus_uconst 0xa]
+    2049                            .dwattr DW$109, DW_AT_accessibility(DW_ACCESS_public)
+    2050                    DW$110  .dwtag  DW_TAG_member, DW_AT_type(*DWT$8)
+    2051                            .dwattr DW$110, DW_AT_name("GlbCtrl_UW"), DW_AT_symbol_name("_GlbCtrl_UW")
+    2052                            .dwattr DW$110, DW_AT_data_member_location[DW_OP_plus_uconst 0xe]
+    2053                            .dwattr DW$110, DW_AT_accessibility(DW_ACCESS_public)
+    2054                    DW$111  .dwtag  DW_TAG_member, DW_AT_type(*DWT$8)
+    2055                            .dwattr DW$111, DW_AT_name("SysECR_UW"), DW_AT_symbol_name("_SysECR_UW")
+    2056                            .dwattr DW$111, DW_AT_data_member_location[DW_OP_plus_uconst 0x12]
+    2057                            .dwattr DW$111, DW_AT_accessibility(DW_ACCESS_public)
+    2058                    DW$112  .dwtag  DW_TAG_member, DW_AT_type(*DWT$8)
+    2059                            .dwattr DW$112, DW_AT_name("SysESR_UW"), DW_AT_symbol_name("_SysESR_UW")
+    2060                            .dwattr DW$112, DW_AT_data_member_location[DW_OP_plus_uconst 0x16]
+    2061                            .dwattr DW$112, DW_AT_accessibility(DW_ACCESS_public)
+    2062                    DW$113  .dwtag  DW_TAG_member, DW_AT_type(*DWT$8)
+    2063                            .dwattr DW$113, DW_AT_name("AbrtESR_UW"), DW_AT_symbol_name("_AbrtESR_UW")
+    2064                            .dwattr DW$113, DW_AT_data_member_location[DW_OP_plus_uconst 0x1a]
+    2065                            .dwattr DW$113, DW_AT_accessibility(DW_ACCESS_public)
+    2066                    DW$114  .dwtag  DW_TAG_member, DW_AT_type(*DWT$8)
+    2067                            .dwattr DW$114, DW_AT_name("GlbStat_UW"), DW_AT_symbol_name("_GlbStat_UW")
+    2068                            .dwattr DW$114, DW_AT_data_member_location[DW_OP_plus_uconst 0x1e]
+    2069                            .dwattr DW$114, DW_AT_accessibility(DW_ACCESS_public)
+    2070                    DW$115  .dwtag  DW_TAG_member, DW_AT_type(*DWT$8)
+    2071                            .dwattr DW$115, DW_AT_name("Dev_UW"), DW_AT_symbol_name("_Dev_UW")
+    2072                            .dwattr DW$115, DW_AT_data_member_location[DW_OP_plus_uconst 0x22]
+    2073                            .dwattr DW$115, DW_AT_accessibility(DW_ACCESS_public)
+    2074                    DW$116  .dwtag  DW_TAG_member, DW_AT_type(*DWT$8)
+    2075                            .dwattr DW$116, DW_AT_name("Ssif_UW"), DW_AT_symbol_name("_Ssif_UW")
+TMS470 COFF Assembler PC Version 2.71 Tue Jan 24 12:32:24 2012
+
+Tools Copyright (c) 1996-2008 Texas Instruments Incorporated
+r:/06_hallib/04_lst/ADLATUS_Hal.asm                                  PAGE   39
+
+    2076                            .dwattr DW$116, DW_AT_data_member_location[DW_OP_plus_uconst 0x2a]
+    2077                            .dwattr DW$116, DW_AT_accessibility(DW_ACCESS_public)
+    2078                    DW$117  .dwtag  DW_TAG_member, DW_AT_type(*DWT$8)
+    2079                            .dwattr DW$117, DW_AT_name("Ssir_UW"), DW_AT_symbol_name("_Ssir_UW")
+    2080                            .dwattr DW$117, DW_AT_data_member_location[DW_OP_plus_uconst 0x2e]
+    2081                            .dwattr DW$117, DW_AT_accessibility(DW_ACCESS_public)
+    2082                            .dwendtag DWT$1076
+    2083                    
+    2084                    
+    2085                    DWT$1079        .dwtag  DW_TAG_structure_type
+    2086                            .dwattr DWT$1079, DW_AT_byte_size(0x04)
+    2087                    DW$118  .dwtag  DW_TAG_member, DW_AT_type(*DWT$10)
+    2088                            .dwattr DW$118, DW_AT_name("RTIM_B3"), DW_AT_symbol_name("_RTIM_B3")
+    2089                            .dwattr DW$118, DW_AT_bit_offset(0x12), DW_AT_bit_size(0x03)
+    2090                            .dwattr DW$118, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    2091                            .dwattr DW$118, DW_AT_accessibility(DW_ACCESS_public)
+    2092                    DW$119  .dwtag  DW_TAG_member, DW_AT_type(*DWT$10)
+    2093                            .dwattr DW$119, DW_AT_name("PREDL_B11"), DW_AT_symbol_name("_PREDL_B11")
+    2094                            .dwattr DW$119, DW_AT_bit_offset(0x15), DW_AT_bit_size(0x0b)
+    2095                            .dwattr DW$119, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    2096                            .dwattr DW$119, DW_AT_accessibility(DW_ACCESS_public)
+    2097                            .dwendtag DWT$1079
+    2098                    
+    2099                    
+    2100                    DWT$1093        .dwtag  DW_TAG_structure_type
+    2101                            .dwattr DWT$1093, DW_AT_name("rti")
+    2102                            .dwattr DWT$1093, DW_AT_byte_size(0x20)
+    2103                    DW$120  .dwtag  DW_TAG_member, DW_AT_type(*DWT$1086)
+    2104                            .dwattr DW$120, DW_AT_name("DRTICNTR_UN"), DW_AT_symbol_name("_DRTICNTR_UN")
+    2105                            .dwattr DW$120, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    2106                            .dwattr DW$120, DW_AT_accessibility(DW_ACCESS_public)
+    2107                    DW$121  .dwtag  DW_TAG_member, DW_AT_type(*DWT$1087)
+    2108                            .dwattr DW$121, DW_AT_name("DRTIPCTL_UN"), DW_AT_symbol_name("_DRTIPCTL_UN")
+    2109                            .dwattr DW$121, DW_AT_data_member_location[DW_OP_plus_uconst 0x4]
+    2110                            .dwattr DW$121, DW_AT_accessibility(DW_ACCESS_public)
+    2111                    DW$122  .dwtag  DW_TAG_member, DW_AT_type(*DWT$1089)
+    2112                            .dwattr DW$122, DW_AT_name("DRTICNTL_UN"), DW_AT_symbol_name("_DRTICNTL_UN")
+    2113                            .dwattr DW$122, DW_AT_data_member_location[DW_OP_plus_uconst 0x8]
+    2114                            .dwattr DW$122, DW_AT_accessibility(DW_ACCESS_public)
+    2115                    DW$123  .dwtag  DW_TAG_member, DW_AT_type(*DWT$12)
+    2116                            .dwattr DW$123, DW_AT_name("WKEY_UL"), DW_AT_symbol_name("_WKEY_UL")
+    2117                            .dwattr DW$123, DW_AT_data_member_location[DW_OP_plus_uconst 0xc]
+    2118                            .dwattr DW$123, DW_AT_accessibility(DW_ACCESS_public)
+    2119                    DW$124  .dwtag  DW_TAG_member, DW_AT_type(*DWT$12)
+    2120                            .dwattr DW$124, DW_AT_name("RTICR1_UL"), DW_AT_symbol_name("_RTICR1_UL")
+    2121                            .dwattr DW$124, DW_AT_data_member_location[DW_OP_plus_uconst 0x10]
+    2122                            .dwattr DW$124, DW_AT_accessibility(DW_ACCESS_public)
+    2123                    DW$125  .dwtag  DW_TAG_member, DW_AT_type(*DWT$12)
+    2124                            .dwattr DW$125, DW_AT_name("RTICR2_UL"), DW_AT_symbol_name("_RTICR2_UL")
+    2125                            .dwattr DW$125, DW_AT_data_member_location[DW_OP_plus_uconst 0x14]
+    2126                            .dwattr DW$125, DW_AT_accessibility(DW_ACCESS_public)
+    2127                    DW$126  .dwtag  DW_TAG_member, DW_AT_type(*DWT$1091)
+    2128                            .dwattr DW$126, DW_AT_name("DRTICINT_UN"), DW_AT_symbol_name("_DRTICINT_UN")
+    2129                            .dwattr DW$126, DW_AT_data_member_location[DW_OP_plus_uconst 0x18]
+    2130                            .dwattr DW$126, DW_AT_accessibility(DW_ACCESS_public)
+TMS470 COFF Assembler PC Version 2.71 Tue Jan 24 12:32:24 2012
+
+Tools Copyright (c) 1996-2008 Texas Instruments Incorporated
+r:/06_hallib/04_lst/ADLATUS_Hal.asm                                  PAGE   40
+
+    2131                    DW$127  .dwtag  DW_TAG_member, DW_AT_type(*DWT$1092)
+    2132                            .dwattr DW$127, DW_AT_name("DRTICNTEN_UN"), DW_AT_symbol_name("_DRTICNTEN_UN")
+    2133                            .dwattr DW$127, DW_AT_data_member_location[DW_OP_plus_uconst 0x1c]
+    2134                            .dwattr DW$127, DW_AT_accessibility(DW_ACCESS_public)
+    2135                            .dwendtag DWT$1093
+    2136                    
+    2137                    
+    2138                    DWT$1057        .dwtag  DW_TAG_structure_type
+    2139                            .dwattr DWT$1057, DW_AT_name("_HALINTERFACE")
+    2140                            .dwattr DWT$1057, DW_AT_byte_size(0x08)
+    2141                    DW$128  .dwtag  DW_TAG_member, DW_AT_type(*DWT$1055)
+    2142                            .dwattr DW$128, DW_AT_name("IntClkFrequency_UL"), DW_AT_symbol_name("_IntClkFrequency_UL")
+    2143                            .dwattr DW$128, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    2144                            .dwattr DW$128, DW_AT_accessibility(DW_ACCESS_public)
+    2145                    DW$129  .dwtag  DW_TAG_member, DW_AT_type(*DWT$1056)
+    2146                            .dwattr DW$129, DW_AT_name("IntWdtTimeout_UW"), DW_AT_symbol_name("_IntWdtTimeout_UW")
+    2147                            .dwattr DW$129, DW_AT_data_member_location[DW_OP_plus_uconst 0x4]
+    2148                            .dwattr DW$129, DW_AT_accessibility(DW_ACCESS_public)
+    2149                            .dwendtag DWT$1057
+    2150                    
+    2151                    
+    2152                    DWT$1086        .dwtag  DW_TAG_union_type
+    2153                            .dwattr DWT$1086, DW_AT_byte_size(0x04)
+    2154                    DW$130  .dwtag  DW_TAG_member, DW_AT_type(*DWT$12)
+    2155                            .dwattr DW$130, DW_AT_name("DRTICNTR_UL"), DW_AT_symbol_name("_DRTICNTR_UL")
+    2156                            .dwattr DW$130, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    2157                            .dwattr DW$130, DW_AT_accessibility(DW_ACCESS_public)
+    2158                    DW$131  .dwtag  DW_TAG_member, DW_AT_type(*DWT$1085)
+    2159                            .dwattr DW$131, DW_AT_name("DRTICNTR_ST"), DW_AT_symbol_name("_DRTICNTR_ST")
+    2160                            .dwattr DW$131, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    2161                            .dwattr DW$131, DW_AT_accessibility(DW_ACCESS_public)
+    2162                            .dwendtag DWT$1086
+    2163                    
+    2164                    
+    2165                    DWT$1087        .dwtag  DW_TAG_union_type
+    2166                            .dwattr DWT$1087, DW_AT_byte_size(0x04)
+    2167                    DW$132  .dwtag  DW_TAG_member, DW_AT_type(*DWT$12)
+    2168                            .dwattr DW$132, DW_AT_name("DRTIPCTL_UL"), DW_AT_symbol_name("_DRTIPCTL_UL")
+    2169                            .dwattr DW$132, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    2170                            .dwattr DW$132, DW_AT_accessibility(DW_ACCESS_public)
+    2171                    DW$133  .dwtag  DW_TAG_member, DW_AT_type(*DWT$1079)
+    2172                            .dwattr DW$133, DW_AT_name("DRTIPCTL_ST"), DW_AT_symbol_name("_DRTIPCTL_ST")
+    2173                            .dwattr DW$133, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    2174                            .dwattr DW$133, DW_AT_accessibility(DW_ACCESS_public)
+    2175                            .dwendtag DWT$1087
+    2176                    
+    2177                    
+    2178                    DWT$1089        .dwtag  DW_TAG_union_type
+    2179                            .dwattr DWT$1089, DW_AT_byte_size(0x04)
+    2180                    DW$134  .dwtag  DW_TAG_member, DW_AT_type(*DWT$12)
+    2181                            .dwattr DW$134, DW_AT_name("DRTICNTL_UL"), DW_AT_symbol_name("_DRTICNTL_UL")
+    2182                            .dwattr DW$134, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    2183                            .dwattr DW$134, DW_AT_accessibility(DW_ACCESS_public)
+    2184                    DW$135  .dwtag  DW_TAG_member, DW_AT_type(*DWT$1088)
+    2185                            .dwattr DW$135, DW_AT_name("DRTICNTL_ST"), DW_AT_symbol_name("_DRTICNTL_ST")
+TMS470 COFF Assembler PC Version 2.71 Tue Jan 24 12:32:24 2012
+
+Tools Copyright (c) 1996-2008 Texas Instruments Incorporated
+r:/06_hallib/04_lst/ADLATUS_Hal.asm                                  PAGE   41
+
+    2186                            .dwattr DW$135, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    2187                            .dwattr DW$135, DW_AT_accessibility(DW_ACCESS_public)
+    2188                            .dwendtag DWT$1089
+    2189                    
+    2190                    
+    2191                    DWT$1091        .dwtag  DW_TAG_union_type
+    2192                            .dwattr DWT$1091, DW_AT_byte_size(0x04)
+    2193                    DW$136  .dwtag  DW_TAG_member, DW_AT_type(*DWT$12)
+    2194                            .dwattr DW$136, DW_AT_name("DRTICINT_UL"), DW_AT_symbol_name("_DRTICINT_UL")
+    2195                            .dwattr DW$136, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    2196                            .dwattr DW$136, DW_AT_accessibility(DW_ACCESS_public)
+    2197                    DW$137  .dwtag  DW_TAG_member, DW_AT_type(*DWT$1090)
+    2198                            .dwattr DW$137, DW_AT_name("DRTICINT_ST"), DW_AT_symbol_name("_DRTICINT_ST")
+    2199                            .dwattr DW$137, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    2200                            .dwattr DW$137, DW_AT_accessibility(DW_ACCESS_public)
+    2201                            .dwendtag DWT$1091
+    2202                    
+    2203                    
+    2204                    DWT$1092        .dwtag  DW_TAG_union_type
+    2205                            .dwattr DWT$1092, DW_AT_byte_size(0x04)
+    2206                    DW$138  .dwtag  DW_TAG_member, DW_AT_type(*DWT$12)
+    2207                            .dwattr DW$138, DW_AT_name("DRTICNTEN_UL"), DW_AT_symbol_name("_DRTICNTEN_UL")
+    2208                            .dwattr DW$138, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    2209                            .dwattr DW$138, DW_AT_accessibility(DW_ACCESS_public)
+    2210                    DW$139  .dwtag  DW_TAG_member, DW_AT_type(*DWT$1082)
+    2211                            .dwattr DW$139, DW_AT_name("DRTICNTEN_ST"), DW_AT_symbol_name("_DRTICNTEN_ST")
+    2212                            .dwattr DW$139, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    2213                            .dwattr DW$139, DW_AT_accessibility(DW_ACCESS_public)
+    2214                            .dwendtag DWT$1092
+    2215                    
+    2216                    DWT$1056        .dwtag  DW_TAG_typedef, DW_AT_name("FAR_PTR_UWORD"), DW_AT_type(*DWT$1022)
+    2217                            .dwattr DWT$1056, DW_AT_language(DW_LANG_C)
+    2218                    DWT$1055        .dwtag  DW_TAG_typedef, DW_AT_name("FAR_PTR_ULONG"), DW_AT_type(*DWT$1020)
+    2219                            .dwattr DWT$1055, DW_AT_language(DW_LANG_C)
+    2220                    
+    2221                    DWT$1082        .dwtag  DW_TAG_structure_type
+    2222                            .dwattr DWT$1082, DW_AT_byte_size(0x04)
+    2223                    DW$140  .dwtag  DW_TAG_member, DW_AT_type(*DWT$10)
+    2224                            .dwattr DW$140, DW_AT_name("CNTEN_B2"), DW_AT_symbol_name("_CNTEN_B2")
+    2225                            .dwattr DW$140, DW_AT_bit_offset(0x1e), DW_AT_bit_size(0x02)
+    2226                            .dwattr DW$140, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    2227                            .dwattr DW$140, DW_AT_accessibility(DW_ACCESS_public)
+    2228                            .dwendtag DWT$1082
+    2229                    
+    2230                    
+    2231                    DWT$1085        .dwtag  DW_TAG_structure_type
+    2232                            .dwattr DWT$1085, DW_AT_byte_size(0x04)
+    2233                    DW$141  .dwtag  DW_TAG_member, DW_AT_type(*DWT$10)
+    2234                            .dwattr DW$141, DW_AT_name("DRTICNTR_B21"), DW_AT_symbol_name("_DRTICNTR_B21")
+    2235                            .dwattr DW$141, DW_AT_bit_offset(0x00), DW_AT_bit_size(0x15)
+    2236                            .dwattr DW$141, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    2237                            .dwattr DW$141, DW_AT_accessibility(DW_ACCESS_public)
+    2238                    DW$142  .dwtag  DW_TAG_member, DW_AT_type(*DWT$10)
+    2239                            .dwattr DW$142, DW_AT_name("DRTIMOD_B11"), DW_AT_symbol_name("_DRTIMOD_B11")
+    2240                            .dwattr DW$142, DW_AT_bit_offset(0x15), DW_AT_bit_size(0x0b)
+TMS470 COFF Assembler PC Version 2.71 Tue Jan 24 12:32:24 2012
+
+Tools Copyright (c) 1996-2008 Texas Instruments Incorporated
+r:/06_hallib/04_lst/ADLATUS_Hal.asm                                  PAGE   42
+
+    2241                            .dwattr DW$142, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    2242                            .dwattr DW$142, DW_AT_accessibility(DW_ACCESS_public)
+    2243                            .dwendtag DWT$1085
+    2244                    
+    2245                    
+    2246                    DWT$1088        .dwtag  DW_TAG_structure_type
+    2247                            .dwattr DWT$1088, DW_AT_byte_size(0x04)
+    2248                    DW$143  .dwtag  DW_TAG_member, DW_AT_type(*DWT$10)
+    2249                            .dwattr DW$143, DW_AT_name("RTIF_B1"), DW_AT_symbol_name("_RTIF_B1")
+    2250                            .dwattr DW$143, DW_AT_bit_offset(0x18), DW_AT_bit_size(0x01)
+    2251                            .dwattr DW$143, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    2252                            .dwattr DW$143, DW_AT_accessibility(DW_ACCESS_public)
+    2253                    DW$144  .dwtag  DW_TAG_member, DW_AT_type(*DWT$10)
+    2254                            .dwattr DW$144, DW_AT_name("RTIE_B1"), DW_AT_symbol_name("_RTIE_B1")
+    2255                            .dwattr DW$144, DW_AT_bit_offset(0x19), DW_AT_bit_size(0x01)
+    2256                            .dwattr DW$144, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    2257                            .dwattr DW$144, DW_AT_accessibility(DW_ACCESS_public)
+    2258                            .dwendtag DWT$1088
+    2259                    
+    2260                    
+    2261                    DWT$1090        .dwtag  DW_TAG_structure_type
+    2262                            .dwattr DWT$1090, DW_AT_byte_size(0x04)
+    2263                    DW$145  .dwtag  DW_TAG_member, DW_AT_type(*DWT$10)
+    2264                            .dwattr DW$145, DW_AT_name("CF1_B1"), DW_AT_symbol_name("_CF1_B1")
+    2265                            .dwattr DW$145, DW_AT_bit_offset(0x18), DW_AT_bit_size(0x01)
+    2266                            .dwattr DW$145, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    2267                            .dwattr DW$145, DW_AT_accessibility(DW_ACCESS_public)
+    2268                    DW$146  .dwtag  DW_TAG_member, DW_AT_type(*DWT$10)
+    2269                            .dwattr DW$146, DW_AT_name("CF2_B1"), DW_AT_symbol_name("_CF2_B1")
+    2270                            .dwattr DW$146, DW_AT_bit_offset(0x19), DW_AT_bit_size(0x01)
+    2271                            .dwattr DW$146, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    2272                            .dwattr DW$146, DW_AT_accessibility(DW_ACCESS_public)
+    2273                    DW$147  .dwtag  DW_TAG_member, DW_AT_type(*DWT$10)
+    2274                            .dwattr DW$147, DW_AT_name("CE1_B1"), DW_AT_symbol_name("_CE1_B1")
+    2275                            .dwattr DW$147, DW_AT_bit_offset(0x1a), DW_AT_bit_size(0x01)
+    2276                            .dwattr DW$147, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    2277                            .dwattr DW$147, DW_AT_accessibility(DW_ACCESS_public)
+    2278                    DW$148  .dwtag  DW_TAG_member, DW_AT_type(*DWT$10)
+    2279                            .dwattr DW$148, DW_AT_name("CR2_B1"), DW_AT_symbol_name("_CR2_B1")
+    2280                            .dwattr DW$148, DW_AT_bit_offset(0x1b), DW_AT_bit_size(0x01)
+    2281                            .dwattr DW$148, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    2282                            .dwattr DW$148, DW_AT_accessibility(DW_ACCESS_public)
+    2283                            .dwendtag DWT$1090
+    2284                    
+    2285                    
+    2286                            .dwattr DW$22, DW_AT_external(0x01)
+    2287                            .dwattr DW$46, DW_AT_external(0x01)
+    2288                            .dwattr DW$48, DW_AT_external(0x01)
+    2289                            .dwattr DW$30, DW_AT_external(0x01)
+    2290                            .dwattr DW$30, DW_AT_type(*DWT$1021)
+    2291                            .dwattr DW$54, DW_AT_external(0x01)
+    2292                            .dwattr DW$54, DW_AT_type(*DWT$1019)
+    2293                            .dwattr DW$51, DW_AT_external(0x01)
+    2294                            .dwattr DW$51, DW_AT_type(*DWT$1019)
+    2295                            .dwattr DW$12, DW_AT_external(0x01)
+TMS470 COFF Assembler PC Version 2.71 Tue Jan 24 12:32:24 2012
+
+Tools Copyright (c) 1996-2008 Texas Instruments Incorporated
+r:/06_hallib/04_lst/ADLATUS_Hal.asm                                  PAGE   43
+
+    2296                            .dwattr DW$26, DW_AT_external(0x01)
+    2297                            .dwattr DW$43, DW_AT_external(0x01)
+    2298                            .dwattr DW$39, DW_AT_external(0x01)
+    2299                            .dwattr DW$36, DW_AT_external(0x01)
+    2300                            .dwattr DW$77, DW_AT_external(0x01)
+    2301                            .dwattr DW$77, DW_AT_type(*DWT$1018)
+    2302                            .dwattr DW$73, DW_AT_external(0x01)
+    2303                            .dwattr DW$56, DW_AT_external(0x01)
+    2304                            .dwattr DWCU, DW_AT_language(DW_LANG_C)
+    2305                    
+    2306                    ;***************************************************************
+    2307                    ;* DWARF CIE ENTRIES                                           *
+    2308                    ;***************************************************************
+    2309                    
+    2310                    DW$CIE  .dwcie 1, 26
+    2311                            .dwcfa  0x0c, 13, 0
+    2312                            .dwcfa  0x07, 0
+    2313                            .dwcfa  0x07, 1
+    2314                            .dwcfa  0x07, 2
+    2315                            .dwcfa  0x07, 3
+    2316                            .dwcfa  0x08, 4
+    2317                            .dwcfa  0x08, 5
+    2318                            .dwcfa  0x08, 6
+    2319                            .dwcfa  0x08, 7
+    2320                            .dwcfa  0x08, 8
+    2321                            .dwcfa  0x08, 9
+    2322                            .dwcfa  0x08, 10
+    2323                            .dwcfa  0x08, 11
+    2324                            .dwcfa  0x07, 12
+    2325                            .dwcfa  0x07, 13
+    2326                            .dwcfa  0x07, 14
+    2327                            .dwcfa  0x07, 15
+    2328                            .dwcfa  0x07, 16
+    2329                            .dwcfa  0x07, 17
+    2330                            .dwcfa  0x07, 18
+    2331                            .dwcfa  0x07, 19
+    2332                            .dwcfa  0x07, 20
+    2333                            .dwcfa  0x07, 21
+    2334                            .dwcfa  0x07, 22
+    2335                            .dwcfa  0x07, 23
+    2336                            .dwcfa  0x07, 24
+    2337                            .dwcfa  0x07, 25
+    2338                            .dwcfa  0x07, 26
+    2339                    
+    2340                    ;***************************************************************
+    2341                    ;* DWARF REGISTER MAP                                          *
+    2342                    ;***************************************************************
+    2343                    
+    2344                    DW$149  .dwtag  DW_TAG_assign_register, DW_AT_name("A1")
+    2345                            .dwattr DW$149, DW_AT_location[DW_OP_reg0]
+    2346                    DW$150  .dwtag  DW_TAG_assign_register, DW_AT_name("A2")
+    2347                            .dwattr DW$150, DW_AT_location[DW_OP_reg1]
+    2348                    DW$151  .dwtag  DW_TAG_assign_register, DW_AT_name("A3")
+    2349                            .dwattr DW$151, DW_AT_location[DW_OP_reg2]
+    2350                    DW$152  .dwtag  DW_TAG_assign_register, DW_AT_name("A4")
+TMS470 COFF Assembler PC Version 2.71 Tue Jan 24 12:32:24 2012
+
+Tools Copyright (c) 1996-2008 Texas Instruments Incorporated
+r:/06_hallib/04_lst/ADLATUS_Hal.asm                                  PAGE   44
+
+    2351                            .dwattr DW$152, DW_AT_location[DW_OP_reg3]
+    2352                    DW$153  .dwtag  DW_TAG_assign_register, DW_AT_name("V1")
+    2353                            .dwattr DW$153, DW_AT_location[DW_OP_reg4]
+    2354                    DW$154  .dwtag  DW_TAG_assign_register, DW_AT_name("V2")
+    2355                            .dwattr DW$154, DW_AT_location[DW_OP_reg5]
+    2356                    DW$155  .dwtag  DW_TAG_assign_register, DW_AT_name("V3")
+    2357                            .dwattr DW$155, DW_AT_location[DW_OP_reg6]
+    2358                    DW$156  .dwtag  DW_TAG_assign_register, DW_AT_name("V4")
+    2359                            .dwattr DW$156, DW_AT_location[DW_OP_reg7]
+    2360                    DW$157  .dwtag  DW_TAG_assign_register, DW_AT_name("V5")
+    2361                            .dwattr DW$157, DW_AT_location[DW_OP_reg8]
+    2362                    DW$158  .dwtag  DW_TAG_assign_register, DW_AT_name("V6")
+    2363                            .dwattr DW$158, DW_AT_location[DW_OP_reg9]
+    2364                    DW$159  .dwtag  DW_TAG_assign_register, DW_AT_name("V7")
+    2365                            .dwattr DW$159, DW_AT_location[DW_OP_reg10]
+    2366                    DW$160  .dwtag  DW_TAG_assign_register, DW_AT_name("V8")
+    2367                            .dwattr DW$160, DW_AT_location[DW_OP_reg11]
+    2368                    DW$161  .dwtag  DW_TAG_assign_register, DW_AT_name("V9")
+    2369                            .dwattr DW$161, DW_AT_location[DW_OP_reg12]
+    2370                    DW$162  .dwtag  DW_TAG_assign_register, DW_AT_name("SP")
+    2371                            .dwattr DW$162, DW_AT_location[DW_OP_reg13]
+    2372                    DW$163  .dwtag  DW_TAG_assign_register, DW_AT_name("LR")
+    2373                            .dwattr DW$163, DW_AT_location[DW_OP_reg14]
+    2374                    DW$164  .dwtag  DW_TAG_assign_register, DW_AT_name("PC")
+    2375                            .dwattr DW$164, DW_AT_location[DW_OP_reg15]
+    2376                    DW$165  .dwtag  DW_TAG_assign_register, DW_AT_name("C0")
+    2377                            .dwattr DW$165, DW_AT_location[DW_OP_reg16]
+    2378                    DW$166  .dwtag  DW_TAG_assign_register, DW_AT_name("C1")
+    2379                            .dwattr DW$166, DW_AT_location[DW_OP_reg17]
+    2380                    DW$167  .dwtag  DW_TAG_assign_register, DW_AT_name("C2")
+    2381                            .dwattr DW$167, DW_AT_location[DW_OP_reg18]
+    2382                    DW$168  .dwtag  DW_TAG_assign_register, DW_AT_name("C3")
+    2383                            .dwattr DW$168, DW_AT_location[DW_OP_reg19]
+    2384                    DW$169  .dwtag  DW_TAG_assign_register, DW_AT_name("C4")
+    2385                            .dwattr DW$169, DW_AT_location[DW_OP_reg20]
+    2386                    DW$170  .dwtag  DW_TAG_assign_register, DW_AT_name("C5")
+    2387                            .dwattr DW$170, DW_AT_location[DW_OP_reg21]
+    2388                    DW$171  .dwtag  DW_TAG_assign_register, DW_AT_name("C6")
+    2389                            .dwattr DW$171, DW_AT_location[DW_OP_reg22]
+    2390                    DW$172  .dwtag  DW_TAG_assign_register, DW_AT_name("C7")
+    2391                            .dwattr DW$172, DW_AT_location[DW_OP_reg23]
+    2392                    DW$173  .dwtag  DW_TAG_assign_register, DW_AT_name("AP")
+    2393                            .dwattr DW$173, DW_AT_location[DW_OP_reg24]
+    2394                    DW$174  .dwtag  DW_TAG_assign_register, DW_AT_name("SR")
+    2395                            .dwattr DW$174, DW_AT_location[DW_OP_reg25]
+    2396                    DW$175  .dwtag  DW_TAG_assign_register, DW_AT_name("CIE_RETA")
+    2397                            .dwattr DW$175, DW_AT_location[DW_OP_reg26]
+    2398                            .dwendtag DWCU
+    2399                    
+
+No Assembly Errors, No Assembly Warnings

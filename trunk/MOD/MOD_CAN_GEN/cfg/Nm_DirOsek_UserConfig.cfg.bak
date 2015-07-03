@@ -1,0 +1,19 @@
+/* Start of Nm_DirOsek_UserConfigFile */
+
+/* Please add this file in GENy as user config file to the component Nm_DirOsek */
+/* Details about the scope of this user config file can be found in the file CBD1000290_Readme.txt */
+
+#ifdef kNmCanPara
+#undef kNmCanPara
+#define kNmCanPara ANY_GLOBAL_EXTERNAL_VARIABLE
+#else
+#error "Please contact vector if this error occurs! (It should never occur)"
+#endif
+
+#include "can_cfg.h"
+#include "can_def.h"
+extern CanInitHandle ANY_GLOBAL_EXTERNAL_VARIABLE;
+
+#define NM_ENABLE_GETSTATE_API
+
+/* End of Nm_DirOsek_UserConfigFile */
